@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+//重置weui 点击态
+.weui-cell_active:active {
+    background-color: transparent;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//修改光标色
+input,
+textarea {
+    caret-color: $color-text-1 !important;
+}

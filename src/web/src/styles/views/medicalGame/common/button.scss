@@ -1,0 +1,36 @@
+//通用按钮 默认白色背景、蓝色字体
+@import './color';
+
+.commonbtn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62.66%;
+    min-width: size(450px);
+    height: size(90px);
+    border-radius: size(45px);
+    background-color: $fff;
+    span {
+        font-size: 16px;
+        color: $blue;
+    }
+    &.btngreen {
+        background-color: $green;
+        span {
+            color: $fff;
+        }
+    }
+    &.btnblue {
+        background-color: $blue;
+        span {
+            color: $fff;
+        }
+    }
+    &.btnred {
+        background-color: $red;
+        span {
+            color: $fff;
+        }
+    }
+}

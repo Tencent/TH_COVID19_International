@@ -1,0 +1,19 @@
+//服务启动配置
+{
+    port: "10169",      //服务监听端口
+    path: "ncovh5api",  //服务监听的path
+    //以本地地址为例,api地址为 http://127.0.0.1:10169/ncovh5api
+
+    CommonConf: {
+        maxHistoryDay : 59,
+        startDate : "20200121",
+        displayHistory:1,
+        provinceReturnModifyHistory:1,
+        areaChinaList:["Shanghai","Yunnan","Neimenggu","Beijing","Sichuan","Jilin","Tianjin","Anhui","Shandong","Shanxi","Guangdong","Xinjiang"],
+        areaForeignList:["Bhutan","Denmark","Ukraine","Armenia","Israel","Iraq","Iran","Russia","Bulgaria","Croatia","Iceland","Canada","Hungary","Macedonia","South Africa","Qatar","Luxembourg","India","Indonesia","Ecuador","Colombia","Costa Rica","Cameroon","San Marino","Egypt","Senegal","Republic of Serbia","Mexico","Togo","Dominica","Austria","Bangladesh","Andorra","Nigeria","Nepal","巴勒斯坦","Pakistan","Paraguay","Bahrain","Brazil","Greece","Germany","Italy","Latvia","Norway","Czech Republic","Moldova","Morocco","Monaco","Slovakia","Slovenia","Sri Lanka","Singapore","New Zealand","Japan","Chile","Cambodia","Georgia","Vatican","Belgium","Saudi Arabia","France","Poland","Bosnia and Herzegovina","Thailand","Australia","Ireland","Estonia","Sweden","Switzerland","Belarus","Kuwait","Peru","Tunisia","Lithuania","Jordan","Romania","United States of America","Finland","United Kingdom","Netherlands","Philippines","Portugal","Spain","Vietnam","钻石号邮轮","Azerbaijan","Afghanistan","Algeria","Oman","Argentina","United Arab Emirates","South Korea","Maldives","Malaysia","Malta","Lebanon"],
+        contentNumPerPage: 10,
+        noDataVal:-999999,
+        focusList:["United States of America", "Italy","Iran","Spain"]
+    },
+    updateInerval:30000     //缓存刷新的时间间隔，单位为ms
+}

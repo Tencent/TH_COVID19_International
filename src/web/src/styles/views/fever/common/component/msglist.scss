@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.msg-list {
+    .weui-cell {
+        padding: 23px 15px;
+        &::before {
+            left: 15px;
+            border-color: $color-line-1;
+        }
+    }
+    .weui-cell__bd {
+        .info {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+        .time {
+            font-size: 14px;
+            color: $color-text-2;
+            line-height: 21px;
+        }
+    }
+    .weui-cell__ft {
+        font-size: 14px;
+        padding-right: 15px;
+        &.news {
+            color: $color-error;
+        }
+        &.continue {
+            color: $color-brand2;
+        }
+        &.done {
+            color: $color-text-2;
+        }
+        &:after {
+            width: 10px;
+            margin-top: -10px;
+        }
+    }
+}

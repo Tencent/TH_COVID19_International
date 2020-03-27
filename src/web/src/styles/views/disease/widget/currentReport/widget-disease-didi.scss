@@ -1,0 +1,86 @@
+.page-didi {
+    .minHeader {
+        background: #fff;
+    }
+    .heaader-img {
+        .cr-cctv {
+            display: none;
+        }
+    }
+    .dashboard-news {
+        padding: 16px 8px 12px 8px;
+    }
+    .dashboard--simple .dashboard-tab {
+        padding-top: 8px;
+    }
+    .header {
+        .cr-cctv {
+            display: none;
+        }
+    }
+    .dashboard {
+        padding-bottom: 0;
+        &::before {
+            background-image: linear-gradient(115deg, #fbb86a 0%, #ffb653 40%, #f04d21 100%);
+        }
+    }
+    .dashboard--local {
+        &::before {
+            content: '';
+            background-image: linear-gradient(270deg, #f04d21 50%, #fbb86a 100%);
+        }
+    }
+    .tab-ends .question-list.pb100 {
+        padding-bottom: 0 !important;
+    }
+    .dashboard-tips .dashboard-tips-btn .svg-path-tips {
+        fill: #af4f31;
+    }
+    .dashboard-tips {
+        margin: 80px 14px 8px 16px;
+        color: #af4f31;
+        p {
+            color: #af4f31;
+        }
+    }
+    .tab-second {
+        .epanel {
+            border-bottom: none;
+            .btn-more {
+                padding-left: 0;
+            }
+            .page-copyright {
+                padding: 20px 0 30px 0;
+            }
+        }
+    }
+    .tab-list .tab-item {
+        &.active {
+            color: #fc9153;
+            &::before {
+                background-color: #fc9153;
+            }
+        }
+    }
+    .tab-num-three,
+    .tab-num-four {
+        &.dashboard-tab-btn .dashboard-tab-menu {
+            &.shadow-right:after {
+                // background: url('https://static.wecity.qq.com/wapyiqing-list/didi-r-2f55564e62d04c727c0c7e8012764405.png') no-repeat;
+                // background: url('https://static.wecity.qq.com/wapyiqing-list/didi-r-1-b02f5ec5610cdbf7b52a9ac5f97ff0ea.png') no-repeat;
+                background: url('https://static.wecity.qq.com/wapyiqing-list/didi-r-2-8b66a159390689ce312d18e767e2d3c8.png')
+                    no-repeat;
+                background-size: auto 100%;
+                background-position-x: -5px;
+            }
+            &.shadow-left:after {
+                // background: url('https://static.wecity.qq.com/wapyiqing-list/didi-l-fcf41558d1f84273f2c3ae93cbaac972.png') no-repeat;
+                // background: url('https://static.wecity.qq.com/wapyiqing-list/didi-l-1-bc88db1cfd4d8032507fa78d80948aed.png') no-repeat;
+                background: url('https://static.wecity.qq.com/wapyiqing-list/didi-l-2-0832c01ecc3d3da94f3d2b404073f336.png')
+                    no-repeat;
+                background-size: auto 100%;
+                background-position-x: -10px;
+            }
+        }
+    }
+}

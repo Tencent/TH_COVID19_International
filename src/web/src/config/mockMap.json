@@ -1,0 +1,224 @@
+{
+    "world": {
+        "name": "world",
+        "url": "https://img.hcharts.cn/mapdata/custom/world-palestine.geo.json"
+    },
+    "韩国": {
+        "name": "South Korea",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/kr-all.geo-5190a5f3e12fe18ca24144702ac332b0.json"
+    },
+    "South Korea": {
+        "name": "South Korea",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/kr-all.geo-5190a5f3e12fe18ca24144702ac332b0.json"
+    },
+    "日本本土": {
+        "name": "Japan",
+        "url": "https://static.wecity.qq.com/h5/2020-3/jp-all.geo-c3a9d11e21318d809357105285f72080.json"
+    },
+    "日本": {
+        "name": "Japan",
+        "url": "https://static.wecity.qq.com/h5/2020-3/jp-all.geo-c3a9d11e21318d809357105285f72080.json"
+    },
+    "Japan": {
+        "name": "Japan",
+        "url": "https://static.wecity.qq.com/h5/2020-3/jp-all.geo-c3a9d11e21318d809357105285f72080.json"
+    },
+    "意大利": {
+        "name": "Italy",
+        "url": "https://static.wecity.qq.com/h5/2020-3/it-all2.geo-27f88bf4592c549a8a88bb9f1354af7e.json"
+    },
+    "Italy": {
+        "name": "Italy",
+        "url": "https://static.wecity.qq.com/h5/2020-3/it-all2.geo-27f88bf4592c549a8a88bb9f1354af7e.json"
+    },
+    "美国": {
+        "name": "USA",
+        "url": "https://static.wecity.qq.com/h5/2020-3/USA-4bed04224654104b9a2ac10c85e42bb3.json",
+        "specialAreas": {
+            "Alaska": {
+                "left": -131,
+                "top": 24,
+                "width": 16
+            },
+            "Hawaii": {
+                "left": -110,
+                "top": 28.3,
+                "width": 4
+            },
+            "Puerto Rico": {
+                "left": -76,
+                "top": 26,
+                "width": 2
+            }
+        }
+    },
+    "United States of America": {
+        "name": "USA",
+        "url": "https://static.wecity.qq.com/h5/2020-3/USA-4bed04224654104b9a2ac10c85e42bb3.json",
+        "specialAreas": {
+            "Alaska": {
+                "left": -131,
+                "top": 24,
+                "width": 16
+            },
+            "Hawaii": {
+                "left": -110,
+                "top": 28.3,
+                "width": 4
+            },
+            "Puerto Rico": {
+                "left": -76,
+                "top": 26,
+                "width": 2
+            }
+        }
+    },
+    "伊朗": {
+        "name": "Iran",
+        "url": "https://static.wecity.qq.com/h5/2020-3/ir-all.geo-4180036f50db3a082fb7507a5897fd9d.json"
+    },
+    "Iran": {
+        "name": "Iran",
+        "url": "https://static.wecity.qq.com/h5/2020-3/ir-all.geo-4180036f50db3a082fb7507a5897fd9d.json"
+    },
+    "中国": {
+        "name": "china",
+        "url": "https://static.wecity.qq.com/h5/2020-1/china-b995a4b5d1b62dbcce658c1649be0916.json"
+    },
+    "北京": {
+        "name": "beijing",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/beijing-23f3936a8031a65a7034ebeecd14eb89.json"
+    },
+    "上海": {
+        "name": "shanghai",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/shanghai-f45368f92267539a08f10c170ac0572b.json"
+    },
+    "天津": {
+        "name": "tianjin",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/tianjin-e16d356865ae82d712f26b42e280d018.json"
+    },
+    "重庆": {
+        "name": "chongqing",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/chongqing-b47a8ca224e7b4acdcc0c573737569a0.json"
+    },
+    "香港": {
+        "name": "xianggang",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/xianggang-cb3fc5a232352903a765b0cd31a131f7.json"
+    },
+    "澳门": {
+        "name": "aomen",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/aomen-58e6797cee7ce9d51e380adaae5fa1ee.json"
+    },
+    "安徽": {
+        "name": "anhui",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/anhui-532327a8e57214240999bd90b737abe3.json"
+    },
+    "福建": {
+        "name": "fujian",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/fujian-865a0a756d74bed5e3ed08be87f165de.json"
+    },
+    "广东": {
+        "name": "guangdong",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/guangdong-a90da7805e6a7e54c644a09c9f884784.json"
+    },
+    "广西": {
+        "name": "guangxi",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/guangxi-a9afc2f65c86c8d6985a1b797329352e.json"
+    },
+    "贵州": {
+        "name": "guizhou",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/guizhou-f80955b504c708311250178771102c84.json"
+    },
+    "甘肃": {
+        "name": "gansu",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/gansu-f17c5906477f5e667cd0ebdddf9e439c.json"
+    },
+    "海南": {
+        "name": "hainan",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/hainan-34750324eb48f16c3bd4a5c8fc39a493.json"
+    },
+    "河北": {
+        "name": "hebei",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/hebei-eada116fa4b094d03353ca0147545238.json"
+    },
+    "河南": {
+        "name": "henan",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/henan-825a18560980e6af313c5ca8755f0518.json"
+    },
+    "黑龙江": {
+        "name": "heilongjiang",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/heilongjiang-27578e351b54ab1b51219a3391012cac.json"
+    },
+    "湖北": {
+        "name": "hubei",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/hubei-0161b50adaac992a67d42520d44d711b.json"
+    },
+    "湖南": {
+        "name": "hunan",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/hunan-d5d76d058488a1d1f6ccfdfe6a53dd13.json"
+    },
+    "吉林": {
+        "name": "jilin",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/jilin-6c24511af65a0844b0fd3b9f8d252695.json"
+    },
+    "江苏": {
+        "name": "jiangsu",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/jiangsu-7ebb4cd1a4c687773041a32c5fd41c50.json"
+    },
+    "江西": {
+        "name": "jiangxi",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/jiangxi-ae09e6f1ddab8b3a631a164a9cdf878a.json"
+    },
+    "辽宁": {
+        "name": "liaoning",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/liaoning-14da767f6cdb6382e4f0c9b00af073c0.json"
+    },
+    "内蒙古": {
+        "name": "neimenggu",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/neimenggu-35a724abe52640e94ac4507e8a02d95c.json"
+    },
+    "宁夏": {
+        "name": "ningxia",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/ningxia-4cab93c1e827e4de1ce87a02caef2530.json"
+    },
+    "青海": {
+        "name": "qinghai",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/qinghai-510af0b151f83732d1a4d54109514ac5.json"
+    },
+    "陕西": {
+        "name": "shanxi1",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/shanxi1-e22ed80332a496008c8073bc11bfba27.json"
+    },
+    "山西": {
+        "name": "shanxi",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/shanxi-7bdb061e0596c45c6b0a8cc1c0bbe1c6.json"
+    },
+    "山东": {
+        "name": "shandong",
+        "url": "https://static.wecity.qq.com/h5/2020-1/shandong-8d86e1403b0e430ad9ff5a1912e82696.json"
+    },
+    "四川": {
+        "name": "sichuan",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/sichuan-c1cedb7fa0537ba1ccd60d408324b750.json"
+    },
+    "台湾": {
+        "name": "taiwan",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/taiwan-e552bdbd933796689b1e244dddbbf8ff.json"
+    },
+    "西藏": {
+        "name": "xizang",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/xizang-33eb1d62b0526e23c1de64d10e9fedd0.json"
+    },
+    "新疆": {
+        "name": "xinjiang",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/xinjiang-6831af6eb84881f860ea53315e8d2f47.json"
+    },
+    "云南": {
+        "name": "yunnan",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/yunnan-f7d5d06a6f5fe339f454c7162f141b91.json"
+    },
+    "浙江": {
+        "name": "zhejiang",
+        "url": "https://static.wecity.qq.com/h5/2020-1/map/json/province/zhejiang-31f96ca952bf04a02bde363919b56c15.json"
+    }
+}

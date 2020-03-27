@@ -1,0 +1,279 @@
+@import './base/fn.scss';
+@import './widgets/button.scss';
+@import './widgets/icon.scss';
+
+.container-card {
+    min-height: 100vh;
+    background-color: $color-bg-gray;
+    .hide {
+        visibility: hidden;
+    }
+    .top-tip {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 20px;
+        background-color: #ffe9da;
+        .tip-text {
+            flex: 1;
+            margin: 0 30px;
+            text-align: justify;
+            font-size: 24px;
+            color: #ff6a10;
+        }
+        .card-warn {
+            width: 30px;
+            // max-width: 30px;
+            height: 30px;
+            // flex: 1;
+            font-size: 24px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .icon-close {
+            padding: 0;
+        }
+    }
+    .card-info {
+        padding: 34px 64px 70px 64px;
+        background-color: $color-bg-white;
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            .title-bar-hd {
+                font-size: 28px;
+                color: #808080;
+            }
+            .title-bar-ft {
+                display: flex;
+                align-items: center;
+                .icon {
+                    width: 20px;
+                    height: 18px;
+                    background: url('https://static.wecity.qq.com/waphealthcard/icon-switch-bba742c037d0be431c4a3f70355d3643.png')
+                        center center no-repeat;
+                    background-size: 100% 100%;
+                    vertical-align: middle;
+                    position: relative;
+                    top: -1px;
+                }
+                .txt {
+                    font-size: 24px;
+                    line-height: 32px;
+                    color: $color-primary;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .card-box {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            padding: 22px 10px 16px 34px;
+            box-sizing: border-box;
+            // background: url('https://static.wecity.qq.com/waphealthcard/bg-665fba8c08d3d76110915b6d1574d23b.png') center center no-repeat;
+            // background-size: 100% 100%;
+            .card-bg {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+            }
+            .card-hd {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 54px;
+                z-index: 1;
+                .title {
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight: $font-medium;
+                }
+                .logo-box {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 16px;
+
+                    .icon-logo {
+                        width: 54px;
+                        height: 54px;
+                        background: url('https://static.wecity.qq.com/waphealthcard/logo-7642ce7bab376889e54fb9b8020fa144.png')
+                            center center no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .logo-txt {
+                        margin-left: 8px;
+                        font-size: 30px;
+                        font-weight: $font-medium;
+                    }
+                }
+            }
+            .card-bd {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-top: 42px;
+                color: #000;
+                z-index: 1;
+                .card-left {
+                    .name {
+                        font-size: 46px;
+                        line-height: 64px;
+                        font-weight: $font-medium;
+                    }
+                    .id-card {
+                        font-size: 30px;
+                        line-height: 42px;
+                    }
+                }
+                .card-right {
+                    .code-box {
+                        width: 170px;
+                        height: 170px;
+                        background-color: $color-bg-white;
+                        padding: 3px;
+                        box-sizing: border-box;
+                        margin-bottom: 12px;
+                        .code {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $color-bg-gray;
+                        }
+                    }
+                }
+            }
+            .card-ft {
+                position: relative;
+                color: #000;
+                margin-top: 18px;
+                z-index: 1;
+                .txt {
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+            }
+        }
+        .btn-area {
+            margin-top: 60px;
+        }
+    }
+    .card-function-list {
+        margin-top: 20px;
+        background-color: $color-bg-white;
+        .card-function-item {
+            display: flex;
+            align-items: center;
+            padding: 43px 74px;
+            .item-hd {
+                width: 64px;
+                height: 64px;
+                margin-right: 20px;
+                background: url('https://static.wecity.qq.com/wap2020-03/hospital-record-ee10e7a6fb6e994388466a39c01ed7a0.png')
+                    center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .item-hd__info {
+                background: url('https://static.wecity.qq.com/wap2020-03/info-73cf3055d193529474e5ba4cd2eda026.png')
+                    center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .item-hd__record {
+                background: url('https://static.wecity.qq.com/wap2020-03/card-record-81d10c3c48d9a5532135440a83b49419.png')
+                    center center no-repeat;
+                background-size: 100% 100%;
+            }
+            .item-bd {
+                flex: 1;
+                font-size: 32px;
+                line-height: 44px;
+                color: #000;
+            }
+            .icon-arrow-right {
+                border-color: #dfdfdf;
+            }
+            & + .card-function-item {
+                position: relative;
+                &::before {
+                    @include one-px-border(top);
+                }
+            }
+        }
+    }
+    .card-scene {
+        margin-top: 10px;
+        background-color: #fff;
+        padding-bottom: 36px;
+    }
+    .card-scene__headline {
+        padding: 39px 63px;
+        font-size: 36px;
+        font-weight: 700;
+        color: #000;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 63px;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            border-top: 2px solid #d8d8d8;
+            transform: scaleY(0.5);
+        }
+    }
+    .card-scene__list {
+        padding: 35px 65px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 63px;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            border-top: 2px solid #d8d8d8;
+            transform: scaleY(0.5);
+        }
+    }
+    .card-scene__icon {
+        // flex: 1;
+        margin-right: 20px;
+        width: 60px;
+        // max-width: 60px;
+        height: 60px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .card-scene__info {
+        width: 540px;
+    }
+    .card-scene__title {
+        font-size: 32px;
+        color: #000;
+    }
+    .card-scene__text {
+        font-size: 28px;
+        line-height: 40px;
+        color: #808080;
+    }
+}

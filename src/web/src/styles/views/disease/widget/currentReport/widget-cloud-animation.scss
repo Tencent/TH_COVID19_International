@@ -1,0 +1,152 @@
+.title-animation {
+    overflow: hidden;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    span {
+        width: 10px;
+        height: 10px;
+        padding: 2px;
+        box-sizing: border-box;
+        float: left;
+        i {
+            display: block;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            animation: pulse 1.2s ease-in-out 0s infinite;
+            animation-delay: 0s;
+        }
+        &:nth-child(1),
+        &:nth-child(5),
+        &:nth-child(7) {
+            i {
+                animation-delay: 0s;
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-child(6),
+        &:nth-child(9) {
+            i {
+                animation-delay: 0.63s;
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(8) {
+            i {
+                animation-delay: 0.35s;
+            }
+        }
+    }
+}
+.hubei-situation .chart.chart--cloud div.hubei-title-bg {
+    background: none;
+}
+.chart--cloud {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: '';
+        background: url('https://static.wecity.qq.com/wapdisease/banner-shape-9da12077d3343d2544bc39cdc69ff047.png');
+        background-size: 100% auto;
+        width: 250px;
+        height: 259px;
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        margin: -130px 0 0 0;
+    }
+    .hubei-title {
+        overflow: hidden;
+        height: 22px;
+        line-height: 22px;
+    }
+    .hubei-title p {
+        animation: textAnimation 0.35s ease-in 0s 1;
+    }
+    .hubei-title-bar {
+        .hubei-title-bg {
+            background: none;
+        }
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%;
+        height: 100%;
+        animation: 5s linear 0s infinite slide;
+        background: linear-gradient(-90deg, #108ced, #245add, #108ced, #245add);
+    }
+}
+
+.ocean-situation .chart.chart--ocean div.ocean-title-bg {
+    background: none;
+}
+.chart--ocean {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: '';
+        background: url('https://static.wecity.qq.com/wapdisease/banner-shape-9da12077d3343d2544bc39cdc69ff047.png');
+        background-size: 100% auto;
+        width: 250px;
+        height: 259px;
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        margin: -130px 0 0 0;
+    }
+    .ocean-title {
+        overflow: hidden;
+        height: 22px;
+        line-height: 22px;
+    }
+    .ocean-title p {
+        animation: textAnimation 0.35s ease-in 0s 1;
+    }
+    .ocean-title-bar {
+        .ocean-title-bg {
+            background: none;
+        }
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%;
+        height: 100%;
+        animation: 5s linear 0s infinite slide;
+        background: linear-gradient(-90deg, #108ced, #245add, #108ced, #245add);
+    }
+}
+
+@keyframes slide {
+    from {
+        left: -200%;
+    }
+    to {
+        left: 0;
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.35);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

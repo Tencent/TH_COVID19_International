@@ -1,0 +1,108 @@
+.page-banner {
+    min-height: 90px;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.page-main {
+    padding: 20px;
+}
+.spanel {
+    margin-bottom: 20px;
+}
+
+.spanel-hd {
+    padding: 0 0 15px 0;
+}
+.spanel-bd {
+    min-height: 40px;
+}
+.spanel-hd-tit {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.slabel {
+    overflow: hidden;
+}
+.slabel-list {
+    overflow: hidden;
+    margin: 0 -11px 0 0;
+}
+.slabel-list-item {
+    width: 33.33333%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 11px 11px 0;
+}
+.slabel-item {
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 14px;
+    background: rgba(231, 233, 237, 0.6);
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    border-radius: 5px;
+    &.cur {
+        background: #00bad1;
+        color: #fff;
+    }
+    &--del {
+        background: rgba(0, 186, 209, 0.06);
+        position: relative;
+        color: #00bad1;
+    }
+    &.disabled {
+        color: #888888;
+    }
+}
+.slabel-del-icon {
+}
+.slabel-list {
+}
+
+.slabel-del-icon {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    font-size: 0;
+}
+.slabel-del-icon:before,
+.slabel-del-icon:after {
+    position: absolute;
+    left: 5px;
+    content: '';
+    height: 12px;
+    width: 1px;
+    background-color: #00bad1;
+}
+.slabel-del-icon:before {
+    transform: rotate(45deg);
+}
+.slabel-del-icon:after {
+    transform: rotate(-45deg);
+}
+
+.hp-btn-wrap {
+    padding: 0 0 20px 0;
+}
+.hp-btn {
+    height: 50px;
+    line-height: 50px;
+    border-radius: 400px;
+    background: #00bad1;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    &.disabled {
+        background: rgba(0, 186, 209, 0.5);
+        color: rgba(255, 255, 255, 0.5);
+    }
+}

@@ -1,0 +1,176 @@
+.nearby-selector-wrap {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    // height: 505px;
+    height: 525px;
+    .selector-box {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        // height: 505px;
+        height: 525px;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 10px 10px 0 0;
+        padding: 0 20px;
+        transition: all 0.3s;
+        // transform: translateY(100%);
+        &.close {
+            transform: translateY(100%) !important;
+        }
+    }
+
+    .selector-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 15px;
+        .title {
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .btn-close {
+            width: 12px;
+            height: 12px;
+            background: url('https://static.wecity.qq.com/wapdisease/btn-close-2020-02-10-1b83ed89381292dd7c6e0c19ba2a786b.png')
+                no-repeat;
+            background-size: contain;
+            &:active {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .selector-tab {
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        .btn-tab-item {
+            font-size: 15px;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-right: 26px;
+            min-height: 16px;
+            // background: pink;
+            position: relative;
+            z-index: 2000;
+            span {
+                max-width: 92px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+                line-height: 20px;
+                min-height: 20px;
+            }
+            &.unable {
+                color: #cacaca;
+            }
+        }
+        .btn-tab-item:not(:last-child):after {
+            content: '';
+            display: flex;
+            width: 6px;
+            height: 8px;
+            background: url('https://static.wecity.qq.com/wapdisease/arrow-right-2020-02-10-1eccc1a764dc91362ea710810c82c79f.png')
+                no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -16px;
+        }
+        .btn-tab-item.active {
+            color: #5675f1;
+            // background: rgba(0,0,0,0.2);
+            &:before {
+                content: '';
+                display: block;
+                width: 24px;
+                height: 3px;
+                border-radius: 1.5px;
+                background: #5675f1;
+                position: absolute;
+                bottom: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .select-tip-wrap {
+        padding-top: 20px;
+        // font-size: 14px;
+        color: #888;
+    }
+
+    .selector-content {
+        margin-right: -10px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 17px;
+        max-height: 395px;
+        box-sizing: border-box;
+        // background:rgba(0,0,0,0.2);
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .col {
+            width: 100%;
+            .place {
+                width: 120px;
+            }
+        }
+        .place {
+            padding: 0 15px;
+            min-width: 76px;
+            box-sizing: border-box;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            background: #f5f5f5;
+            border-radius: 6px;
+            font-size: 15px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            &.active {
+                background: rgba(44, 82, 238, 0.8);
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .nearby-selector-wrap {
+        height: 540px;
+        .selector-box {
+            height: 540px;
+        }
+    }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    .nearby-selector-wrap {
+        height: 540px;
+        .selector-box {
+            height: 540px;
+        }
+    }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    .nearby-selector-wrap {
+        height: 540px;
+        .selector-box {
+            height: 540px;
+        }
+    }
+}

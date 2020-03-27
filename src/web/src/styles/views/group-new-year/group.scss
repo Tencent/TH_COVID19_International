@@ -1,0 +1,143 @@
+.page-group {
+    // font-family: fangzheng;
+    font-family: simplification;
+    .bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff6e6;
+        z-index: -1;
+    }
+    .gc-container {
+        padding: 20px;
+        .gc-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 18px 15px 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            .gc-title {
+                .gc-name {
+                    font-size: 16px;
+                    color: #523b1b;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                }
+            }
+            .gc-pro {
+                font-size: 16px;
+                color: #523b1b;
+                letter-spacing: 1px;
+                line-height: 24px;
+                .gc-buddy {
+                    text-align: right;
+                    width: 130px;
+                    color: #523b1b;
+                    line-height: 24px;
+                }
+                .gr-arrow {
+                    display: inline-block;
+                    width: 9px;
+                    height: 9px;
+                    border-top: 1px solid #523b1b;
+                    border-right: 1px solid #523b1b;
+                    transform: rotate(45deg);
+                    margin-left: 5px;
+                }
+            }
+        }
+        .gr-pot {
+            background-color: #fff;
+            padding: 18px 15px 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            .gr-line {
+                font-size: 16px;
+                color: #523b1b;
+                margin-bottom: 12px;
+            }
+            .gr-awe {
+                font-size: 16px;
+                color: #523b1b;
+                margin-bottom: 12px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .gr-crs {
+                    font-size: 16px;
+                    color: #523b1b;
+                    letter-spacing: 1px;
+                    line-height: 24px;
+                    .gr-arrow {
+                        display: inline-block;
+                        width: 9px;
+                        height: 9px;
+                        border-top: 1px solid #523b1b;
+                        border-right: 1px solid #523b1b;
+                        transform: rotate(45deg);
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .gr-txts {
+                height: 80px;
+                color: #523b1b;
+                font-size: 16px;
+                border-color: #fff;
+                width: 300px;
+                &:active {
+                    border-color: #fff;
+                }
+            }
+            .gr-zinger {
+                text-align: right;
+            }
+            .gr-tarea {
+                height: 200px;
+                color: #523b1b;
+                font-size: 16px;
+                opacity: 1;
+                border-color: #fff;
+                width: 300px;
+            }
+        }
+    }
+    .cg-footer,
+    .cg-life {
+        width: 100%;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        font-size: 16px;
+        color: #523b1b;
+        background: url('http://beta.gtimg.com/hospital_img/plus-lib/digital-hospital-ui-h5/new-year/bar.png');
+        background-size: 100% 100%;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+    .cg-life {
+        bottom: 14%;
+    }
+    .cg-blessing {
+        font-size: 16px;
+        color: #523b1b;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 24px;
+        .cg-arrow {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid #523b1b;
+            border-right: 1px solid #523b1b;
+            transform: rotate(45deg);
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-bottom: 1px;
+        }
+    }
+}

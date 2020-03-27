@@ -1,0 +1,55 @@
+@import '../common/variables';
+
+.add-doctor-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #f1f1f1;
+    .weui-cells::before,
+    .weui-cells::after {
+        border: none;
+        height: 0;
+    }
+    .add-doctor-header {
+        padding: 35px 20px 32px 20px;
+        background-color: #fff;
+        .add-doctor-title {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+        .em {
+            color: $color-brand4;
+        }
+    }
+    .configured-doc {
+        padding: 12px 20px 0;
+        .weui-cells__title {
+            font-size: 18px;
+            margin: 0 0 12px;
+            padding: 0;
+        }
+        .weui-cell__bd,
+        .weui-cell__ft {
+            font-size: 18px;
+        }
+        .weui-cell__ft {
+            color: $color-text-2;
+        }
+    }
+    .hospital-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 14px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 4px;
+        color: $color-white;
+        background-color: $color-brand4;
+        &:active {
+            opacity: 0.4;
+        }
+    }
+}

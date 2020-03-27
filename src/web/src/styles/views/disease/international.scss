@@ -1,0 +1,469 @@
+@import 'widget/currentReport/widget-table-International.scss'; //table list
+
+img {
+    width: 100%;
+    height: 100%;
+}
+.icon-arrow-right {
+    display: inline-block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    transform: rotate(-45deg);
+}
+.icon-arrow-down {
+    display: inline-block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(45deg);
+    position: relative;
+    top: -2px;
+}
+.icon-arrow-up {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(-135deg);
+}
+.red {
+    color: #de5e5b;
+}
+.orange {
+    color: #e2941d;
+}
+.green {
+    color: #62c298;
+}
+.gray {
+    color: #888888;
+}
+.pb100 {
+    padding-bottom: 100px !important;
+}
+
+.container .tab-list {
+    position: relative;
+    display: flex;
+    height: 48px;
+    font-size: 16px;
+    padding: 0 20px;
+    background-color: #fff;
+    z-index: 500;
+    box-shadow: 0 7px 10px 0 rgba(172, 172, 172, 0.08);
+    justify-content: space-around;
+    &.tab-four {
+        justify-content: space-between;
+        .tab-item {
+            img {
+                // top: 10px;
+                right: -16px;
+                width: 16px;
+                height: auto;
+                // height: 11px;
+            }
+        }
+    }
+    .tab-item {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        line-height: 48px;
+        // font-weight: bold;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        user-select: none;
+        -webkit-user-select: none;
+        color: #333;
+        .img {
+            position: absolute;
+            right: -22px;
+            top: 20px;
+            width: 21px;
+            height: 11px;
+            margin-top: -7px;
+            &.swiper {
+                animation: redbag1 2.5s cubic-bezier(0.62, 1.08, 0.92, 0.99) infinite;
+            }
+        }
+        .dot-hot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #ff1c1c;
+            position: absolute;
+            top: 15px;
+            right: -8px;
+        }
+        &.active {
+            position: relative;
+            color: #00b9d1;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                // height: 7px;
+                height: 3px;
+                width: 32px;
+                margin-left: -16px;
+                background-color: #00b9d1;
+                border-radius: 7px;
+            }
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid #dfdfdf;
+        transform: scaleY(0.5);
+    }
+}
+
+// tab吸顶样式
+.container .tab-list.top-blue {
+    background-color: #195c8e;
+    transform: translateZ(0);
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        background: #195c8e;
+        z-index: 2;
+    }
+    &::before {
+        border-bottom: none;
+    }
+    .tab-item {
+        color: #b8e2ff;
+        &.active {
+            color: #fff;
+            &:before {
+                background-color: #9de2ff;
+            }
+        }
+    }
+}
+
+@keyframes redbag1 {
+    0% {
+        transform: translateX(0);
+    }
+    3.84% {
+        transform: translateX(-3px);
+    }
+    7.69% {
+        transform: translateX(3px);
+    }
+    11.52% {
+        transform: translateX(-3px);
+    }
+    15.36% {
+        transform: translateX(3px);
+    }
+    23.04% {
+        transform: translateX(-3px);
+    }
+    26.88% {
+        transform: translateX(3px);
+    }
+    30.72% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.title-bar {
+    margin-left: 25px;
+    .title {
+        font-weight: bold;
+        position: relative;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.85);
+        letter-spacing: 0.11px;
+        line-height: 25px;
+        margin-bottom: 5px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translate3d(0, -50%, 0);
+            height: 18px;
+            width: 4px;
+            background-color: #00b9d1;
+            border-radius: 1px;
+        }
+    }
+    .sub-title {
+        font-size: 12px;
+        color: #888;
+        line-height: 16px;
+    }
+}
+.txt-info {
+    color: #00b9d1;
+}
+.txt-warning {
+    color: #ab0000;
+}
+.txt-success {
+    color: #62c298;
+}
+
+.page-international {
+    // 标题 s
+    &.tab-content-international .international-charts-wrapper .epanel-title-bar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title-wrap {
+            margin-right: auto;
+            white-space: nowrap;
+        }
+        .epanel-title {
+            font-weight: bold;
+            position: relative;
+            font-size: 18px;
+            color: #333;
+            letter-spacing: 0.11px;
+            line-height: 25px;
+            margin-bottom: 4px;
+            padding-left: 12px;
+            font-weight: 500;
+            overflow: hidden;
+            .svg-path-tips {
+                position: relative;
+                top: -2px;
+                // fill: #d9d9d9;
+                fill: #888;
+            }
+            .epanel-sub-title {
+                font-size: 10px;
+                color: #898786;
+                padding-left: 0;
+                line-height: 14px;
+                vertical-align: middle;
+                position: relative;
+                top: -1px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 4px;
+                height: 18px;
+                width: 4px;
+                background-color: #00b9d1;
+                border-radius: 4px;
+            }
+        }
+        .epanel-sub-title {
+            font-size: 12px;
+            color: #888;
+            line-height: 16px;
+            padding-left: 12px;
+        }
+        .epanel-more {
+            position: absolute;
+            bottom: 50%;
+            right: 0;
+            transform: translate3d(0, 50%, 0);
+            font-size: 12px;
+            color: #333;
+            font-weight: 500;
+            text-align: right;
+            padding-right: 20px;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 8px;
+                width: 6px;
+                height: 6px;
+                margin-left: 5px;
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+    }
+    .subpanel {
+        padding: 25px 0 0;
+        .subpanel-box {
+            padding-top: 40px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -20px;
+                right: -20px;
+                top: 0;
+                height: 15px;
+                background-color: #f8f8f8;
+            }
+            .epanel-title-bar {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    // 标题 e
+
+    // 订阅日报入口new S
+    .dialy-entrnce-new {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        margin: 0 0 0 65px;
+        .entrnce-img {
+            margin-right: 0;
+            background: #ffefe6;
+            &.look {
+                background: #e9f9fb;
+            }
+        }
+
+        .entrnce-img {
+            min-width: 104px;
+            height: 35px;
+            position: relative;
+            flex: 1;
+            text-align: center;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .original-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 57px;
+            height: 13px;
+        }
+        .small-icon {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 23px;
+            height: 18px;
+        }
+    }
+    // 订阅日报 e
+
+    .international-map {
+        position: absolute;
+        left: 12px;
+        top: 0;
+        font-size: 13px;
+        color: #333;
+    }
+
+    // 地图 s
+    .international-map-wrap {
+        position: relative;
+    }
+    .bubble-box {
+        font-size: 12px;
+        padding: 0 0 5px 15px;
+        position: absolute;
+        right: 0px;
+        top: -5px;
+        z-index: 20;
+    }
+    .bubble-box-inner {
+        display: inline-block;
+        background: #fff4b4;
+        color: #c7211c;
+        line-height: 20px;
+        border-radius: 4px;
+        padding: 7px 10px;
+        margin: -5px 0 0 0;
+        font-size: 12px;
+        li {
+            list-style-type: none !important;
+        }
+        li:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        .txt-warning,
+        .txt-info {
+            color: rgba(199, 33, 28, 0.85);
+        }
+        .icon-arrow-right {
+            display: inline-block;
+            position: relative;
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid rgba(199, 33, 28, 0.85);
+            border-bottom: 1px solid rgba(199, 33, 28, 0.85);
+            transform: rotate(-45deg);
+            vertical-align: middle;
+            margin: -2px 1px 0 -1px;
+        }
+    }
+
+    .legend-wrap {
+        position: absolute;
+        bottom: 5px;
+        left: 15px;
+        .legend-ul {
+            width: 180px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .legend-li {
+            list-style-type: none !important;
+            width: 76px;
+            font-size: 8px;
+            color: rgba(1, 6, 4, 0.57);
+            margin-bottom: 4px;
+            white-space: nowrap;
+        }
+        .lump {
+            margin-right: 2px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 9px;
+            height: 9px;
+            background-color: transparent;
+            border-radius: 1px;
+        }
+        .text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    // 地图 e
+}
+.page-english .page-international .subpanel .subpanel-box {
+    // padding-top: 66px;
+    .epanel-title-bar {
+        display: block;
+    }
+    &::before {
+        position: relative;
+        height: 0;
+    }
+}
+// .page-english .tab-content-international.page-international .international-charts-wrapper table thead th:first-child  {
+//     transform: translateY(10px);
+// }

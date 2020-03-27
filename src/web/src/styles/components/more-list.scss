@@ -1,0 +1,27 @@
+.more-list-btn {
+    &.bottomMargin {
+        // 当Tab3不存在时 需要适当抬高tab2的高度，以免被遮挡
+        margin-bottom: 55px;
+    }
+    margin: 15px 0;
+    background: #f5f5f5;
+    border-radius: 6px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 43%;
+        right: 50%;
+        width: 6px;
+        height: 6px;
+        margin-right: -55px;
+        border-bottom: 1px solid #888;
+        border-right: 1px solid #888;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}

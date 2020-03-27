@@ -1,0 +1,446 @@
+@import './color';
+@import '~assets/font/fonts/fonts';
+
+.btn-primary {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    height: 36px;
+    line-height: 36px;
+    background: -webkit-linear-gradient(#f06582, #ef4e50);
+    background: linear-gradient(#f06582, #ef4e50);
+    border-radius: 4px;
+}
+.btn-full {
+    width: 100%;
+}
+
+/* icons */
+.icon-wechat-pay {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 4.5714%;
+    height: 0;
+    padding-top: 4%;
+    position: relative;
+    background: url('~assets/imgs/cardActivity/icon/wechat-pay.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+.icon-arrow-right {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+    background: url('~assets/imgs/cardActivity/icon/arrow-right.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+.icon-code {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('~assets/imgs/cardActivity/icon/code.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 页面样式 */
+.invitaion {
+    &.redpacket-box {
+        background-image: -webkit-gradient(
+            linear,
+            0 0,
+            0 bottom,
+            from(rgba(89, 202, 219, 1)),
+            to(rgba(43, 130, 225, 1))
+        );
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        .header {
+            padding-bottom: 0;
+            padding-top: 6%;
+            background: none;
+        }
+        .redpacket-msg {
+            position: absolute;
+            left: 50%;
+            top: 29%;
+            transform: translateX(-50%);
+            z-index: 4;
+            width: 70%;
+            height: 400px;
+            background-image: url('~assets/imgs/cardActivity/bg/redpacketBG.png');
+            background-size: 100% 100%;
+            .msg-tittle,
+            .msg-people {
+                color: #ddbc84;
+                text-align: center;
+            }
+            .msg-button {
+                width: 76px;
+                height: 76px;
+                font-size: 32px;
+                position: relative;
+                top: 30%;
+                margin: 0 auto;
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                border: 4px solid #ddbc84;
+                background-color: #ddbc84;
+                border-radius: 50%;
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 75px;
+                    background-color: #ddbc84;
+                    border: 1px solid #d0b17b;
+                    border-radius: 50%;
+                    img {
+                        width: 31px;
+                        height: 35px;
+                    }
+                }
+            }
+            .msg-tittle {
+                font-size: 20px;
+                font-family: 'PingFang';
+                line-height: 36px;
+                font-weight: bold;
+                position: relative;
+                top: 13%;
+            }
+            .msg-people {
+                font-size: 15px;
+                font-family: 'PingFang';
+                position: relative;
+                top: 47%;
+            }
+        }
+        .redpacket-center,
+        .redpacket-footer {
+            position: absolute;
+            width: 100%;
+            font-size: 0;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .redpacket-center {
+            bottom: 20%;
+            z-index: 3;
+        }
+        .redpacket-footer {
+            bottom: 0;
+            z-index: 5;
+        }
+    }
+}
+
+.header {
+    background: url('~assets/imgs/cardActivity/bg/heardBG.png') center center no-repeat;
+    background-size: 100% 100%;
+    color: $white;
+    text-align: center;
+    line-height: 1;
+    padding-top: 15px;
+    padding-bottom: 55px;
+    .title {
+        font-size: 4.5vmin;
+        font-family: 'PingFang';
+        margin-bottom: 15px;
+        .icon-wechat-pay {
+            margin-right: 1.7142%;
+        }
+    }
+    .sub-title {
+        display: flex;
+        margin: 0 auto 15px;
+        width: 61%;
+        justify-content: space-between;
+        font-size: 4.5vmin;
+        font-family: 'PingFang';
+    }
+    .banner {
+        margin-bottom: 15px;
+        padding: 0 15px;
+        img {
+            width: 100%;
+        }
+    }
+    .bottom-title {
+        position: relative;
+        background-image: url('~assets/imgs/cardActivity/bannerbtm.png');
+        background-size: 100% 100%;
+        width: 73.73%;
+        height: 0;
+        padding-top: 53.46%;
+        font-size: 16px;
+        font-family: 'PingFang';
+        margin: 15px auto 0;
+        span {
+            position: absolute;
+            left: 13%;
+            display: block;
+            width: 45%;
+            text-align: center;
+        }
+        .num {
+            top: 16%;
+            color: $deepred;
+            font-size: 3.5vmin;
+        }
+        .num2 {
+            top: 24%;
+            color: #ffc000;
+            font-size: 7vmin;
+            background-image: -webkit-gradient(
+                linear,
+                0 0,
+                0 bottom,
+                from(rgba(250, 225, 145, 1)),
+                to(rgba(255, 187, 134, 1))
+            );
+            background-image: gradient(linear, 0 0, 0 bottom, from(rgba(250, 225, 145, 1)), to(rgba(255, 187, 134, 1)));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .num3 {
+            top: 39%;
+            color: $shallowred;
+            font-size: 3.5vmin;
+        }
+    }
+}
+
+.content-wrapper {
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(78, 187, 225, 1)), to(rgba(43, 131, 225, 1)));
+    .content {
+        background-color: #fff;
+        margin: 0 15px;
+        border-radius: 4px;
+        position: relative;
+        padding-bottom: 9vmin;
+    }
+    .avatar {
+        position: absolute;
+        left: 50%;
+        top: -25px;
+        margin-left: -25px;
+        width: 49px;
+        height: 49px;
+        border: 1px solid $white;
+        border-radius: 4px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .code-box {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 76px;
+        height: 76px;
+        background: url('~assets/imgs/cardActivity/icon/code-box.png') center center no-repeat;
+        background-size: 100% 100%;
+        .icon-code {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+        }
+    }
+    .money {
+        line-height: 1;
+        padding: 44px 22px 30px 22px;
+        text-align: center;
+        .title {
+            font-size: 18px;
+            font-family: 'PingFang';
+            line-height: 27px;
+            color: #010101;
+            margin-bottom: 23px;
+            p {
+                font-weight: bold;
+            }
+        }
+        .amount {
+            font-size: 16px;
+            margin-bottom: 26px;
+            .num {
+                font-size: 70px;
+                line-height: 0.8;
+                margin-right: 11px;
+            }
+        }
+        .btn-primary {
+            margin-top: 25px;
+        }
+    }
+    .check {
+        font-size: 14px;
+        color: $deepred;
+        text-align: center;
+        .icon-arrow-right {
+            margin-left: 6px;
+        }
+    }
+    .activities {
+        .title {
+            height: 10.7692vmin;
+            line-height: 10.7692vmin;
+            font-size: 4.923vmin;
+            font-family: 'PingFang';
+            color: $shallowred;
+            background-color: #fff2de;
+            padding: 0 6.7692%;
+        }
+        .welfare-content-1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 6.7692% 3%;
+            height: 32.3076vmin;
+            .wc1-num,
+            .wc1-equality {
+                font-size: 4.923vmin;
+            }
+            .getmoney {
+                margin-right: 3%;
+            }
+            .wc1-num {
+                font-family: 'PingFang';
+            }
+        }
+        .welfare-content-2 {
+            margin-top: 9vmin;
+            position: relative;
+            left: -5px;
+            .bg-line {
+                width: 100%;
+                height: auto;
+            }
+            .red-packet-list {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                li {
+                    width: 33.3333%;
+                    height: 36.8695%;
+                    position: relative;
+                    top: -5vmin;
+                    .getmoney {
+                        margin: 0 auto;
+                    }
+                }
+                li:nth-child(n + 4) {
+                    position: relative;
+                    top: -2vmin;
+                }
+            }
+        }
+
+        .check {
+            margin-top: 4vmin;
+        }
+    }
+}
+.getmoney {
+    position: relative;
+    top: 1vmin;
+    width: 15.38vmin;
+    height: 14vmin;
+    background-image: url('~assets/imgs/cardActivity/icon/redOpen.png');
+    background-size: 100% 100%;
+    .getmoney-title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 3.6vmin;
+        font-family: 'PingFang';
+        position: absolute;
+        bottom: -6.15vmin;
+        color: $shallowred;
+        font-weight: bold;
+    }
+    .getmoney-num {
+        display: block;
+        width: 100%;
+        height: 20px;
+        text-align: center;
+        position: absolute;
+        top: 3.07vmin;
+        font-size: 3.6vmin;
+        font-family: 'PingFang';
+        color: $deepred;
+    }
+    &.notgetmoney {
+        background-image: url('~assets/imgs/cardActivity/icon/redClose.png');
+        height: 10.7692vmin;
+        top: 4.2308vmin;
+        .getmoney-title {
+            display: block;
+            width: 170%;
+            left: 50%;
+            bottom: -6.15vmin;
+            transform: translateX(-50%);
+            color: black;
+            opacity: 0.6;
+        }
+        .getmoney-num {
+            color: #ffd593;
+            position: relative;
+            top: 58%;
+            font-weight: bold;
+        }
+    }
+}
+
+.rule {
+    background-color: rgba(43, 131, 225, 1);
+    font-size: 14px;
+    color: $white;
+    padding: 0 23px;
+    line-height: 22px;
+    padding-top: 38px;
+    padding-bottom: 70px;
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-family: 'PingFang';
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 17px;
+        .rule-line {
+            width: 25%;
+            height: 1px;
+            background-color: $white;
+            margin: 0 2px;
+        }
+    }
+    p {
+        margin-top: 5px;
+        font-family: 'PingFang';
+        span {
+            color: $white;
+            padding: 0 5px;
+        }
+    }
+}

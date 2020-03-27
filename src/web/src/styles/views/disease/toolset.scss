@@ -1,0 +1,223 @@
+.booking-page {
+    width: 375px;
+    margin: 0 auto;
+
+    .banner {
+        width: 100%;
+        height: 110px;
+        display: block;
+    }
+    .active-banner-wrap {
+        margin-top: 16px;
+        text-align: right;
+        .btn-detail {
+            display: inline-block;
+            text-align: center;
+            padding-left: 4px;
+            min-width: 69px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 10px 0px 0px 10px;
+            color: #fff;
+            background-color: #1573f7;
+        }
+        .active-banner {
+            display: block;
+            margin: 5px auto 0;
+            width: 340px;
+            height: 82px;
+        }
+    }
+    .address-select {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+        font-size: 16px;
+        color: #333;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            height: 100%;
+            max-width: calc(100% - 16px);
+        }
+        .arrow-down,
+        .arrow-up {
+            position: relative;
+            padding: 0 0 0 20px;
+            font-size: 14px;
+            color: #4875f6;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 2px;
+                bottom: 50%;
+                transform: translate3d(0, 50%, 0);
+                width: 16px;
+                height: 18px;
+                padding-top: 2px;
+                background-image: url('https://static.wecity.qq.com/h5/2020-2/location-9f40c3852c6591118b1fe77e518ca9d6.png');
+                background-repeat: no-repeat;
+                background-size: 16px 18px;
+                display: inline-block;
+            }
+            &::after {
+                content: '';
+                width: 12px;
+                height: 10px;
+                margin-left: 4px;
+                background-image: url('https://static.wecity.qq.com/h5/2020-2/arrow-down-463c0c9c668142a993be0082176d8879.png');
+                background-repeat: no-repeat;
+                background-size: 12px 10px;
+                display: inline-block;
+            }
+        }
+        .arrow-up {
+            &::after {
+                transform: scale(1, -1);
+            }
+        }
+    }
+
+    .tools-list {
+        width: 335px;
+        margin: 0 auto;
+        padding: 10px 0;
+        /*border-top: 1px solid #e5e5e5;*/
+        box-sizing: border-box;
+        .tools-block {
+            padding-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            .block-title {
+                width: 100%;
+                margin: 10px 0;
+                font-size: 16px;
+                color: #333;
+                display: block;
+            }
+            .tools-item {
+                width: 163px;
+                padding: 15px 12px;
+                margin: 5px 9px 5px 0;
+                border-radius: 6px;
+                background: #ecf5fd;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                &.big {
+                    width: 100%;
+                    margin: 5px 0;
+                }
+                &.small {
+                    &:nth-last-child(2n + 1) {
+                        margin-right: 0;
+                    }
+                }
+                &-icon {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 8px 0 6px;
+                    display: block;
+                }
+                &-info {
+                    h3 {
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: rgba(0, 20, 50, 0.8);
+                    }
+                    span {
+                        font-size: 11px;
+                        line-height: 18px;
+                        color: rgba(0, 20, 50, 0.7);
+                    }
+                }
+            }
+            .tools-item-box {
+                margin: 5px 0;
+                img {
+                    height: 70px;
+                    display: block;
+                }
+                &.even-img {
+                    width: 100%;
+                    height: 0;
+                    padding-top: 24.9%;
+                    position: relative;
+                    overflow: hidden;
+                    .even-left {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 52%;
+                        height: auto;
+                    }
+                    .even-right {
+                        position: absolute;
+                        left: 52%;
+                        top: 0;
+                        width: 48%;
+                        height: auto;
+                    }
+                }
+                &.big {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+                &.small {
+                    width: 50%;
+                    img {
+                        width: 163px;
+                    }
+                    &:nth-of-type(even) {
+                        img {
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        width: 100%;
+        padding: 20px 0 40px 0;
+        background: #f5f5f5;
+
+        .join-guide {
+            width: 100%;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                font-size: 14px;
+                line-height: 22px;
+                color: #2c52ee;
+            }
+            .arrow-right {
+                width: 12px;
+                height: 12px;
+                margin-left: 10px;
+                background-image: url('https://static.wecity.qq.com/h5/2020-2/arrow-right-blue-0ad9c5a26c9557ca6dd1e89d3a603a78.png');
+                background-repeat: no-repeat;
+                background-size: 12px 12px;
+                display: block;
+            }
+        }
+        .grey {
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(51, 51, 51, 0.45);
+        }
+    }
+}

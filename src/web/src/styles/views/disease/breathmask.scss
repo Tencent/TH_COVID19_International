@@ -1,0 +1,502 @@
+@import 'widget/common/widget-toolbtn';
+.breathmask-page {
+    background: #f9f9f9;
+    min-height: 100vh;
+    .top-banner-wrap {
+        width: 100%;
+        position: relative;
+        ul {
+            position: absolute;
+            top: 8%;
+            left: 5%;
+            right: 5%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        li {
+            list-style: none;
+            margin-right: 4px;
+            height: 20px;
+        }
+        .logo {
+            height: 100%;
+            // object-fit: contain;
+        }
+        .banner {
+            width: 100%;
+            display: block;
+        }
+    }
+    .position-wrap {
+        padding: 13px 0;
+        padding-left: 20px;
+        // text-align: center;
+        background-color: #f9f9f9;
+        span {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            &::before {
+                margin-right: 8px;
+                transform: translateY(1px);
+            }
+        }
+    }
+    .arrow-down,
+    .arrow-up {
+        position: relative;
+        padding: 0 0 0 20px;
+        font-size: 18px;
+        color: #353535;
+        letter-spacing: 0.705px;
+
+        &::before {
+            content: '';
+            // position: absolute;
+            // left: -2px;
+            // bottom: 50%;
+            // transform: translate3d(0, 50%, 0);
+            width: 16px;
+            height: 16px;
+            padding-top: 2px;
+            background-image: url('https://static.wecity.qq.com/h5/2020-2/location-9f40c3852c6591118b1fe77e518ca9d6.png');
+            background-repeat: no-repeat;
+            // background-size: 16px 18px;
+            background-size: contain;
+            display: inline-block;
+        }
+        &::after {
+            content: '';
+            width: 12px;
+            // height: 10px;
+            height: 12px;
+            margin-left: 4px;
+            // background-image: url("https://static.wecity.qq.com/wap/down-5ce5c7c223e53b3e45b922af15420c55.png");
+            background-image: url('https://static.wecity.qq.com/wapdisease/down-333-7404ddb9a5d1285702d3930f3a464270.png');
+            background-repeat: no-repeat;
+            background-size: 12px 12px;
+            display: inline-block;
+        }
+    }
+    .arrow-up {
+        &::after {
+            transform: scale(1, -1);
+        }
+    }
+
+    .list {
+        padding: 0 20px;
+        font-size: 15px;
+
+        .item {
+            height: 60px;
+            line-height: 60px;
+            display: flex;
+            justify-content: space-between;
+            &.title span {
+                font-size: 16px;
+                font-weight: bold;
+                color: #000;
+            }
+            &:nth-child(2n) {
+                background: #f9f9f9;
+            }
+            .prov {
+                width: 35%;
+                padding-left: 10px;
+                box-sizing: border-box;
+            }
+            .city {
+                width: 35%;
+                text-align: center;
+            }
+            .way {
+                width: 30%;
+                text-align: right;
+                padding-right: 10px;
+                color: #858585;
+                &.col {
+                    color: #00b9d0;
+                }
+            }
+        }
+    }
+    .other {
+        width: 100%;
+        padding: 10px 20px 120px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 13px;
+        color: #858585;
+    }
+    .weui-btn_primary {
+        background-color: #5475f2;
+    }
+    // .share {
+    //     position: fixed;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 75px;
+    //     padding: 0 20px 25px;
+    //     text-align: center;
+    //     background: #fff;
+    //     box-sizing: border-box;
+
+    //     .btn {
+    //         width: 100%;
+    //         height: 50px;
+    //         line-height: 50px;
+    //         font-size: 16px;
+    //         color: #fff;
+    //         background-image: linear-gradient(-45deg, #00BAD1 0%, #10DCF5 100%);
+    //         box-shadow: 0 2px 24px 0 rgba(161,161,161,0.50);
+    //         border-radius: 25px;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         .icon-share {
+    //             width: 18px;
+    //             height: 18px;
+    //             margin-right: 10px;
+    //             background: url('https://static.wecity.qq.com/h5/2020-2/share-171257d2f180a1db2810877b4f9c4e9a.png');
+    //             background-size: 18px 18px;
+    //             background-repeat: no-repeat;
+    //             display: block;
+    //         }
+    //     }
+    // }
+
+    // 新列表
+    .mask-list {
+        list-style: none;
+        padding: 0 15px;
+        .list-item {
+            background: #ffffff;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            padding: 15px;
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+
+            .list-hd {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 12px;
+                position: relative;
+                padding-bottom: 5px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-bottom: 1px solid #dfdfdf;
+                    transform: scaleY(0.5);
+                    transform-origin: center bottom;
+                }
+                .name {
+                    color: #333333;
+                    max-width: 60%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .time {
+                }
+                .state-red {
+                    color: #f94242;
+                }
+            }
+
+            .list-bd {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 9px;
+                .bd-right {
+                    flex-shrink: 0;
+                    padding-top: 11px;
+                    .btn-detail {
+                        height: 25px;
+                        border-radius: 12.5px;
+                        padding: 0 13.5px;
+                        line-height: 25px;
+                        text-align: center;
+                        box-sizing: border-box;
+                        min-width: 75px;
+                        background: #5675f1;
+                        &.red {
+                            background: #f94242;
+                        }
+                        &.gray {
+                            background: #f5f5f5;
+                            span {
+                                color: #6d7278;
+                            }
+                        }
+                        &:active {
+                            opacity: 0.5;
+                        }
+                        span {
+                            font-size: 12px;
+                            color: #ffffff;
+                            line-height: 25px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .bd-left {
+                    width: 73%;
+                    .mask-desc {
+                        font-size: 15px;
+                        color: #333333;
+                        text-align: justify;
+                        padding-right: 20px;
+                        padding-bottom: 4.5px;
+                        span {
+                            display: inline-block;
+                            font-weight: 600;
+                            line-height: 21px;
+                        }
+
+                        .arrow-right {
+                            // line-height: 21px;
+                            height: 12px;
+                            margin-left: 2px;
+                            // vertical-align: middle;
+                        }
+                    }
+
+                    .bradges {
+                        margin-right: -5px;
+                        margin-bottom: -5px;
+                        // display: -webkit-box;
+                        // -webkit-box-orient: vertical;
+                        // -webkit-line-clamp: 2;
+                        // overflow: hidden;
+                        // /* autoprefixer: off */
+                        // -webkit-box-orient: vertical;
+                        // /* autoprefixer: on */
+                        box-sizing: border-box;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        max-width: 100%;
+                        .col-blue {
+                            color: #5675f1;
+                            background: rgba(44, 82, 238, 0.08);
+                        }
+                        .col-red {
+                            color: #f94242;
+                            background: rgba(249, 66, 66, 0.1);
+                        }
+                        .bradge {
+                            display: inline-block;
+                            font-size: 12px;
+                            border-radius: 3px;
+                            margin-right: 5px;
+                            margin-bottom: 5px;
+                            padding: 3px;
+                            // white-space: nowrap;
+                            // overflow: hidden;
+                            // text-overflow: ellipsis;
+                            // max-width: 90%;
+                        }
+                    }
+                }
+                &:active {
+                    .mask-desc {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    .disabled {
+        opacity: 0.7;
+    }
+
+    // toast
+    .toast {
+        width: 185px;
+        min-height: 150px;
+        border-radius: 5px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        box-sizing: border-box;
+        padding-top: 21px;
+        text-align: center;
+        .icon-state {
+            width: 42px;
+            height: 42px;
+        }
+        .desc {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 17px 36px 20px;
+            line-height: 1.3;
+        }
+    }
+
+    // 暂无信息
+    .mask-no-data {
+        padding: 77px 37px 0;
+        text-align: center;
+        box-sizing: border-box;
+        flex: 1;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        // .no-data-inner {
+        //     width: 100%;
+        //     padding: 0 37px;
+        //     height: fit-content;
+        // }
+        .icon-state {
+            width: 104px;
+            height: 100px;
+        }
+        .icon-desc {
+            font-size: 16px;
+            color: #353535;
+            font-weight: 500;
+            padding-top: 15px;
+        }
+        .tips {
+            font-size: 13px;
+            color: #888888;
+            padding-top: 8px;
+        }
+        .btn-primary {
+            height: 50px;
+            border-radius: 25px;
+            background: #5675f1;
+            color: #fff;
+            font-size: 18px;
+            line-height: 50px;
+            margin-top: 32px;
+            &:active {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    // 订阅
+    .mask-subscript {
+        height: 100vh;
+        // height: calc(100vh-100px);
+        padding: 0 37px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        .subscript-inner {
+            text-align: center;
+            transform: translateY(-30px);
+        }
+        .icon-state {
+            width: 104px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .icon-desc {
+            font-size: 16px;
+            color: #353535;
+            font-weight: 500;
+            padding-top: 15px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        .tips {
+            font-size: 13px;
+            color: #888888;
+            padding-top: 8px;
+            text-align: center;
+        }
+        .btn-primary {
+            height: 50px;
+            border-radius: 25px;
+            background: #5675f1;
+            color: #fff;
+            font-size: 18px;
+            line-height: 50px;
+            margin-top: 32px;
+            text-align: center;
+            &:active {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .float-toolbtn-box {
+        // 移除悬浮按钮最外层的布局影响
+        position: absolute;
+    }
+
+    @media only screen and (min-device-width: 768px) {
+        .top-banner-wrap {
+            ul {
+                position: absolute;
+                top: 8%;
+                left: 5%;
+                right: 5%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            li {
+                height: 30px;
+            }
+        }
+    }
+    @media only screen and (min-device-width: 1024px) {
+        .top-banner-wrap {
+            ul {
+                position: absolute;
+                top: 8%;
+                left: 5%;
+                right: 5%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            li {
+                height: 40px;
+            }
+        }
+    }
+
+    // iphoneX等机型：无信息居中
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+        .mask-no-data {
+            padding-top: 140px;
+        }
+    }
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+        .mask-no-data {
+            padding-top: 140px;
+        }
+    }
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+        .mask-no-data {
+            padding-top: 140px;
+        }
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    .breathmask-page .mask-list .list-item .list-hd:after {
+        transform: scaleY(1);
+    }
+}

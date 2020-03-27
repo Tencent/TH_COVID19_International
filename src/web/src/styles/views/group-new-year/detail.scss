@@ -1,0 +1,231 @@
+@import './common.scss';
+.group-new-year-detail-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a6192d;
+    font-family: fangzheng;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .title {
+        font-size: 27px;
+        // font-weight: bold;
+        color: $col-gold;
+        text-align: center;
+        padding-top: 30px;
+        line-height: 32px;
+        .em {
+            font-size: 50px;
+        }
+    }
+    .inner-wrap {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        color: $col-gold;
+        padding-bottom: 30px;
+        .card-box {
+            width: 325px;
+            height: 150px;
+            background: url('http://beta.gtimg.com/hospital_img/plus-lib/wap/mid-year-review/dinner.png') no-repeat;
+            background-size: 100% 100%;
+            // background-image: linear-gradient(152deg, #ebc08b 0%, #ffebc8 49%, #ecbb81 100%),
+            // linear-gradient(#fce5c1, #fce5c1);
+            background-blend-mode: normal, normal;
+            box-shadow: 0px 27px 46px 0px rgba(151, 44, 44, 0.18);
+            border-radius: 15px;
+            margin: 30px auto 0;
+        }
+
+        .comment-list {
+            padding: 50px 25px 30px;
+        }
+
+        .comment-item {
+            border-bottom: 1px solid rgba(244, 207, 158, 0.3);
+            display: flex;
+            min-height: 60px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+            position: relative;
+            .left {
+                padding: 15px 7px 0 5px;
+                .avatar-box {
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    .avatar {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                    .cap {
+                        width: 38px;
+                        height: 16.5px;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: -15px;
+                        z-index: -1;
+                    }
+                }
+            }
+            .mid {
+                flex: 1;
+                padding-left: 5px;
+                .user {
+                    font-size: 10px;
+                    opacity: 0.7;
+                    padding-bottom: 8px;
+                    .name {
+                    }
+                    .tag {
+                        display: inline-block;
+                        height: 13px;
+                        border-radius: 6.5px;
+                        line-height: 13px;
+                        padding: 0 7px;
+                        border: 1px solid $col-gold;
+                    }
+                }
+                .blessing {
+                    font-size: 14px;
+                }
+            }
+            .right {
+                position: absolute;
+                top: 10px;
+                right: 0;
+                .dots-btn {
+                    display: flex;
+                    width: 15px;
+                    justify-content: space-between;
+                    float: right;
+                    position: relative;
+                    .dot {
+                        width: 3.5px;
+                        height: 3.5px;
+                        border-radius: 50%;
+                        background: $col-gold;
+                        opacity: 0.5;
+                    }
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 30px;
+                        height: 7px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+                .btn-sue {
+                    height: 20px;
+                    line-height: 20px;
+                    border-radius: 10px;
+                    text-align: center;
+                    padding: 0 14px;
+                    background: $col-gold;
+                    color: #8d5726;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .footer-wrap {
+            padding: 0 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            margin-top: -10px;
+            .logo {
+                width: 122.5px;
+                height: 29px;
+                margin-bottom: 6px;
+            }
+            .code-wrap {
+                position: relative;
+                width: 77.5px;
+                height: 77.5px;
+            }
+            .qr-code {
+                width: 77.5px;
+                height: 77.5px;
+                border-radius: 50%;
+            }
+            .qr-txt {
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -30px;
+                text-align: center;
+            }
+        }
+        .pg-footer {
+            margin: 20px 0 0px;
+            text-align: center;
+            color: #f4cf9e;
+            .pg-bind {
+                font-size: 18px;
+                margin-bottom: 40px;
+                .pg-arrow {
+                    display: inline-block;
+                    width: 9px;
+                    height: 9px;
+                    border-top: 1px solid #f4cf9e;
+                    border-right: 1px solid #f4cf9e;
+                    transform: rotate(45deg);
+                    margin-bottom: 1px;
+                    margin-left: 1px;
+                }
+            }
+            .pg-mc {
+                .pg-icon {
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+                .pg-sp {
+                    font-size: 14px;
+                    margin-right: 2px;
+                    margin-left: 2px;
+                    vertical-align: middle;
+                }
+                .pg-pull {
+                    display: inline-block;
+                    font-size: 12px;
+                    border: 1px solid #f4cf9e;
+                    padding: 3px 10px;
+                    border-radius: 12px;
+                    vertical-align: middle;
+                    .pg-ar {
+                        display: inline-block;
+                        width: 4px;
+                        height: 4px;
+                        border-top: 1px solid #f4cf9e;
+                        border-right: 1px solid #f4cf9e;
+                        transform: rotate(45deg);
+                        margin-bottom: 2px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

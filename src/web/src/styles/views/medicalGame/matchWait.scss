@@ -1,0 +1,93 @@
+@import './common/color';
+
+.container {
+    background: #0059d5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: size(197px);
+    color: #fff;
+}
+
+.avatar-box {
+    height: size(417px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.img-outline {
+    width: size(280px);
+    height: size(280px);
+    border: 1px solid $green;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar {
+    width: size(238px);
+    height: size(238px);
+    display: block;
+    border-radius: 50%;
+}
+
+.line-box {
+    width: 100%;
+    height: size(417px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .line-out {
+        width: size(479px);
+        animation: rotateLeft 2s infinite;
+        animation-timing-function: linear;
+    }
+
+    .line-in {
+        width: size(384px);
+        animation: rotateRight 3s infinite;
+        animation-timing-function: linear;
+    }
+}
+
+.user-name {
+    font-family: 'PingFang-SC-Bold';
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: size(39px);
+}
+
+.state-msg {
+    font-family: 'PingFang-SC-Medium';
+    font-size: 12px;
+    text-align: center;
+    padding-top: size(59px);
+}
+
+@keyframes rotateLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

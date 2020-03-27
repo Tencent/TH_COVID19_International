@@ -1,0 +1,243 @@
+.dialog-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding-top: 0px;
+    z-index: 999;
+}
+
+.text-wrapper {
+    opacity: 0;
+    animation: show 1s 2.8s;
+    animation-fill-mode: forwards;
+}
+
+.fuqi-msg {
+    padding-top: 48px;
+    text-align: center;
+    // font-family: 'PingFangSC-Medium';
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.get-msg {
+    // font-family: 'PingFangSC-Regular';
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 46px;
+}
+
+.fudai-wrap {
+    margin: 0 auto;
+    width: 286px;
+    height: 225px;
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: updown 1s ease-in;
+
+    .fudai-body {
+        width: 286px;
+        height: 225px;
+        background: url('~assets/imgs/midYearReview/fudai.png') no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .fudai-head {
+        width: 122px;
+        height: 39px;
+        position: absolute;
+        top: -8px;
+        left: 75px;
+        background: url('~assets/imgs/midYearReview/fudai-head.png') no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+
+    .bag-left {
+        width: 39px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 80px;
+        background: url('~assets/imgs/midYearReview/red-bag-s.png') no-repeat;
+        background-size: contain;
+        opacity: 0;
+        z-index: -1;
+        animation: topToBottom 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .bag-middle {
+        width: 47px;
+        height: 63px;
+        position: absolute;
+        top: -14px;
+        left: 100px;
+        background: url('~assets/imgs/midYearReview/red-bag-m.png') no-repeat;
+        background-size: contain;
+        opacity: 0;
+        z-index: -1;
+        animation: topToBottom 1s ease-in;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .bag-right {
+        width: 47px;
+        height: 63px;
+        position: absolute;
+        top: -20px;
+        left: 130px;
+        background: url('~assets/imgs/midYearReview/red-bag-l.png') no-repeat;
+        background-size: contain;
+        opacity: 0;
+        z-index: -1;
+        animation: topToBottom 1s ease-in;
+        animation-delay: 1.8s;
+        animation-fill-mode: forwards;
+    }
+
+    .bag-s-left-line {
+        width: 20px;
+        height: 25px;
+        position: absolute;
+        top: -200px;
+        left: -50px;
+        background: url('~assets/imgs/midYearReview/red-bag-s.png') no-repeat;
+        background-size: contain;
+        opacity: 0;
+        z-index: -1;
+        animation: leftToBottom 1s ease-in;
+        animation-delay: 1s;
+    }
+
+    .bag-m-left-line {
+        width: 39px;
+        height: 50px;
+        position: absolute;
+        top: -200px;
+        left: -50px;
+        background: url('~assets/imgs/midYearReview/red-bag-s.png') no-repeat;
+        background-size: contain;
+        opacity: 0;
+        z-index: -1;
+        animation: leftToBottom 1s ease-in;
+        animation-delay: 1.8s;
+    }
+
+    .bag-s-right-line {
+        width: 24px;
+        height: 32px;
+        position: absolute;
+        top: -200px;
+        right: -50px;
+        background: url('~assets/imgs/midYearReview/red-bag-l.png') no-repeat;
+        background-size: contain;
+        opacity: 0;
+        z-index: -1;
+        animation: rightToBottom 1s ease-in;
+        animation-delay: 1s;
+    }
+
+    .bag-m-right-line {
+        width: 47px;
+        height: 63px;
+        position: absolute;
+        top: -200px;
+        right: -50px;
+        background: url('~assets/imgs/midYearReview/red-bag-l.png') no-repeat;
+        background-size: contain;
+        opacity: 0;
+        z-index: -1;
+        animation: rightToBottom 1s ease-in;
+        animation-delay: 1.8s;
+    }
+}
+
+.check-btn {
+    width: 178px;
+    height: 40px;
+    background-image: linear-gradient(90deg, #feb2a4 0%, #fd5e3b 100%);
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 49px;
+    position: absolute;
+    top: 460px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: show 1s 2.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes topToBottom {
+    0% {
+        top: -200px;
+        opacity: 0;
+    }
+    100% {
+        top: -8px;
+        opacity: 1;
+    }
+}
+
+@keyframes leftToBottom {
+    0% {
+        top: -200px;
+        left: -50px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes rightToBottom {
+    0% {
+        top: -200px;
+        right: -50px;
+        opacity: 0;
+    }
+    100% {
+        top: -20px;
+        right: 130px;
+        opacity: 1;
+    }
+}
+
+@keyframes updown {
+    0% {
+        top: -286px;
+    }
+    100% {
+        top: 300px;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

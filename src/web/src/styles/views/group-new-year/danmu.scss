@@ -1,0 +1,60 @@
+@import './common.scss';
+// 弹幕框架
+.baberrage-stage {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    .baberrage-top,
+    .baberrage-bottom {
+        padding-top: 40px;
+    }
+    .custom {
+        display: inline-block;
+        width: auto;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        transform: translate3d(0, -200px, 0);
+        .baberrage-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            z-index: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -30px;
+            overflow: visible;
+            &:after {
+                content: '';
+                display: block;
+                width: 38px;
+                height: 16.5px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -15px;
+                z-index: -1;
+                background: url('https://s.beta.gtimg.com/hospital_img/plus-lib/mysscard-mini/assets/img/group-new-year/card-page/cap.png')
+                    no-repeat;
+                background-size: contain;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+        }
+        .baberrage-msg {
+            height: 23.5px;
+            display: inline-block;
+            border-radius: 0 18.5px 18.5px 0;
+            background: $col-red;
+            color: #fff;
+            font-size: 14px;
+            font-family: PingFang-SC-Bold;
+            line-height: 23.5px;
+            padding: 0 13px 0 25px;
+            margin-left: -15px;
+        }
+    }
+}

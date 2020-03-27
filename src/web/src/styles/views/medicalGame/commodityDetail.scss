@@ -1,0 +1,161 @@
+@import './common/color';
+
+.commodity-detail {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fbfbfb;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .banner-box {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 64.53%;
+        .wrapper {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+                .swiper-pagination {
+                    position: relative;
+                    bottom: 25%;
+                }
+            }
+        }
+        .share {
+            position: absolute;
+            right: 0;
+            top: 13.86%;
+            z-index: 999;
+            text-align: center;
+            line-height: 19px;
+            font-size: 12px;
+            width: 50px;
+            height: 19px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            color: $fff;
+            background-color: $green;
+        }
+    }
+
+    .commodity-msg {
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+        // background-color: #fbfbfb;
+        .msg-box {
+            padding: 0 15px;
+            position: relative;
+            top: -34px;
+            z-index: 9;
+            .msg-top,
+            .msg-content {
+                padding: 20px 15px 42px;
+            }
+            .msg-top {
+                margin-bottom: 15px;
+                border-radius: 3px;
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+                background-color: $fff;
+            }
+            .msg-detail {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .msg-detail-left {
+                    .msg-detail-gold {
+                        padding-bottom: 12px;
+                        span {
+                            display: inline-block;
+                            vertical-align: bottom;
+                            padding-right: 8px;
+                        }
+                        .gold {
+                            font-size: 12px;
+                            color: #333333;
+                        }
+                        .price {
+                            font-size: 12px;
+                            margin-left: -10px;
+                            transform: scale(0.75);
+                            text-decoration: line-through;
+                            color: #999999;
+                        }
+                    }
+                    .msg-detail-title {
+                        font-size: 16px;
+                        color: #1a1a1a;
+                        font-weight: bold;
+                    }
+                }
+                .msg-detail-right {
+                    .msg-detail-num {
+                        font-size: 12px;
+                        line-height: 20px;
+                        color: #999999;
+                    }
+                }
+            }
+        }
+
+        .msg-content {
+            padding-bottom: 56px;
+            border-radius: 3px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+            background-color: $fff;
+            .content-space {
+                padding: 13px 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            .content-space:nth-last-child(1) {
+                border: none;
+            }
+            .content-title {
+                padding-top: 0;
+                font-size: 16px;
+                color: #1a1a1a;
+                font-weight: bold;
+            }
+            .content-box {
+                font-size: 12px;
+                .content-box-title {
+                    padding-bottom: 9px;
+                    color: #1a1a1a;
+                    font-weight: bold;
+                }
+                .content-box-detail {
+                    line-height: 19px;
+                    color: #666666;
+                }
+            }
+        }
+
+        .msg-button {
+            position: fixed;
+            z-index: 10;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 16px;
+            color: $fff;
+            background-color: $green;
+        }
+    }
+}

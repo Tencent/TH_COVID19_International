@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------
+// icon.scss
+//-----------------------------------------------------
+
+.ww-icon-arrow-left {
+    position: relative;
+    &::after {
+        @include triangle(left);
+    }
+}
+
+.ww-icon-arrow-right {
+    position: relative;
+    &::after {
+        @include triangle(right);
+    }
+}
+
+.ww-icon-search {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid $color9;
+        height: 12px;
+        width: 12px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        margin-left: -2px;
+        margin-top: -2px;
+    }
+    &::after {
+        content: '';
+        background: $color9;
+        height: 6px;
+        width: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: 4px;
+        margin-top: 4px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}

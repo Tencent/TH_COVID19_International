@@ -1,0 +1,317 @@
+@import './common/color.scss';
+
+.page-region {
+    .page-box {
+        width: 100%;
+        height: 100%;
+        background-color: $blue;
+    }
+    .bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #0059d5;
+        z-index: -1;
+    }
+    .page-boxs {
+        width: 90%;
+        height: 45px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        padding-top: 20px;
+        .ld-lead {
+            width: 49%;
+            height: 45px;
+            color: $fff;
+            text-align: center;
+            line-height: 45px;
+            background-color: $blue;
+            border: 1px solid $green;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            float: left;
+            font-size: 16px;
+        }
+        .ld-region {
+            width: 49%;
+            height: 45px;
+            color: $fff;
+            text-align: center;
+            line-height: 45px;
+            float: left;
+            background-color: $green;
+            border: 1px solid $green;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            font-size: 16px;
+        }
+    }
+    .ld-my {
+        width: 85%;
+        height: 70px;
+        background-color: $fff;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        line-height: 70px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 5%;
+        margin-left: 5%;
+        .ld-name {
+            width: 70%;
+            height: 70px;
+            float: left;
+            .ld-reput {
+                display: inline-block;
+                float: left;
+                font-size: 14px;
+                margin-right: 11%;
+            }
+            .ld-head {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                border-radius: 50%;
+                float: left;
+                margin-top: 10px;
+            }
+            .ld-miunter {
+                font-size: 12px;
+                width: 22%;
+                float: left;
+                margin-left: 3%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .ld-xiuner {
+                font-size: 12px;
+                color: #999999;
+                margin-left: 5px;
+            }
+        }
+        .ld-feng {
+            .ld-veriter {
+                position: absolute;
+                top: -2px;
+                right: 12%;
+                font-size: 14px;
+            }
+            .ld-golder {
+                width: 18px;
+                height: 18px;
+                margin: 3px 15px 0 10px;
+            }
+        }
+    }
+    .ld-container {
+        width: 90%;
+        // height: 100%;
+        background-color: $fff;
+        border-radius: 5px;
+        margin-left: 5%;
+        margin-bottom: 25px;
+        .ld-banner {
+            width: 100%;
+            height: 100%;
+            .ld-nav {
+                width: 100%;
+                height: 160px;
+                padding: 30px 0;
+                .ld-two {
+                    width: 33%;
+                    height: 160px;
+                    text-align: center;
+                    float: left;
+                    position: relative;
+                    .ld-logo {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 2px solid #c3d2e0;
+                        position: absolute;
+                        top: 5px;
+                        left: 23%;
+                    }
+                    .ld-logos {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        margin-top: -10px;
+                        border: 2px solid #f9d114;
+                        position: absolute;
+                        top: 9px;
+                        left: 17.5%;
+                    }
+                    .ld-logor {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 2px solid #f6a776;
+                        position: absolute;
+                        top: 5px;
+                        left: 23%;
+                    }
+                    .ld-runner {
+                        width: 40px;
+                        height: 26px;
+                        position: absolute;
+                        top: -19px;
+                        left: 33%;
+                    }
+                    .ld-runners {
+                        width: 40px;
+                        height: 26px;
+                        position: absolute;
+                        top: -26px;
+                        left: 32.5%;
+                    }
+                    .ld-weight {
+                        color: #1a1a1a;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        position: absolute;
+                        top: 77px;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .ld-weights {
+                        color: #1a1a1a;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        position: absolute;
+                        top: 77px;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .ld-weighter {
+                        color: #1a1a1a;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        position: absolute;
+                        top: 77px;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .ld-radio {
+                        color: #0059d5;
+                        font-size: 20px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 117px;
+                        width: 100%;
+                    }
+                    .ld-radios {
+                        color: #0059d5;
+                        font-size: 24px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 115px;
+                        width: 100%;
+                    }
+                    .ld-radior {
+                        color: #0059d5;
+                        font-size: 20px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 117px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .ld-conter {
+            padding-left: 5%;
+            .ld-mys {
+                width: 100%;
+                height: 90px;
+                background-color: $fff;
+                border-radius: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                line-height: 95px;
+                position: relative;
+                border-top: 1px solid #f0f0f0;
+                .ld-name {
+                    width: 70%;
+                    height: 70px;
+                    margin: -5px 2%;
+                    .ld-reput {
+                        display: inline-block;
+                        position: absolute;
+                        top: -2px;
+                    }
+                    .ld-head {
+                        width: 50px;
+                        height: 50px;
+                        display: inline-block;
+                        border-radius: 50%;
+                        margin-top: 5px;
+                        position: absolute;
+                        top: 15px;
+                        left: 14%;
+                    }
+                    .ld-miunter {
+                        position: absolute;
+                        left: 29%;
+                        top: -1px;
+                        font-size: 12px;
+                        margin-left: 3%;
+                        width: 40%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 12px;
+                    }
+                }
+                .ld-feng {
+                    width: 30%;
+                    height: 70px;
+                    .ld-veriter {
+                        position: absolute;
+                        top: -2px;
+                        right: 12%;
+                        font-size: 14px;
+                    }
+                    .ld-golder {
+                        width: 18px;
+                        height: 18px;
+                        position: absolute;
+                        top: 35px;
+                        right: 4%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 736px) and (min-height: 668px) {
+    .page-box {
+        height: 100%;
+        background-color: $blue;
+    }
+    .ld-container {
+        margin-bottom: 13px !important;
+    }
+}
+@media screen and (max-height: 812px) and (min-height: 737px) {
+    .page-box {
+        height: 950px !important;
+        background-color: $blue;
+    }
+    .ld-container {
+        margin-bottom: 13px !important;
+    }
+}

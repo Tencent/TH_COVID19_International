@@ -1,0 +1,31 @@
+@import '../base/fn.scss';
+
+.tab-list {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 34px;
+    line-height: 48px;
+    background-color: #fff;
+    .tab-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        .tab-txt {
+            position: relative;
+            display: inline-block;
+            padding: 20px 0;
+        }
+        &.active {
+            .tab-txt {
+                font-weight: $font-medium;
+                color: $color-primary;
+                &::before {
+                    @include one-px-border(bottom);
+                    border-width: 8px;
+                    border-color: $color-primary;
+                }
+            }
+        }
+    }
+}

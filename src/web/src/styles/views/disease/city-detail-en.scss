@@ -1,0 +1,76 @@
+.page-citydetail {
+    &.page-citydetail {
+        .epanel {
+            border-bottom: none;
+        }
+        .epanel--tools .title-bar .title {
+            font-size: 14px;
+            word-wrap: break-word;
+            word-break: normal;
+            max-width: calc(100% - 70px);
+        }
+        .panel-dashboard-val {
+            height: 24px;
+            line-height: 24px;
+        }
+        .panel-dashboard-item,
+        .panel-dashboard-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .panel-dashboard-tit {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .panel-dashboard-text {
+                font-size: 10px;
+            }
+        }
+        // .epanel--tools .title-bar .sub-title {
+        //     font-size: 8px;
+        // }
+        .ve-table-box .ve-tt {
+            max-width: 50%;
+            word-wrap: break-word;
+            word-break: normal;
+            font-size: 12px;
+        }
+        .chat-tab-item {
+            font-size: 8px;
+        }
+        table.datalist-detail thead th:nth-child(2) {
+            // width: auto;
+            padding-left: 0;
+        }
+        table.datalist-detail tbody td:first-child .cell p {
+            width: 65px;
+        }
+        table.datalist-detail thead th:last-child {
+            padding-right: 3px;
+            white-space: unset;
+        }
+
+        table.datalist-detail thead th:not(:first-child) {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        table.datalist-detail.foreign-datalist-detail tbody td:first-child .cell p {
+            width: 70px;
+            word-wrap: break-word;
+            word-break: normal;
+        }
+        table.datalist-detail.foreign-datalist-detail thead th:nth-child(2) {
+            padding-left: 0;
+        }
+        .panel-dashboard-item.item--new .val-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .panel-dashboard-item .txt-cn {
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+}

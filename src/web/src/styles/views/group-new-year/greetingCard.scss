@@ -1,0 +1,47 @@
+.page-greetingCard {
+    font-family: fangzheng;
+    .bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff6e6;
+        z-index: -1;
+    }
+    .gc-container {
+        padding: 20px;
+        margin-top: 50px;
+        .gc-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 18px 15px 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            .gc-title {
+                .gc-name {
+                    font-size: 16px;
+                    color: #523b1b;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                }
+                .gc-time {
+                    font-size: 12px;
+                    color: #523b1b;
+                    line-height: 24px;
+                    opacity: 0.45;
+                }
+            }
+            .gc-arrow {
+                width: 9px;
+                height: 9px;
+                border-top: 1px solid #523b1b;
+                border-right: 1px solid #523b1b;
+                transform: rotate(45deg);
+                margin-top: 22px;
+            }
+        }
+    }
+}

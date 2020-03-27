@@ -1,0 +1,171 @@
+.icon-arrow-right {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg);
+}
+.icon-arrow-up {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(225deg);
+    position: relative;
+    top: 4px;
+}
+.icon-arrow-down {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    position: relative;
+    top: -4px;
+}
+.icon-arrow-right-full {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 12px solid $color-primary;
+    border-left: 8px dashed transparent;
+    border-right: 8px dashed transparent;
+}
+.icon-clear {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #b2b2b2;
+    border-radius: 50%;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        bottom: 0;
+        right: 6px;
+        border-bottom: 2px solid #fff;
+        transform: translate3d(0, -14px, 0) rotate(45deg);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        bottom: 0;
+        right: 6px;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-45deg);
+        transform: translate3d(0, -14px, 0) rotate(-45deg);
+    }
+}
+.icon-close {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    padding: 20px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 2px;
+        height: 32px;
+        margin-left: -16px;
+        margin-top: -16px;
+        background-color: #000;
+        transform: translate3d(20px, 0, 0) rotate(45deg);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 2px;
+        height: 32px;
+        margin-left: -16px;
+        margin-top: -16px;
+        background-color: #000;
+        transform: translate3d(20px, 0, 0) rotate(-45deg);
+    }
+}
+.icon-check-right {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 16px;
+    border-left: 4px solid $color-primary;
+    border-bottom: 4px solid $color-primary;
+    transform: translate3d(0, 12px, 0) rotate(-45deg);
+}
+.icon-delete {
+    display: inline-block;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    width: 26px;
+    height: 26px;
+    background-color: #f13636;
+    border-radius: 50%;
+    z-index: 99;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 12px;
+        height: 4px;
+        transform: translate3d(-50%, -50%, 0);
+        background-color: #fff;
+    }
+}
+.icon-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-left: 8px;
+}
+.icon-camera {
+    display: inline-block;
+    width: 41px;
+    height: 32px;
+    background: url('https://static.wecity.qq.com/waphealthcard/camera-c5edd5f3d27c9e5fcd0c2b17fb093a44.png') center
+        center no-repeat;
+    background-size: 100% 100%;
+}
+.icon-warn {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url('https://static.wecity.qq.com/waphealthcard/warn-ab5096c1baa6b9e06fde1ec23f69aea0.png') center
+        center no-repeat;
+    background-size: 100% 100%;
+}
+
+// 下拉箭头
+.icon-arrow-down {
+    margin: 0 16px;
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-right: 2px solid #5675f1;
+    border-bottom: 2px solid #5675f1;
+    transform: rotate(45deg);
+    position: relative;
+    top: -4px;
+}
+
+// 上拉箭头
+.icon-arrow-up:extend(.icon-arrow-down) {
+    transform: rotate(225deg);
+    top: 4px;
+}

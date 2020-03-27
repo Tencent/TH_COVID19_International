@@ -1,0 +1,112 @@
+.common-dialog {
+    z-index: 6000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .dialog {
+        position: fixed;
+        z-index: 5000;
+        top: 50%;
+        left: 16px;
+        right: 16px;
+        transform: translate(0, -50%);
+        background-color: #ffffff;
+        text-align: center;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        max-height: 90%;
+        .dialog-hd {
+            padding: 32px 24px 16px;
+            .dialog-hd-title {
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 1.4;
+            }
+        }
+        .dialog-bd {
+            overflow-y: auto;
+            padding: 0 24px;
+            margin-bottom: 32px;
+            font-size: 17px;
+            line-height: 1.4;
+            word-wrap: break-word;
+            hyphens: auto;
+            color: rgba(0, 0, 0, 0.5);
+            &.text-left {
+                text-align: left;
+            }
+        }
+        .dialog-ft {
+            position: relative;
+            line-height: 56px;
+            min-height: 56px;
+            font-size: 17px;
+            display: flex;
+            .btn {
+                display: block;
+                flex: 1;
+                color: #576b95;
+                font-weight: 700;
+                text-decoration: none;
+                position: relative;
+                &.default {
+                    color: rgba(0, 0, 0, 0.9);
+                }
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 1px;
+                    bottom: 0;
+                    border-left: 1px solid rgba(0, 0, 0, 0.1);
+                    color: rgba(0, 0, 0, 0.1);
+                    transform-origin: 0 0;
+                    transform: scaleX(0.5);
+                }
+                &:active {
+                    background-color: #ececec;
+                }
+            }
+            &::after {
+                content: ' ';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                height: 1px;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                color: rgba(0, 0, 0, 0.1);
+                transform-origin: 0 0;
+                transform: scaleY(0.5);
+            }
+        }
+
+        .dialog-bd {
+            &.text-left {
+                font-size: 14px;
+                color: #333;
+                line-height: 1.6;
+                margin-bottom: 15px;
+                p {
+                    padding-bottom: 6px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+.mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}

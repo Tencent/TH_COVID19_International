@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@import '~styles/lib/weui-v2.1.4.min.css';
+@import './variables';
+
+@media (min-width: 900px) {
+    .container {
+        width: 450px;
+        margin: 0 auto;
+    }
+}

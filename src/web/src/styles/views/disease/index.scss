@@ -1,0 +1,620 @@
+.icon-question {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    background-image: url(//static2.baike.qq.com/yidian/production/_nuxt/img/ask.478c4bb.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+
+.disease {
+    padding-bottom: 50px;
+    .head {
+        padding-top: 3.5px;
+        padding-bottom: 12px;
+        background-image: linear-gradient(180deg, #5391ff 0%, #33cfe7 100%);
+        .statistics {
+            text-align: center;
+            line-height: 14px;
+            opacity: 0.8;
+            font-family: PingFangSC-Regular;
+            font-size: 10px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        .type {
+            display: flex;
+            margin-bottom: 14px;
+            > div {
+                width: 33.3%;
+                position: relative;
+            }
+            > div:before {
+                background: #dfdfdf;
+                content: '';
+                width: 1px;
+                height: 29px;
+                position: absolute;
+                opacity: 0.5;
+                right: 0px;
+                top: 5px;
+            }
+            > div:last-child:before {
+                content: '';
+                width: 0px;
+                height: 0px;
+            }
+            .item-num {
+                width: 100%;
+                line-height: 24px;
+                font-family: DINAlternate-Bold;
+                font-size: 21px;
+                color: #ffffff;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            .item-type {
+                width: 100%;
+                line-height: 16px;
+                opacity: 0.8;
+                font-family: PingFangSC-Regular;
+                font-size: 14px;
+                color: #ffffff;
+                text-align: center;
+            }
+        }
+        .district {
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 20px;
+            margin-bottom: 9px;
+        }
+        .unfold,
+        .pack {
+            height: 17px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.8;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .pack {
+            margin-bottom: 0px;
+        }
+        .arrow {
+            margin-left: 5px;
+            display: inline-block;
+            border-top: 1px solid;
+            border-right: 1px solid;
+            width: 6px;
+            height: 6px;
+            border-color: #ffffff;
+        }
+        .arrow-top {
+            margin-top: 5px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        .arrow-bottom {
+            margin-top: -2px;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+    }
+    .tabs {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #dfdfdf;
+        display: flex;
+        > div {
+            width: 33.3%;
+            text-align: center;
+            position: relative;
+            font-family: PingFangSC-Regular;
+            font-size: 16px;
+            color: #000000;
+        }
+        .active {
+            color: #000000;
+        }
+        .active:before {
+            border-bottom: 2px solid #000000;
+            position: absolute;
+            content: '';
+            width: 46px;
+            height: 0px;
+            left: 50%;
+            margin-left: -23px;
+            bottom: 0px;
+        }
+    }
+    // 实时通报
+    .tab-content1 {
+        padding: 0px 15px;
+        padding-top: 17px;
+        .city-box {
+            background: #fff9e8;
+            border-radius: 5px;
+            padding: 8px 15px 14px 15px;
+            margin-bottom: 19px;
+            .title {
+                font-family: PingFangSC-Medium;
+                font-size: 14px;
+                color: #916c2b;
+                margin-bottom: 10px;
+            }
+            .city {
+                display: flex;
+                justify-content: space-between;
+                > div {
+                    width: 70px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #fea100;
+                    border-radius: 5px;
+                    font-family: PingFangSC-Medium;
+                    font-size: 14px;
+                    color: #fff9e8;
+                }
+                > div:last-child {
+                    i {
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        background: #fff9e8;
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+        .dynamic {
+            display: flex;
+            .content-left {
+                width: 12px;
+                margin-right: 13px;
+                position: relative;
+                .dot {
+                    top: 5px;
+                    left: 0px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: #949ab4;
+                    position: absolute;
+                    z-index: 99;
+                }
+                .line {
+                    top: 5px;
+                    left: 4px;
+                    width: 4px;
+                    position: absolute;
+                    height: 100%;
+                    background: #f2f2f2;
+                }
+            }
+            .content-right {
+                flex: 1;
+                margin-bottom: 30px;
+                background: #f7f7f7;
+                .time {
+                    display: flex;
+                    height: 25px;
+                    line-height: 25px;
+                    justify-items: center;
+                    margin-bottom: 11px;
+                    > div {
+                        font-family: PingFangSC-Medium;
+                        font-size: 14px;
+                        color: #ffffff;
+                        padding: 0px 12.5px;
+                        height: 25px;
+                        text-align: center;
+                        background: #949ab4;
+                        margin-right: 5px;
+                    }
+                }
+                .title {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    line-height: 23px;
+                    font-family: PingFangSC-Regular;
+                    font-size: 16px;
+                    color: #000000;
+                    margin-bottom: 9px;
+                }
+                .text {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    font-family: PingFangSC-Regular;
+                    font-size: 14px;
+                    color: #999999;
+                    letter-spacing: 0;
+                    line-height: 22x;
+                    margin-bottom: 10px;
+                }
+                .source {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    line-height: 20px;
+                    font-family: PingFangSC-Regular;
+                    font-size: 14px;
+                    color: #000000;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .dynamic:nth-child(2) {
+            .content-left {
+                .dot {
+                    background: #f25768;
+                }
+            }
+            .content-right {
+                .time {
+                    > div {
+                        font-family: PingFangSC-Medium;
+                        font-size: 14px;
+                        color: #ffffff;
+                        padding: 0px 12.5px;
+                        height: 25px;
+                        text-align: center;
+                        background: #f25768;
+                        margin-right: 5px;
+                    }
+                    > span {
+                        font-family: PingFangSC-Medium;
+                        font-size: 14px;
+                        color: #f25768;
+                    }
+                }
+            }
+        }
+    }
+    // 如何预防
+    .tab-content2 {
+        .prevention {
+            width: 100%;
+        }
+        .question-list {
+            padding: 24px;
+        }
+        .question-item {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            .title {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 12px;
+                .txt {
+                    flex: 1;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .content {
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.45);
+                line-height: 24px;
+                margin-bottom: 8px;
+                word-break: break-all;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            .more {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.85);
+                position: relative;
+                text-align: right;
+                padding-right: 20px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 8px;
+                    width: 6px;
+                    height: 6px;
+                    margin-left: 5px;
+                    border-top: 1px solid #000;
+                    border-right: 1px solid #000;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    // 就诊指引
+    .tab-content3 {
+        background: #f7f7f7;
+        padding: 0px 10px;
+        padding-bottom: 30px;
+        padding-top: 0.1px;
+        .item {
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 20px;
+            position: relative;
+            .icon {
+                top: 0px;
+                left: 0px;
+                width: 32px;
+                height: 32px;
+                position: absolute;
+            }
+            .title {
+                line-height: 28px;
+                font-family: PingFangSC-Semibold;
+                font-size: 20px;
+                color: #000000;
+                margin-bottom: 23.5px;
+            }
+            .text {
+                line-height: 26px;
+                font-family: PingFangSC-Regular;
+                font-size: 16px;
+                color: #000000;
+                margin-bottom: 5px;
+            }
+            .ul {
+                .li {
+                    font-family: PingFangSC-Medium;
+                    font-size: 16px;
+                    color: #000000;
+                    line-height: 35px;
+                    display: flex;
+                    i {
+                        margin-top: 15px;
+                        display: inline-block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        margin-right: 14px;
+                    }
+                }
+            }
+        }
+        .item1 {
+            padding: 33px 25px 33px 30px;
+            .ul {
+                .li {
+                    i {
+                        background: #f25768;
+                    }
+                }
+            }
+        }
+        .item2 {
+            padding: 31px 25px 33px 30px;
+            .ul {
+                .li {
+                    i {
+                        background: #86dff1;
+                    }
+                }
+            }
+        }
+        .item3 {
+            padding-top: 33px;
+            .title {
+                padding: 0px 25px 0px 30px;
+            }
+            .city-item {
+                display: flex;
+                flex-wrap: wrap;
+                > div {
+                    width: 33.3%;
+                    height: 50px;
+                    box-sizing: border-box;
+                    border-top: 1px solid #f2f2f2;
+                    border-right: 1px solid #f2f2f2;
+                    display: flex;
+                    justify-content: center;
+                    font-family: PingFangSC-Medium;
+                    font-size: 14px;
+                    color: #000000;
+                    align-items: center;
+                    i {
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background: #fea100;
+                        margin-right: 3.5px;
+                    }
+                }
+                .last-div {
+                    border-right: none;
+                }
+            }
+        }
+        .item4 {
+            .title {
+                font-family: PingFangSC-Semibold;
+                font-size: 20px;
+                color: #000000;
+                border-radius: 10px 10px 0px 0px;
+                height: 96px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0px;
+                background-image: linear-gradient(180deg, #dddddd 0%, #ebebeb 100%);
+            }
+            .table {
+                .table-item {
+                    border-top: 1px solid #f2f2f2;
+                    display: flex;
+                    > div {
+                        box-sizing: border-box;
+                        width: 25%;
+                        line-height: 20px;
+                        font-family: PingFangSC-Medium;
+                        font-size: 14px;
+                        color: #000000;
+                        padding: 20px 10px;
+                        border-left: 1px solid #f2f2f2;
+                    }
+                    > div:first-child {
+                        padding: 0px 6px;
+                        border-left: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .table-item:first-child {
+                    border-top: none;
+                }
+            }
+        }
+    }
+    // 分享
+    .btn-box {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: flex;
+        font-size: 16px;
+        z-index: 100;
+        border-top: 1px solid #39c3eb;
+        .consult {
+            flex: 1;
+            background: #ffffff;
+            color: #39c3eb;
+        }
+        .share {
+            flex: 1;
+            background: #39c3eb;
+            color: #ffffff;
+        }
+    }
+    // 分享遮罩
+    .gudie-mask {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        .txt {
+            position: absolute;
+            top: 70px;
+            right: 40px;
+            color: #fff;
+            font-size: 18px;
+        }
+        .arrow {
+            width: 34px;
+            height: 43px;
+            background: url('https://s.beta.gtimg.com/hospital_img/plus-lib/mysscard-mini/assets/img/group-new-year/card-page/arrow.png')
+                no-repeat;
+            background-size: contain;
+            transform: scaleX(-1) rotate(180deg);
+            position: absolute;
+            top: 10px;
+            right: 55px;
+        }
+    }
+    // 城市遮罩
+    .cover-box {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 99999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cover {
+            width: 315px;
+            min-height: 260px;
+            background: #fff;
+            .shut-down {
+                height: 27px;
+                font-size: 20px;
+                padding-right: 7px;
+                color: #a1a1a1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .title {
+                font-family: PingFangSC-Medium;
+                font-size: 16px;
+                line-height: 23px;
+                color: #000000;
+                text-align: center;
+                margin-bottom: 4px;
+            }
+            .tips {
+                text-align: center;
+                font-family: PingFangSC-Medium;
+                font-size: 14px;
+                color: #737373;
+                margin-bottom: 21px;
+            }
+            .city-list {
+                padding: 0px 22.5px;
+                display: flex;
+                flex-wrap: wrap;
+                > div {
+                    width: 80px;
+                    height: 35px;
+                    background: #f2f2f2;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: PingFangSC-Medium;
+                    font-size: 14px;
+                    color: #000000;
+                    margin-bottom: 15px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+                > div:nth-child(3),
+                > div:nth-child(6),
+                > div:nth-child(9) {
+                    margin-right: 0px;
+                }
+                .active {
+                    background: #39c3eb;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+.bless-popup {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    margin-top: 30px;
+    .img {
+        width: 100px;
+    }
+}

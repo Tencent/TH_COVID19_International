@@ -1,0 +1,70 @@
+@import '../common/mixin-user.scss';
+@import '../common/variables-user.scss';
+
+input::-webkit-input-placeholder {
+    color: $color-text-2;
+    text-align: right;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: $color-fill-bg-light;
+}
+.weui-cells__group_form .weui-cells:after {
+    left: 0;
+    right: 0;
+}
+.weui-cells {
+    margin-top: 0;
+    &::before {
+        display: none;
+    }
+}
+.weui-cell {
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    padding: 19px 20px;
+    &::before {
+        left: 0;
+        right: 0;
+    }
+}
+.weui-select__wrap {
+    padding-right: 15px;
+    .weui-select {
+        text-align: right;
+        text-align-last: right;
+        &.unselect {
+            color: $color-text-2;
+        }
+    }
+}
+.weui-select {
+    height: 22px;
+    line-height: 22px;
+}
+.weui-cells__group_form .weui-cell_select .weui-select {
+    padding: 0;
+}
+.weui-cells__group_form .weui-cell__hd {
+    padding-right: 0;
+}
+.weui-cell_select-before .weui-cell__hd:after {
+    display: none;
+}
+.weui-cell_select-before .weui-select {
+    width: 103px;
+}
+.weui-cell_select-before .weui-cell__hd:before {
+    right: 8px;
+}
+.weui-input {
+    text-align: right;
+}
+.weui-cells__group_form .weui-cell_select .weui-cell__bd:after {
+    right: 15px;
+}
+.btn-area {
+    margin-top: 20px;
+}

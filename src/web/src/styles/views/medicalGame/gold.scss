@@ -1,0 +1,115 @@
+@import './common/color.scss';
+
+.page-gold {
+    height: 100%;
+    padding: 5%;
+    background-color: $blue;
+    .bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $blue;
+        z-index: -1;
+    }
+
+    .mg-container {
+        height: 180px;
+        margin-top: 50px;
+        background-color: $fff;
+        position: relative;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        img {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            border: 1px solid $fff;
+            background-color: $fff;
+            border-radius: 50%;
+            left: 43%;
+            top: -14%;
+        }
+        .mg-notice {
+            position: absolute;
+            left: 37%;
+            top: 23%;
+            color: $blue;
+            width: 30%;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+        .mg-gold {
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            bottom: 0;
+            .mg-my {
+                width: 49%;
+                height: 50px;
+                text-align: center;
+                float: left;
+                border-right: 1px solid #efefef;
+            }
+            .mg-exchange {
+                width: 50%;
+                height: 80px;
+                text-align: center;
+                float: left;
+                color: #666666;
+            }
+            .mg-pro {
+                margin-bottom: 15px;
+                color: #666666;
+                font-size: 12px;
+            }
+            .mg-span {
+                font-weight: bold;
+                font-size: 22px;
+                color: #000;
+            }
+        }
+    }
+
+    .mg-conter {
+        // height: 260px;
+        background-color: $fff;
+        border-radius: 5px;
+        ul {
+            padding: 5px 5%;
+        }
+        .mg-item {
+            height: 20%;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+            .mg-left {
+                width: 70%;
+                margin-bottom: 10px;
+            }
+            .mg-right {
+                line-height: 36px;
+                font-size: 12px;
+            }
+            .mg-random {
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
+            .mg-time {
+                color: #999999;
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

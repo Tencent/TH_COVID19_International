@@ -1,0 +1,89 @@
+@import './base/fn.scss';
+@import './widgets/search-bar.scss';
+@import './widgets/icon.scss';
+@import './widgets/dropdown.scss';
+
+.container-hospitallist {
+    min-height: 100vh;
+    background-color: $color-bg-gray;
+    .dropdown-wrap {
+        margin-bottom: 20px;
+    }
+    .dropdown-tab {
+        &::before {
+            @include one-px-border(top);
+        }
+        &::after {
+            @include one-px-border(bottom);
+        }
+    }
+    .hospital-list {
+        position: relative;
+        .hospital-item {
+            background-color: $color-bg-white;
+            display: flex;
+            justify-content: space-between;
+            padding: 28px 40px 30px 50px;
+            position: relative;
+            .hospital-item-left {
+                .item-left-hd {
+                    display: flex;
+                    align-items: center;
+                    .title {
+                        font-size: 28px;
+                        letter-spacing: -0.01px;
+                        line-height: 40px;
+                        font-weight: $font-medium;
+                    }
+                    .tag {
+                        display: flex;
+                        align-items: center;
+                        background-color: #f6f9ff;
+                        border-radius: 8px;
+                        height: 34px;
+                        padding: 0 10px;
+                        margin-left: 24px;
+                        .txt {
+                            font-size: 24px;
+                            color: #426ef5;
+                            line-height: 32px;
+                            font-weight: $font-medium;
+                            margin-right: 6px;
+                        }
+                    }
+                }
+                .item-left-bd {
+                    margin-top: 12px;
+                    font-size: 24px;
+                    color: #9b9b9b;
+                }
+                .item-left-ft {
+                    margin-top: 4px;
+                    font-size: 24px;
+                    color: #9b9b9b;
+                }
+            }
+            .hospital-item-right {
+                .distance {
+                    font-size: 24px;
+                    color: #9b9b9b;
+                    line-height: 32px;
+                }
+            }
+            &::after {
+                // @include one-px-border(bottom); 真机测试时有时无，暂时先注释
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                border-bottom: 1px solid #dfdfdf;
+                transform: scaleY(0.5);
+            }
+        }
+        &::before {
+            @include one-px-border(top);
+        }
+    }
+}

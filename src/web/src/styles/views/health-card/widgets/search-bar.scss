@@ -1,0 +1,54 @@
+@import '../base/fn.scss';
+
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 30px;
+    background-color: #fff;
+    z-index: 9999;
+
+    .search-box {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        height: 72px;
+        border-radius: 36px;
+        padding: 0 26px;
+        background-color: $color-bg-gray;
+
+        .input-box {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            .input {
+                width: calc(100% - 50px);
+                position: relative;
+                padding-left: 42px;
+                background: url('https://static.wecity.qq.com/h5/2020-2/search-4d36ad820be42c1925f9650971b2f26b.png') 0
+                    center no-repeat;
+                background-size: 28px 28px;
+                outline: none;
+                border: none;
+                color: #000;
+                margin-right: 20px;
+                font-size: 28px;
+                height: 40px;
+                line-height: 40px;
+
+                &::-webkit-input-placeholder {
+                    color: #888;
+                }
+            }
+        }
+    }
+
+    .search-btn {
+        font-size: 32px;
+        line-height: 44px;
+        color: #576b95;
+        margin-left: 16px;
+    }
+}

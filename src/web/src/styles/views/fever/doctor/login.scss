@@ -1,0 +1,141 @@
+@import '../common/mixin.scss';
+@import '../common/variables.scss';
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.weui-form {
+    padding-top: 0;
+    background-color: #fff;
+}
+.weui-form__text-area {
+    height: 195px;
+    width: 100%;
+    background: url('https://static.wecity.qq.com/wapdisease/登陆图片-9c4b094502f830b0ef5579b2a0fb93da.png') top center
+        no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 0;
+    .title-box {
+        display: inline-block;
+        position: relative;
+        top: -10px;
+        color: #fff;
+        .sub-tt {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 6px;
+        }
+        .tt {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        .icon-quote {
+            position: absolute;
+            left: -18px;
+            top: -6px;
+            width: 15px;
+            height: 11px;
+            &.revert {
+                left: auto;
+                top: auto;
+                right: -24px;
+                bottom: -10px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .label {
+        position: relative;
+        top: -10px;
+        width: 55px;
+        height: 20px;
+        margin: 0 auto;
+        line-height: 20px;
+        text-align: center;
+        opacity: 0.9;
+        background: #ffffff;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #00a7ff;
+        margin-top: 9px;
+    }
+}
+.weui-form__control-area {
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: -20px;
+}
+.weui-cells {
+    margin-top: 0;
+    padding-top: 50px;
+    &::before {
+        display: none;
+    }
+}
+.weui-cell {
+    padding: 8px 53px;
+}
+.weui-cells_form {
+    background-color: #fff;
+    font-size: 16px;
+}
+.weui-label {
+    width: 64px;
+}
+.weui-cell__ft {
+    position: relative;
+    padding-left: 10px;
+    &::before {
+        @include one-px-border(left);
+        top: 5px;
+        bottom: 5px;
+    }
+}
+.weui-cells__group_form .weui-vcode-btn {
+    background-color: #fff;
+    color: $color-text-4;
+    padding: 0;
+}
+.weui-cells__group_form .weui-cell:before {
+    left: 30px;
+    right: 30px;
+}
+.button-sp-area {
+    margin: 75px 30px 0;
+}
+.weui-btn_primary {
+    background: #cacaca;
+    background-image: linear-gradient(269deg, #2c52ee 0%, #00b0ff 100%);
+    border-radius: 5px;
+}
+.weui-form__tips-area {
+    line-height: 1;
+    margin-top: 32px;
+}
+.weui-agree__text {
+    font-size: 12px;
+    color: $color-text-2;
+}
+.weui-agree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .img {
+        width: 12px;
+        height: 15px;
+        margin-right: 10px;
+    }
+    a {
+        color: $color-brand1;
+    }
+}

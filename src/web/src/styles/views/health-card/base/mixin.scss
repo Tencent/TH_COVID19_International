@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+// border
+@mixin one-px-border($direction: top, $color: #dfdfdf) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+
+    @if $direction == top or $direction == bottom {
+        right: 0;
+        height: 0;
+        transform: scaleY(0.5);
+        border-top: 2px solid $color;
+        transform-origin: top;
+    }
+    @if $direction == bottom {
+        top: auto;
+        bottom: 0;
+        transform-origin: bottom;
+    }
+    @if $direction == right or $direction == left {
+        width: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+        border-left: 2px solid $color;
+        transform-origin: left;
+    }
+    @if $direction == right {
+        left: auto;
+        right: 0;
+        transform-origin: right;
+    }
+    @if $direction == all {
+        width: 200%;
+        height: 200%;
+        transform-origin: left top;
+        transform: scale(0.5);
+        border: 2px solid $color;
+    }
+}

@@ -1,0 +1,281 @@
+.chart-tab-list {
+    display: flex;
+    position: relative;
+    border: 0.7px solid #dfdfdf;
+    // border: 1px solid #000;
+    border-radius: 3px;
+    .chart-tab {
+        position: relative;
+        flex: 1;
+        height: 25px;
+        line-height: 27px;
+        text-align: center;
+        color: #333;
+        font-size: 10px;
+        border-right: 0.7px solid #dfdfdf;
+        &.active {
+            background-color: #00bad1;
+            color: #fff;
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+.chart-tab-list-two {
+    display: flex;
+    position: relative;
+    border-radius: 4px;
+    .chart-tab {
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 25px;
+        color: #333;
+        font-size: 10px;
+        border: 0.7px solid rgba($color: #dfdfdf, $alpha: 1);
+        border-right: none;
+        box-sizing: border-box;
+        &.active {
+            background-color: #e9f9fb;
+            color: #00b9d1;
+        }
+        &:first-child {
+            border-radius: 4px 0 0 4px;
+        }
+        &:last-child {
+            border-right: 0.7px solid rgba($color: #dfdfdf, $alpha: 1);
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}
+.trend-chart-wrap {
+    margin-bottom: 30px;
+    padding: 0 11px;
+    &.seperate-line {
+        position: relative;
+        padding-bottom: 23px;
+        margin-bottom: 38px;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            right: -20px;
+            bottom: -13px;
+            height: 13px;
+            background-color: #f8f8f8;
+        }
+    }
+    .chart-tt-box {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 10px;
+        .tt {
+            font-size: 14px;
+            color: #333;
+            line-height: 23px;
+            font-weight: 500;
+        }
+        .sub-tt {
+            font-size: 10px;
+            line-height: 14px;
+            color: #010604;
+            opacity: 0.57;
+            margin-bottom: 3px;
+            margin-left: 6px;
+        }
+    }
+    .chart-wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 90px;
+        margin-top: 10px;
+        background-color: #f2f9ff;
+        border-radius: 3px;
+        .legend-list {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 8px 0 6px 16px;
+            .legend-item {
+                display: flex;
+                align-items: center;
+                .legend-txt {
+                    position: relative;
+                    font-size: 10px;
+                    line-height: 23px;
+                    color: #000;
+                    width: 36px;
+                    margin-right: 4px;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -6px;
+                        top: 50%;
+                        height: 8px;
+                        width: 2px;
+                        margin-top: -4px;
+                        background-color: #d8d8d8;
+                        border-radius: 1px;
+                    }
+                }
+                &:nth-child(1) {
+                    .legend-txt {
+                        &::before {
+                            background-color: #ff73f6;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .legend-txt {
+                        &::before {
+                            background-color: #4f57ff;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    .legend-txt {
+                        &::before {
+                            background-color: #ffbb42;
+                        }
+                    }
+                }
+                .legend-desc {
+                    padding-left: 8px;
+                }
+                &.increase {
+                    .legend-desc {
+                        color: #62c298;
+                        background: url('https://static.wecity.qq.com/wapdisease/green-d12d037c142bcc5ad89333e89379e873.png')
+                            left center no-repeat;
+                        background-size: 6px 8px;
+                    }
+                }
+                &.decrease {
+                    .legend-desc {
+                        color: #4095f7;
+                        background: url('https://static.wecity.qq.com/wapdisease/blue-10ca75f74e7e71f541f9751fcec57c5b.png')
+                            left center no-repeat;
+                        background-size: 6px 8px;
+                    }
+                }
+                &.fair {
+                    .legend-desc {
+                        padding-left: 0;
+                        opacity: 0.57;
+                        color: #000;
+                    }
+                }
+                &.increase-hubei {
+                    .legend-desc {
+                        background: url('https://static.wecity.qq.com/wapdisease/red-de798cafb361d88e971433cd40dd4504.png')
+                            left center no-repeat;
+                        background-size: 6px 8px;
+                        color: #dd5e5b;
+                    }
+                }
+            }
+        }
+        .chart-area {
+            width: 205px;
+            height: 87px;
+            margin-top: 2px;
+            margin-right: 2px;
+        }
+    }
+    .chart-legend-box {
+        background-color: #f8f8f8;
+        height: 54px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 9px 12px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        border-radius: 4px;
+        .tt {
+            font-size: 12px;
+            color: #444444;
+            line-height: 16px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .legend-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .legend-item {
+                display: flex;
+                justify-content: center;
+                font-size: 12px;
+                .legend-txt {
+                    margin-right: 6px;
+                    color: #444444;
+                }
+                .legend-desc {
+                    padding-left: 10px;
+                    &.decrease {
+                        color: #39e0ae;
+                        background: url('https://static.wecity.qq.com/wapdisease/decrease-270996388952a6a7e58c96094d64466f.png')
+                            left top no-repeat;
+                        background-size: 9px 11px;
+                    }
+                    &.increase {
+                        color: #ff4c13;
+                        background: url('https://static.wecity.qq.com/wapdisease/increase-d359a29616ae7284328238faf890b4e6.png')
+                            left top no-repeat;
+                        background-size: 9px 11px;
+                    }
+                    &.fair {
+                        color: #afafaf;
+                        background: url('https://static.wecity.qq.com/wapdisease/fair-140c83c88f9eec35e3ea4091ec358f8e.png')
+                            left top no-repeat;
+                        background-size: 9px 11px;
+                    }
+                }
+            }
+        }
+    }
+    .chart-area-two {
+        width: 100%;
+        // height: 80px;
+        height: 95px;
+        margin-top: 6px;
+    }
+    .chart-legend-list {
+        margin-top: 6px;
+        .chart-legend-item {
+            display: flex;
+            justify-content: center;
+            .chart-legend-txt {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 10px;
+                color: #666;
+                margin-right: 15px;
+                .line {
+                    display: block;
+                    width: 9px;
+                    height: 2px;
+                    margin-left: 2px;
+                    &.red {
+                        background-color: #ff73f6;
+                    }
+                    &.blue {
+                        background-color: #4f57ff;
+                    }
+                    &.yellow {
+                        background-color: #ffbb42;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

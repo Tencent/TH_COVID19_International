@@ -1,0 +1,46 @@
+.disease-entrance {
+    padding: 20px 0 5px 0;
+}
+.disease-entrance-bd {
+}
+.disease-entrance-button {
+    width: 25%;
+    box-sizing: border-box;
+    height: 75px;
+    display: inline-block;
+    margin: 0 0 16px 0;
+}
+.disease-entrance-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px auto;
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    // background: #ccc;
+}
+.disease-entrance-txt {
+    font-size: 14px;
+    color: #001432;
+    display: block;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+}
+.disease-entrance-bd {
+    font-size: 0;
+    position: relative;
+    .swiper-container {
+        height: 205px;
+    }
+}
+.disease-entrance {
+    .swiper-pagination-bullet {
+        &:only-child {
+            display: none;
+        }
+    }
+}

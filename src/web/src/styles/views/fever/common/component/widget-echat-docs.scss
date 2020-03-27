@@ -1,0 +1,76 @@
+// desc:咨询窗口--表格
+// desc:使用于用户端、医生端咨询窗口
+
+.panel-docs {
+    background-color: $color-fill-2;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+.panel-docs-hd {
+    padding: 8px 0;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid $color-line-1;
+        transform: scaleY(0.5);
+    }
+}
+.panel-docs-tit {
+    font-size: $font-size-l;
+    color: $color-text-1;
+}
+.panel-docs-bd {
+    padding: 8px 0 10px 0;
+    font-size: $font-size-base;
+    color: $color-text-2;
+}
+.panel-docs-tips {
+    font-size: $font-size-s;
+    color: $color-text-4;
+    padding: 6px 0 0 0;
+}
+.panel-docs-text {
+    line-height: 1.5;
+    text-align: justify;
+}
+.svg-ico {
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+.svg-ico--checked,
+.svg-ico--table,
+.svg-ico--doc {
+    display: inline-block;
+    vertical-align: middle;
+}
+.svg-ico--checked {
+    width: 12px;
+    height: 12px;
+    margin: -3px 0 0;
+}
+.svg-ico--table {
+    width: 16px;
+    height: 18px;
+    margin: -3px 5px 0 0;
+}
+
+.svg-ico--doc {
+    width: 16px;
+    height: 18px;
+    margin: -3px 5px 0 0;
+}
+.svg-path-doc {
+    fill: $color-brand1;
+}
+
+.svg-path-doc,
+.svg-path-checked,
+.svg-path-table {
+    fill: $color-brand1;
+}

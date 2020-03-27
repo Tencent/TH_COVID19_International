@@ -1,0 +1,173 @@
+@import '../../common/variables';
+.operation {
+    position: relative;
+}
+.chatbar {
+    background: $color-fill-1;
+    position: relative;
+    padding-bottom: calc(constant(safe-area-inset-bottom));
+    padding-bottom: calc(env(safe-area-inset-bottom));
+}
+.chatbar-editor {
+    position: relative;
+    display: flex;
+    padding: 10px 15px 10px 0;
+}
+.chatbar-toolbtn {
+    width: 60px;
+    height: 40px;
+    position: relative;
+}
+.chatbar-toolbtn-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -12px;
+    border: 2px solid $color-text-2;
+    border-radius: 50%;
+    &::before,
+    &::after {
+        content: '';
+        width: 14px;
+        height: 2px;
+        background: $color-text-2;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    &::before {
+        margin: -1px 0 0 -7px;
+    }
+    &::after {
+        width: 2px;
+        height: 14px;
+        margin: -7px 0 0 -1px;
+    }
+}
+.svg-path-tools {
+    fill: $color-text-2;
+}
+
+.chatbar-textarea {
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+
+    background: $color-fill-2;
+    border-radius: 5px;
+    padding: 0 60px 0 5px;
+    textarea {
+        min-height: 28px;
+        height: 40px;
+        font-size: $font-size-l;
+        color: $color-text-3;
+        width: 100%;
+        outline: none;
+        resize: none;
+        -webkit-appearance: none;
+        border: none;
+        box-sizing: border-box;
+        padding: 8px 4px 0 4px;
+        border-radius: 0;
+        background: $color-fill-2;
+        &:focus {
+            color: $color-text-1;
+        }
+    }
+    .chat-btn-send {
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
+        background: rgba($color: $color-brand1, $alpha: 0.8);
+        color: $color-white;
+        font-size: $font-size-base;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 5px;
+        text-align: center;
+        &.disabled {
+            background: rgba($color: $color-brand1, $alpha: 0.4);
+        }
+    }
+}
+
+.chatbar-menu {
+    // display: none;
+}
+.chatbar-menu-list {
+    font-size: 0;
+    padding: 15px 0 24px 0;
+}
+.chatbar-menu-item {
+    width: 33.3333%;
+    display: inline-block;
+    text-align: center;
+}
+.chatbar-menu-btn {
+    display: inline-block;
+    text-align: center;
+}
+.chatbar-menu-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    background: $color-fill-2;
+    display: block;
+    margin: 0 auto 5px auto;
+    position: relative;
+}
+.svg-tool-ico {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15px 0 0 -15px;
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+.chatbar-menu-text {
+    color: $color-text-2;
+    font-size: $font-size-base;
+}
+.svg-path-tools {
+    fill: $color-text-2;
+}
+
+.operation-btn,
+.operation-tips {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-fill-1;
+}
+
+.hp-btn {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: $color-white;
+    background: rgba($color: $color-brand1, $alpha: 0.8);
+    font-weight: 500;
+    font-size: $font-size-l;
+}
+
+.operation-tips {
+}
+.operation-tips-text {
+    min-height: 20px;
+    padding: 18px 24px 18px 24px;
+    text-align: center;
+    font-size: $font-size-l;
+    color: $color-text-3;
+    line-height: 1.5;
+}

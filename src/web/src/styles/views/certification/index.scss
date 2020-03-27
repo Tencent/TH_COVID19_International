@@ -1,0 +1,249 @@
+.container {
+    background: #f7f7f7;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .content-wrapper {
+        min-height: calc(100vh - 100px);
+    }
+
+    .step-nav-wrap {
+        height: 93px;
+        background: #fff;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-bottom: 25px;
+
+        .ww-step-line {
+            width: 79%;
+            height: 2px;
+            background: #dfdfdf;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            .current-step-line {
+                height: 2px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #0074f2;
+            }
+
+            .step-dot-wrap {
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+                z-index: 10;
+
+                .dot {
+                    width: 22px;
+                    height: 22px;
+                    color: #fff;
+                    line-height: 22px;
+                    text-align: center;
+                    font-family: 'PingFangSC-Regular';
+                    font-size: 14px;
+                    border-radius: 50%;
+                    background: #dfdfdf;
+                    position: relative;
+
+                    &.active {
+                        background: #0074f2;
+
+                        .step-desc {
+                            color: #000;
+                        }
+                    }
+
+                    .step-desc {
+                        display: inline-block;
+                        position: absolute;
+                        left: -39px;
+                        bottom: -25px;
+                        width: 100px;
+                        text-align: center;
+                        color: #dfdfdf;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        .ww-form-wrap {
+            padding-left: 15px;
+            background: #fff;
+
+            .ww-input-group {
+                font-family: 'PingFangSC-Regular';
+                font-size: 16px;
+                padding: 15px 15px 14px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #dfdfdf;
+                }
+
+                input {
+                    background: none;
+                    outline: none;
+                    border: 0px;
+                    text-align: right;
+                    font-family: 'PingFangSC-Regular';
+                    font-size: 16px;
+                    width: 65%;
+
+                    &::placeholder {
+                        color: #cacaca;
+                    }
+                }
+            }
+        }
+
+        .msg {
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            color: #888888;
+            line-height: 22px;
+            padding: 20px 16px;
+        }
+
+        &.article {
+            font-family: 'PingFangSC-Regular';
+            font-size: 14px;
+            color: #888888;
+            text-align: justify;
+            line-height: 24px;
+            padding: 0 20px 20px 20px;
+            border-top: 20px solid #fff;
+            background: #fff;
+            overflow: auto;
+            height: calc(100vh - 93px - 100px - 20px - 35px);
+            // height: calc(100vh - 93px - 98px - 50px);
+
+            .article-title {
+                text-align: center;
+                font-family: 'PingFangSC-Medium';
+                font-size: 16px;
+                color: #000;
+                font-weight: bold;
+                padding-bottom: 12px;
+            }
+
+            .confirm-msg {
+                padding-top: 20px;
+                display: flex;
+                align-items: flex-start;
+
+                .icon-check {
+                    color: #0074f2;
+                }
+
+                span {
+                    padding-left: 6px;
+                    color: #000;
+                    font-family: 'PingFangSC-Regular';
+                    text-align: left;
+                }
+
+                &.disabled {
+                    .icon-circle {
+                        color: #cacaca;
+                    }
+
+                    span {
+                        color: #cacaca;
+                    }
+                }
+            }
+        }
+
+        &.success-wrap {
+            background: #fff;
+            position: absolute;
+            top: 108px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            .success-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 18.8%;
+
+                .iconfont {
+                    display: inline-block;
+                    color: #09bb07;
+                    font-size: 73px;
+                }
+
+                .text {
+                    font-family: 'PingFangSC-Medium';
+                    font-size: 16px;
+                    text-align: center;
+                    padding-top: 27.5px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .footer-btn {
+        width: 100%;
+        padding-bottom: 30px;
+        padding-top: 20px;
+
+        &.bg-white {
+            background: #fff;
+        }
+
+        .ww-btn {
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 6px;
+        }
+
+        .ww-btn-primary {
+            background: #0074f2;
+            width: 92%;
+            color: #fff;
+            font-size: 16px;
+            font-family: 'PingFangSC-Medium';
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        .ww-disabled {
+            opacity: 0.5;
+        }
+    }
+
+    .toast {
+        width: 178px;
+        height: 44px;
+        opacity: 0.8;
+        background: #000000;
+        border-radius: 6px;
+        color: #fff;
+        text-align: center;
+        line-height: 44px;
+        font-size: 14px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+}

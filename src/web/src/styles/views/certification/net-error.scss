@@ -1,0 +1,20 @@
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    @include center-flex;
+}
+.error-wrapper {
+    @include center-flex;
+    flex-direction: column;
+    position: relative;
+    top: -40px;
+    color: #999;
+    .iconfont {
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+}

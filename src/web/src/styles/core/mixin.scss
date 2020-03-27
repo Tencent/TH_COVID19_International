@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------
+// mixin scss
+// mixin，通过@include调用，样式通过拷贝的方式使用，尤其适用于传递参数
+// %，通过@extend调用，样式通过组合申明的方式使用，适用于不传参数的代码片段
+// @function，返回一个值，用于调用
+//-----------------------------------------------------
+
+// 居中一个块状元素
+@mixin center-block($extend: true) {
+    @if $extend {
+        @extend %center-block;
+    } @else {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+%center-block {
+    @include center-block(false);
+}
+
+// 清除浮动
+@mixin clearfix($extend: true) {
+    @if $extend {
+        @extend %clearfix;
+    } @else {
+        &::before,
+        &::after {
+            content: '';
+            display: table;
+        }
+        &::after {
+            clear: both;
+        }
+    }
+}
+
+%clearfix {
+    @include clearfix(false);
+}
+
+// 省略...效果
+@mixin ellipsis($extend: true) {
+    @if $extend {
+        @extend %ellipsis;
+    } @else {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+%ellipsis {
+    @include ellipsis(false);
+}
+
+// 根据行数添加...效果
+@mixin ellipsis-lines($lines: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+// 单词换行
+@mixin word-break($extend: true) {
+    @if $extend {
+        @extend %word-break;
+    } @else {
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+%word-break {
+    @include word-break(false);
+}
+
+// flex居中对齐
+@mixin center-flex($direction: both) {
+    display: flex;
+    @if $direction == both {
+        justify-content: center;
+        align-items: center;
+    } @else if $direction == x {
+        justify-content: center;
+    } @else if $direction == y {
+        align-items: center;
+    }
+}
+
+// translate居中对齐
+@mixin center-translate($direction: both) {
+    position: absolute;
+    @if $direction == both {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    } @else if $direction == x {
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    } @else if $direction == y {
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+// flex左右对齐
+@mixin justify($extend: true) {
+    @if $extend {
+        @extend %justify;
+    } @else {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+%justify {
+    @include justify(false);
+}
+
+// border
+@mixin one-px-border($direction: top, $color: $colorBorder) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+
+    @if $direction == top or $direction == bottom {
+        right: 0;
+        height: 0;
+        transform: scaleY(0.5);
+        border-top: 1px solid $color;
+    }
+    @if $direction == bottom {
+        top: auto;
+        bottom: 0;
+    }
+    @if $direction == right or $direction == left {
+        width: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+        border-left: 1px solid $color;
+    }
+    @if $direction == right {
+        left: auto;
+        right: 0;
+    }
+    @if $direction == all {
+        width: 200%;
+        height: 200%;
+        transform-origin: left top;
+        transform: scale(0.5);
+        border: 1px solid $color;
+    }
+}
+
+// border top & border bottom
+%border-tb {
+    position: relative;
+    &::before {
+        content: '';
+        @include one-px-border(top);
+        z-index: 1;
+    }
+    &::after {
+        content: '';
+        @include one-px-border(bottom);
+    }
+}
+
+// border all
+%border-all {
+    position: relative;
+    &::before {
+        content: '';
+        @include one-px-border(all);
+        z-index: -1;
+    }
+}
+
+// triangle 三角箭头
+%triangle-basic {
+    content: '';
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+@mixin triangle($direction: top, $borderWidth: 6px, $borderColor: $colorC) {
+    @extend %triangle-basic;
+    @if $direction == top {
+        border-bottom: $borderWidth solid $borderColor;
+        border-left: $borderWidth dashed transparent;
+        border-right: $borderWidth dashed transparent;
+    } @else if $direction == right {
+        border-left: $borderWidth solid $borderColor;
+        border-top: $borderWidth dashed transparent;
+        border-bottom: $borderWidth dashed transparent;
+    } @else if $direction == bottom {
+        border-top: $borderWidth solid $borderColor;
+        border-left: $borderWidth dashed transparent;
+        border-right: $borderWidth dashed transparent;
+    } @else if $direction == left {
+        border-right: $borderWidth solid $borderColor;
+        border-top: $borderWidth dashed transparent;
+        border-bottom: $borderWidth dashed transparent;
+    }
+}

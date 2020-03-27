@@ -1,0 +1,315 @@
+@import 'widget/currentReport/widget-table.scss';
+@import 'widget/currentReport/widget-panel-tab.scss';
+
+.hubei-situation {
+    padding: 0;
+    .datelist {
+        margin-bottom: 10px;
+    }
+    .chart {
+        position: relative;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 15px 11px 11px;
+        margin-bottom: 10px;
+        &.chart--cloud {
+            height: 70px;
+            box-sizing: border-box;
+            background: #f5f5f5
+                url('https://static.wecity.qq.com/wapdisease/bg_cloud-c728af0cced13dfddb91dbb662917066.png');
+            background-size: 100% 100%;
+            .hubei-title-bg {
+                background: url('https://static.wecity.qq.com/wapdisease/ico_s_cloud-de0ca8016e59215368a8d05258c0d679.png');
+                background-size: 100% 100%;
+            }
+            .hubei-title-bar {
+                .hubei-title-txt-box {
+                    .hubei-title {
+                    }
+                    .hubei-sub-title {
+                        font-size: 10px;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+        &.chart--knowledge {
+            height: 70px;
+            box-sizing: border-box;
+            background: #f5f5f5
+                url('https://static.wecity.qq.com/wapdisease/bg_yd-c6029c84e1a4029567c4dc762a3f4bb8.png');
+            background-size: 100% 100%;
+            .hubei-title-button {
+                background: #fff;
+                color: #04aad5;
+            }
+            .hubei-title-bg {
+                background: url('https://static.wecity.qq.com/wapdisease/ico_s_yd-f0b8d75b4c2a5854b8282ea9b8b667d2.png');
+                background-size: 100% 100%;
+            }
+        }
+        .hubei-title-txt-box {
+            height: 40px;
+            .hubei-title {
+                &:last-child {
+                    padding-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    p {
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+        .hubei-title-bar-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: none;
+        }
+        .hubei-title-bar {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: 0 0 4px 2px;
+            .hubei-title-bg {
+                width: 29px;
+                height: 29px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -15px;
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+                }
+            }
+            .hubei-title-txt-box {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 75px 0 35px;
+                .hubei-title {
+                    font-size: 15px;
+                    color: #fff;
+                    line-height: 15px;
+                    display: flex;
+                    padding-top: 3px;
+                    margin-bottom: 6px;
+                    p {
+                        font-weight: bold;
+                    }
+                    .highlight {
+                        .icon-arrow-right {
+                            border-color: #fff;
+                            position: relative;
+                            top: -2px;
+                        }
+                    }
+                }
+                .hubei-sub-title {
+                    font-size: 10px;
+                    opacity: 0.8;
+                    color: #fff;
+                    line-height: 15px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .tt {
+            line-height: 23px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+        .tt-svg-ico {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+            .svg-path-tips2 {
+                fill: #ccc;
+            }
+        }
+        .tt-ico {
+            width: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+        .tt-tips {
+            font-size: 10px;
+            color: #888;
+            margin-bottom: 5px;
+            svg {
+                width: 9px;
+                height: 9px;
+            }
+            .svg-path-tips2 {
+                fill: #888;
+            }
+            .txt-tips-color01 {
+                color: #c94511;
+            }
+            .txt-tips-color02 {
+                color: #ff971f;
+            }
+            .txt-tips-color03 {
+                color: #0e8afb;
+            }
+            .txt-tips-color04 {
+                color: #62c298;
+            }
+            .txt-tips-color05 {
+                color: #151515;
+            }
+        }
+        .img-box {
+            .img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .remark-tips {
+        font-size: 10px;
+        line-height: 14px;
+        color: #b2b2b2;
+    }
+    .sub-title-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        font-size: 14px;
+        color: #333;
+        .sub-title {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    .third-panel {
+        padding: 0 0 18px 0;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .third-panel-hd {
+        padding: 0 0 15px 0;
+        .remark-tips {
+            padding: 10px 0 0;
+        }
+    }
+    .hubei-title-button {
+        width: 70px;
+        height: 30px;
+        line-height: 28px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        border-radius: 100px;
+        border: 1.5px solid #fff;
+        position: absolute;
+        box-sizing: border-box;
+        right: 0;
+        top: 50%;
+        margin-top: -16px;
+        font-weight: 500;
+        span {
+            font-weight: 500;
+        }
+    }
+    .chart {
+    }
+    .tt-tips-box {
+        background-color: #f9f9f9;
+        border: 0.4px solid #dfdfdf;
+        border-radius: 3px;
+        display: inline-block;
+    }
+    .tt-tips-box-inner {
+        padding: 6px 8px 5px 8px;
+        color: #888;
+        font-size: 10px;
+        .txt-link {
+            font-size: 10px;
+            color: #00b9d1;
+            font-weight: normal;
+            display: inline-block;
+        }
+    }
+}
+.hubei-situation-table {
+    margin-bottom: 10px;
+    table tbody tr {
+        td {
+            .cell {
+                background-color: #fff;
+                border-top: 1px solid #e7e7e7;
+            }
+        }
+        &:first-child {
+            td .cell {
+                border-top: none;
+            }
+        }
+    }
+}
+.chart-hd {
+    position: relative;
+}
+.chat-select-button {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    font-size: 12px;
+    color: #333;
+    background: #e7e9ed;
+    border-radius: 100px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 9px;
+    .chat-select-button-txt {
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: url('https://static.wecity.qq.com/wapdisease/ico-change-528dd1551fdcf03affc8af0c53e7f2b0.png');
+            background-size: 100% 100%;
+            vertical-align: middle;
+            margin: -3px 0 0 0px;
+        }
+    }
+}
+.chat-select-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    height: 25px;
+    font-size: 12px;
+    opacity: 0;
+}

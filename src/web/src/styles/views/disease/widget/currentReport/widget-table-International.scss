@@ -1,0 +1,281 @@
+.tab-content-international.page-international .international-charts-wrapper {
+    .txt-info {
+        color: #00b9d1;
+    }
+
+    .txt-warning {
+        color: #ab0000;
+    }
+
+    .txt-success {
+        color: #62c298;
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px;
+        .cell {
+            position: relative;
+            // &.add-tag-red::after {
+            //     content: '';
+            //     position: absolute;
+            //     left: 0;
+            //     top: 0;
+            //     width: 29px;
+            //     height: 12px;
+            //     background: url('https://static.wecity.qq.com/wap2020-02/tag_red-b2a608049298610797cce49040c9c95d.png') no-repeat;
+            //     background-size: 100% 100%;
+            // }
+            // &.add-tag-blue::after {
+            //     content: '';
+            //     position: absolute;
+            //     left: 0;
+            //     top: 0;
+            //     width: 29px;
+            //     height: 12px;
+            //     background: url('https://static.wecity.qq.com/wap2020-02/tag_blue-0b2b728e26e55569f9726ce115b79f5e.png') no-repeat;
+            //     background-size: 100% 100%;
+            // }
+        }
+        thead {
+            color: #333;
+            th {
+                height: 40px;
+                text-align: center;
+                line-height: 20px;
+                color: #333;
+                font-weight: 700;
+                &:first-child {
+                    text-align: left;
+                    padding-left: 12px;
+                    color: #888;
+                }
+                &:last-child {
+                    padding-right: 20px;
+                }
+                &:nth-child(2) {
+                    width: 65px;
+                }
+                &:nth-child(3) {
+                    width: 65px;
+                }
+                &:nth-child(4) {
+                    width: 65px;
+                }
+                &:nth-child(5) {
+                    width: 65px;
+                    // padding-right: 0;
+                }
+                &.txt-info {
+                    color: #00b9d1;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    height: 44px;
+                    line-height: 44px;
+                    text-align: center;
+                    padding: 0;
+                    .cell {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        box-sizing: border-box;
+                        position: relative;
+                        background: #f9f9f9;
+                    }
+                    p {
+                        font-weight: 700;
+                        font-size: 14px;
+                        &.nodata {
+                            font-size: 12px;
+                        }
+                        &:first-child {
+                            line-height: 22px;
+                            color: #000;
+                            .txt-cn {
+                                font-size: 14px;
+                                font-weight: 700;
+                            }
+                        }
+                        &.red {
+                            color: #c7211c;
+                        }
+                        &.increase {
+                            line-height: 17px;
+                            font-size: 12px;
+                            color: #888888;
+                        }
+
+                        &.txt-info {
+                            color: #00b9d1;
+                        }
+
+                        &.txt-warning {
+                            color: #c7211c;
+                        }
+
+                        &.txt-success {
+                            color: #329c6d;
+                        }
+                    }
+                    &:first-child {
+                        p {
+                            font-weight: normal;
+                            text-align: left;
+                            font-weight: bold;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            width: 80px;
+                        }
+                        .cell {
+                            position: relative;
+                            top: 0;
+                            align-items: flex-start;
+                            padding-left: 10px;
+                            border-top-left-radius: 6px;
+                            border-bottom-left-radius: 6px;
+                        }
+                    }
+                    &:last-child {
+                        border-radius: 0 6px 6px 0;
+                        .cell {
+                            padding-right: 20px;
+                            border-top-right-radius: 6px;
+                            border-bottom-right-radius: 6px;
+                            .icon-arrow-right {
+                                position: absolute;
+                                right: 15px;
+                                top: 50%;
+                                margin-top: -3px;
+                            }
+                        }
+                    }
+                    // 最后两个td颜色
+                    &:nth-last-child(2) p {
+                        color: #333;
+                    }
+                    &:last-child p {
+                        color: #333;
+                    }
+                }
+                &.other-city {
+                    td {
+                        padding-top: 7px;
+                    }
+                }
+                &.set-color {
+                    td .cell {
+                        background-color: #e9f9fb;
+                    }
+                }
+                // 非本地 首个和末尾两个td颜色
+                &.other-city td:first-child p {
+                    width: 72px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: #333;
+                }
+                // 圆角定制
+                &.radius-set:nth-child(1) td:first-child .cell {
+                    border-bottom-left-radius: 0;
+                }
+                &.radius-set:nth-child(1) td:last-child .cell {
+                    border-bottom-right-radius: 0;
+                }
+                &.radius-set:nth-child(2) td:first-child .cell {
+                    border-top-left-radius: 0;
+                }
+                &.radius-set:nth-child(2) td:last-child .cell {
+                    border-top-right-radius: 0;
+                }
+
+                &:first-child {
+                    td {
+                        &:first-child {
+                            .cell {
+                                border-top-left-radius: 6px;
+                            }
+                        }
+                        &:last-child {
+                            .cell {
+                                border-top-right-radius: 6px;
+                            }
+                        }
+                        .cell {
+                            border-top: none;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    td {
+                        &:first-child {
+                            .cell {
+                                border-bottom-left-radius: 6px;
+                            }
+                        }
+                        &:last-child {
+                            .cell {
+                                border-bottom-right-radius: 6px;
+                            }
+                        }
+                        &:nth-child(2) {
+                            .cell {
+                                position: relative;
+                                top: auto;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                &.radius-set:nth-child(2) td .cell {
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: -1px;
+                        height: 2px;
+                        border-top: 2px solid #fff;
+                        transform: scaleY(0.5);
+                    }
+                }
+            }
+        }
+        .set-top {
+            position: fixed;
+            top: 48px;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 10;
+            padding: 5px 20px;
+            // display: flex;
+            th {
+                line-height: 20px;
+                width: 65px;
+            }
+            th:first-child {
+                flex: 1;
+                min-width: 71px;
+            }
+            th:last-child {
+                padding-right: 18px;
+            }
+            &.ocean {
+                th:first-child {
+                    min-width: 79px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import './base/fn.scss';
+@import './widgets/button.scss';
+@import './widgets/icon.scss';
+
+.container-introduction {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 0;
+    .location {
+        display: flex;
+        padding-top: 20px;
+        .location-box {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 30px;
+            padding: 0 20px;
+            font-size: 28px;
+            background-color: #edf5ff;
+            margin-left: 20px;
+            .txt {
+                color: $color-primary;
+                margin-right: 8px;
+            }
+        }
+    }
+    .title-bar {
+        position: relative;
+        text-align: center;
+        padding-top: 11px;
+        .title {
+            font-size: 54px;
+            line-height: 75px;
+            font-weight: bold;
+        }
+        .sub-title {
+            margin-top: 7px;
+            font-size: 28px;
+            line-height: 50px;
+        }
+    }
+    .img-box {
+        margin-top: 10px;
+        width: 100%;
+        .img {
+            width: 100%;
+        }
+    }
+    .footer {
+        flex: 1;
+        background-color: #ebf4ff;
+        padding: 0 20px;
+    }
+    .desc-list {
+        display: flex;
+        justify-content: space-between;
+        .desc-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 33.33333%;
+            padding: 62px 0 74px 0;
+            .desc-icon {
+                width: 90px;
+                height: 90px;
+                &.icon1 {
+                    background: url('https://static.wecity.qq.com/waphealthcard/icon1-d0b3b5399ccf387f812af02479e1fad5.png');
+                    background-size: 100% 100%;
+                }
+                &.icon2 {
+                    background: url('https://static.wecity.qq.com/waphealthcard/icon2-40fae070435e660e0aa1709c6473406f.png');
+                    background-size: 100% 100%;
+                }
+                &.icon3 {
+                    background: url('https://static.wecity.qq.com/waphealthcard/icon3-335e85b587ae9e2ec7312b74c0ea8fea.png');
+                    background-size: 100% 100%;
+                }
+            }
+            .desc-txt {
+                font-size: 28px;
+                color: #51576e;
+                line-height: 40px;
+                margin-top: 22px;
+            }
+        }
+    }
+    .btn-area {
+        padding: 0;
+    }
+}

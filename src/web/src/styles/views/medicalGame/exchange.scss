@@ -1,0 +1,108 @@
+@import './common/color.scss';
+
+.page-exchange {
+    height: 100%;
+    // padding: 0 10%;
+    padding-left: 10%;
+    background-color: $blue;
+    overflow: hidden;
+    overflow-x: hidden;
+
+    .page-boxs {
+        width: 90%;
+        height: 500px;
+        background-color: $fff;
+        border-radius: 10px;
+        position: relative;
+        bottom: -10px;
+        margin-bottom: 35px;
+        .ex-banner {
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 70px;
+            left: 0%;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            .ex-img {
+                width: 40px;
+                height: 40px;
+            }
+            .ex-title {
+                font-size: 18px;
+                margin: 30px auto 7px;
+                font-family: PingFang-SC-Bold;
+            }
+            .ex-record {
+                color: #999999;
+            }
+            .ex-after {
+                width: 20px;
+                height: 20px;
+                background-color: $blue;
+                border-radius: 50%;
+                position: absolute;
+                left: -3%;
+                top: 15px;
+            }
+            .ex-before {
+                width: 20px;
+                height: 20px;
+                background-color: $blue;
+                border-radius: 50%;
+                position: absolute;
+                right: -3%;
+                top: 15px;
+            }
+        }
+        .ex-logos {
+            width: 60%;
+            height: 40px;
+            background-color: #f0f0f0;
+            position: absolute;
+            left: 20%;
+            top: 65%;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            color: #1a1a1a;
+        }
+        .ex-method {
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            bottom: 20px;
+            left: 5%;
+            line-height: 25px;
+            color: #666666;
+        }
+    }
+    .ex-footer {
+        width: 90%;
+        height: 180px;
+        background-color: $fff;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        .ex-detail {
+            width: 100%;
+            height: 40px;
+            .ex-golds {
+                font-size: 24px;
+                font-weight: bold;
+                border-left: 4px solid $green;
+                margin: 30px 20px;
+                padding-left: 10px;
+                position: absolute;
+            }
+        }
+        .ex-rita {
+            position: absolute;
+            margin: 50px 20px;
+            color: #666666;
+            .ex-cell {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import '../common/mixin-user.scss';
+@import '../common/variables-user.scss';
+
+.banner {
+    height: 100px;
+    background: url('https://static.wecity.qq.com/wapdisease/bg-488794a76cc62f1bff289727d63c3a7e.png') center center
+        no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+    .tt {
+        margin-bottom: 6px;
+    }
+    .sub-tt {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: center;
+        span {
+            position: relative;
+            z-index: 2;
+            background-color: transparent;
+            &:last-child {
+                margin-left: 8px;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 26px;
+            right: 75%;
+            top: 50%;
+            transform: translate3d(0, -50%, 0) scaleY(0.5);
+            border-top: 1px solid #d8d8d8;
+            z-index: 1;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 75%;
+            right: 26px;
+            top: 50%;
+            transform: translate3d(0, -50%, 0) scaleY(0.5);
+            border-top: 1px solid #d8d8d8;
+            z-index: 1;
+        }
+    }
+}
+.my-consult {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+    margin: 15px 15px 0 15px;
+    background-image: linear-gradient(90deg, #ffa513 0%, #fd833c 100%);
+    box-shadow: 0 3px 10px 0 rgba(255, 80, 0, 0.4);
+    border-radius: 7px;
+}
+.weui-cell {
+    padding: 19px 20px;
+    &::before {
+        border-color: $color-line-1;
+    }
+}
+.weui-cell__bd {
+    font-size: 16px;
+    line-height: 22px;
+}
+.weui-cell__ft {
+    font-size: 14px;
+    color: $color-text-2;
+}

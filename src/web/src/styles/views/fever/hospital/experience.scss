@@ -1,0 +1,121 @@
+@import '../common/variables';
+
+.experience-link-wrap {
+    padding: 0 17px 27px;
+    height: auto;
+    min-height: 100%;
+    // background-color: $color-white;
+    .experience-link-header {
+        padding: 15px 0 23px;
+        font-weight: 500;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: #d8d8d8;
+            transform: scaleY(0.5);
+        }
+        .experience-title {
+            font-size: 50px;
+            color: $color-black;
+            letter-spacing: 0;
+        }
+        .experience-text {
+            font-size: 18px;
+            color: $color-black;
+            letter-spacing: 0;
+        }
+        .em {
+            color: $color-brand4;
+        }
+    }
+
+    .experience-link-content {
+        padding: 20px 0 57px;
+        font-weight: 500;
+        .experience-list:not(:nth-child(1)) {
+            margin-top: 20px;
+        }
+        .content-title {
+            margin-bottom: 7px;
+            font-size: 18px;
+            color: $color-black;
+            letter-spacing: 0;
+        }
+        .link-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .content-msg-wrap {
+            box-sizing: border-box;
+            width: 165px;
+            min-height: 68px;
+            padding: 14px 15px;
+            // background-color: #00adc2;
+            background-image: linear-gradient(-133deg, $color-brand4 30%, #00adc2 100%);
+            border-radius: 8px;
+            position: relative;
+        }
+        .content-msg {
+            width: 125px;
+            font-size: 14px;
+            color: $color-white;
+            word-break: break-all;
+        }
+        .content-msg-icon {
+            position: absolute;
+            right: 8px;
+            bottom: 8px;
+            width: 15px;
+            height: 15px;
+            color: $color-white;
+        }
+    }
+    .experience-link-footer {
+        padding-top: 20px;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 1px;
+            background-color: #d8d8d8;
+            transform: scaleY(0.5);
+        }
+    }
+    .hospital-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 4px;
+        color: $color-white;
+        background-color: $color-brand4;
+        &:active {
+            opacity: 0.4;
+        }
+    }
+}
+
+@media screen and(min-width: 1024px) {
+    .experience-link-wrap {
+        .experience-link-content {
+            .link-content {
+                justify-content: flex-start;
+            }
+            .content-msg-wrap {
+                margin-right: 15px;
+            }
+        }
+    }
+}

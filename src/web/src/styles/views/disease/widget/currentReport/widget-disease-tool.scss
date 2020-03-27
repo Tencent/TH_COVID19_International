@@ -1,0 +1,69 @@
+.disease-tool-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    // padding-bottom: 4px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f7f7f7;
+    .tool-menu {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 6px 6px;
+        // margin-bottom: 8px;
+        // width: 110px;
+        // width: 33.33%;
+        flex: 1;
+        // border-radius: 26px;
+        background: #f7f7f7;
+        white-space: nowrap;
+        position: relative;
+        &:last-child {
+            .line {
+                display: none;
+            }
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-left: -3px;
+        }
+        span {
+            vertical-align: middle;
+            font-size: 14px;
+            padding-left: 2px;
+            color: #333;
+            line-height: 1;
+        }
+        &:not(:nth-child(3n)) {
+            // margin-right: 8px;
+        }
+        // &:not(:nth-child(-n+3)) {
+        //     margin-top: 8px;
+        // }
+
+        // &:not(:last-child):after {
+        //     content: "";
+        //     display: block;
+        //     height: 14px;
+        //     border-right: 1px solid #dfdfdf;
+        //     position: absolute;
+        //     right:0;
+        //     top:50%;
+        //     transform: translateY(-50%) scaleX(1);
+        // }
+    }
+    .line {
+        width: 0;
+        height: 14px;
+        display: inline-block;
+        border-right: 1px solid #dfdfdf; /*no*/
+        position: absolute;
+        right: 1px; /*no*/
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+}

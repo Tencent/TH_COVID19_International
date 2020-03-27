@@ -1,0 +1,163 @@
+@import '../common/mixin-user.scss';
+@import '../common/variables-user.scss';
+
+input::-webkit-input-placeholder {
+    color: $color-text-3;
+    text-align: right;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: $color-fill-bg-light;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    min-height: calc(100vh - 97px);
+}
+.weui-cell {
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    padding: 19px 20px;
+    background-color: #fff;
+    &::before {
+        left: 0;
+        right: 0;
+    }
+}
+.box {
+    padding: 20px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    background-color: #fff;
+    .title-bar {
+        display: flex;
+        justify-content: space-between;
+        line-height: 22px;
+        margin-bottom: 11px;
+        .title {
+            font-size: 16px;
+        }
+        .title-right {
+            font-size: 14px;
+            color: $color-brand1;
+        }
+    }
+    .weui-textarea {
+        font-size: 13px;
+        line-height: 22px;
+        height: 120px;
+    }
+    .weui-textarea-counter {
+        font-size: 13px;
+        color: $color-text-3;
+        margin-top: 5px;
+        line-height: 22px;
+    }
+    .sub-title {
+        font-size: 13px;
+        line-height: 22px;
+        color: $color-text-3;
+        margin-bottom: 21px;
+    }
+    .weui-uploader__bd {
+        margin-bottom: 32px;
+    }
+    .weui-uploader__file {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .weui-uploader__input-box {
+        width: 80px;
+        height: 80px;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.03) 98%);
+        border: 1px solid $color-text-3;
+        box-sizing: border-box;
+        background-color: transparent;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 3px;
+            height: 32px;
+            background-color: $color-line-1;
+            transform: translate3d(-50%, -50%, 0);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 32px;
+            height: 3px;
+            background-color: $color-line-1;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+}
+.weui-form__tips-area {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    text-align: left;
+    margin-bottom: 0;
+}
+.weui-agree {
+    padding-top: 0;
+}
+.weui-agree__checkbox {
+    width: 21px;
+    height: 21px;
+    box-sizing: border-box;
+}
+.weui-agree__checkbox:checked {
+    color: $color-brand1;
+    opacity: 0.8;
+}
+.weui-agree__text {
+    margin-left: 10px;
+    font-size: 14px;
+    color: $color-text-3;
+}
+.weui-actionsheet {
+    border-radius: 0;
+}
+.weui-actionsheet__title {
+    height: 50px;
+    line-height: 50px;
+}
+.weui-actionsheet__title-text {
+    font-size: 16px;
+    color: #000;
+}
+.weui-actionsheet__cell {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 14px 15px;
+    &.active {
+        p {
+            color: $color-brand1;
+        }
+    }
+}
+.weui-actionsheet__action {
+    margin-top: 0;
+    .weui-actionsheet__cell {
+        justify-content: center;
+        font-size: 16px;
+        line-height: 22px;
+        color: #fff;
+        background-color: $color-brand1;
+    }
+}

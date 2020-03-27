@@ -1,0 +1,28 @@
+// 分享遮罩
+.gudie-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    .txt {
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        color: #fff;
+        font-size: 18px;
+    }
+    .arrow {
+        width: 34px;
+        height: 43px;
+        background: url('https://s.beta.gtimg.com/hospital_img/plus-lib/mysscard-mini/assets/img/group-new-year/card-page/arrow.png')
+            no-repeat;
+        background-size: contain;
+        transform: scaleX(-1) rotate(180deg);
+        position: absolute;
+        top: 10px;
+        right: 55px;
+    }
+}

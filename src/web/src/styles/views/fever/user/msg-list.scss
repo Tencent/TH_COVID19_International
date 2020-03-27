@@ -1,0 +1,13 @@
+@import '../common/mixin-user.scss';
+@import '../common/component/msglist.scss';
+
+.container {
+    min-height: 100vh;
+    background-color: $color-fill-bg-light;
+}
+.msg-list {
+    margin-top: 0;
+    &::before {
+        display: none;
+    }
+}

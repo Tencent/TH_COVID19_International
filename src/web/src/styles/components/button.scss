@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+//---------------------------------------------------
+// btn.scss
+//---------------------------------------------------
+
+// btn-basic
+
+.ww-btn {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 6px;
+}
+
+.ww-btn-default {
+    background: #eee;
+    width: 345px;
+}
+
+.ww-btn-primary {
+    background: #0074f2;
+    width: 345px;
+}

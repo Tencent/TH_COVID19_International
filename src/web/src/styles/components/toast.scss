@@ -1,0 +1,123 @@
+.wx-toast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.wx-toast-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    line-height: 100%;
+    text-align: center;
+    &::before {
+        content: '';
+        width: 1px;
+        display: inline-block;
+        line-height: 100%;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+.wx-toast-icon {
+    margin-bottom: 8px;
+}
+.wx-toast-icon-loading {
+    width: 26px;
+    height: 26px;
+    display: block;
+    margin: 0 auto;
+    animation: loadingtest 1.3s linear 0s infinite;
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+@keyframes loadingtest {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wx-toast-box {
+    padding: 20px;
+    min-width: 120px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    position: relative;
+    z-index: 300;
+}
+.wx-toast-txt {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+}
+.wx-toast-mask {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.wx-toast--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+.wx-toast--text {
+    .wx-toast-box {
+        border-radius: 500px;
+        font-size: 14px;
+        padding: 10px 20px;
+        .wx-toast-txt {
+            font-size: 14px;
+        }
+    }
+}
+
+.wx-toast--autohide {
+    pointer-events: none;
+    .wx-toast-box {
+        animation: toastAutohide 1.8s ease-out 0s 1 forwards;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes toastAutohide {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%, 100%, 0);
+    }
+    15%,
+    85% {
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(-50%, 100%, 0);
+    }
+}

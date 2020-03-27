@@ -1,0 +1,87 @@
+@import '../base/fn.scss';
+
+.form {
+    background-color: $color-bg-white;
+    .form-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 34px 40px;
+        &::before {
+            @include one-px-border(bottom);
+            left: 16px;
+            right: 16px;
+        }
+    }
+    .form-item-hd {
+        width: 200px;
+        .label {
+            font-size: 30px;
+            line-height: 42px;
+            color: #16172a;
+        }
+    }
+    .form-item-bd {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .input {
+            color: #000;
+            font-size: 30px;
+            height: 42px;
+            line-height: 42px;
+            width: 100%;
+            outline: none;
+            border: none;
+            &::-webkit-input-placeholder {
+                color: #999;
+                font-size: 24px;
+            }
+        }
+        .select {
+            position: relative;
+            width: 100%;
+            color: #000;
+            font-size: 30px;
+            line-height: 42px;
+            &.placeholder {
+                color: #999;
+                font-size: 24px;
+                line-height: 32px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 12px;
+                height: 12px;
+                border-right: 1px solid #999;
+                border-bottom: 1px solid #999;
+                transform: translate3d(0, -50%, 0) rotate(-45deg);
+            }
+        }
+    }
+    .form-item-ft {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        background: none;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        .icon {
+            margin-right: 16px;
+        }
+        .txt {
+            font-size: 28px;
+            color: $color-primary;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+    & + .form {
+        margin-top: 30px;
+    }
+}

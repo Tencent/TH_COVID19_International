@@ -1,0 +1,136 @@
+@import '../common/variables.scss';
+@import '../common/mixin.scss';
+@import '../common/component/msglist.scss';
+@import '../common/component/widget-info.scss';
+
+.weui-cells {
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+.weui-cells {
+    margin-top: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-fill-bg-light;
+}
+.tab-wrapper {
+    margin-bottom: 10px;
+    .weui-navbar {
+        &::after {
+            display: none;
+        }
+    }
+    .weui-navbar__item {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 20px 0 0;
+        color: #000;
+        .weui-navbar__item-txt {
+            position: relative;
+            span {
+                position: absolute;
+                right: -18px;
+                top: -5px;
+                transform: scale(0.7);
+                &.dot {
+                    right: -10px;
+                    top: 0;
+                }
+            }
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .weui-bar__item_on {
+        background-color: transparent;
+        color: $color-text-4;
+        .weui-navbar__item-txt {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 10px;
+            &::before {
+                @include one-px-border(bottom);
+                border-width: 3px;
+                border-color: $color-line-2;
+            }
+        }
+    }
+}
+.start-consult {
+    flex: 1;
+    background-color: #fff;
+    .weui-btn_default {
+        margin-top: 190px;
+        background-color: #fff;
+        border: 1px solid $color-brand2;
+        width: 210px;
+        height: 40px;
+        box-sizing: border-box;
+        line-height: 22px;
+        border-radius: 5px;
+    }
+}
+.waiting-list {
+    margin-top: 10px;
+    .weui-panel {
+        &::before {
+            display: none;
+        }
+    }
+    .weui-panel__hd {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .btn {
+            width: 50px;
+            height: 22px;
+            border-radius: 3px;
+            border: 1px solid $color-brand3;
+            text-align: center;
+            line-height: 21px;
+            box-sizing: border-box;
+            color: $color-brand3;
+        }
+        &::after {
+            border-color: $color-line-1;
+            right: 15px;
+        }
+    }
+    .weui-media-box {
+        padding: 20px 15px 32px;
+    }
+    .weui-media-box__title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .weui-media-box__desc {
+        font-size: 14px;
+        line-height: 21px;
+        padding-top: 8px;
+    }
+}
+@media (min-width: 900px) {
+    .container {
+        width: 450px;
+        margin: 0 auto;
+    }
+    .weui-badge {
+        min-height: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,204 @@
+/* icon */
+.btn-play {
+    display: inline-block;
+    width: 80px;
+    height: 83px;
+    background: url('~assets/imgs/insurance/index/btn-play.png');
+    background-size: 100% 100%;
+}
+.btn-play__pressed {
+    display: inline-block;
+    width: 79px;
+    height: 80px;
+    background: url('~assets/imgs/insurance/index/btn-play-pressed.png');
+    background-size: 100% 100%;
+}
+
+/* 动画组件 */
+.door-open__text {
+    width: 142px; /*no*/
+    height: 53px; /*no*/
+    background: url('~assets/imgs/insurance/index/open-door-txt.png');
+    background-size: 100% 100%;
+}
+.door-twinkle {
+    width: 375px; /*no*/
+    height: auto; /*no*/
+    background: url('~assets/imgs/sprite.png') no-repeat;
+    animation: twinkle 0.7s steps(1) infinite;
+}
+.door-open {
+    width: 100%; /*no*/
+    height: 100%; /*no*/
+    background: url('~assets/imgs/sprite.png');
+    animation: openDoor 0.1s steps(1) forwards;
+}
+@keyframes scaleInOut {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes twinkle {
+    0% {
+        background-position: 0px -692px; /*no*/
+    }
+    50% {
+        background-position: 0px -940px; /*no*/
+    }
+    100% {
+        background-position: 0px -940px; /*no*/
+    }
+}
+@keyframes openDoor {
+    0% {
+        background-position: 0px -1188px; /*no*/
+    }
+    50% {
+        background-position: 0px -1436px; /*no*/
+    }
+    100% {
+        background-position: 0px -1684px; /*no*/
+    }
+}
+
+/* 页面样式 */
+.index-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #567dc5 url('~assets/imgs/insurance/index/bg.png') no-repeat;
+    background-size: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 71px;
+    .bg {
+        width: 100%;
+        height: auto;
+    }
+    .video {
+        position: absolute;
+        left: 50%;
+        top: 7%;
+        transform: translate3d(-50%, 0, 0);
+        width: 86%;
+        height: 58%;
+        background-color: #fff;
+    }
+    .btn-play-wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80px;
+        height: 83px;
+        margin-left: -40px;
+        margin-top: -78px;
+        .btn-play {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .btn-play__pressed {
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        &.btn-pressed {
+            .btn-play {
+                display: none;
+            }
+            .btn-play__pressed {
+                display: block;
+            }
+        }
+    }
+}
+.door-wrapper {
+    width: 100%;
+    height: 248px; /*no*/
+    position: relative;
+    .door-twinkle__wrapper {
+        width: 100%;
+    }
+    .door-open__text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -71px; /*no*/
+        margin-top: -32px; /*no*/
+        animation: scaleInOut 0.7s linear infinite alternate;
+        z-index: 3;
+    }
+    .door-twinkle {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        transform: translate3d(-50%, 0, 0);
+        z-index: 2;
+    }
+    .door-open {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 375px; /*no*/
+        transform: translate3d(-50%, 0, 0);
+        z-index: 4;
+    }
+    &.door-opened {
+        .door-twinkle {
+            display: none;
+        }
+        .door-open__text {
+            animation: fadeOut 4s linear;
+        }
+        .door-open {
+            display: block;
+        }
+    }
+}
+.bottom-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .bottom-text {
+        display: block;
+        width: 100%;
+        height: 78px;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-height: 667px) and (min-height: 569px) {
+    .index-page {
+        top: -30px;
+        overflow: hidden;
+    }
+}
+@media screen and (max-height: 568px) {
+    .index-page {
+        top: -60px;
+    }
+}

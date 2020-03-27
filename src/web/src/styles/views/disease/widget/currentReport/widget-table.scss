@@ -1,0 +1,176 @@
+.icon-arrow-right {
+    display: inline-block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(-45deg);
+}
+.txt-info {
+    color: #00b9d1;
+}
+
+.txt-warning {
+    color: #c7211c;
+}
+
+.txt-success {
+    color: #62c298;
+}
+
+.charts-wrapper table {
+    width: 100%;
+    font-size: 14px;
+    thead {
+        color: #000;
+        th {
+            height: 30px;
+            text-align: right;
+            line-height: 20px;
+            color: #333;
+            font-weight: 700;
+            &:first-child {
+                text-align: left;
+                padding-left: 12px;
+                color: #888;
+            }
+            &:last-child {
+                padding-right: 30px;
+                width: 40px;
+            }
+            &:nth-child(2) {
+                width: 60px;
+            }
+            &:nth-child(3) {
+                width: 60px;
+            }
+            &:nth-child(4) {
+                width: 50px;
+            }
+            &:nth-child(5) {
+                width: 80px;
+                padding-right: 0;
+                text-align: center;
+            }
+            &.txt-info {
+                color: #00b9d1;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                height: 44px;
+                line-height: 44px;
+                text-align: center;
+                padding: 0;
+                .cell {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: center;
+                    height: 100%;
+                    box-sizing: border-box;
+                    position: relative;
+                    background: #f9f9f9;
+                    border-top: 1px solid #fff;
+                }
+                p {
+                    font-weight: 500;
+                    &:first-child {
+                        line-height: 22px;
+                        color: #2a2a2a;
+                        .txt-cn {
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                    }
+                    &.red {
+                        color: #c7211c;
+                    }
+                    &.increase {
+                        line-height: 17px;
+                        font-size: 12px;
+                        color: #888888;
+                    }
+
+                    &.txt-info {
+                        color: #00b9d1;
+                    }
+
+                    &.txt-warning {
+                        color: #c7211c;
+                    }
+
+                    &.txt-success {
+                        color: #62c298;
+                    }
+                }
+                &:first-child {
+                    p {
+                        font-weight: normal;
+                        text-align: left;
+                        font-weight: bold;
+                    }
+                    .cell {
+                        position: relative;
+                        top: 0;
+                        align-items: flex-start;
+                        padding-left: 12px;
+                    }
+                }
+                &:last-child {
+                    border-radius: 0 6px 6px 0;
+                    .cell {
+                        padding-right: 30px;
+                        .icon-arrow-right {
+                            position: absolute;
+                            right: 15px;
+                            top: 50%;
+                            margin-top: -3px;
+                        }
+                    }
+                }
+            }
+            &:first-child {
+                td {
+                    &:first-child {
+                        .cell {
+                            border-top-left-radius: 6px;
+                        }
+                    }
+                    &:last-child {
+                        .cell {
+                            border-top-right-radius: 6px;
+                        }
+                    }
+                    .cell {
+                        border-top: none;
+                    }
+                }
+            }
+            &:last-child {
+                td {
+                    &:first-child {
+                        .cell {
+                            border-bottom-left-radius: 6px;
+                        }
+                    }
+                    &:last-child {
+                        .cell {
+                            border-bottom-right-radius: 6px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        .cell {
+                            position: relative;
+                            top: auto;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

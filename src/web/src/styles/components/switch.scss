@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------
+// switch.scss
+//-----------------------------------------------------
+
+$iconSwitchSize: 30px !default;
+$iconSwitchBg: #ccc !default;
+$iconSwitchBgActive: #099fde !default;
+
+.ww-icon-switch {
+    height: $iconSwitchSize;
+    width: $iconSwitchSize * 2 - 10px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: $iconSwitchBg;
+    border-radius: $iconSwitchSize / 2;
+    overflow: hidden;
+    z-index: 1;
+    &::before {
+        content: '';
+        height: $iconSwitchSize;
+        width: $iconSwitchSize * 2 - 10px;
+        position: absolute;
+        left: -$iconSwitchSize * 2 + 10px;
+        background-color: $iconSwitchBgActive;
+        border-radius: $iconSwitchSize / 2;
+        transition: left 0.2s ease 0s;
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        height: $iconSwitchSize - 4px;
+        width: $iconSwitchSize - 4px;
+        background-color: #fff;
+        border-radius: $iconSwitchSize / 2;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        transition: left 0.2s ease 0s;
+        z-index: 3;
+    }
+    &.active {
+        &::before {
+            left: 0;
+        }
+        &::after {
+            left: $iconSwitchSize - 8px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import '../base/fn.scss';
+
+.dropdown-wrap {
+    @mixin border-b($color: $color-border) {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 2px solid $color;
+        transform: scaleY(0.5);
+        transform-origin: center bottom;
+    }
+
+    position: relative;
+    .icon-arrow-down-full {
+        border-top: 12px solid $color-border;
+        border-left: 8px dashed transparent;
+        border-right: 8px dashed transparent;
+    }
+
+    color: #888;
+    background-color: #fff;
+    height: 88px;
+    .dropdown-tab {
+        height: 88px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        z-index: 1000;
+        .tab {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            line-height: 40px;
+            width: 50%;
+            .txt {
+                color: #000;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 80%;
+            }
+            .icon-arrow-down-full {
+                margin-left: 10px;
+            }
+            &.selected {
+                .txt {
+                    color: $color-primary;
+                }
+                .icon-arrow-down-full {
+                    border-top-color: $color-primary;
+                }
+            }
+        }
+    }
+    .dropdown-list {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 88px;
+        background-color: #fff;
+        color: #000;
+        z-index: 999;
+        .dropdown-item {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 88px;
+            padding-left: 40px;
+            font-size: 28px;
+            &.selected {
+                .txt {
+                    color: $color-primary;
+                }
+            }
+            &::before {
+                @include border-b($color-border);
+                left: 40px;
+            }
+        }
+    }
+    .dropdown-mask {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        z-index: 998;
+    }
+}

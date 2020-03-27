@@ -1,0 +1,319 @@
+@import '../../components/button-share'; //分享按钮
+@import '../../components/toast'; //toast
+
+.subscribe-select-wrap {
+    .header-act {
+        position: relative;
+        width: 100%;
+        height: 110px;
+        .home {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            width: 100px;
+            height: 25px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            .icon-home {
+                width: 12px;
+                height: 13px;
+                margin-right: 5px;
+                display: block;
+            }
+            a {
+                height: 100%;
+                line-height: 28px;
+                color: #4875f6;
+                font-size: 13px;
+                display: block;
+            }
+        }
+        .header-banner {
+            width: 100%;
+            height: 110px;
+            display: block;
+        }
+        .icon-statement {
+            position: absolute;
+            top: 76px;
+            left: 260px;
+            width: 15px;
+            height: 15px;
+            background-image: url('https://static.wecity.qq.com/h5/2020-2/help_2-d815b0248582886e5fa03fde6e43391e.png');
+            background-size: 100%;
+        }
+    }
+
+    .my-subscribe-city {
+        // margin-top: 25px;
+        padding: 0 20px;
+        .subscribe-city-title {
+            padding: 25px 0;
+            padding-top: 13px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .city-wrap {
+            // display: flex;
+            // justify-content: flex-start;
+            // align-items: flex-start;
+            // flex-wrap: wrap;
+        }
+        .city-list {
+            display: inline-block;
+            position: relative;
+            box-sizing: border-box;
+            min-width: 100px;
+            // height: 35px;
+            // line-height: 35px;
+            padding: 10px 18px 10px 4px;
+            border-radius: 5px;
+            color: #00bad1;
+            background-color: rgba(0, 186, 209, 0.06);
+            font-size: 14px;
+            letter-spacing: 0;
+            text-align: center;
+            margin-right: 12px;
+            margin-bottom: 12px;
+            .city-name {
+                padding: 0 8px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+            p {
+                position: relative;
+                display: inline-block;
+                // padding: 0 10px;
+            }
+            .icon-position {
+                margin-left: 4px;
+                margin-right: -8px;
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                // left: -8px;
+                // top: 50%;
+                width: 16px;
+                height: 14px;
+                // transform: translate3d(0, -50%, 0);
+                svg {
+                    width: 16px;
+                    height: 14px;
+                    // position: absolute;
+                    // top: 50%;
+                    // transform: translateY(-50%);
+                    // left: 0;
+                }
+            }
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+        .city-list-text {
+            position: relative;
+        }
+        .icon-daohang {
+            margin-right: 4px;
+            font-size: 12px;
+            color: #00bad1;
+        }
+        .city-close-wrap {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // .city-close {
+            //     margin-top: 0;
+            // }
+        }
+        .city-close {
+            display: inline-block;
+            position: relative;
+            width: 12px;
+            height: 12px;
+            padding: 0;
+            margin-top: 2px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 1px;
+                height: 14px;
+                margin-left: -7px;
+                margin-top: -7px;
+                background-color: #00bad1;
+                transform: translate3d(10px, 0, 0) rotate(45deg);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 1px;
+                height: 14px;
+                margin-left: -7px;
+                margin-top: -7px;
+                background-color: #00bad1;
+                transform: translate3d(10px, 0, 0) rotate(-45deg);
+            }
+        }
+        .content-wrapper {
+            padding: 0 0 25px 0;
+            background-color: #fff;
+            margin-bottom: 8px;
+        }
+        .city-list-new {
+            width: 100%;
+            .city {
+                border-radius: 4px;
+                margin-bottom: 2px;
+            }
+            .city-hd {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                background-color: #f5f5f5;
+                padding: 0 13px;
+                border-radius: 4px;
+                position: relative;
+                .city-hd-tt {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .city-hd-bd {
+                    display: flex;
+                    flex: 1;
+                    justify-content: flex-end;
+                    font-size: 14px;
+                    margin-right: 5px;
+                }
+            }
+            .city-bd {
+                .city-bd-line {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 42px;
+                    padding: 0 13px;
+                    color: #000;
+                    border-bottom: 1px solid #e5e5e5;
+                    .city-bd-tt {
+                        font-size: 16px;
+                    }
+                    .city-bd-ft {
+                        font-size: 14px;
+                        color: #00bad1;
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        .search-result-nodata {
+            text-align: center;
+            padding: 15px 0;
+        }
+        .search-result-nodata-txt {
+            font-size: 14px;
+            color: #888;
+            padding: 6px 17px;
+            display: inline-block;
+            background: #eaeaea;
+            border-radius: 200px;
+        }
+        .local-tag {
+            height: 12px;
+            width: 33px;
+            font-size: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url('https://static.wecity.qq.com/wapdisease/icon-local-hp-209326dd9f293741a4d7890d809cf81e.png');
+            background-size: 100% 100%;
+        }
+        .icon-arrow-up {
+            display: inline-block;
+            position: relative;
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(225deg);
+            position: relative;
+            top: 2px;
+        }
+        .icon-arrow-down {
+            display: inline-block;
+            position: relative;
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            position: relative;
+            top: -2px;
+        }
+    }
+    .wx-toast {
+        &.wx-toast--fixed {
+            position: fixed;
+        }
+        &.wx-toast--autohide {
+            animation: autohide 2.3s linear 0s 1 both;
+            pointer-events: none;
+            @keyframes autohide {
+                0% {
+                    opacity: 0;
+                }
+                15% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 1;
+                }
+                85% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+        .wx-toast-icon-success {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            mask-position: 50% 50%;
+            mask-repeat: no-repeat;
+            mask-size: 100%;
+            background-color: #fff;
+            mask-image: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.657%2018.435L3%2012.778l1.414-1.414%204.95%204.95L20.678%205l1.414%201.414-12.02%2012.021a1%201%200%2001-1.415%200z%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+        }
+        .wx-toast-icon {
+            padding-bottom: 10px;
+        }
+        .wx-toast-icon-success-check {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 13px;
+            border-left: 4px solid #fff;
+            border-bottom: 4px solid #fff;
+            transform: rotate(-45deg);
+        }
+    }
+}

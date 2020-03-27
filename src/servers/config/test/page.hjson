@@ -1,0 +1,224 @@
+{
+    "wording": {
+        "common": {
+            "dialog": {
+                "dataFromDesc": {
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"Data Explanations\",\"Domestic data sources: national and regional health commission, provincial and municipal governments, and official reports from Hong Kong, Macau, and Taiwan.\",\"Overseas data sources: official news and local media reports\",\"\",\"Live data collection methods:\",\"1.\\tDomestic live updates\",\"1)\\tTotal cases/ total recovered/ total deaths (including Hong Kong, Macau, and Taiwan): before NHC releases daily data, use the total number from regional channels. After NHC releases daily data, use NHC’s. If the amount of the total cases from the regional health commission exceeds that of NHC, use regional data.\",\"2)\\tSuspected/ Severe Cases (excluding Hong Kong, Macau, and Taiwan): data come from NHC. Before daily data are updated, use data from the previous day. They are not changed with live data.\",\"3)\\tActive Cases(including Hong Kong, Macau, and Taiwan)=Total Cases-Total Recovered-Total Deaths\",\"4)\\tChanges of total cases, active cases, total recovered, total deaths(including Hong Kong, Macau, and Taiwan): data from NHC. Before daily data are updated, they are not shown in the graph.\",\"5)\\tChanges of suspected and severer cases (excluding Hong Kong, Macau, and Taiwan): data from NHC. Before daily data are updated, they are not shown in the graph.\",\"6)\\tChange of active cases (including Hong Kong, Macau, and Taiwan)= current active cases-active cases from the previous day. It is not changed with live data. Before daily data are updated, it is not shown in the graph.\",\"\",\"2.\\tNon-Hubei live updates\",\"1)\\tTotal cases/ total recovered/ total deaths outside of Hubei (including Hong Kong, Macau, and Taiwan) =Domestic cases-Hubei cases\",\"2)\\tSuspected Cases outside of Hubei (excluding Hong Kong, Macau, and Taiwan)=domestic suspected cases-Hubei suspected cases. It is not changed with live data. Before daily data are updated, it is shown as “to be updated”.\",\"3)\\tChanges of total cases, recovered, deaths (including Hong Kong, Macau, and Taiwan)=Domestic cases- Hubei cases. They are not changed with live data. Before daily data are updated, they are not shown in the graph.\",\"4)\\tChange of suspected cases outside of Hubei (excluding Hong Kong, Macau, and Taiwan)=Domestic cases-Hubei cases. It is not changed with live data. Before daily data are updated, it is shown as “-“.\",\"\",\"3.\\tOverseas live updates\",\"1)\\tActive cases, total cases, total recovered, total deaths: data from the sum of regions. They are updated in real-time.\",\"2)\\tChanges of active cases, total cases, total recovered, total deaths=live data-data from 24 hours ago, based on the time zone of GMT +8. They are updated in real-time.\",\"3)\\tOverseas regional data come from health authorities or local media reports.\",\"\",\"4.\\tStatistical methods for pandemic trends:\",\"1)\\tDomestic: NHC data at 24:00 of the previous day. Updated daily and excluding data of Hong Kong, Macau, and Taiwan.\",\"2)\\tHubei: NHC data at 24:00 of the previous day. Updated daily.\",\"3)\\tOutside of Hubei: domestic data-Hubei data. Updated daily.\",\"4)\\tOverseas: based on the time zone of GMT +8. Use data at 24:00 GMT +8 as daily data.\",\"\",\"5.\\tAbout cure rate, severer rate, and mortality rate:\",\"1)\\tCure Rate= number of patients discharged from hospitals/total cases\",\"2)\\tSeverer Rate= severer cases/total cases\",\"3)\\tMortality Rate= total deaths/total cases\"]"
+                },
+                "suspectDesc": {
+                    "show": true,
+                    "isLink": false,
+                    "link": {
+                        "desc": "",
+                        "url": ""
+                    },
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"The data uses the \\\"new number of suspected cases\\\" announced by the National Health Commission.\"]"
+                },
+                "nowConfirmDesc": {
+                    "show": true,
+                    "isLink": false,
+                    "link": {
+                        "desc": "",
+                        "url": ""
+                    },
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"Active Cases=Total Cases-Total Recovered-Total Deaths.\"]"
+                },
+                "microTrendDesc": {
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"The graphs in the micro-trend of the epidemic situation are all trend diagrams, and do not represent the absolute values of the corresponding data of the epidemic situation.\",\"The relevant data comes from the calculation method as follows.\",\"[Data source] National and regional health commissions officially released epidemic data.\",\"[Calculation method & curve description]\",\"Updated: national, regional health health committee official release time data calculation time for the micro trends backstage, does not mean.\",\"Growth rate in the past 7 days: [(The latest published corresponding data-published corresponding data 7 days ago) / published corresponding data 7 days ago] * 100%\",\"Newly confirmed case trend curve: the ordinate is logarithmic growth, which is only used as a performance trend and does not represent the absolute value of the data.\",\"Added trend curve of suspected cases: the ordinate is a linear increase, which is only used as a performance trend and does not represent the absolute value of the data.\",\"Added cure case trend curve: the ordinate is a linear increase, which is only used as a performance trend and does not represent the absolute value of the data.\",\"Newly added death case trend curve: the ordinate is a logarithmic increase, which is only used as a performance trend and does not represent the absolute value of the data.\"]"
+                },
+                "heavyRateDesc": {
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"Severe rate: Among the cases confirmed by the National Health and Health Commission for new coronavirus infections, the proportion of severe cases in the total number of cases being treated\"]"
+                },
+                "deadRateDesc": {
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"Case fatality rate: The proportion of deaths due to infection with the new coronavirus to the total confirmed cases announced by the National Health Commission, indicating the severity of the disease\"]"
+                },
+                "addConfirmDesc": {
+                    "show": false,
+                    "isLink": false,
+                    "link": {
+                        "desc": "点击查看详细解读",
+                        "url": "https://h5.baike.qq.com/mobile/article.html?docid"
+                    },
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"湖北部分城市存在核减，湖北省新增确诊数小于武汉市新增确诊数\"]"
+                },
+                "areaDetailDesc": {
+                    "show": false,
+                    "isLink": false,
+                    "link": {
+                        "desc": "点击查看详细解读",
+                        "url": "https://h5.baike.qq.com/mobile/article.html?docid"
+                    },
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"There are reductions in some cities in Hubei. The number of newly diagnosed diagnoses in Hubei is less than the number of newly diagnosed diagnoses in Wuhan.\"]"
+                },
+                "addConfirmTrendDesc": {
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"在《新型冠状病毒感染的肺炎诊疗方案（试行第五版）》中，诊断标准区分了湖北省以外和湖北省两种情况。\",\"湖北省在原来的“确诊病例”基础上，增加了“临床诊断病例”。新冠肺炎确诊病例，需要核酸检测阳性。然而，核酸检测的阳性率仅在30～50%之间，会导致一些真正的感染者被漏掉。临床诊断病例，可以将某些核酸检测阴性的新冠肺炎病例包括进来，以便患者能及早按照确诊病例接受规范治疗，进一步提高救治成功率。\",\"湖北省卫健委发文，近期对既往的疑似病例开展了排查并对诊断结果进行了订正，从2月13日起，湖北省将临床诊断病例数纳入确诊病例数进行公布，因此新增确诊数据会有较大波动\"]"
+                },
+                "addConfirmCaseDesc": {
+                    "show": false,
+                    "isLink": false,
+                    "link": {
+                        "desc": "点击查看详细解读",
+                        "url": "https://h5.baike.qq.com/mobile/article.html?docid"
+                    },
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"There are reductions in some cities in Hubei. The number of newly diagnosed diagnoses in Hubei is less than the number of newly diagnosed diagnoses in Wuhan.\"]"
+                },
+                "otherSuspectDesc": {
+                    "title": "Data Explanations",
+                    "content": "__Array__[\"Non-Hubei Suspected Cases= Domestic Suspected Cases-Suspected Cases of Hube\",\"New Suspected Cases=New Suspected Cases-New Suspected Cases of Hubei.\",\"Updated after NHC and Health Commission of Hubei Province release daily data.\"]"
+                }
+            }
+        },
+        "home": {
+            tab1_title: 'COVID-19 Map',
+            tab2_title: '疫情动态',
+            tab2_1_title: 'Domestic',
+            tab2_2_title: 'Overseas',
+            tab3_title: '抗疫专区',
+            broadcast_tips: 'New',
+            china_broadcast_tips: 'New',
+            abroad_broadcast_tips: 'New',
+            "third_banner": {
+                "barometer": {
+                    "title": "海外疫情历史走势晴雨表",
+                    "subTitle": "联合北京大学可视化实验室出品",
+                    "button": "点击查看",
+                    "target": "/wuhan-study/barometer-foreign/index.html?x_cache_fresh"
+                },
+                "knowledge": {
+                    "title": "疫情回顾：国内疫情何时消？国外爆发恐难免",
+                    "subTitle": "",
+                    "button": "立即阅读",
+                    "target": "https://h5.baike.qq.com/mobile/article.html?docid=tx204060016vtduq&VNK=ec417ce5&adtag=wxjk.op.fygj.yqsdfx"
+                }
+            },
+            "wuhan": {
+                "modifyConfirm": {
+                    "desc": "新增确诊病例含临床诊断病例。",
+                    "link": {
+                        "desc": "查看详细解读",
+                        "url": "https://h5.baike.qq.com/mobile/article.html?docid=qa20406011zc5y6y&VNK=c1ef2c93&share_event=txyd.share&from=groupmessage&isappinstalled=0"
+                    }
+                },
+                "totalDead": {
+                    "desc": "湖北/武汉累计死亡病例含临床诊断病例。",
+                    "link": {
+                        "desc": "查看详细解读",
+                        "url": "https://h5.baike.qq.com/mobile/article.html?docid=qa20406011zc5y6y&VNK=c1ef2c93&share_event=txyd.share&from=groupmessage&isappinstalled=0"
+                    }
+                },
+                "modifyHealDead": {
+                    "desc": "湖北/武汉累计死亡病例含临床诊断病例。",
+                    "link": {
+                        "desc": "查看详细解读",
+                        "url": "https://h5.baike.qq.com/mobile/article.html?docid=qa20406011zc5y6y&VNK=c1ef2c93&share_event=txyd.share&from=groupmessage&isappinstalled=0"
+                    }
+                }
+            }
+        }
+    },
+    "feature": {
+        "moreTools": {
+            "bannerUrl": ""
+        },
+        "bannerEntry": {
+            "id": "wuhan-mask",
+            "title": "口罩预约",
+            "subtitle": "",
+            "icon": "https://static.wecity.qq.com/wuhan-static/mask-h5.png",
+            "enable": true,
+            "disableDesc": "您所在城市服务正在建设中，敬请期待",
+            "link": {
+                "type": 3,
+                "url": "/pages/activity/wuhan-mask/main",
+                "appId": "",
+                "appVer": "release"
+            }
+        },
+        "modifyTrend": {
+            "show": false,
+            "showConfirm": true,
+            "showSuspect": true,
+            "showHeal": true,
+            "showDead": true
+        },
+        "feiyanActivity": {
+            "AllowMapMode": true,
+            "AllowTapToMap": true
+        },
+        "home": {
+            "infoScrollBar": {
+                "barColor": "#ffffff",
+                "color": "#ffffff",
+                "numbers": 5,
+                "autoplay": true,
+                "showDate": true,
+                "showTime": true
+            }
+        },
+        "overseaMap": {
+            "show": true,
+            "specilCountry":["United States of America", "Italy","Iran","Spain"]
+        },
+        "hubeiMaskAppointment": {
+            "show": false,
+            "banner_img": "https://static.wecity.qq.com/wap2020-02/face-mask-h5-d2456452967493c6765c3bc687151b78.png"
+        },
+        "mapTabs": {
+            "nowConfirm": true,
+            "totalConfirm": true,
+            "totalHeal": true
+        },
+        "defaultMapTab": "nowConfirm"
+    },
+    "allowShare": true,
+    "allowSubscribe": true,
+    "isShowTab1": true,
+    "isShowTab2": true,
+    "isShowTab3": true,
+    "show_tab1_title_dot": false,
+    "show_tab2_1_title_dot": false,
+    "show_tab2_2_title_dot": false,
+    "show_tab3_title_dot": false,
+    "allowActive_bless": false,
+    "home_pills": "__Array__[8,9,12]",
+    "pneumoniaentrance": false,
+    "shareImg": "",
+    "weakStyle": "1",
+    "logos": "__Array__[]",
+    "logos_desc": "__Array__[\"\"]",
+    "moreToolsFilter": "__Array__[1,2]",
+    "toolKitFaceMaskApply": "__Array__[\"tool\",\"share\",\"feedback\"]",
+    "toolKitFeiYanActivity": "__Array__[\"tool\",\"share\",\"subscribe\",\"feedback\"]",
+    "toolKitMapLanding": "__Array__[\"tool\",\"share\"]",
+    "toolKitFeiYanMap": "__Array__[\"tool\",\"share\"]",
+    "toolKitFeiYanHospital": "__Array__[\"tool\",\"share\"]",
+    "toolKitPsychologyHotline": "__Array__[\"tool\",\"share\"]",
+    "helthMaskLogo": "",
+    "allowContactAndTollBox": true,
+    "allowDeepAnalize": false,
+    "tongxiaoqu_subscribeImg": "https://static.wecity.qq.com/h5/2020-2/qrcode-1b5ee38378a9c10cbdb953ea07ec3348.png",
+    "showToolsBanner": false,
+    "city": {
+        "id": "440300",
+        "name": "深圳",
+        "locReason": 0,
+        "locReasonMsg": "default"
+    },
+    "miCity": {
+        "id": "440300",
+        "name": "深圳",
+        "locReason": 0,
+        "locReasonMsg": "default"
+    },
+    namemap:{}
+}

@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f7f7f7;
+    z-index: 3000;
+    text-align: center;
+    &::before {
+        content: '';
+        width: 1px;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.notification-cont {
+    width: 220px;
+    min-height: 204px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.notification-icon {
+    width: 115px;
+    height: 141px;
+    background: url('https://static.wecity.qq.com/wapdisease/iconbox-34df60ed3b4b62e0f9756b7b0d1138f2.png');
+    background-size: 100% auto;
+    margin: 0 auto;
+    display: block;
+}
+.notification-text {
+    h3 {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 8px;
+    }
+    p {
+        font-size: 14px;
+        color: #888;
+    }
+}

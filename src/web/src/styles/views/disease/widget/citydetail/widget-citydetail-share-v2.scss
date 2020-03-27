@@ -1,0 +1,110 @@
+.page-citydetail {
+    .imgbox.imgbox-new {
+        width: 338px;
+        height: 562px;
+        background: #195583 url('https://static.wecity.qq.com/wapdisease/bg-fff54882418749a213d441a3c016b2e7.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        margin: 0 auto;
+        .imgbox-slogan {
+            opacity: 0.4;
+        }
+        .imgbox-tips {
+            opacity: 0.3;
+            text-align: left;
+            font-size: 9px;
+        }
+        .imgbox-logo {
+            opacity: 0.3;
+        }
+        .imgbox-hd {
+            display: none;
+        }
+        .imgbox-new-hd {
+            position: relative;
+            height: 109px;
+            box-sizing: border-box;
+            padding: 10px 25px 15px 25px;
+        }
+        .imgbox-new-subtitle {
+            font-size: 30px;
+            font-weight: 500;
+            color: #d8eeff;
+            text-align: justify;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+        .imgbox-new-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #eff8ff;
+            text-align: justify;
+            font-style: italic;
+            padding: 0 0 10px 0;
+            letter-spacing: 6px;
+            white-space: nowrap;
+            height: 40px;
+            line-height: 48px;
+        }
+        .imgbox-new-title--m {
+            letter-spacing: 1.2px;
+        }
+        .imgbox-new-title--l {
+            letter-spacing: 0px;
+            font-size: 28px;
+        }
+        .imgbox-new-slogan {
+            font-size: 14px;
+            color: #ffce5d;
+            font-weight: 500;
+            font-style: italic;
+            height: 23px;
+            line-height: 23px;
+            letter-spacing: 3px;
+            white-space: nowrap;
+            text-align: right;
+        }
+        .imgbox-new-date {
+            font-size: 10px;
+            color: #fff;
+            opacity: 0.4;
+            text-align: right;
+        }
+        .imgbox-new-tips {
+            position: absolute;
+            right: 25px;
+            top: 56px;
+            text-align: center;
+        }
+        .imgbox-slogan {
+            font-size: 11px;
+            margin-bottom: 0;
+            line-height: 1.3;
+            padding-top: 6px;
+        }
+        .imgbox-qrcode {
+            width: 78px;
+            position: absolute;
+            right: 12px;
+            top: 8px;
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+        .imgbox-logo {
+            width: 120px;
+            margin: 6px 0 3px 0;
+        }
+        .imgbox-ft {
+            padding-top: 5px;
+        }
+        .imgbox-slogan {
+            &::before,
+            &::after {
+                opacity: 0.5;
+            }
+        }
+    }
+}

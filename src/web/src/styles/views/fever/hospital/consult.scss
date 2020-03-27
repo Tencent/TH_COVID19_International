@@ -1,0 +1,260 @@
+@import '../common/variables';
+
+.consult-wrap {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 15px 20px 0;
+    background-color: #f1f1f1;
+    .consult-common:not(:nth-child(1)) {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: -3px;
+            right: -3px;
+            top: 0;
+            height: 1px;
+            border-top: 1px solid #d8d8d8;
+            transform: scaleY(0.5);
+        }
+    }
+    .weui-cells__title {
+        font-size: 18px;
+        margin: 0 0 7px;
+        padding: 0;
+    }
+    .weui-cells {
+        margin: 0;
+        .weui-cell {
+            padding: 14px 15px 14px 12px;
+            background-color: $color-white;
+        }
+        .weui-cell__bd {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+    .weui-cells::before,
+    .weui-cells::after {
+        border: none;
+        height: 0;
+    }
+    .consult-top {
+        margin-bottom: 14px;
+        .weui-cells {
+            margin-top: 0;
+            border-radius: 4px;
+            background: none;
+
+            .input-text {
+                text-align: right;
+                border: none;
+                outline: none;
+                font-size: 16px;
+            }
+            .configuration-doc-sel {
+                direction: rtl;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: rotate(-45deg) translateY(-50%);
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    border-top: 1px solid #000;
+                    border-right: 1px solid #000;
+                }
+                .weui-select {
+                    height: 25px;
+                    line-height: 25px;
+                    padding-right: 20px;
+                    font-size: 18px;
+                }
+                .gray {
+                    color: #888;
+                    opacity: 0.5;
+                }
+                .black {
+                    color: #000;
+                }
+                .azure {
+                    color: $color-brand4;
+                }
+                option {
+                    direction: ltr;
+                    border-color: $color-brand4;
+                }
+            }
+            .weui-switch {
+                display: block;
+                width: 50px;
+                border-radius: 13px;
+                height: 24px;
+                background-color: #999;
+                border: none;
+                &::before,
+                &::after {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 5px;
+                    width: 40%;
+                    height: 84%;
+                    box-shadow: none;
+                }
+                &::before {
+                    transform: scale(0);
+                }
+            }
+            .weui-switch:checked {
+                height: 24px;
+                border-color: $color-brand4;
+                background-color: $color-brand4;
+                &::after {
+                    transform: translate(20px, -50%);
+                }
+            }
+        }
+    }
+
+    .consult-center {
+        padding-top: 14px;
+        margin-bottom: 14px;
+        .weui-cell_example {
+            .weui-cell__bd {
+                color: $color-black;
+            }
+            .submit {
+                color: #ff8816;
+            }
+            .pass {
+                color: $color-brand4;
+                position: relative;
+                &::after {
+                    content: '审核已通过，功能已发布';
+                    position: absolute;
+                    width: 132px;
+                    white-space: nowrap;
+                    top: 45px;
+                    right: 0;
+                    font-size: 12px;
+                    color: $color-brand4;
+                }
+            }
+        }
+        .weui-cells {
+            background: none;
+            overflow: initial;
+        }
+        .weui-cell {
+            border-radius: 4px;
+            &::before {
+                border: none;
+                height: 0;
+            }
+            &:not(:first-child) {
+                margin-top: 5px;
+            }
+        }
+    }
+    .consult-bottom {
+        margin-top: 57px;
+        padding-top: 68px;
+    }
+    .get-link-wrap {
+        flex: 1;
+        position: relative;
+        min-height: 68px;
+    }
+    .get-link {
+        position: absolute;
+        bottom: 34px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        opacity: 0.8;
+        font-size: 12px;
+        text-decoration: underline;
+        font-weight: 500;
+        color: $color-brand4;
+    }
+    .arrows-right {
+        padding-right: 20px;
+        position: relative;
+        color: $color-brand4;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            transform: rotate(45deg) translateY(-50%);
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-top: 1px solid #000;
+            border-right: 1px solid #000;
+        }
+    }
+    .textarea-wrap {
+        margin-top: 7px;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        .weui-textarea {
+            height: 94px;
+            box-sizing: border-box;
+            padding: 7px;
+            caret-color: $color-brand4;
+        }
+        .weui-textarea-counter {
+            padding-top: 5px;
+            display: flex;
+            justify-content: flex-end;
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 7px 6px 0;
+                width: 40px;
+                height: 18px;
+                border-radius: 4px;
+                font-size: 12px;
+                color: #fff;
+                background-color: $color-brand4;
+            }
+        }
+    }
+    .textarea-tip {
+        font-size: 12px;
+        opacity: 0.5;
+        padding-bottom: 9px;
+        li {
+            margin-top: 4px;
+        }
+    }
+    .hospital-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 4px;
+        color: $color-white;
+        background-color: $color-brand4;
+        &:active {
+            opacity: 0.4;
+        }
+    }
+    input {
+        caret-color: $color-black !important;
+    }
+}

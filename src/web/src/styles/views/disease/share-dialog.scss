@@ -1,0 +1,45 @@
+.share-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    .txt-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        // width: 319px;
+        width: 75%;
+        transform: translate3d(-50%, -50%, 0);
+        z-index: 3;
+        .img-box {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .code-txt {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+        }
+    }
+}

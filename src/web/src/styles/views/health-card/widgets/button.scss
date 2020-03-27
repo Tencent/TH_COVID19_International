@@ -1,0 +1,60 @@
+.btn-area {
+    padding: 0 30px;
+}
+.btn {
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid $color-border;
+    outline: none;
+    cursor: pointer;
+    &:active {
+        opacity: 0.5;
+    }
+}
+.btn-white {
+    background-color: #fff;
+}
+.btn-primary {
+    color: #fff;
+    background-color: $color-primary;
+    border: none;
+}
+.btn-primary-light {
+    color: #fff;
+    background-color: #ebf1fc;
+    color: #5c8bff;
+    border: none;
+}
+.btn-disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+.btn-full-with {
+    width: 100%;
+    border-radius: 0 !important;
+    border: none !important;
+}
+.btn-small {
+    font-size: 24px;
+    font-weight: $font-medium;
+    height: 60px;
+    line-height: 60px;
+    // border-radius: 30px;
+    padding: 0 22px;
+}
+.btn-outline {
+    border: 2px solid rgba($color: #000000, $alpha: 0.2);
+    &.btn-small {
+        height: 44px;
+        line-height: 44px;
+        border-radius: 25px;
+        font-size: 22px;
+        color: #000;
+    }
+}

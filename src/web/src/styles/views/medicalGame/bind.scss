@@ -1,0 +1,342 @@
+@import './common/color.scss';
+
+.page-bind {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+
+    .page-container {
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+    }
+
+    .page-boxs {
+        width: 100%;
+        // height: 580px;
+        position: relative;
+        background-color: $blue;
+        padding-bottom: 60px;
+        .sg-logo {
+            width: 100%;
+            // height: 400px;
+        }
+        .sg-action {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            color: $fff;
+            .sg-gold {
+                display: inline-block;
+                margin-right: 25px;
+            }
+            .sg-leads {
+                display: inline-block;
+                margin-left: 0px;
+            }
+            a {
+                color: $fff;
+                text-decoration: underline;
+            }
+            img {
+                width: 14px;
+                height: 14px;
+                margin-top: 0px;
+            }
+        }
+        .sg-progress {
+            width: 100%;
+            height: 45px;
+            padding: 10px 10% 15px;
+            position: relative;
+            .sg-invite {
+                width: 35%;
+                height: 45px;
+                float: left;
+                position: absolute;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                text-align: center;
+                line-height: 45px;
+                color: $blue;
+                font-weight: bold;
+                background: linear-gradient(-62deg, transparent 21px, $fff 0) top right;
+            }
+            .sg-random {
+                width: 35%;
+                height: 45px;
+                float: left;
+                position: absolute;
+                right: 25%;
+                background: $green;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                text-align: center;
+                line-height: 45px;
+                color: $fff;
+                font-weight: bold;
+                background: linear-gradient(118deg, transparent 21px, $green 0) bottom left;
+            }
+        }
+        .sg-welss {
+            font-size: 12px;
+            color: $fff;
+            text-align: center;
+        }
+    }
+    .mg-container {
+        width: 100%;
+        height: 700px;
+        position: relative;
+        background-color: #fff;
+        .mg-banner {
+            width: 90%;
+            height: 160px;
+            border-radius: 5px;
+            position: absolute;
+            left: 5%;
+            top: -40px;
+            background-color: $fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+            .mg-title {
+                width: 50%;
+                height: 160px;
+                .sg-one {
+                    font-size: 24px;
+                    margin: 30px 0 35px 20px;
+                    .sg-per {
+                        font-weight: bold;
+                        border-left: 4px solid $green;
+                        padding-left: 10px;
+                    }
+                }
+                .sg-two {
+                    margin-left: 32px;
+                    border-right: 1px solid #efefef;
+                    .sg-ban {
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+                    .sg-fit {
+                        color: #666;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .sg-bar {
+                width: 50%;
+                height: 73px;
+                position: absolute;
+                bottom: 8px;
+                right: -10%;
+                .sg-three {
+                    width: 130px;
+                    height: 32px;
+                    background-color: $green;
+                    border-radius: 20px;
+                    color: $fff;
+                    text-align: center;
+                    line-height: 32px;
+                    margin-bottom: 10px;
+                    position: absolute;
+                    right: 40%;
+                }
+                .sg-four {
+                    color: #999;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 42px;
+                    right: 51%;
+                }
+            }
+        }
+        .sg-out {
+            width: 70px;
+            height: 70px;
+            background-color: $blue;
+            border-radius: 50%;
+            position: fixed;
+            right: 20px;
+            top: 650px;
+            display: table-cell; //主要是这个属性
+            vertical-align: middle;
+            text-align: center;
+            line-height: 70px;
+            z-index: 999;
+            img {
+                width: 35px;
+                height: 35px;
+                margin: 17px auto;
+                text-align: center;
+            }
+        }
+        .mg-convert {
+            width: 90%;
+            height: 580px;
+            background-color: $fff;
+            box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 145px;
+            left: 5%;
+            .mg-nav {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .mg-liter {
+                    width: 60%;
+                    .mg-notes {
+                        font-size: 24px;
+                        font-weight: bold;
+                        border-left: 4px solid $green;
+                        padding-left: 10px;
+                        margin: 30px 0 10px 20px;
+                    }
+                    .mg-annal {
+                        font-size: 14px;
+                        color: #666666;
+                        margin-left: 34px;
+                    }
+                }
+                .mg-record {
+                    width: 40%;
+                    .mg-minure {
+                        font-size: 16px;
+                        margin: 45px 30px;
+                        color: #999999;
+                        position: absolute;
+                        right: 2%;
+                    }
+                    .mg-tran {
+                        width: 7px;
+                        height: 7px;
+                        border-top: 1px solid #6a7485;
+                        border-right: 1px solid #6a7485;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        right: -17%;
+                        top: 4px;
+                    }
+                }
+            }
+            .mg-container {
+                width: 90%;
+                height: 500px;
+                padding-left: 5%;
+                margin-top: 50px;
+                clear: both;
+                .mg-box {
+                    width: 47%;
+                    height: 220px;
+                    float: left;
+                    margin-right: 5%;
+                    .mg-img {
+                        width: 100%;
+                        height: 100px;
+                        background: #585e74;
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: center;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        float: left;
+                        img {
+                            width: 72%;
+                            height: 37px;
+                            margin-top: 30px;
+                        }
+                    }
+                    .mg-titles {
+                        width: 100%;
+                        height: 30px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        font-size: 12px;
+                        padding-top: 12px;
+                        .mg-golds {
+                            .mg-vip {
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                            }
+                            .mg-dunk {
+                                color: #666;
+                            }
+                        }
+                        .mg-xuner {
+                            color: #999999;
+                            margin-top: 15px;
+                        }
+                    }
+                    .mg-bun,
+                    .mg-bur {
+                        width: 60%;
+                        height: 30px;
+                        border-radius: 20px;
+                        background-color: $green;
+                        color: $fff;
+                        text-align: center;
+                        line-height: 30px;
+                        margin-top: 25px;
+                    }
+                    .mg-bur {
+                        background-color: #999999;
+                    }
+                }
+                .mg-box:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .bd-layer {
+        width: 80%;
+        // height: 400px;
+        background-color: $fff;
+        border-radius: 5px;
+        position: fixed;
+        top: 42%;
+        left: 9%;
+        z-index: 9999;
+        box-shadow: 0 0 2.133333rem 0 rgba(0, 0, 0, 0.1);
+        .bd-img {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: -5%;
+            top: -14px;
+        }
+        .bd-logo {
+            width: 100%;
+            // height: 180px;
+            img {
+                width: 100%;
+                // height: 180px;
+            }
+        }
+        .bd-binds {
+            text-align: center;
+            padding: 40px 0;
+            .bd-cell {
+                color: #1a1a1a;
+                margin-bottom: 50px;
+            }
+            .bd-vertail {
+                width: 80%;
+                height: 40px;
+                border-radius: 20px;
+                color: $fff;
+                background-color: $green;
+                line-height: 40px;
+                margin-left: 10%;
+            }
+        }
+    }
+}

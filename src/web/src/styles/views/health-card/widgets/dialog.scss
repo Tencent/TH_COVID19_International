@@ -1,0 +1,8 @@
+@import '../base/fn.scss';
+
+.weui-dialog__btn {
+    color: $color-primary;
+    &.weui-dialog__btn_default {
+        color: #000;
+    }
+}

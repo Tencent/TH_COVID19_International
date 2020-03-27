@@ -1,0 +1,160 @@
+// 分享长按保存图片弹层
+.wx-share-dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    &.fixed-height {
+        .wx-share-dialog-inner {
+            font-size: 0;
+            text-align: center;
+            &::before {
+                content: '';
+                width: 1px;
+                height: 100%;
+                line-height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .wx-share-dialog-cont {
+            overflow: hidden;
+            width: 90%;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            overflow: visible;
+            margin-top: -10px;
+            .wx-btn-close {
+                // position: absolute;
+                // right: -40px;
+                // top: 0;
+            }
+
+            img {
+                width: auto !important;
+                height: auto !important;
+                max-width: 100%;
+                max-height: calc(100vh - 200px);
+                display: inline-block;
+                object-fit: contain;
+            }
+        }
+    }
+    &.loading-status {
+        .wx-share-dialog-tips {
+            display: none;
+        }
+        .wx-toast-mask {
+            display: none;
+        }
+        .wx-btn-close {
+            display: none;
+        }
+    }
+}
+.wx-share-dialog-wrap {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    right: 20px;
+    bottom: 70px;
+    z-index: 1050;
+}
+.wx-share-dialog-inner {
+    width: 100%;
+    height: 100%;
+}
+.wx-share-dialog-cont-img {
+    display: inline-block;
+    position: relative;
+}
+.wx-share-dialog-cont {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    img {
+        width: 100%;
+        height: auto !important;
+        display: block;
+    }
+    .wx-toast-box {
+        background: none;
+    }
+}
+.wx-share-dialog-tips {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -42px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.wx-btn-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: -30px;
+    z-index: 1050;
+    opacity: 0.7;
+    &-icon {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 0;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAAVhJREFUSA211r1OwzAUBeDamVMFJDpUqsRSFmaYWWBC4h0Y+z4deREWlg4wsdCdEYklP4pgSnqOVUtZWvs6t5FcO7V9v9hurzKZ4Or73qIUbJ/qKsvyjLEJ2bquX1A2TdNcnAKsqmptjPlo23ZuAUxRbgBfd133po0SQ+wVjAXiX7kFEUHHF5bds9ZCie1j/qF+cJj/0EaPYtpoFKaFirCxaBKWio7CpKgKFouqYiE0BTM+aKjm/5SZiBkJaWrLVIX7Z9T/+O6pKIrXUAz2R4McPETdZCHGOcyl0Vee579c2WDCT5Zln4P7YFME8sz8NgL+xlZecpsluTcaJAZg5c/MWnuL9pZnKkWD23Do16id8N2DHML8U6qiIUwVjcVUUCk2Ck3FktCxmAjVwqJQbewYaoCdY8A7ykKS9X3QUO0TPsYtEf/RjecbMTruQpNT+xF7hvfSe87fAbEuzaZiZJLKAAAAAElFTkSuQmCC');
+        background-size: 100% 100%;
+    }
+}
+.wx-btn-icon {
+    width: 18px;
+    height: 19px;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.wx-share-tips {
+    width: 270px;
+    height: 30px;
+    position: fixed;
+    right: 60px;
+    top: 8px;
+    background: url('https://static.wecity.qq.com/wapdisease/tips-w-f9d76e6ff148bc8a03ef46f2654cf173.png');
+    background-size: 100% auto;
+}
+
+.wx-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.imgbox-dialog {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 0 0;
+}

@@ -1,0 +1,113 @@
+@import '../common/variables';
+
+.configuration-doc-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 15px 20px;
+    background-color: #f1f1f1;
+    .weui-cells::before,
+    .weui-cells::after,
+    .weui-cell::before {
+        border: none;
+    }
+    .weui-cells {
+        margin-top: 0;
+        background: none;
+        .weui-cell {
+            padding: 14px 15px 14px 12px;
+            border-radius: 4px;
+            background-color: $color-white;
+            &:not(:last-child) {
+                margin-bottom: 14px;
+            }
+        }
+        .weui-cell__bd {
+            p {
+                font-size: 18px;
+            }
+        }
+        .input-text {
+            text-align: right;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+        .configuration-doc-sel {
+            direction: rtl;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: rotate(-45deg) translateY(-50%);
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+            }
+            .weui-select {
+                height: 25px;
+                line-height: 25px;
+                padding-right: 20px;
+                color: $color-brand4;
+                font-size: 18px;
+            }
+            option {
+                direction: ltr;
+                border-color: $color-brand4;
+            }
+        }
+        .weui-switch {
+            display: block;
+            width: 50px;
+            border-radius: 13px;
+            height: 24px;
+            background-color: #999;
+            border: none;
+            &::before,
+            &::after {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 5px;
+                width: 40%;
+                height: 84%;
+                box-shadow: none;
+            }
+            &::before {
+                transform: scale(0);
+            }
+        }
+        .weui-switch:checked {
+            height: 24px;
+            border-color: $color-brand4;
+            background-color: $color-brand4;
+            &::after {
+                transform: translate(20px, -50%);
+            }
+        }
+    }
+
+    .hospital-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        height: 50px;
+        font-size: 16px;
+        border-radius: 4px;
+        color: $color-white;
+        background-color: $color-brand4;
+        &:active {
+            opacity: 0.4;
+        }
+    }
+    input,
+    textarea {
+        caret-color: $color-black !important;
+    }
+}

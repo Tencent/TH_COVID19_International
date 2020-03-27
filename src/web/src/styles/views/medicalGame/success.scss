@@ -1,0 +1,280 @@
+@import './common/color.scss';
+
+.page-success {
+    height: 100%;
+    width: 100%;
+    background-color: $blue;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .page-boxs {
+        width: 100%;
+        // height: 100%;
+        padding: 5%;
+        background-color: $blue;
+        margin-bottom: 10px;
+        .mg-nav {
+            width: 90%;
+            height: 80px;
+            position: relative;
+            .mg-left {
+                width: 50%;
+                height: 100%;
+                background: $green;
+                border-radius: 50px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                position: absolute;
+                left: 0;
+                img {
+                    width: 67px;
+                    height: 67px;
+                    border-radius: 50px;
+                    position: absolute;
+                    top: 6px;
+                    bottom: 6px;
+                    left: 7px;
+                }
+                .mg-name {
+                    position: absolute;
+                    top: 18px;
+                    left: 77px;
+                    font-size: 12px;
+                    color: #fff;
+                }
+                .mg-times {
+                    position: absolute;
+                    top: 37px;
+                    left: 68px;
+                    font-size: 12px;
+                    color: #ffffffad;
+                    transform: scale(0.8);
+                }
+                .mg-numbers {
+                    position: absolute;
+                    top: 56px;
+                    left: 77px;
+                    color: $fff;
+                    font-size: 18px;
+                }
+            }
+            .mg-conter {
+                width: 60px;
+                height: 60px;
+                border: 12px solid $blue;
+                border-radius: 50%;
+                background-color: #fff;
+                text-align: center;
+                position: absolute;
+                left: 40%;
+                top: -3%;
+                z-index: 9;
+                .mg-box {
+                    width: 40px;
+                    height: 40px;
+                    border: 10px solid $fff;
+                    border-radius: 50%;
+                    background-color: $blue;
+                    span {
+                        color: $fff;
+                        font-size: 12px;
+                        position: absolute;
+                        left: 25%;
+                        top: 37%;
+                    }
+                    .mg-progress {
+                        width: 80%;
+                        height: 80%;
+                        border-radius: 50%;
+                        border: 4px solid $fff;
+                        border-top: 4px solid $green;
+                        border-left: 4px solid $green;
+                        border-bottom: 4px solid $green;
+                        // border-right:4px solid $green;
+                        position: absolute;
+                        left: 2px;
+                        top: 2px;
+                        bottom: 2px;
+                        right: 2px;
+                        animation: progress 5s linear;
+                    }
+                    @keyframes progress {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+            .mg-right {
+                width: 50%;
+                height: 100%;
+                background: $yellow;
+                border-radius: 50px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                position: absolute;
+                right: 0;
+                img {
+                    width: 67px;
+                    height: 67px;
+                    padding: 6px 0 6px 7px;
+                    border-radius: 50px;
+                    position: absolute;
+                    right: 7px;
+                }
+                .mg-name {
+                    position: absolute;
+                    top: 20px;
+                    right: 80px;
+                    font-size: 12px;
+                    color: #fff;
+                }
+                .mg-number3 {
+                    position: absolute;
+                    top: 45px;
+                    right: 80px;
+                    color: $fff;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .circle_process {
+            position: relative;
+            width: 54px;
+            height: 54px;
+            top: -6px;
+            left: -6px;
+        }
+        .circle_process .wrapper {
+            width: 27px;
+            height: 54px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+        }
+        .circle_process .right {
+            right: 3%;
+        }
+        .circle_process .left {
+            left: 0%;
+        }
+        .circle_process .circle {
+            width: 42px;
+            height: 42px;
+            border: 5px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            transform: rotate(-135deg);
+        }
+        .circle_process .rightcircle {
+            border-top: 5px solid $green;
+            border-right: 5px solid $green;
+            right: 0;
+            -webkit-animation: circle_right 5s linear infinite;
+        }
+        .circle_process .leftcircle {
+            border-bottom: 5px solid $green;
+            border-left: 5px solid $green;
+            left: 0;
+            -webkit-animation: circle_left 5s linear infinite;
+        }
+        @-webkit-keyframes circle_right {
+            0% {
+                -webkit-transform: rotate(45deg);
+            }
+            50%,
+            100% {
+                -webkit-transform: rotate(230deg);
+            }
+        }
+        @-webkit-keyframes circle_left {
+            0%,
+            50% {
+                -webkit-transform: rotate(45deg);
+            }
+            100% {
+                -webkit-transform: rotate(225deg);
+            }
+        }
+    }
+    .mg-container {
+        width: 100%;
+        background-color: $blue;
+        .mg-content {
+            width: 80%;
+            background-color: $fff;
+            margin-left: 10%;
+            margin-top: 70px;
+            border-radius: 5px;
+            img {
+                width: 64%;
+                // height: 160px;
+                margin-top: -50px;
+                margin-left: 18%;
+            }
+            .mg-notice {
+                color: #000;
+                font-size: 20px;
+                letter-spacing: 1px;
+                line-height: 30px;
+                margin-top: 33px;
+                text-align: center;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .mg-correct,
+            .mg-wrong {
+                width: 80%;
+                height: 56px;
+                border-radius: 50px;
+                background-color: $fff;
+                color: #0059d5;
+                border-color: $fff;
+                font-size: 20px;
+                text-align: center;
+                font-weight: bold;
+                line-height: 56px;
+                cursor: pointer;
+                font-family: 'PingFang-SC-Bold';
+                letter-spacing: 1px;
+                margin-left: 10%;
+            }
+            .mg-correct {
+                margin-top: 33px;
+                color: $fff;
+                background-color: $blue;
+            }
+            .mg-wrong {
+                margin-top: 15px;
+                color: $fff;
+                background-color: $green;
+            }
+            .mg-backs {
+                text-align: center;
+                text-decoration: underline;
+                color: #1a1a1a;
+                font-size: 16px;
+                margin-top: 30px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .mg-footer {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        color: #ffffffad;
+        font-size: 12px;
+        text-align: center;
+    }
+}

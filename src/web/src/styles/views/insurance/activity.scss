@@ -1,0 +1,316 @@
+// @function px2rem($px){
+//   $rem: 75px;
+//   @return ($px/$rem) +rem;
+// }
+
+.container {
+    // max-width: px2rem(750px);
+    max-width: 375px;
+    margin: 0 auto;
+    .bg-mask {
+        width: 100%;
+        // height: 4.6rem;
+        height: 172.5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: radial-gradient(circle, #699ee5, #5880c4);
+        z-index: -1;
+    }
+    .inner-wrap {
+        // padding-top: px2rem(124px);
+        // padding-bottom: px2rem(143px);
+        padding-top: 62px;
+        padding-bottom: 71.5px;
+        width: 100%;
+        background: url('~assets/imgs/activity/BG.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.door {
+    width: 100%;
+    // height: px2rem(509px);
+    height: 254.5px;
+    &.close {
+        background: url('~assets/imgs/activity/close-door.png') no-repeat;
+        background-size: 100% 100%;
+    }
+    &.open {
+        background: url('~assets/imgs/activity/open-door.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    position: relative;
+
+    .quan-model {
+        width: 100%;
+        // height: px2rem(425px);
+        height: 212.5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .light {
+            width: 100%;
+            // height: px2rem(712px);
+            height: 356px;
+            background: url('~assets/imgs/activity/light.png') no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            // top: px2rem(-100px);
+            top: -50px;
+            animation: light 0.3s;
+        }
+
+        .quan-card {
+            // width: px2rem(573px);
+            // height: px2rem(219px);
+            width: 286.5px;
+            height: 109.5px;
+            margin: auto;
+            background: url('~assets/imgs/activity/quan2.png') no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            animation: showCard 0.3s;
+
+            .btn-again {
+                // width: px2rem(220px);
+                // height: px2rem(81px);
+                width: 110px;
+                height: 40.5px;
+                margin: auto;
+                background: url('~assets/imgs/activity/again.png') no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                left: 0;
+                right: 0;
+                // top: px2rem(190px);
+                top: 95px;
+                animation: showBtn 0.3s;
+            }
+        }
+    }
+}
+
+@keyframes showCard {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    // 100% {width: px2rem(573px); height: px2rem(219px);}
+    100% {
+        width: 286.5px;
+        height: 109.5px;
+    }
+}
+
+@keyframes showBtn {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    // 100% {width: px2rem(220px); height: px2rem(81px);}
+    100% {
+        width: 110px;
+        height: 40.5px;
+    }
+}
+
+@keyframes light {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.middle-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 0 px2rem(95px);
+    // margin-top: px2rem(-80px);
+    padding: 0 47.5px;
+    margin-top: -40px;
+
+    .btn-check {
+        // width: px2rem(251px);
+        // height: px2rem(84px);
+        width: 125.5px;
+        height: 42px;
+        background: url('~assets/imgs/activity/fuli.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .btn-rule {
+        // width: px2rem(144px);
+        // height: px2rem(41px);
+        width: 72px;
+        height: 20.5px;
+        background: url('~assets/imgs/activity/rule.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding-top: px2rem(9px);
+    padding-top: 4.5px;
+    .btn-bind {
+        // width: px2rem(557px);
+        // height: px2rem(119px);
+        width: 278.5px;
+        height: 59.5px;
+        background: url('~assets/imgs/activity/btn-2.png') no-repeat;
+        background-size: 100% 100%;
+        // margin-bottom: px2rem(8px);
+        margin-bottom: 4px;
+    }
+
+    .fuli-box {
+        // width: px2rem(553px);
+        // height: px2rem(330px);
+        width: 276.5px;
+        height: 165px;
+        background: url('~assets/imgs/activity/fuli-bg.png') no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        // margin-bottom: px2rem(58px);
+        margin-bottom: 29px;
+
+        .text {
+            // width: px2rem(392px);
+            // height: px2rem(45px);
+            width: 196px;
+            height: 22.5px;
+            background: url('~assets/imgs/activity/fuli-text.png') no-repeat;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            // margin-top: px2rem(33px);
+            margin-top: 16.5px;
+        }
+
+        .fuli-content {
+            display: flex;
+            justify-content: space-between;
+            // padding: 0 px2rem(26px);
+            // padding-top: px2rem(10px);
+            padding: 0 13px;
+            padding-top: 5px;
+
+            .item-box {
+                // width: px2rem(127px);
+                // height: px2rem(127px);
+                width: 63.5px;
+                height: 63.5px;
+                background: url('~assets/imgs/activity/dot.png');
+                background-size: 100% 100%;
+                position: relative;
+                .quan {
+                    // width: px2rem(130px);
+                    // height: px2rem(128px);
+                    width: 65px;
+                    height: 64px;
+                    position: absolute;
+                    // top: px2rem(-15px);
+                    // left: px2rem(-2px);
+                    top: -7.5px;
+                    left: -1px;
+                }
+                .disc {
+                    position: absolute;
+                    // bottom:px2rem(-45px);
+                    bottom: -22.5px;
+                    left: 0;
+                    text-align: center;
+                    // width: px2rem(127px);
+                    width: 63.5px;
+                    font-weight: bold;
+                    .disc-title {
+                        // font-size: px2rem(12px);
+                        font-size: 12px;
+                        color: #fff;
+                    }
+                    .num {
+                        // font-size: px2rem(12px);
+                        font-size: 12px;
+                        color: #aedeff;
+                        // padding-top: px2rem(5px);
+                        padding-top: 2.5px;
+                    }
+                }
+            }
+        }
+
+        .footer-bar {
+            // width: px2rem(414px);
+            // height:px2rem(31px);
+            width: 207px;
+            height: 15.5px;
+            box-sizing: border-box;
+            // padding:0 px2rem(21px);
+            padding: 0 10.5px;
+            margin: auto;
+            // border-radius: px2rem(31px);
+            border-radius: 15.5px;
+            background: #345da9;
+            position: absolute;
+            // bottom: px2rem(28px);
+            bottom: 14px;
+            left: 0;
+            right: 0;
+            // font-size: px2rem(8px);
+            font-size: 8px;
+            // line-height: px2rem(31px);
+            line-height: 15.5px;
+            color: #aedeff;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .current-disc {
+            // width: px2rem(553px);
+            // font-size: px2rem(12px);
+            width: 276.5px;
+            font-size: 12px;
+            font-family: 'SourceHanSansCN-Medium';
+            color: #aedeff;
+            position: absolute;
+            left: 0;
+            // bottom:px2rem(-40px);
+            bottom: -20px;
+            text-align: center;
+            font-weight: bold;
+            // letter-spacing: px2rem(2px);
+            letter-spacing: 1px;
+            span {
+                color: #fff;
+            }
+        }
+    }
+
+    .btn-help {
+        // width: px2rem(534px);
+        // height: px2rem(105px);
+        width: 267px;
+        height: 52.5px;
+        background: url('~assets/imgs/activity/btn-1.png') no-repeat;
+        background-size: 100% 100%;
+        // margin-bottom: px2rem(8px);
+        margin-bottom: 4px;
+    }
+
+    .search-text {
+        // width: px2rem(405px);
+        // height: px2rem(33px);
+        width: 202.5px;
+        height: 16.5px;
+        background: url('~assets/imgs/activity/search.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}

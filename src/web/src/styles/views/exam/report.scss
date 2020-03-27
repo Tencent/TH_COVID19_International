@@ -1,0 +1,245 @@
+.report-page {
+    position: relative;
+    width: 375px;
+    margin: 0 auto;
+    background: #eeeff5;
+
+    &.page-lock {
+        width: 375px;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        right: 50%;
+        transform: translate3d(50%, 0, 0);
+    }
+    .assist-text {
+        color: #777;
+    }
+
+    .report-page-main {
+        width: 100%;
+        font-size: 15px;
+        line-height: 24px;
+        padding: 0 15px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        color: #111;
+        background-color: #eeeff5;
+        background-image: url('https://static.wecity.qq.com/h5/2020-2/bg-5944ec5ec78658b127c2ed5d6131d6f2.png');
+        background-repeat: no-repeat;
+        background-size: 375px;
+        background-position: top center;
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            .time {
+                position: absolute;
+                top: 78px;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+        .content {
+            width: 100%;
+            padding: 22px 15px 15px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-sizing: border-box;
+            .report-block {
+                margin-bottom: 20px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                &-title {
+                    font-size: 17px;
+                    line-height: 17px;
+                    margin-bottom: 16px;
+                    background-image: linear-gradient(270deg, #73e8fc 0%, #54bdff 100%);
+                    background-repeat: no-repeat;
+                    background-position: left bottom;
+                    background-size: 44px 10px;
+                }
+                .row {
+                    width: 100%;
+                    display: flex;
+                    margin: 8px 0;
+                    justify-content: space-between;
+                    &:first-of-type {
+                        margin-top: 0;
+                    }
+                    .col-10 {
+                        width: 100%;
+                    }
+                    .col-7 {
+                        width: 70%;
+                    }
+                    .col-6 {
+                        width: 60%;
+                    }
+                    .col-5 {
+                        width: 50%;
+                    }
+                    .col-4 {
+                        width: 40%;
+                    }
+                    .col-3 {
+                        width: 30%;
+                    }
+                }
+                .report-item {
+                    display: flex;
+                    label {
+                        width: 2.1em;
+                        margin-right: 15px;
+                        color: #888;
+                        &.large {
+                            width: 60px;
+                        }
+                    }
+                    &-result {
+                        width: 0;
+                        flex: 1;
+                        .result-row {
+                            display: block;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                .result-comment {
+                    font-size: 16px;
+                }
+                .result-summary {
+                    margin: 8px 0;
+                    color: #444;
+                    font-size: 15px;
+                }
+                .statement {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #888;
+                }
+            }
+        }
+        .qrcode {
+            width: 100%;
+            height: 105px;
+            display: block;
+        }
+    }
+    .place-holder {
+        width: 100%;
+        height: 104px;
+    }
+    .btn-group {
+        position: fixed;
+        bottom: 34px;
+        right: 50%;
+        transform: translate3d(50%, 0, 0);
+        width: 345px;
+        padding-top: 20px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+            height: 50px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 50px;
+            color: #4875f6;
+            background: #ffffff;
+            box-shadow: 0 2px 24px 0 rgba(188, 188, 188, 0.5);
+            border-radius: 50px;
+
+            &.primary {
+                color: #fff;
+                background-image: linear-gradient(270deg, #1e7bfd 0%, #309cfe 100%);
+                box-shadow: 0 2px 24px 0 rgba(161, 161, 161, 0.5);
+            }
+
+            &.small {
+                width: 130px;
+            }
+            &.mid {
+                width: 190px;
+            }
+        }
+    }
+    .share-dialog {
+        position: absolute;
+        top: 0;
+        bottom: -80px;
+        right: 50%;
+        width: 375px;
+        padding-top: 58px;
+        background: rgba(0, 0, 0, 0.85);
+        transform: translate3d(50%, 0, 0);
+        // display: flex;
+        // align-items: flex-end;
+        // justify-content: center;
+        // flex-direction: column;
+        z-index: 3;
+        .dialog-close {
+            width: 345px;
+            height: 15px;
+            background-image: url('https://static.wecity.qq.com/h5/2020-2/close-8099280462c21e523b042746735c3a07.png');
+            background-repeat: no-repeat;
+            background-size: 15px 15px;
+            background-position: right center;
+        }
+        .img-wrap {
+            width: 315px;
+            margin: 10px auto 15px;
+            background: #fff;
+            overflow-x: hidden;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .share-img {
+                width: 315px;
+                // height: 1038px;
+                display: block;
+            }
+        }
+        .share-guide {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .btn {
+            width: 170px;
+            height: 50px;
+            margin: 10px auto 0;
+            font-size: 16px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50px;
+            color: #fff;
+            background-image: linear-gradient(270deg, #1e7bfd 0%, #309cfe 100%);
+            box-shadow: 0 2px 24px 0 rgba(161, 161, 161, 0.5);
+        }
+    }
+    .continue-ask-btn {
+        position: fixed;
+        right: 50%;
+        bottom: 34px;
+        transform: translate3d(50%, 0, 0);
+        width: 170px;
+        height: 50px;
+        margin: 10px auto 0;
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50px;
+        color: #fff;
+        background-image: linear-gradient(270deg, #1e7bfd 0%, #309cfe 100%);
+        box-shadow: 0 2px 24px 0 rgba(161, 161, 161, 0.5);
+        z-index: 5;
+    }
+}

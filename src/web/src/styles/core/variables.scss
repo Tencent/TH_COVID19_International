@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------
+// 公共通用样式变量
+//-----------------------------------------------------
+
+// 背景色，文本色，边框色，链接色
+$colorOverlay: rgba(0, 0, 0, 0.7); // 遮罩层颜色
+$colorBorder: #e5e5e5 !default;
+
+// 基本颜色
+// color function : http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+// lighten($color, $amount)
+// darken($color, $amount)
+// opacity($color, $amount)
+$color3: #333;
+$color6: #666;
+$color9: #999;
+$colorC: #ccc;
+$colorF: #f5f5f5;
+
+$blue: #007aff !default;
+$orange: #ff9500 !default;
+$red: #ff3b30 !default;
+$green: #4cd964 !default;
+
+// z-index
+//-----------------------------------------------------
+$zIndexHeader: 1000 !default;
+$zIndexFooter: 2000 !default;
+$zIndexPopup: 3000 !default;
+$zIndexOverlay: 4000 !default; // 默认高于header和footer部分

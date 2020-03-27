@@ -1,0 +1,474 @@
+@import '../../components/notificaton'; //异常提示
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    line-height: 1;
+    font-family: -apple-system-font, 'Helvetica Neue', sans-serif;
+}
+.page-hd {
+    background: #fff;
+    padding: 15px 18px 0 18px;
+    .tag-box {
+        margin: -5px 0 8px 0;
+    }
+}
+.page-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.address-info {
+    min-height: 50px;
+    position: relative;
+    margin: 0 -18px;
+    padding: 0 18px;
+    font-size: 14px;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        border-top: 1px solid #dfdfdf;
+        transform: scaleY(0.5);
+    }
+}
+.address-info-bd {
+    font-size: 14px;
+    padding: 15px 70px 15px 20px;
+    line-height: 1.4;
+    position: relative;
+    font-weight: 500;
+    color: #00bad1;
+    &::before {
+        content: '';
+        background: url('https://static.wecity.qq.com/wapdisease/hp-icon-sprites-4a5d9f2b388215ed181be900d8f2b303.png');
+        background-size: 16px 109px;
+        background-position: 0 -38px;
+        width: 14px;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        top: 16px;
+    }
+}
+.address-info-ft {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 74px;
+    &::after {
+        content: '';
+        width: 1px;
+        height: 34px;
+        background: #dfdfdf;
+        transform: scaleX(0.5);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -17px;
+    }
+}
+
+.btn-tellphone {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -8px 0 0 -8px;
+        z-index: 1;
+        background: url('https://static.wecity.qq.com/wapdisease/hp-icon-sprites-4a5d9f2b388215ed181be900d8f2b303.png');
+        background-size: 16px 109px;
+        background-position: 0 -89px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.page-bd {
+    padding: 10px 15px 80px 15px;
+    padding-bottom: calc(80px + constant(safe-area-inset-bottom));
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    padding: 15px 20px 13px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    .img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .banner-txt {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        color: #f0faff;
+        font-size: 14px;
+        .banner-tit {
+            position: relative;
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 5px;
+            .btn-consult {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+                padding: 0px 10px;
+                background-color: #b5f3ff;
+                color: #336583;
+                font-size: 14px;
+                border-radius: 15px;
+                line-height: 22px;
+            }
+        }
+        .banner-meta {
+            margin-bottom: 13px;
+        }
+        .banner-tips {
+            font-size: 10px;
+        }
+    }
+}
+.hp-cell {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.hp-cell-hd {
+}
+.hp-cell-tit {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        bottom: 0;
+        width: 3px;
+        height: 13px;
+        background-color: #888;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+.hp-cell-tips {
+    display: inline-block;
+    color: #888888;
+    font-size: 10px;
+    padding: 0 0 0 8px;
+}
+.hp-cell-bd {
+    font-size: 15px;
+    padding: 20px 0 0 0;
+    line-height: 1.6;
+    text-align: justify;
+    p {
+        text-align: justify;
+        font-size: 15px;
+        padding-bottom: 8px;
+        strong {
+            font-weight: 500;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.hp-panel-group-item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        border-top: 1px solid #dfdfdf;
+        transform: scaleY(0.5);
+    }
+    &:first-child {
+        padding-top: 0;
+        &::after {
+            display: none;
+        }
+    }
+}
+.tag-box {
+    // display: flex;
+    margin-bottom: 5px;
+    .tag {
+        display: inline-block;
+        padding: 2px 6px;
+        background-color: #fb8788;
+        border-radius: 3px;
+        color: #fff;
+        margin-bottom: 8px;
+        font-size: 12px;
+        margin-right: 5px;
+        font-weight: 500;
+
+        &.gray,
+        &.tag-default {
+            background-color: #f7f7f7;
+            color: rgba($color: #000000, $alpha: 0.4);
+        }
+        &.tag-warning {
+            background-color: #fbaa3f;
+            color: #fff;
+        }
+        &.tag-success {
+            background-color: #00b8d1;
+            color: #fff;
+        }
+        &.tag-error {
+            background-color: #fb8788;
+            color: #fff;
+        }
+    }
+}
+.cell-ico {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: #ccc;
+    vertical-align: middle;
+    background: url('https://static.wecity.qq.com/wapdisease/hp-icon-sprites-4a5d9f2b388215ed181be900d8f2b303.png');
+    background-size: 16px 109px;
+    background-position: 0 -57px;
+    width: 14px;
+    height: 12px;
+    margin: -3px 10px 0 0;
+}
+.cell-ico--check {
+    background-position: 0 0;
+    width: 13px;
+    height: 16px;
+}
+.cell-ico--guide {
+    background-position: 0 -20px;
+    width: 13px;
+    height: 14px;
+}
+.cell-ico--support {
+    background-position: 0 -73px;
+    width: 13px;
+    height: 12px;
+}
+
+.hp-cell-more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 70px;
+    line-height: 55px;
+    padding: 0 20px 0 0;
+    text-align: right;
+    font-size: 14px;
+    color: #000;
+    opacity: 0.85;
+    &::after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        width: 6px;
+        height: 6px;
+        border-right: 1px solid #888888;
+        border-bottom: 1px solid #888888;
+        transform: translateY(-1px) rotate(-45deg);
+        margin: 0 0 0 4px;
+    }
+}
+.hp-cell-tipstext {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 70px;
+    line-height: 55px;
+    padding: 0 20px 0 0;
+    text-align: right;
+    font-size: 14px;
+    color: #888;
+}
+.status-tips {
+    padding: 14px 20px 7px 20px;
+    // background: url("https://static.wecity.qq.com/wapdisease/status-bg-normal-30035483304a3988b898a611bbf06870.png");
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    .status-tips-txt-val {
+        color: #00b6cc;
+    }
+}
+.status-tips--high {
+    // background: url("https://static.wecity.qq.com/wapdisease/status-bg-high-b4056030b09f2bd25fca64c4ec418564.png");
+    // background-size: 100% 100%;
+    // background-repeat: no-repeat;
+    background-color: #fec1a9;
+    .status-tips-txt-val {
+        // color: #ff1542;
+        color: #000;
+    }
+}
+.status-tips--middle {
+    // background: url("https://static.wecity.qq.com/wapdisease/status-bg-middle-c9d8501a39a67a23f64829d9b4e035ea.png");
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
+    background-color: #fff5e9;
+    .status-tips-txt-val {
+        // color: #ffa60c;
+        color: #000;
+    }
+    .status-tip-top {
+        border-color: rgba($color: #ffa000, $alpha: 0.2);
+    }
+}
+.status-tips--normal {
+    // background: url("https://static.wecity.qq.com/wapdisease/status-bg-middle-c9d8501a39a67a23f64829d9b4e035ea.png");
+    // background-size: 100% auto;
+    // background-repeat: no-repeat;
+    background-color: #f1ffff;
+    .status-tips-txt-val {
+        // color: #ffa60c;
+        color: #000;
+    }
+    .status-tip-top {
+        border-color: rgba($color: #00b6cc, $alpha: 0.2);
+    }
+}
+.status-tip-top {
+    border-bottom: 1px solid #e1a489;
+}
+.status-tips-txt {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.status-tip-time {
+    font-size: 15px;
+    color: #000;
+    padding-bottom: 9px;
+    line-height: 19px;
+    .time {
+        margin-left: 10px;
+    }
+}
+.status-tips-words {
+    font-size: 12px;
+    padding-top: 6px;
+    line-height: 17px;
+}
+.status-tips-txt-word {
+    font-weight: 500;
+}
+.status-tips-txt-val {
+    padding: 0 0 0 10px;
+    font-weight: 500;
+}
+
+.hp-cell--enter {
+    display: block;
+    position: relative;
+    color: #000;
+    &::after {
+        content: '';
+        background: url('https://static.wecity.qq.com/wapdisease/ico-enter-e910cf2688c8b9b383cf789e28cb1cdb.png');
+        background-size: 100% 100%;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin: -13px 0 0 0;
+    }
+}
+
+.footbar-btn-full {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    .footbar-btn {
+        flex: 1;
+        width: 50%;
+        height: 50px;
+        display: block;
+        background-color: #00bad1;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        line-height: 50px;
+        z-index: 999;
+        padding-bottom: calc(constant(safe-area-inset-bottom) - 8px);
+        padding-bottom: calc(env(safe-area-inset-bottom) - 8px);
+        &:only-child {
+            width: 100%;
+        }
+    }
+    .btn--default {
+        background: #fff;
+        color: #000;
+        &:only-child {
+            background-color: #00bad1;
+            color: #fff;
+        }
+    }
+}
+
+.btn-area {
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    bottom: 27px;
+    background-color: #fff;
+    .btn {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        background-color: #00bdd4;
+        border-radius: 6px;
+        font-size: 16px;
+        opacity: 0.8;
+        z-index: 2;
+    }
+}

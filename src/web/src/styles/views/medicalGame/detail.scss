@@ -1,0 +1,426 @@
+@import './common/color.scss';
+
+.page-detail {
+    height: 100%;
+    width: 100%;
+    background-color: $blue;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .page-boxs {
+        width: 100%;
+        // height: 100%;
+        padding: 5%;
+        background-color: $blue;
+        margin-bottom: 10px;
+        .mg-nav {
+            width: 90%;
+            height: 72px;
+            position: relative;
+            .mg-left {
+                width: 50%;
+                height: 100%;
+                background: $green;
+                border-radius: 50px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                position: absolute;
+                left: 0;
+                img {
+                    width: 35%;
+                    height: 82%;
+                    border-radius: 50px;
+                    position: absolute;
+                    top: 6px;
+                    bottom: 6px;
+                    left: 7px;
+                }
+                .mg-name {
+                    width: 37%;
+                    height: 15px;
+                    position: absolute;
+                    top: 18px;
+                    left: 42%;
+                    font-size: 12px;
+                    color: #fff;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .mg-times {
+                    width: 40%;
+                    height: 15px;
+                    position: absolute;
+                    top: 45px;
+                    left: 40%;
+                    font-size: 12px;
+                    color: #ffffffad;
+                    transform: scale(0.9);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .mg-conter {
+                width: 58px;
+                height: 58px;
+                border: 12px solid $blue;
+                border-radius: 50%;
+                background-color: #fff;
+                text-align: center;
+                position: absolute;
+                left: 39%;
+                top: -6%;
+                z-index: 9;
+                .mg-box {
+                    width: 40px;
+                    height: 40px;
+                    border: 10px solid $fff;
+                    border-radius: 50%;
+                    background-color: $blue;
+                    span {
+                        color: $fff;
+                        font-size: 12px;
+                        position: absolute;
+                        left: 25%;
+                        top: 37%;
+                    }
+                    .mg-progress {
+                        width: 80%;
+                        height: 80%;
+                        border-radius: 50%;
+                        border: 4px solid $fff;
+                        border-top: 4px solid $green;
+                        border-left: 4px solid $green;
+                        border-bottom: 4px solid $green;
+                        // border-right:4px solid $green;
+                        position: absolute;
+                        left: 2px;
+                        top: 2px;
+                        bottom: 2px;
+                        right: 2px;
+                        animation: progress 5s linear;
+                    }
+                    @keyframes progress {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+            .mg-right {
+                width: 50%;
+                height: 100%;
+                background: $yellow;
+                border-radius: 50px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                position: absolute;
+                right: 0;
+                img {
+                    width: 35%;
+                    height: 82%;
+                    padding: 6px 0 6px 7px;
+                    border-radius: 50px;
+                    // position: absolute;
+                    // right: 7px;
+                    float: right;
+                    margin-right: 4%;
+                }
+                .mg-name {
+                    width: 32%;
+                    height: 15px;
+                    float: right;
+                    text-align: right;
+                    // position: absolute;
+                    // top: 20px;
+                    // right: 35%;
+                    font-size: 12px;
+                    color: #fff;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    line-height: 15px;
+                    margin-top: 18px;
+                    margin-right: -2%;
+                }
+            }
+        }
+        .circle_process {
+            position: relative;
+            width: 53px;
+            height: 54px;
+            top: -6px;
+            left: -6px;
+        }
+        .circle_process .wrapper {
+            width: 27px;
+            height: 54px;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+        }
+        .circle_process .right {
+            right: 2%;
+        }
+        .circle_process .left {
+            left: 0%;
+        }
+        .circle_process .circle {
+            width: 42px;
+            height: 42px;
+            border: 5px solid transparent;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            transform: rotate(-135deg);
+        }
+        .circle_process .rightcircle {
+            border-top: 5px solid $green;
+            border-right: 5px solid $green;
+            right: 0;
+            -webkit-animation: circle_right 5s linear infinite;
+        }
+        .circle_process .leftcircle {
+            border-bottom: 5px solid $green;
+            border-left: 5px solid $green;
+            left: 0;
+            -webkit-animation: circle_left 5s linear infinite;
+        }
+        @-webkit-keyframes circle_right {
+            0% {
+                -webkit-transform: rotate(45deg);
+            }
+            50%,
+            100% {
+                -webkit-transform: rotate(230deg);
+            }
+        }
+        @-webkit-keyframes circle_left {
+            0%,
+            50% {
+                -webkit-transform: rotate(45deg);
+            }
+            100% {
+                -webkit-transform: rotate(225deg);
+            }
+        }
+    }
+    .mg-container {
+        width: 90%;
+        height: 80%;
+        padding: 5%;
+        background-color: $blue;
+        position: relative;
+        .mg-sidebar {
+            width: 10%;
+            height: 90%;
+            color: $fff;
+            position: absolute;
+            .mg-number {
+                margin-bottom: 20px;
+                font-size: 20px;
+                text-align: center;
+            }
+            .mg-pro {
+                width: 10px;
+                height: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #003278;
+                border-radius: 5px;
+                position: relative;
+                .mg-green {
+                    width: 100%;
+                    height: 85%;
+                    background-color: $green;
+                    border-radius: 5px;
+                    // padding-top: 40%;
+                    position: absolute;
+                    bottom: 0;
+                    animation: wordpress 2s ease-out;
+                }
+            }
+            @keyframes wordpress {
+                0% {
+                    height: 0px;
+                }
+                100% {
+                    height: 85%;
+                }
+            }
+        }
+        .mg-content {
+            width: 55%;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            color: $fff;
+            transform: translateX(-50%);
+            .mg-fade {
+                animation: fade 2s 1 0s;
+            }
+            .mg-title {
+                text-align: center;
+                margin-top: -20px;
+                margin-bottom: 30px;
+                font-size: 20px;
+            }
+            .mg-two {
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .mg-three {
+                text-align: center;
+                margin-bottom: 40px;
+                font-size: 14px;
+            }
+            .mg-correct,
+            .mg-wrong,
+            .mg-payment {
+                width: 100%;
+                height: 52px;
+                border-radius: 52px;
+                background-color: $fff;
+                color: #0059d5;
+                border-color: $fff;
+                margin-bottom: 20px;
+                font-size: 17px;
+                text-align: center;
+                font-weight: bold;
+                // line-height: 50px;
+                cursor: pointer;
+                font-family: 'PingFang-SC-Bold';
+                letter-spacing: 1px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                line-height: 20px;
+                .mg-mone {
+                    width: 70%;
+                    margin-left: 16%;
+                    font-weight: bold;
+                }
+            }
+            .mg-green {
+                width: 100%;
+                height: 52px;
+                background-color: $green;
+                color: $fff;
+                position: relative;
+                .mg-garden {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 4px solid $fff;
+                    background: $green;
+                    color: $fff;
+                    position: absolute;
+                    left: 6%;
+                    top: 15px;
+                }
+            }
+            .mg-red {
+                background-color: $red;
+                color: $fff;
+                position: relative;
+                .mg-cross {
+                    position: absolute;
+                    width: 0.3em;
+                    height: 1.5em;
+                    background: $fff;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    display: inline-block;
+                    right: 10%;
+                    font-size: 12px;
+                    top: 17px;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0.3em;
+                        height: 1.5em;
+                        background: $fff;
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+            .mg-time {
+                position: absolute;
+                top: 66%;
+                left: 45%;
+                font-size: 12px;
+            }
+        }
+        .mg-sidebarRight {
+            width: 10%;
+            height: 90%;
+            color: $fff;
+            position: absolute;
+            right: 5%;
+            .mg-number {
+                margin-bottom: 20px;
+                font-size: 20px;
+                text-align: center;
+            }
+            .mg-pro {
+                width: 10px;
+                height: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #003278;
+                border-radius: 5px;
+                position: relative;
+                .mg-green {
+                    width: 100%;
+                    height: 70%;
+                    background-color: $green;
+                    border-radius: 5px;
+                    // padding-top: 40%;
+                    position: absolute;
+                    bottom: 0;
+                    animation: wordpresa 2s ease-out;
+                }
+            }
+            @keyframes wordpresa {
+                0% {
+                    height: 0px;
+                }
+                100% {
+                    height: 70%;
+                }
+            }
+        }
+    }
+    .mg-footer {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        color: #ffffffad;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}

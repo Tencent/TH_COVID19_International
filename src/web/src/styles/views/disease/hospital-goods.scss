@@ -1,0 +1,127 @@
+@import '../../components/notificaton'; //异常提示
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    line-height: 1;
+}
+
+.page-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0 20px 0;
+    text-align: center;
+}
+.page-bd {
+    padding: 10px 15px 60px 15px;
+    padding-bottom: calc(60px + constant(safe-area-inset-bottom));
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+
+.hp-cell {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.hp-cell-tit {
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+}
+.hp-cell-bd {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    img {
+        max-width: 100%;
+    }
+    strong {
+        font-weight: 500;
+    }
+    p {
+        text-align: justify;
+        font-size: 15px;
+        padding-bottom: 8px;
+
+        &:last-child {
+            // padding-bottom: 0;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0 0 8px 0;
+    }
+    .content-block {
+        padding-bottom: 10px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.hp-panel-group-item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        border-top: 1px solid #dfdfdf;
+        transform: scaleY(0.5);
+    }
+    &:first-child {
+        padding-top: 0;
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.footbar-btn-full {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    .footbar-btn {
+        flex: 1;
+        width: 50%;
+        height: 50px;
+        display: block;
+        background-color: #00bad1;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        line-height: 50px;
+        z-index: 999;
+        padding-bottom: calc(constant(safe-area-inset-bottom) - 8px);
+        padding-bottom: calc(env(safe-area-inset-bottom) - 8px);
+        &:only-child {
+            width: 100%;
+        }
+    }
+    .btn--default {
+        background: #fff;
+        color: #000;
+        &:only-child {
+            background-color: #00bad1;
+            color: #fff;
+        }
+    }
+}

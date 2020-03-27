@@ -1,0 +1,149 @@
+@import '../../common/variables';
+// desc:咨询窗口--消息块
+// desc:使用于用户端、医生端咨询窗口
+
+.chat-cell {
+    padding: 0 15px 15px 15px;
+}
+.echat {
+}
+.echat-inner {
+    background: $color-white;
+    border-radius: 15px 15px 15px 0;
+    font-size: $font-size-base;
+    padding: 10px 13px;
+    display: inline-block;
+    max-width: calc(100vw - 80px);
+    text-align: justify;
+    word-break: break-all;
+    box-sizing: border-box;
+    color: $color-text-1;
+}
+
+.echat--mine {
+    text-align: right;
+    .echat-inner {
+        background: linear-gradient(270deg, #6480ef 0%, #5473ef 100%);
+        text-align: left;
+        border-radius: 15px 15px 0 15px;
+        color: $color-white;
+    }
+}
+.echat-cont {
+    -webkit-user-select: auto;
+    user-select: auto;
+    text-align: justify;
+    word-break: break-all;
+}
+
+.chat-time,
+.chat-tips {
+    text-align: center;
+    font-size: $font-size-s;
+    color: $color-text-2;
+    padding: 5px 0 0;
+}
+
+.chat-tips-score {
+    text-align: center;
+    padding: 5px 0 0;
+}
+.chat-tips-scorebox {
+    background: $color-line-1;
+    color: $color-text-2;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: $font-size-s;
+    text-align: center;
+    border-radius: 200px;
+    padding: 0 10px;
+}
+
+.echat--img {
+    .echat-inner {
+        padding: 3px;
+        border-radius: 5px;
+    }
+    .echat-cont {
+    }
+    .echat-img {
+        max-width: 60px;
+        max-height: 60px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        display: block;
+        border-radius: 5px;
+    }
+}
+
+.gallery-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+.gallery-viewer-mask {
+    background-color: rgba($color: #000000, $alpha: 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+.gallery-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+        content: '';
+        width: 0;
+        height: 100%;
+        line-height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.gallery-img-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+.gallery-img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.galler-dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+}
+.galler-dialog-close:before,
+.galler-dialog-close:after {
+    position: absolute;
+    left: 13px;
+    top: 2px;
+    content: ' ';
+    height: 24px;
+    width: 1px;
+    background-color: $color-white;
+}
+.galler-dialog-close:before {
+    transform: rotate(45deg);
+}
+.galler-dialog-close:after {
+    transform: rotate(-45deg);
+}

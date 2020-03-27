@@ -1,0 +1,66 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-1 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px 0px;
+    width: 270px;
+    height: 230px;
+}
+.icon-2 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px -230px;
+    width: 270px;
+    height: 231px;
+}
+.icon-3 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px -461px;
+    width: 270px;
+    height: 231px;
+}
+.icon-light-twinkle01 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px -692px;
+    width: 375px;
+    height: 248px;
+}
+.icon-light-twinkle02 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px -940px;
+    width: 375px;
+    height: 248px;
+}
+.icon-open-door01 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px -1188px;
+    width: 375px;
+    height: 248px;
+}
+.icon-open-door02 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px -1436px;
+    width: 375px;
+    height: 248px;
+}
+.icon-open-door03 {
+    background-image: url(~assets/imgs/sprite.png);
+    background-position: 0px -1684px;
+    width: 375px;
+    height: 248px;
+}

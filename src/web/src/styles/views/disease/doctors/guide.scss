@@ -1,0 +1,110 @@
+@import '../../../components/notificaton'; //异常提示
+.container {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px 15px 60px 15px;
+    padding-bottom: calc(60px + constant(safe-area-inset-bottom));
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    line-height: 1;
+}
+
+.article-box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px 10px 20px;
+    margin: 0 0 5px 0;
+}
+
+.article-box-tit {
+    font-size: 16px;
+    padding: 0 0 15px 20px;
+    position: relative;
+    margin: 0 0 0 -20px;
+    &::after {
+        content: '';
+        width: 3px;
+        height: 13px;
+        background: #00bdd4;
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+}
+.article-box-group-tit {
+    font-size: 18px;
+    padding: 0 0 15px 0;
+    line-height: 1.5;
+    text-align: justify;
+    font-weight: 500;
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+.article-box-group-item {
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
+    & > p {
+        padding: 0 0 5px 0;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.article-box-group {
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid rgba(138, 144, 150, 0.4);
+        transform: scaleY(0.5);
+    }
+    &:last-child {
+        padding-bottom: 0;
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.footbar-btn-full {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: #fff;
+    .footbar-btn {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #00bdd4;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        line-height: 50px;
+        opacity: 0.8;
+        z-index: 999;
+        padding-bottom: calc(constant(safe-area-inset-bottom) - 8px);
+        padding-bottom: calc(env(safe-area-inset-bottom) - 8px);
+    }
+}
+
+.txt-wraning {
+    color: #ffa200;
+}
+.txt-error {
+    color: #ff1542;
+}

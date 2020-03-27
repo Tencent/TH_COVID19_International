@@ -1,0 +1,139 @@
+.nb-bubble-box-wrap {
+    width: 245px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid rgba(44, 82, 238, 0.5);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.13);
+    position: relative;
+    padding: 15px;
+    font-size: 12px;
+    &:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid rgba(44, 82, 238, 0.5);
+        border-bottom: 1px solid rgba(44, 82, 238, 0.5);
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(-45deg);
+        bottom: -6px;
+    }
+
+    .bubble-hd {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        line-height: 1;
+        .title {
+            font-size: 12px;
+            color: #888888;
+        }
+        .btn-close {
+            width: 10px;
+            height: 10px;
+            background: url('https://static.wecity.qq.com/wapdisease/btn-close-2020-02-10-1b83ed89381292dd7c6e0c19ba2a786b.png')
+                no-repeat;
+            background-size: contain;
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+            &:active {
+                opacity: 0.5;
+            }
+        }
+    }
+    .bubble-bd {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d8d8d8;
+        .em {
+            color: #f81f1f;
+            font-weight: 500;
+            padding: 0 5px;
+        }
+        .desc {
+            &:not(:last-child) {
+                padding-bottom: 5px;
+            }
+            &:last-child {
+                line-height: 1;
+            }
+        }
+
+        .control {
+            padding-left: 10px;
+            // .btn-check {
+            //     width: fit-content;
+            //     height: 17px;
+            //     border: 1px solid #2C52EE;
+            //     border-radius: 2.5px;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     padding: 0 8px;
+            //     flex-shrink: 0;
+            //     white-space: nowrap;
+            //     &:active {
+            //         opacity: 0.5;
+            //     }
+            //     span {
+            //         color: #2C52EE;
+            //     }
+            // }
+
+            .btn-check {
+                font-size: 12px;
+                color: #2c52ee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+                position: relative;
+                // top: 2px;
+                padding-right: 5px;
+                // height: 20px;
+                // height: 14px;
+                &:active {
+                    opacity: 0.5;
+                }
+                span {
+                    padding-right: 2px;
+                    line-height: 1;
+                }
+                .arrow-right {
+                    width: 5px;
+                    height: 5px;
+                    border-top: 1px solid #2c52ee;
+                    border-right: 1px solid #2c52ee;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                    right: 0;
+                    // margin-top: 1px;
+                }
+            }
+        }
+    }
+
+    .bubble-ft {
+        padding-top: 10px;
+        .tips {
+            color: #888;
+            white-space: nowrap;
+        }
+    }
+}

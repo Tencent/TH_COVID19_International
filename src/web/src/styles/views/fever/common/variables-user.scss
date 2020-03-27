@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+//-----------------------------------------------------
+// 公共通用样式变量
+//-----------------------------------------------------
+
+$color-white: #fff; // 白色
+$color-black: #000; // 黑色
+
+$color-brand1: #00bdd4; //品牌色1
+$color-brand2: #28d0a0; //品牌色2
+$color-brand3: #f0250e; //品牌色3
+$color-brand4: #00bad1; //品牌色4 (医院端)
+
+// 背景色，文本色，边框色，链接色
+$color-fill-bg-light: #f7f7f7; // 页面背景--浅
+$color-fill-1: #f5f5f5; //填充色1
+$color-fill-2: #ffffff; //填充色2-白色
+
+$color-line-1: #dfdfdf; //分隔线1
+$color-line-2: #00bdd4; //分隔线2
+
+$color-text-1: #000; //重要文本色
+$color-text-2: #888; //辅助文本色
+$color-text-3: #cacaca; //次要文本色
+$color-text-4: #00bdd4; //重要文本色
+
+// 功能色
+$color-error: #f0250e;
+$color-warning: #f5a623;
+
+//字体大小
+$font-size-xs: 10px;
+$font-size-s: 12px;
+$font-size-base: 14px;
+$font-size-l: 16px;
+$font-size-xl: 18px;

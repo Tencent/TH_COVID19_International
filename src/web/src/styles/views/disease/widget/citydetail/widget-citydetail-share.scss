@@ -1,0 +1,477 @@
+@import 'widget-citydetail-share-v2.scss';
+.page-citydetail,
+.page-citydetail-sub {
+    .wx-share-dialog-wrap {
+        left: 0;
+        right: 0;
+    }
+    .imgbox {
+        width: 352px;
+        height: 610px;
+        background: #008596 url('https://static.wecity.qq.com/wapdisease/img-bg-c96eee86e25de9276535cce9de07a1f1.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        margin: 0 auto;
+        font-family: -apple-system-font, 'Helvetica Neue', sans-serif;
+    }
+    .imgbox--citysub {
+        background: #008596 url('https://static.wecity.qq.com/wapdisease/img-bg-c96eee86e25de9276535cce9de07a1f1.jpg');
+    }
+    .imgbox-hd {
+        overflow: hidden;
+    }
+    .imgbox-title {
+        width: 290px;
+        height: 29px;
+        margin: 28px auto 5px auto;
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+    .imgbox-subtitle {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        padding: 10px 0 8px 0;
+        strong {
+            color: #ffe364;
+            font-weight: 700;
+        }
+    }
+    .imgbox-date {
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        padding: 0 0 15px 0;
+    }
+
+    .imgbox-cont {
+        background: #fff;
+        width: 322px;
+        height: 335px;
+        border-radius: 10px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .imgbox-ft {
+        position: relative;
+        padding: 10px 0 0 14px;
+    }
+    .imgbox-slogan {
+        font-size: 14px;
+        color: #fff;
+        position: relative;
+        display: inline-block;
+        padding: 10px 0 10px 0;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        &::before,
+        &::after {
+            content: '';
+            width: 5px;
+            height: 4px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url('https://static.wecity.qq.com/wapdisease/ico-q-l-2350bd7e20201396148499cb67d7e112.png');
+            background-size: cover;
+        }
+        &::after {
+            position: absolute;
+            right: -10px;
+            bottom: 20px;
+            top: auto;
+            left: auto;
+            background: url('https://static.wecity.qq.com/wapdisease/ico-q-r-845603890f2495cfdd764197ae4c99d5.png');
+            background-size: cover;
+        }
+    }
+
+    .imgbox-logo {
+        width: 134px;
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+    .imgbox-tips {
+        font-size: 10px;
+        text-align: center;
+        color: #fff;
+        padding-top: 12px;
+    }
+
+    .dt-dashboard-grid {
+        display: flex;
+        margin: 20px 10px 0 10px;
+        &.wuhan {
+            margin-top: 8px;
+        }
+        .dt-dashboard-item {
+            flex: 1;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            height: 50px;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                border-right: 1px solid #dfdfdf;
+                transform: scaleX(0.5);
+            }
+            &:first-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .dt-dashboard-item-val {
+        font-size: 18px;
+        font-weight: 500;
+        height: 28px;
+        line-height: 28px;
+        margin-bottom: 5px;
+        .txt-cn {
+            font-size: 14px;
+        }
+        * {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    .dt-dashboard-item-tit {
+        font-size: 10px;
+        font-weight: 500;
+        * {
+            font-size: 10px;
+            font-weight: 500;
+        }
+    }
+    .dashboard-label {
+        // position: absolute;
+        // left: 0;
+        // bottom: 0;
+    }
+
+    .dashboard-label-ico {
+        width: 8px;
+        height: 8px;
+        border-radius: 1px;
+        background: #fed89b;
+        vertical-align: middle;
+        display: inline-block;
+        margin: -0.5px 3px 0 0;
+        &.ico-01 {
+            background: #fed89b;
+        }
+        &.ico-02 {
+            background: #feb99b;
+        }
+        &.ico-03 {
+            background: #e16f5d;
+        }
+
+        &.ico-04 {
+            background: #9a0000;
+        }
+
+        &.ico-05 {
+            background: #ffa317;
+        }
+
+        &.ico-06 {
+            background: #0f8afb;
+        }
+
+        &.ico-07 {
+            background: #33ae5b;
+        }
+        &.ico-08 {
+            background: #333333;
+        }
+        &.ico-09 {
+            background: #de5e5b;
+        }
+        &.ico-10 {
+            background: #62c298;
+        }
+        &.ico-11 {
+            background: #888888;
+        }
+    }
+    .dashboard-label-txt {
+        vertical-align: middle;
+        font-size: 8px;
+        color: rgba($color: #010604, $alpha: 0.5);
+    }
+    .dashboard-label--h {
+        font-size: 0;
+        .dashboard-label-item {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 6px 0 0;
+            .dashboard-label-ico {
+                width: 6px;
+                height: 6px;
+                border-radius: 1px;
+                margin: 0 2px 0 0;
+            }
+            .dashboard-label-txt {
+                font-size: 5px;
+            }
+        }
+    }
+    .dashboard-table {
+        position: relative;
+
+        &.table-spec01 {
+            margin-top: 15px;
+            .dashboard-table-title {
+                position: absolute;
+                left: 0;
+                top: 5px;
+            }
+            .chart-mapbox {
+                width: 140px;
+                height: 140px;
+                margin: -25px auto 0 auto;
+                // position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // margin: -65px 0 0 -70px;
+            }
+            .dashboard-label {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            .dashboard-label-item {
+                padding-bottom: 2px;
+                .dashboard-label-ico {
+                    margin: -2px 3px 0 0;
+                }
+            }
+        }
+        &.table-spec02 {
+            margin: 25px 0 0;
+            position: relative;
+            &:nth-child(2) {
+                .dashboard-label {
+                    text-align: center;
+                }
+            }
+            .chart-mapbox {
+                width: 150px;
+                height: 150px;
+                margin: 0 0 0 -10px;
+            }
+            .chart-line--01 {
+                width: 130px;
+                height: 130px;
+                position: relative;
+                margin: 15px auto 5px auto;
+            }
+            .dashboard-table-box {
+                height: 180px;
+            }
+            .dashboard-label--h {
+                // white-space: nowrap;
+                .dashboard-label-item {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding-bottom: 8px;
+                    padding-right: 5px;
+                    .dashboard-label-ico {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 1px;
+                        margin: -0.5px 3px 0 0;
+                        vertical-align: middle;
+                    }
+                    .dashboard-label-txt {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard-table-row--01 {
+        margin-top: 16px;
+        .dashboard-table-box {
+        }
+        .chart-line {
+            height: 100px;
+        }
+        .dashboard-label {
+            text-align: center;
+            display: block;
+            width: 100%;
+            .dashboard-label-item {
+                &:last-child {
+                    padding-right: 0;
+                }
+                padding-bottom: 3px;
+            }
+            .dashboard-label-ico {
+                width: 6px;
+                height: 6px;
+            }
+            .dashboard-label-txt {
+                font-size: 6px;
+            }
+        }
+        .dashboard-table-box {
+            margin-top: 5px;
+        }
+        .dashboard-table-box {
+        }
+    }
+    .dashboard-table-grid {
+        padding: 0 18px;
+    }
+    .dashboard-table-title {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .dashboard-table-row {
+        display: flex;
+        margin-bottom: 8px;
+    }
+    .dashboard-table {
+        width: 145px;
+        &:only-child {
+            width: 290px;
+        }
+    }
+    .dashboard-table-box {
+        height: 100px;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .txt-new {
+        color: #00b9d1;
+    }
+    .txt-error {
+        color: #de5e5b;
+    }
+    .txt-success {
+        color: #32ae5b;
+    }
+    .txt-default {
+        color: #666;
+        .dt-dashboard-item-val {
+            color: #9d9d9d;
+        }
+    }
+    .chart-mapbox,
+    .chart-line {
+        overflow: hidden;
+    }
+    .imgbox--citysub {
+        .imgbox-title {
+            background: url('https://static.wecity.qq.com/wapdisease/logo-559a347a7e6acb7eb1dc03fc44887fe5.png');
+            background-size: 100% auto;
+            img {
+                display: none;
+            }
+        }
+        .imgbox-subtitle {
+            strong {
+                color: #ffce5d;
+            }
+        }
+        .dt-dashboard-grid {
+            margin: 10px 10px 5px 10px;
+        }
+
+        .imgbox-cont {
+            background-image: linear-gradient(180deg, #ffffff 0%, #f2f4ff 100%);
+        }
+
+        .dashboard-table-panel-hd {
+            font-size: 12px;
+            font-weight: 500;
+            height: 24px;
+            line-height: 24px;
+        }
+        .dashboard-table-panel-bd {
+            // padding: 10px 0 0;
+        }
+        .dd-table-row-full {
+            padding: 8px 0 10px 0;
+        }
+        .dashboard-table-map {
+            width: 195px;
+            height: 117px;
+            border-radius: 3px;
+            background: #f5f5f5;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .dd-table-row {
+            font-size: 0;
+            .dashboard-table-panel {
+                width: 50%;
+                display: inline-block;
+                box-sizing: border-box;
+                vertical-align: top;
+            }
+            .dashboard-label {
+                font-size: 0;
+                text-align: center;
+            }
+            .dashboard-label-item {
+                display: inline-block;
+                padding: 0 5px 0 0;
+            }
+            .dashboard-label-txt {
+                font-size: 6px;
+            }
+            .dashboard-label-ico {
+                width: 6px;
+                height: 6px;
+            }
+            .dashboard-table-line {
+                width: 135px;
+                height: 60px;
+                box-sizing: border-box;
+                margin: 0 auto 8px auto;
+            }
+        }
+    }
+
+    // 武汉分享图
+    .fright-wuhan {
+        margin: 3px -18px -13px;
+        height: 134.5px;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .dashboard-table-row {
+            margin-bottom: 0;
+        }
+        .dashboard-table.table-spec01 {
+            margin-top: 0;
+        }
+        .icon-wuhan {
+            width: 138px;
+            height: 85.5px;
+            position: absolute;
+            top: 26px;
+            right: 16px;
+        }
+    }
+}

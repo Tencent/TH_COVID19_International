@@ -1,0 +1,430 @@
+@import '../common/color.scss';
+
+.page-eight {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+
+    .page-container {
+        opacity: 0.5;
+    }
+    .page-boxs {
+        width: 100%;
+        // height: 580px;
+        position: relative;
+        background-color: $blue;
+        clear: both;
+        padding-bottom: 60px;
+        .sg-logo {
+            width: 100%;
+            // height: 400px;
+        }
+        .sg-action {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            color: $fff;
+            .sg-gold {
+                display: inline-block;
+                margin-right: 25px;
+                img {
+                    margin-bottom: -2px;
+                }
+            }
+            .sg-leads {
+                display: inline-block;
+                margin-left: 0px;
+                img {
+                    margin-bottom: -2px;
+                }
+            }
+            a {
+                color: $fff;
+                text-decoration: underline;
+            }
+            img {
+                width: 14px;
+                height: 14px;
+                margin-top: 0px;
+            }
+        }
+        .sg-progress {
+            width: 100%;
+            height: 45px;
+            padding: 10px 10% 15px;
+            position: relative;
+            .sg-invite {
+                width: 35%;
+                height: 45px;
+                float: left;
+                position: absolute;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                text-align: center;
+                line-height: 45px;
+                color: $blue;
+                font-weight: bold;
+                background-color: $fff;
+                opacity: 1 !important;
+                z-index: 999999999;
+                background: linear-gradient(-62deg, transparent 21px, $fff 0) top right;
+                font-size: 16px;
+            }
+            .sg-random {
+                width: 35%;
+                height: 45px;
+                float: left;
+                position: absolute;
+                right: 25%;
+                background: $green;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                text-align: center;
+                line-height: 45px;
+                color: $fff;
+                font-weight: bold;
+                background: linear-gradient(118deg, transparent 21px, $green 0) bottom left;
+                font-size: 16px;
+            }
+        }
+        .sg-welss {
+            font-size: 12px;
+            color: $fff;
+            text-align: center;
+        }
+    }
+    .mg-container {
+        width: 100%;
+        height: 800px;
+        position: relative;
+        background: $fff;
+        .mg-banner {
+            width: 90%;
+            height: 160px;
+            border-radius: 5px;
+            position: absolute;
+            left: 5%;
+            top: -40px;
+            background-color: $fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+            .mg-title {
+                width: 50%;
+                height: 160px;
+                .sg-one {
+                    width: 100%;
+                    height: 30px;
+                    font-size: 22px;
+                    margin: 30px 0 20px 20px;
+                    .sg-per {
+                        font-weight: bold;
+                        padding-left: 10px;
+                        &::after {
+                            content: '';
+                            width: 4px;
+                            height: 24px;
+                            position: absolute;
+                            top: 28px;
+                            left: 4%;
+                            background: $green;
+                        }
+                    }
+                }
+                .sg-two {
+                    margin-left: 30px;
+                    border-right: 1px solid #efefef;
+                    .sg-ban {
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                    }
+                    .sg-fit {
+                        color: #666;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .sg-bar {
+                width: 50%;
+                height: 73px;
+                position: absolute;
+                bottom: 8px;
+                right: -10%;
+                .sg-three {
+                    width: 69%;
+                    height: 32px;
+                    background-color: $green;
+                    border-radius: 20px;
+                    color: $fff;
+                    text-align: center;
+                    line-height: 32px;
+                    margin-bottom: 0px;
+                    position: absolute;
+                    right: 40%;
+                    font-size: 14px;
+                }
+                .sg-four {
+                    color: #999;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 40px;
+                    right: 55%;
+                }
+            }
+        }
+        .sg-out {
+            width: 50px;
+            height: 50px;
+            background-color: $blue;
+            border-radius: 50%;
+            position: fixed;
+            right: 20px;
+            top: 560px;
+            display: table-cell; //主要是这个属性
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+            z-index: 999;
+            img {
+                width: 23px;
+                height: 23px;
+                margin: 14px auto;
+                text-align: center;
+            }
+        }
+        .mg-convert {
+            width: 90%;
+            height: 620px;
+            background-color: $fff;
+            box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 145px;
+            left: 5%;
+            .mg-nav {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .mg-liter {
+                    width: 60%;
+                    .mg-notes {
+                        font-size: 24px;
+                        font-weight: bold;
+                        border-left: 4px solid $green;
+                        padding-left: 10px;
+                        margin: 30px 0 10px 20px;
+                    }
+                    .mg-annal {
+                        font-size: 14px;
+                        color: #666666;
+                        margin-left: 34px;
+                    }
+                }
+                .mg-record {
+                    width: 40%;
+                    .mg-minure {
+                        font-size: 16px;
+                        margin: 45px 30px;
+                        color: #999999;
+                        position: absolute;
+                        right: 2%;
+                    }
+                    .mg-tran {
+                        width: 7px;
+                        height: 7px;
+                        border-top: 1px solid #6a7485;
+                        border-right: 1px solid #6a7485;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        right: -17%;
+                        top: 2px;
+                    }
+                }
+            }
+            .mg-container {
+                width: 90%;
+                height: 510px;
+                padding-left: 5%;
+                margin-top: 50px;
+                clear: both;
+                .mg-box {
+                    width: 47%;
+                    height: 220px;
+                    float: left;
+                    margin-right: 5%;
+                    .mg-img {
+                        width: 100%;
+                        height: 100px;
+                        background: #585e74;
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: center;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        float: left;
+                        img {
+                            width: 72%;
+                            height: 37px;
+                            margin-top: 30px;
+                        }
+                    }
+                    .mg-titles {
+                        width: 100%;
+                        height: 30px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        font-size: 12px;
+                        padding-top: 12px;
+                        .mg-golds {
+                            .mg-vip {
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                            }
+                            .mg-dunk {
+                                color: #666;
+                            }
+                        }
+                        .mg-xuner {
+                            color: #999999;
+                            margin-top: 15px;
+                        }
+                    }
+                    .mg-bun,
+                    .mg-bur {
+                        width: 60%;
+                        height: 30px;
+                        border-radius: 20px;
+                        background-color: $green;
+                        color: $fff;
+                        text-align: center;
+                        line-height: 30px;
+                        margin-top: 25px;
+                    }
+                    .mg-bur {
+                        background-color: #999999;
+                    }
+                }
+                .mg-box:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .mg-haver {
+        // position: fixed;
+        top: 442px;
+        left: 10%;
+        width: 42%;
+        height: 45px;
+        float: left;
+        position: absolute;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        text-align: center;
+        line-height: 45px;
+        color: $blue;
+        font-weight: bold;
+        background-color: $fff;
+        opacity: 1 !important;
+        z-index: 999;
+        background: linear-gradient(-62deg, transparent 21px, $fff 0) top right;
+    }
+    .mg-park {
+        position: absolute;
+        top: 190px;
+        left: 10%;
+        width: 50%;
+        height: 45px;
+        float: left;
+        text-align: center;
+        line-height: 45px;
+        color: $blue;
+        font-weight: bold;
+        opacity: 1 !important;
+        z-index: 999;
+        .mg-gite {
+            position: absolute;
+            width: 20%;
+            height: 120px;
+            left: 15%;
+            top: 100px;
+        }
+        .mg-filt {
+            position: absolute;
+            width: 30%;
+            height: 18px;
+            left: 65%;
+            top: 140px;
+        }
+        .mg-vertail {
+            position: absolute;
+            width: 100%;
+            height: 18px;
+            opacity: 1 !important;
+            left: 30%;
+            top: 177px;
+        }
+    }
+    .mg-next {
+        .mg-steps {
+            position: absolute;
+            left: 50%;
+            top: 590px;
+            width: 35%;
+            height: 40px;
+            background-color: $fff;
+            color: $blue;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 16px;
+            transform: translate(-50%, -50%);
+        }
+        .mg-eap {
+            position: absolute;
+            left: 50%;
+            top: 630px;
+            color: $fff;
+            transform: translate(-50%, -50%);
+            font-size: 13px;
+        }
+    }
+}
+@media screen and (max-height: 568px) and (max-width: 320px) {
+    .mg-titles {
+        position: relative;
+    }
+    .mg-golds {
+        width: 51%;
+        .mg-vip {
+            font-size: 12px;
+            margin-bottom: 6px;
+            transform: scale(0.9);
+            margin-left: -7px !important;
+        }
+        .mg-dunk {
+            color: #666;
+            font-size: 12px;
+            transform: scale(0.9);
+            margin-left: -7px !important;
+        }
+    }
+    .mg-xuner {
+        position: absolute;
+        right: 1px;
+        font-size: 12px;
+        color: #999999;
+        margin-top: 20px;
+        transform: scale(0.9);
+        margin-left: -7px !important;
+    }
+}

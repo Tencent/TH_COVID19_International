@@ -1,0 +1,183 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-item {
+    display: inline-block;
+    width: 106px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 6px;
+    line-height: 22px;
+    margin-top: 4px;
+    background: #f9f9f9;
+    .tt-bar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 13px;
+        margin-bottom: 11px;
+        padding: 0 10px;
+        padding-right: 2px;
+        font-size: 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        .tt {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                font-size: 14px;
+                font-weight: 500;
+                color: #333;
+            }
+            .icon-arrow-right {
+                position: absolute;
+                right: 12px;
+                top: 6px;
+                width: 8px;
+                height: 8px;
+                border-right: 1px solid rgba(18, 18, 18, 0.85);
+                border-bottom: 1px solid rgba(18, 18, 18, 0.85);
+                transform: rotate(-45deg);
+            }
+        }
+        .attention {
+            position: absolute;
+            right: 22px;
+            font-size: 12px;
+            // width: 27px;
+            height: 14px;
+            line-height: 14px;
+            background-color: #00b9d1;
+            border-radius: 3px;
+            transform: scale(0.9);
+            transform-origin: 100% 0;
+            color: #fff;
+            .img {
+                width: 35px;
+                height: 14px;
+            }
+            .img-new {
+                width: 35px;
+                height: 14px;
+            }
+        }
+        .attention-new {
+            position: absolute;
+            right: 22px;
+            font-size: 12px;
+            height: 14px;
+            line-height: 14px;
+            background-color: #00b9d1;
+            border-radius: 3px;
+            color: #fff;
+            margin-left: 3px;
+            // opacity: 0.5;
+            transform: scale(0.9);
+            transform-origin: 100% 0;
+            .img {
+                width: 27px;
+                height: 14px;
+            }
+            .img-new {
+                width: 35px;
+                height: 14px;
+            }
+        }
+    }
+}
+.chart-box {
+    padding: 0 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    .box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        padding-bottom: 15px;
+        .num {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 500;
+            .txt-cn {
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+        .desc {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: 10px;
+            transform: scale(0.9);
+            // position: relative;
+            color: #888;
+            line-height: 14px;
+            white-space: nowrap;
+        }
+        &:first-child {
+            .num {
+                color: #c7211c;
+            }
+
+            .desc {
+                left: -2px;
+            }
+        }
+        &:last-child {
+            text-align: right;
+            .num {
+                color: #00b9d1;
+                padding: 0 1px;
+            }
+            .desc {
+                left: auto;
+                right: -1px;
+            }
+        }
+    }
+}
+.line-item {
+    display: flex;
+    justify-content: space-between;
+    p {
+        height: 15px;
+    }
+    .num {
+        margin-left: 10px;
+        font-size: 14px;
+        line-height: 15px;
+    }
+    &.line1 {
+        .line {
+            width: 60px;
+            background-color: #c95058;
+        }
+        .num {
+            color: #c95058;
+        }
+    }
+    &.line2 {
+        .line {
+            width: 30px;
+            background-color: #ed9753;
+        }
+        .num {
+            color: #ed9753;
+        }
+    }
+    &.line3 {
+        .line {
+            width: 10px;
+            background-color: #000;
+        }
+        .num {
+            color: #000;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import './base/fn.scss';
+@import './widgets/button.scss';
+@import './widgets/tab.scss';
+@import './widgets/form.scss';
+@import './widgets/icon.scss';
+
+.container-application {
+    background-color: $color-bg-gray;
+    min-height: 100vh;
+    box-sizing: border-box;
+    .tab-list {
+        position: relative;
+        padding-top: 30px;
+        &::before {
+            @include one-px-border(bottom);
+        }
+    }
+    .btn-area {
+        margin-top: 66px;
+    }
+}

@@ -1,0 +1,208 @@
+//黑色遮罩 弹出框
+@import './color';
+@import './button';
+//弹窗背景
+.shadebox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9998;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    //弹窗内容盒子
+    .modalbox {
+        width: 79.6%;
+        position: absolute;
+        z-index: 9999;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        //弹窗上半部分背景
+        .modalheader {
+            position: relative;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 100%;
+            height: 0;
+            padding-top: 44.05%;
+            background-image: url('~assets/imgs/medicalGame/cardBG.png');
+            background-size: 100% 100%;
+            img {
+                display: none;
+            }
+            //弹窗上半部分背景(兑换奖品成功)
+            &.modalheader-img {
+                background-color: $blue;
+                background-image: none;
+                .prize-logo {
+                    width: 53.26%;
+                    position: absolute;
+                    display: inline-block;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        //弹窗关闭
+        .close {
+            display: block;
+            position: absolute;
+            right: size(-33px);
+            top: size(-33px);
+            z-index: 999;
+            width: size(66px);
+            height: size(66px);
+            background-image: url('~assets/imgs/medicalGame/close.png');
+            background-size: 100% 100%;
+        }
+        //弹窗下半部分盒子
+        .modal-textbox {
+            position: relative;
+            padding-top: size(48px);
+            background-color: $fff;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            &.modal-radius {
+                border-radius: 5px;
+                .modal-laughbox {
+                    padding-top: size(131px);
+                    padding-bottom: size(180px);
+                    text-align: center;
+                    .laugh {
+                        width: 36.68%;
+                        margin-bottom: size(33px);
+                    }
+                }
+            }
+            //弹窗提示中间文字
+            .modalTip {
+                width: 62.66%;
+                min-width: size(470px);
+                color: #1a1a1a;
+                text-align: center;
+                margin: 0 auto size(60px);
+            }
+            .modalTip2-1,
+            .modalTip2-2 {
+                margin-top: size(20px);
+                line-height: 21px;
+            }
+            .modalTip2-1 {
+                font-size: 16px;
+            }
+            .modalTip2-2 {
+                font-size: 12px;
+                color: $gray;
+            }
+            //活动规则弹框样式
+            .modal-rulesbox {
+                .modalTip {
+                    padding-top: size(39px);
+                    padding-bottom: size(133px);
+                    .modalTip2-1 {
+                        margin: 0 auto;
+                        padding-bottom: size(58px);
+                    }
+                    .modalTip2-2 {
+                        text-align: left;
+                    }
+                }
+            }
+            .modal-selectbox {
+                //区域选择样式
+                .modalTip {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+                .select-district {
+                    position: relative;
+                    width: 100%;
+                    height: 0;
+                    padding-top: 55.6%;
+                    overflow: auto;
+                    ul {
+                        box-sizing: border-box;
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        padding: 0 size(30px);
+                        li {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            text-align: left;
+                            font-size: 12px;
+                            color: $gray;
+                            padding: size(30px) size(11px) size(30px) size(54px);
+                            border-top: size(2px) solid #f0f0f0;
+                            .circle {
+                                display: block;
+                                width: size(15px);
+                                height: size(15px);
+                                border: size(2px) solid #cccccc;
+                                border-radius: 50%;
+                                &.circle-blue {
+                                    border-color: $blue;
+                                    background-color: $blue;
+                                }
+                            }
+                        }
+                        li:last-child {
+                            border-bottom: size(2px) solid #f0f0f0;
+                        }
+                    }
+                }
+                .select-district::-webkit-scrollbar {
+                    display: none;
+                }
+                .select-affirm {
+                    padding: size(60px) 0;
+                }
+            }
+            //弹窗CDK样式
+            .cdk-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 62.66%;
+                min-width: size(450px);
+                height: size(60px);
+                margin: 0 auto size(60px);
+                padding: 4px;
+                background-color: #f0f0f0;
+                span {
+                    transform-origin: center;
+                    transform: translate(-50%, -50%);
+                    transform: scale(0.7);
+                    white-space: nowrap;
+                    font-size: 18px;
+                }
+            }
+            //弹窗底部文字
+            .footer {
+                position: relative;
+                padding: size(30px) 0;
+                text-align: center;
+                font-size: 12px;
+                color: $gray;
+            }
+            //弹窗底部箭头
+            .footer-arrows:after {
+                content: '';
+                position: absolute;
+                top: size(38px);
+                margin-left: size(15px);
+                width: size(12px);
+                height: size(12px);
+                border-width: 1px 1px 0 0;
+                border-color: $gray;
+                border-style: solid;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

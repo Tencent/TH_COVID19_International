@@ -1,0 +1,64 @@
+@import './common/color';
+.share {
+    &.shadebox {
+        .modalbox {
+            padding-bottom: size(30px);
+            .modalheader2 {
+                padding-top: 84%;
+                background-image: url('~assets/imgs/medicalGame/cardBG2.png');
+                background-size: 100% 100%;
+            }
+            .modal-textbox {
+                padding-bottom: size(60px);
+            }
+            .sharebox {
+                position: relative;
+                height: 0;
+                padding-top: 10%;
+            }
+            .Share-text {
+                margin-left: 4%;
+                position: absolute;
+                height: 100%;
+                left: 0;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .Share-text1,
+            .Share-text2 {
+                width: 100%;
+            }
+            .Share-text1 {
+                font-size: 16px;
+            }
+            .Share-text2 {
+                font-size: 12px;
+                color: $gray;
+            }
+            .qrcode {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding-left: 10%;
+                height: 100%;
+                background-image: url('~assets/imgs/medicalGame/qrcode.jpg');
+                background-size: 100% 100%;
+                margin-right: 4%;
+            }
+            .share-bottom-text {
+                width: size(500px);
+                position: absolute;
+                // bottom: size(231px);
+                top: 150px;
+                left: 50%;
+                transform: translate(-50%, 350%);
+                font-size: 12px;
+                text-align: center;
+                line-height: size(60px);
+                color: $fff;
+            }
+        }
+    }
+}

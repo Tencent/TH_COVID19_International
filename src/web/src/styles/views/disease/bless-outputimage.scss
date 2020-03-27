@@ -1,0 +1,136 @@
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0a1f88;
+    background: url('https://s.beta.gtimg.com/hospital_img/plus-lib/wap/disease/bless-outputimage-bg.png') center -35px no-repeat;
+    background-size: 100% 100%;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.btn {
+    display: inline-block;
+    width: 300px;
+    height: 55px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 55px;
+    color: #000;
+    font-size: 25px;
+    border-radius: 27px;
+}
+.logo {
+    width: 270px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 45px;
+}
+.btn-primary {
+    background-color: #ec7d6a;
+    color: #fff;
+}
+.userinfo {
+    position: relative;
+    margin-left: 37px;
+    color: #fff;
+    z-index: 2;
+    .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .info {
+        position: absolute;
+        left: 61px;
+        top: 0;
+        line-height: 21px;
+        padding-top: 5px;
+        .name {
+            font-size: 15px;
+        }
+        .desc {
+            font-size: 20px;
+        }
+    }
+}
+.bless-word {
+    margin-top: 11px;
+    text-align: center;
+    .img {
+        width: 281px;
+    }
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: inherit;
+    text-align: center;
+    .btn {
+        margin-bottom: 15px;
+    }
+    &.mask {
+        background-color: #0a1d85;
+        &.orange {
+            background-color: #cc6e6e;
+        }
+        .btn {
+            background-color: #fff;
+            color: #0a1f88;
+        }
+        .switch-txt {
+            color: #fff;
+        }
+    }
+}
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    height: 25px;
+    .icon-switch {
+        width: 24px;
+        height: 24px;
+    }
+    .switch-txt {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+}
+// 分享遮罩
+.gudie-mask.to-post {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    .txt {
+        position: absolute;
+        top: 50%;
+        color: #fff;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        right: 0;
+    }
+    .arrow {
+        width: 34px;
+        height: 43px;
+        background-size: contain;
+        transform: scaleX(-1) rotate(180deg);
+        position: absolute;
+        top: 10px;
+        right: 55px;
+    }
+}

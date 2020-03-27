@@ -1,0 +1,348 @@
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffebec;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 0 !important;
+    }
+    padding-bottom: 33px;
+}
+
+.bg {
+    width: 100%;
+    // height: 557px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.logo {
+    width: 114px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 18px;
+    img {
+        width: 100%;
+    }
+}
+
+.slogan {
+    text-align: center;
+    // font-family: 'PingFangSC-Regular';
+    font-size: 14px;
+    color: #fff;
+    padding-top: 11px;
+    min-height: 24px;
+}
+
+.share-btn {
+    min-width: 60px;
+    height: 32px;
+    padding: 0 12px;
+    background-image: linear-gradient(-34deg, #ff2808 0%, #ffaa9a 94%);
+    // box-shadow: 10px 4px 7px 4px rgba(255,167,167,0.74);
+    border-radius: 100px 0 0 100px;
+    position: fixed;
+    top: 347px;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    line-height: 32px;
+}
+
+// 福气盒子
+.fuqi-box {
+    margin: 0 auto;
+    // margin-top: 305px;
+    margin-top: 69%;
+    background-image: linear-gradient(180deg, #ffffff 0%, #ffebc1 100%);
+    box-shadow: 0 6px 15px 0 rgba(255, 188, 191, 0.67);
+    width: 345px;
+    height: 339px;
+    position: relative;
+    border-radius: 5px;
+
+    .user-img {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        position: absolute;
+        top: -29px;
+        left: 50%;
+        transform: translateX(-50%);
+        img {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+        }
+    }
+
+    .msg {
+        opacity: 0.58;
+        // font-family: 'PingFangSC-Regular';
+        font-size: 14px;
+        color: #ff543a;
+        letter-spacing: -0px;
+        text-align: center;
+        line-height: 20px;
+        padding-top: 45px;
+        padding-bottom: 15px;
+    }
+
+    .invited-btn {
+        width: 279px;
+        height: 51px;
+        background-image: linear-gradient(180deg, #ff6a55 50%, #fd4820 100%);
+        box-shadow: 0 5px 6px 0 rgba(253, 156, 55, 0.59);
+        border-radius: 25.5px;
+        margin: 0 auto;
+        margin-top: 26px;
+        .wrap {
+            width: 279px;
+            height: 44px;
+            background-image: linear-gradient(180deg, #fecdc6 0%, #ff7455 100%);
+            border-radius: 22px;
+            text-align: center;
+            line-height: 44px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        &.disabled {
+            background: #7e7e7e;
+            .wrap {
+                background: #cccccc;
+            }
+        }
+    }
+}
+
+.fuqi-box .content {
+    background: url('~assets/imgs/midYearReview/fuqi-content.png') no-repeat;
+    background-size: cover;
+    width: 279px;
+    height: 152px;
+    margin: 0 auto;
+    text-align: center;
+    .money-box {
+        color: #fff;
+        line-height: 1;
+        padding-top: 20px;
+        .num {
+            font-size: 70px;
+            font-weight: bold;
+        }
+        .yuan {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    .btn-take {
+        width: 112px;
+        height: 30px;
+        background-image: linear-gradient(180deg, #ffeebb 38%, #ffb517 100%);
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-top: 18px;
+        .wrap {
+            width: 112px;
+            height: 30px;
+            background-image: linear-gradient(180deg, #fff8e3 13%, #ffe3a5 100%);
+            border-radius: 15px;
+            position: relative;
+            top: -4px;
+            // font-family: 'PingFangSC-Medium';
+            font-size: 14px;
+            color: #ff543a;
+            line-height: 30px;
+        }
+    }
+    .disc-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        line-height: 1.5;
+        .disc-top {
+            // font-family: 'PingFangSC-Medium';
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .disc-sub {
+            // font-family: 'PingFangSC-Regular';
+            font-size: 14px;
+            color: #ffffff;
+            padding-top: 8px;
+        }
+    }
+}
+
+.common-box {
+    background: #ffffff;
+    border-radius: 4px;
+    width: 345px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+// 好友助力列表
+.boost-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boost-list-title {
+    display: flex;
+    align-items: center;
+    padding-top: 28px;
+    .title-line {
+        width: 71px;
+        height: 0px;
+        border-top: 1px solid #888;
+    }
+    .txt {
+        padding: 0 15px;
+        // font-family: 'PingFangSC-Regular';
+        font-size: 14px;
+        color: #888888;
+        .em {
+            color: #ff543a;
+            padding: 5px;
+        }
+    }
+}
+
+.boost-list .content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 25px 0 25px;
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        .user {
+            display: flex;
+            align-items: center;
+            .user-img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+            .user-name {
+                // font-family: 'PingFangSC-Regular';
+                font-size: 14px;
+                color: #888888;
+                padding-left: 12px;
+            }
+        }
+
+        .boost-money {
+            // font-family: 'PingFangSC-Regular';
+            font-size: 14px;
+            color: #888888;
+        }
+    }
+
+    .empty {
+        width: 113px;
+        height: 105px;
+        background: url('~assets/imgs/midYearReview/fuqi-empty.png') no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+.boost-list .btn-more {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    // font-family: 'PingFangSC-Regular';
+    font-size: 12px;
+    color: #888888;
+    line-height: 1;
+
+    &.invite-more {
+        // font-family: 'PingFangSC-Medium';
+        font-size: 14px;
+        color: #ff7e63;
+    }
+}
+
+// 活动规则
+.rule-box {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rule-title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    .dots {
+        width: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .dot {
+            border-radius: 50%;
+            background: #ff7e63;
+        }
+        .s {
+            width: 2px;
+            height: 2px;
+        }
+        .m {
+            width: 4px;
+            height: 4px;
+        }
+        .l {
+            width: 6px;
+            height: 6px;
+        }
+    }
+
+    .txt {
+        font-size: 20px;
+        color: #ff7e63;
+        font-weight: bold;
+        padding: 0 9px;
+    }
+}
+
+.rule-content {
+    padding: 20px;
+    // font-family: 'PingFangSC-Regular';
+    font-size: 14px;
+    color: #888888;
+    letter-spacing: 0;
+    text-align: justify;
+    line-height: 24px;
+
+    ol {
+        padding-left: 18.2px;
+    }
+
+    li {
+        list-style: decimal outside;
+        padding-bottom: 5px;
+    }
+}

@@ -1,0 +1,102 @@
+.icon-arrow-right {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transform: rotate(-45deg);
+}
+@mixin border-bottom($left: 17px, $left: 17px) {
+    content: '';
+    position: absolute;
+    left: $left;
+    right: $left;
+    bottom: 0;
+    border-bottom: 1px solid #d8d8d8;
+    transform: scaleY(0.5);
+}
+
+.container {
+    background: #fff;
+}
+.header {
+    position: relative;
+    padding: 15px 25px;
+    .title {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .sub-title-box {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: bold;
+        .orange {
+            color: #002f0d;
+        }
+    }
+}
+.content-wrapper {
+    position: relative;
+    padding: 16px 17px 22px;
+    .box {
+        border-radius: 7px;
+        width: 340px;
+        height: 110px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 21px;
+        line-height: 30px;
+        padding: 0 24px;
+        box-sizing: border-box;
+        color: #fff;
+        margin-bottom: 15px;
+        .icon-arrow-right {
+            border-color: #fff;
+        }
+        &.orange {
+            background: url('https://static.wecity.qq.com/wapdisease/welcome-box1-65b15024a217b1771c6ce5b7ef85b963.png')
+                center center no-repeat;
+            background-size: 100% 100%;
+        }
+        &.blue {
+            background: url('https://static.wecity.qq.com/wapdisease/welcome-box2-653904536a81b62418bc74b5b9cdbb42.png')
+                center center no-repeat;
+            background-size: 100% 100%;
+        }
+        &.green {
+            background: url('https://static.wecity.qq.com/wapdisease/welcome-box3-e92d32133b2b2f81b4600be38677653d.png')
+                center center no-repeat;
+            background-size: 100% 100%;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &::before {
+        @include border-bottom();
+    }
+}
+.log-wrapper {
+    padding: 10px 17px 30px;
+    .log-tt {
+        font-size: 18px;
+        color: #000;
+        line-height: 25px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .item {
+        display: flex;
+        font-size: 12px;
+        color: #000;
+        line-height: 17px;
+        .time {
+            margin-right: 8px;
+        }
+        span {
+            color: #ff7034;
+        }
+    }
+}

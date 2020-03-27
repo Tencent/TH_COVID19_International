@@ -1,0 +1,61 @@
+.custom-range-slider {
+    .vue-slider-rail {
+        height: 5px;
+        &::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            right: -20px;
+            top: 0;
+            bottom: 0;
+            border-radius: 2.5px;
+            background-image: linear-gradient(270deg, #4095f7 0%, #ffa317 21%, #de5e5b 46%, #ffa317 77%, #62c298 100%);
+        }
+    }
+    .vue-slider-process {
+        background-color: transparent;
+    }
+    .vue-slider-mark-label {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .choice-dot {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #cacaca;
+        box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.08);
+        background: #fff;
+        &:after {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #de5e5b;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+    .vue-slider-dot-tooltip-inner::before {
+        content: '';
+        position: absolute;
+    }
+    .vue-slider-dot-tooltip-inner-top::before {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -2px);
+        height: 0;
+        width: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0.13333rem;
+        border-top-color: #fff;
+        z-index: 9999;
+    }
+}

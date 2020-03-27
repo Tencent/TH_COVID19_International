@@ -1,0 +1,55 @@
+// desc:咨询窗口--提示
+// desc:使用于医生端咨询窗口
+
+.notes {
+    background: $color-white;
+    color: $color-warning;
+    font-size: $font-size-base;
+    line-height: 1.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+.notes-inner {
+    background-color: rgba($color: $color-warning, $alpha: 0.15);
+}
+.notes-bd {
+    padding: 5px 45px 5px 15px;
+}
+.notes-btn-close {
+    width: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.notes + .echat-list {
+    margin-top: 50px;
+}
+
+.css-ico-close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0 -16px;
+}
+.css-ico-close:before,
+.css-ico-close:after {
+    position: absolute;
+    left: 13px;
+    top: 2px;
+    content: ' ';
+    height: 24px;
+    width: 1px;
+    background-color: $color-warning;
+}
+.css-ico-close:before {
+    transform: rotate(45deg);
+}
+.css-ico-close:after {
+    transform: rotate(-45deg);
+}

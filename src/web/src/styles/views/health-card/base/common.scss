@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.container {
+    background-color: #fff;
+    color: #000;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

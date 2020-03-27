@@ -1,0 +1,75 @@
+@import './base/fn.scss';
+@import './widgets/button.scss';
+@import './widgets/footer.scss';
+
+.container-cardlist {
+    padding: 0 24px;
+    box-sizing: border-box;
+    background-color: $color-bg-gray;
+    .card-content {
+        min-height: calc(100vh - 120px);
+    }
+    .card-title {
+        font-size: 32px;
+        color: #4d4d4d;
+        line-height: 44px;
+        padding: 20px 0;
+    }
+    .card-list {
+        .card-item {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+            height: 242px;
+            background: url('https://static.wecity.qq.com/waphealthcard/bg-afe5e52646faa463947d8ec58c0b8073.png') center
+                center no-repeat;
+            background-size: 100% 100%;
+            padding: 100px 34px 34px 30px;
+            box-sizing: border-box;
+            .card-item-left {
+                .card-info-hd {
+                    display: flex;
+                    align-items: center;
+                    .name {
+                        font-size: 40px;
+                        color: #000;
+                        line-height: 56px;
+                        font-weight: $font-medium;
+                    }
+                    .btn {
+                        margin-left: 24px;
+                    }
+                }
+                .card-info-bd {
+                    margin-top: 14px;
+                    .id-card {
+                        font-size: 28px;
+                        line-height: 40px;
+                    }
+                }
+            }
+            .logo-box {
+                position: absolute;
+                right: 30px;
+                top: 16px;
+                display: flex;
+                align-items: center;
+                .icon-logo {
+                    width: 36px;
+                    height: 36px;
+                }
+                .logo-txt {
+                    font-size: 24px;
+                    color: #000;
+                    line-height: 34px;
+                    margin-left: 10px;
+                }
+            }
+            & + .card-item {
+                margin-top: 24px;
+            }
+        }
+    }
+}

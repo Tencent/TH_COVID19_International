@@ -1,0 +1,217 @@
+$border-margin: 0.32rem;
+$background: #eaeff2;
+$border-color: #e3e6ea;
+$border-bottom: 1px solid $border-color;
+$block-background: #f8fbfb;
+$side-distance: 0.32rem;
+$content-font-size: 0.34rem;
+$content-font-color: #3e464a;
+$border-bottom: 1px solid $border-color;
+$bottom-shadow: 0 0.03rem 0.05rem rgba(0, 0, 0, 0.05);
+$title-font-size: 0.4rem;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 700;
+$font-semibold: 800;
+
+@function thRem($ydRem) {
+    $remSize: $ydRem * 1.333333333333;
+    @return #{$remSize};
+}
+
+// 点击选中态，仅适用于链接类
+@mixin setTouchBackground($color: rgba(18, 51, 66, 0.06)) {
+    &:active {
+        -webkit-tap-highlight-color: $color;
+        -webkit-touch-callout: none;
+    }
+}
+
+@mixin setBottomLine($color: $border-color, $margin-left: 0, $margin-right: 0) {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    border-bottom: 1px solid $color;
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+@mixin setTopLine($color: $border-color, $margin-left: 0, $margin-right: 0) {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1px;
+    border-bottom: 1px solid $color;
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+}
+
+@mixin setOnePxBorder($borderColor, $borderRadius) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid $borderColor;
+    border-radius: $borderRadius;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: left top;
+}
+
+@mixin setRightLine($borderColor) {
+    content: ' ';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-right: 1px solid $borderColor;
+    color: $borderColor;
+    transform-origin: 100% 0;
+    transform: scaleX(0.5);
+}
+
+@mixin setLineClamp($line: 1) {
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+
+@mixin setCloseIcon($width: 0.17rem, $right: 0.16rem, $color: #a3aaaf, $opacity: 1) {
+    content: '\2715';
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: $width + $right * 2;
+    height: $width + $right * 2;
+    line-height: $width + $right * 2;
+    font-size: $width * 2;
+    font-family: 'Times New Roman';
+    text-align: center;
+    color: #a3aaaf;
+    opacity: $opacity;
+}
+
+@mixin setCheckIcon($width: 0.17rem, $right: 0.16rem, $color: #a3aaaf, $opacity: 1) {
+    content: '\2713';
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: $width + $right * 2;
+    height: $width + $right * 2;
+    line-height: $width + $right * 2;
+    font-size: $width;
+    font-family: 'Times New Roman';
+    text-align: center;
+    color: #a3aaaf;
+    opacity: $opacity;
+}
+
+@mixin setSeperator($left: 1px, $right: 1px, $borderColor: #e3e6ea) {
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: $left solid $borderColor;
+    border-right: $right solid $borderColor;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    transform-origin: left center;
+}
+
+@mixin hideScrollbar() {
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+        background: rgba(0, 0, 0, 0);
+        opacity: 0;
+        display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+        background: rgba(0, 0, 0, 0);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@mixin arrow($size, $borderColor) {
+    content: ' ';
+    display: inline-block;
+    height: $size;
+    width: $size;
+    border-width: 2px 2px 0 0;
+    border-color: $borderColor;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+@mixin arrowByDeg($color, $deg: 45) {
+    position: absolute;
+    content: '\20';
+    border-top: 1px solid #{$color};
+    border-right: 1px solid #{$color};
+    transform: rotate(#{$deg}deg);
+}
+
+@mixin setBackground($url, $color: transparent, $repeat: no-repeat, $pos: center, $size: contain) {
+    background: {
+        image: url($url);
+        color: $color;
+        repeat: $repeat;
+        position: $pos;
+        size: $size;
+    }
+}
+
+@mixin ellipsis($maxWidth: 4) {
+    max-width: #{$maxWidth}rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin lazyImg($maxHeight: 0, $maxWidth: 0, $height: 0, $width: 0) {
+    &[lazy='loading'],
+    &[lazy='error'] {
+        @if $width > 0 {
+            width: #{$width}rem;
+        }
+        @if $height > 0 {
+            height: #{$height}rem;
+        }
+        @if $maxWidth > 0 {
+            max-width: #{$maxWidth}rem;
+        }
+        @if $maxHeight > 0 {
+            max-height: #{$maxHeight}rem;
+        }
+    }
+}

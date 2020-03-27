@@ -1,0 +1,9 @@
+/* -----------全局样式---------- */
+@import './variables.scss';
+@import './mixin.scss';
+@import '~assets/font/iconfont.css';
+
+/* -----------组件样式---------- */
+@import '../components/button.scss';
+@import '../components/icon.scss';
+@import '../components/switch.scss';

@@ -1,0 +1,1455 @@
+.nearby-v2-page {
+    background: rgb(247, 247, 247);
+    padding-top: 127px; /*no*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // overflow-y: scroll;
+    // display: flex;
+    // flex-direction: column;
+    &.no-location {
+        padding-top: 85px;
+        .search-box {
+            display: none;
+        }
+    }
+    .header {
+        width: 100%;
+        height: 75px; /*no*/
+        padding: 13px 15px 15px; /*no*/
+        box-sizing: border-box;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        .head-left {
+            .tag-list {
+                vertical-align: middle;
+                height: 15px;
+                margin-bottom: 9px;
+                display: flex;
+                align-items: center;
+                .tag-item {
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;
+                    height: 15px;
+                    margin-right: 6px;
+                    padding-right: 2px;
+                    &:last-child {
+                        .ng-splic {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .nb-net {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                .nb-img {
+                    width: unset;
+                    display: inline-block;
+                    height: 15px;
+                    margin-right: 2px;
+                }
+                .nb-xin {
+                    display: inline-block;
+                    font-size: 12px;
+                    color: #888;
+                    margin-left: 2px;
+                }
+            }
+            .ng-splic {
+                width: 2px;
+                height: 20px;
+                background-color: #888;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 6px;
+                -webkit-transform: scale(0.5, 0.5);
+                -ms-transform: scale(0.5, 0.5);
+                -o-transform: scale(0.5, 0.5);
+                transform: scale(0.5, 0.5);
+            }
+            .drop-select {
+                font-size: 16px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                height: 28px;
+                position: relative;
+                z-index: 2000;
+                &:active {
+                    opacity: 0.5;
+                }
+                span {
+                    padding-right: 5px;
+                    line-height: 1;
+                }
+                .down {
+                    width: 9px;
+                    height: 6px;
+                    background: url('https://static.wecity.qq.com/wapnearby_v2/icon-down-e57abf00d0bb39be37572362f0e1609a.png')
+                        no-repeat;
+                    background-size: contain;
+                }
+            }
+            .drop-select-inner {
+                display: flex;
+                align-items: center;
+                min-height: 28px;
+                position: relative;
+                z-index: 2000;
+                span {
+                    white-space: nowrap;
+                    display: block;
+                }
+                .place {
+                    max-width: 50px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .place.place-long {
+                    max-width: 100px;
+                }
+            }
+        }
+
+        .head-right {
+            .tips {
+                font-size: 12px;
+                color: #ff9f00;
+                margin-bottom: 9px;
+                font-weight: bold;
+                display: block;
+                height: 15px;
+                white-space: nowrap;
+            }
+            .subscript {
+                width: 96px;
+                height: 28px;
+                box-sizing: border-box;
+                padding-top: 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: linear-gradient(270deg, #ff5a1b 0%, #fea413 100%);
+                border-radius: 14px;
+                font-size: 14px;
+                color: #fff;
+                font-weight: bold;
+                margin-left: auto;
+                span {
+                    line-height: 1;
+                }
+                &:active {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    .search-box {
+        width: 100%;
+        height: 52px; /*no*/
+        padding: 10px 15px; /*no*/
+        background: rgb(247, 247, 247);
+        box-sizing: border-box;
+        position: fixed;
+        left: 0;
+        top: 75px; /*no*/
+        .search-holder {
+            width: 100%;
+            height: 32px;
+            font-size: 12px;
+            line-height: 34px;
+            text-align: center;
+            color: #000;
+            background: #fff;
+            border: 1px solid #dedede;
+            border-radius: 2.5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                margin-right: 10px;
+                background: url('https://static.wecity.qq.com/wapnearby_v2/icon-search-aaac1bfd7f47605923b3b858c31a2c03.png')
+                    no-repeat;
+                background-size: 100%;
+                display: inline-block;
+            }
+        }
+        .search-input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            input {
+                // width: 258px;
+                height: 32px;
+                flex: 1;
+                padding: 0 10px 0 32px;
+                border: none;
+                border-radius: 3px;
+                color: #333;
+                background-color: #fff;
+                background-image: url('https://static.wecity.qq.com/h5/2020-2/search-4d36ad820be42c1925f9650971b2f26b.png');
+                background-size: 12px 12px;
+                background-position: 10px center;
+                background-repeat: no-repeat;
+            }
+            span {
+                height: 32px;
+                padding-left: 15px;
+                font-size: 14px;
+                line-height: 32px;
+                color: #4875f6;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .search-nodata {
+        width: 100%;
+        height: 100%;
+        // padding-top: 90px;
+        background: #fff;
+        border-radius: 10px 10px 0 0;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .no-data-content {
+            transform: translate3d(0, 0, 0);
+        }
+        .no-data-content {
+            padding: 0 50px;
+            text-align: center;
+            transform: translate3d(0, -50%, 0);
+            &.fix-top {
+                transform: translate3d(0, -25%, 0);
+            }
+            img {
+                width: 90px;
+                height: 90px;
+                margin: 0 auto;
+                display: block;
+            }
+            h4 {
+                font-size: 16px;
+                line-height: 32px;
+                font-weight: bold;
+                color: #333333;
+            }
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                color: #666666;
+            }
+            .btn {
+                height: 45px;
+                margin-top: 30px;
+                line-height: 45px;
+                font-size: 16px;
+                color: #fff;
+                text-align: center;
+                background: #5675f1;
+                border-radius: 45px;
+            }
+        }
+    }
+
+    // 地区列表
+    .address-list {
+        width: 100%;
+        background: #fff;
+        border-radius: 10px 10px 0 0; /*no*/
+        // padding-top: 25px;/*no*/
+        // padding-top: 78px;/*no*/
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        // flex: 1;
+        // height: calc(100% - 127px);
+        height: 100%;
+        transition: all 0.3s;
+        .guide-line {
+            // padding: 10px 0 3px;
+            width: 100%;
+            height: 25px; /*no*/
+            display: flex;
+            // align-items: center;
+            justify-content: center;
+            // position:absolute;
+            // top:0;
+            // left: 0;
+            .guide-line-inner {
+                width: 50px;
+                height: 15px;
+                background: url('https://static.wecity.qq.com/wapnearby_v2/icon-drop-down-4483545dbff748cf3fed118b3eadd390.png')
+                    no-repeat;
+                background-size: contain;
+                &.drop-up {
+                    height: 13px;
+                    background: url('https://static.wecity.qq.com/wapnearby_v2/drop-up-icon-5ab092d90a370aedd7dc184112e24738.png')
+                        no-repeat;
+                    background-size: contain;
+                    transform: translateY(-10px);
+                    // background-color: #fff
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 200%;
+                        height: 200%;
+                        position: absolute;
+                        left: 50%;
+                        transform: translatex(-50%);
+                        bottom: 0;
+                    }
+                }
+            }
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 10px;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+            }
+        }
+
+        .data-statement {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // padding: 7px 15px 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            // padding-top: 7px; /* no */
+            padding-bottom: 15px; /* no */
+            border-bottom: 1px solid rgba(223, 223, 223, 0.8);
+            // height: 70px; /* no */
+            box-sizing: border-box;
+            width: 100%;
+            height: 53px; /* no */
+            // position: absolute;
+            // top: 25px; /*no*/
+            // left:0;
+            z-index: 1000;
+            background: #fff;
+            .statement-left {
+                font-size: 12px;
+                .last-time {
+                    font-weight: bold;
+                    padding-bottom: 5px; /* no */
+                }
+                .source {
+                    color: #888;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        padding-right: 5px;
+                    }
+                    .source-logo {
+                        width: 12px;
+                        height: 10px; /* no */
+                        background: url('https://static.wecity.qq.com/wapnearby_v2/logo-data-3cb71276cead5bd924665447b19e3678.png')
+                            no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+
+            .statement-right {
+                .btn-all-time {
+                    width: 70px;
+                    height: 27px; /* no */
+                    border-radius: 2.5px;
+                    border: 1px solid #2c52ee;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #2c52ee;
+                    font-size: 14px;
+                    font-weight: bold;
+                    span {
+                        // line-height: 1;
+                        // padding: 7px 0;/* no */
+                        height: 27px; /* no */
+                        line-height: 27px; /* no */
+                        display: inline-block;
+                    }
+                    &:active {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+
+        .data-statement-new {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // height: 84px; /*no*/
+            line-height: 1;
+            .statement-hd {
+                padding: 0 15px;
+            }
+            .top-title {
+                font-size: 16px;
+                font-weight: bold;
+                padding-bottom: 5px; /*no*/
+                line-height: 22px;
+                .em {
+                    color: #f82121;
+                    font-weight: bold;
+                }
+            }
+            .sub-title {
+                font-size: 12px;
+                color: #888;
+                display: flex;
+                align-content: center;
+                padding-bottom: 5px; /*no*/
+                .icon-source {
+                    width: 10px;
+                    height: 12px;
+                    background: url('https://static.wecity.qq.com/wapnearby_v2/icon-source-0302-e67c267423093edb3a16cc9cebfc61d5.png')
+                        no-repeat;
+                    background-size: contain;
+                    margin-left: 5px;
+                }
+            }
+
+            .statement-ft {
+                margin-top: 10px; /*no*/
+                padding-top: 7px; /*no*/
+                padding-bottom: 7px; /*no*/
+                padding-left: 15px;
+                padding-right: 15px;
+                background: #f7f7f7;
+                color: #888;
+                font-size: 12px;
+                line-height: 1.3;
+            }
+        }
+
+        .address-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // padding: 7px 15px 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px; /* no */
+            padding-bottom: 15px; /* no */
+            // border-bottom: 1px solid #dfdfdf;/*no*/
+            height: 70px; /* no */
+            box-sizing: border-box;
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                height: 1px;
+                position: absolute;
+                left: 15px;
+                right: 0px;
+                bottom: 0;
+                background: rgba(223, 223, 223, 0.8);
+            }
+            .address-left {
+                // max-width: 64%;
+                // max-width: 70%;
+                width: 70%;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
+                // white-space: nowrap;
+                .address-name {
+                    // height: 16px; /* no */
+                    // font-size: 16px;
+                    // font-weight: bold;
+                    // padding-bottom: 7.5px; /* no */
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 5px; /* no */
+                    .name {
+                        display: inline-block;
+                        // height: 18px; /* no */
+                        line-height: 20px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        padding-right: 10px;
+                        // box-sizing: border-box;
+                        &.have-tip {
+                            max-width: 75%;
+                        }
+                    }
+                    .tip {
+                        color: #ff9f00;
+                        // padding-bottom: 7.5px; /* no */
+                        // height: 16px; /* no */
+                        min-width: 10px;
+                    }
+                }
+                .address-detail {
+                    font-size: 12px;
+                    color: #888;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .address-right {
+                font-size: 12px;
+                text-align: right;
+                // .tip {
+                //     color:#FF9F00;
+                //     padding-bottom: 7.5px; /* no */
+                //     height: 16px; /* no */
+                //     min-width: 10px;
+                // }
+                .distance {
+                    color: #888;
+                    padding-bottom: 7.5px; /* no */
+                    height: 16px; /* no */
+                    transform: translateY(1.5px); /* no */
+                }
+                .detail {
+                    color: #888;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    .line {
+                        width: 1px;
+                        height: 10px; /* no */
+                        background: #888;
+                        margin: 0 5px;
+                    }
+                }
+            }
+            &.no-address {
+                .address-name,
+                .address-detail {
+                    color: #888;
+                }
+                .address-detail {
+                    color: #888;
+                }
+                .address-right {
+                    .tip {
+                        color: #cacaca;
+                    }
+                    .detail {
+                        color: #888;
+                    }
+                }
+            }
+        }
+        .item-no-res {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // padding: 7px 15px 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px; /* no */
+            padding-bottom: 15px; /* no */
+            // border-bottom: 1px solid #dfdfdf;/*no*/
+            height: 70px; /* no */
+            box-sizing: border-box;
+            position: relative;
+            &.no-confirm {
+                width: 100%;
+                .text {
+                    width: 100%;
+                    text-align: center;
+                    color: #888;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .address-list-wrap {
+            padding-bottom: 25px; /*no*/
+            flex: 1;
+            // overflow-y: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        // &.short-list {
+        //     // transform: translateY(371px);
+        //     // transform: translateY(calc(100vh-155px));
+        //     // top: -200px;
+        //     .address-list-wrap {
+        //         overflow: hidden;
+        //     }
+        // }
+    }
+
+    // 小区详情
+    .community-detail {
+        padding: 20px 15px 45px;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        .address {
+            border-bottom: 1px solid #dfdfdf;
+            .top {
+                display: flex;
+                align-items: center;
+                padding-bottom: 7.5px;
+                .name {
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding-right: 15px;
+                    word-break: break-all;
+                }
+                .btn {
+                    margin-right: 10px;
+                    flex: 1;
+                    max-width: 50px;
+                    padding: 0 5px;
+                    height: 20px;
+                    border: 1px solid #cacaca;
+                    border-radius: 2.5px;
+                    font-size: 12px;
+                    color: #888;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    white-space: nowrap;
+                }
+                .btn-close {
+                    margin-left: auto;
+                    width: 11.5px;
+                    height: 11.5px;
+                    background: url('https://static.wecity.qq.com/wapdisease/btn-close-2020-02-10-1b83ed89381292dd7c6e0c19ba2a786b.png')
+                        no-repeat;
+                    background-size: contain;
+                    &:active {
+                        opacity: 0.5;
+                    }
+                }
+            }
+            .detail {
+                font-size: 12px;
+                padding-bottom: 10px;
+            }
+        }
+        .more-massage {
+            padding-top: 10px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            .msg-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .tip {
+                    color: #ff9f00;
+                    font-weight: bold;
+                }
+            }
+            .msg-sub {
+                padding-top: 7.5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                // .update .city {
+
+                // }
+                .update {
+                    // max-width: 250px;
+                    max-width: 310px;
+                    line-height: 1.3;
+                }
+                .arrow-right {
+                    width: 6px;
+                    height: 6px;
+                    border-top: 1px solid #888;
+                    border-right: 1px solid #888;
+                    transform: rotate(45deg);
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .check-more {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            background: rgba(255, 159, 0, 0.2);
+            border-radius: 5px;
+            color: #ff9f00;
+            font-size: 14px;
+            padding: 0 10px;
+            .icon-state {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: url('https://static.wecity.qq.com/wapnearby_v2/icon-oppos-04d5a47e0049e19230e313f73cce7b65.png')
+                    no-repeat;
+                background-size: contain;
+                background-color: #fff;
+                margin-right: 5px;
+            }
+            .arrow-right {
+                width: 6px;
+                height: 6px;
+                border-top: 1px solid #ff9f00;
+                border-right: 1px solid #ff9f00;
+                transform: rotate(45deg);
+                margin-left: auto;
+            }
+        }
+    }
+
+    // 时间范围
+    .all-time {
+        padding: 15px 20px 45px;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        .time-title {
+            display: flex;
+            align-items: center;
+            padding-bottom: 25px;
+            .name {
+                font-size: 16px;
+                font-weight: bold;
+                padding-right: 15px;
+            }
+            .btn-close {
+                margin-left: auto;
+                width: 11.5px;
+                height: 11.5px;
+                background: url('https://static.wecity.qq.com/wapdisease/btn-close-2020-02-10-1b83ed89381292dd7c6e0c19ba2a786b.png')
+                    no-repeat;
+                background-size: contain;
+                &:active {
+                    opacity: 0.5;
+                }
+            }
+        }
+        .time-range-box {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -10px;
+            font-size: 15px;
+            .col {
+                width: 100%;
+                .box {
+                    width: 162px;
+                    box-sizing: border-box;
+                }
+            }
+            .box {
+                padding: 0 18px;
+                min-width: 76px;
+                height: 44px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #f5f5f5;
+                border-radius: 6px;
+                font-size: 15px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                &.active {
+                    background: rgba(44, 82, 238, 0.8);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    // 地图模式
+    .model-select {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #dedede;
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.13);
+        background: url('https://static.wecity.qq.com/wapnearby_v2/map-model-1-566edac0c98eb46e37f19b2b73d68ec5.png')
+            no-repeat;
+        background-size: cover;
+        position: fixed;
+        right: 20px;
+        bottom: 108px;
+        z-index: 1000;
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    // 悬浮按钮
+    .float-btns {
+        position: fixed;
+        bottom: 225px;
+        right: 15px;
+        width: 40px;
+        margin-bottom: -19px;
+        z-index: 1000;
+        .float-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-bottom: 19px;
+            background-color: #ffffff;
+            // border: 1px solid #DEDEDE;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.13);
+            &:active {
+                opacity: 0.5;
+            }
+        }
+
+        .share {
+            background: url('https://static.wecity.qq.com/wapnearby_v2/btn-share-1-8c512009498f0250f3a65d654810d85a.png')
+                no-repeat;
+            background-size: cover;
+        }
+        .search {
+            background: url('https://static.wecity.qq.com/wapnearby_v2/btn-search-1-a9f4842706fcace6a58bf84da0921bfe.png')
+                no-repeat;
+            background-size: cover;
+        }
+        .location {
+            background: url('https://static.wecity.qq.com/wapnearby_v2/btn-location-1-2497663e5ff0963f95bccefede742757.png')
+                no-repeat;
+            background-size: cover;
+        }
+        .list {
+            background: url('https://static.wecity.qq.com/wapnearby_v2/btn-list-1-19cdaaedeff820775c02ec4f051c73f6.png')
+                no-repeat;
+            background-size: cover;
+        }
+    }
+
+    // 工具箱按钮
+    .tool-btns {
+        width: 40px;
+        position: fixed;
+        left: 15px;
+        bottom: 225px;
+        background: #ffffff;
+        // border: 1px solid #DEDEDE;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.13);
+        border-radius: 5px;
+        z-index: 1000;
+        .tool-btn {
+            text-align: center;
+            width: 40px;
+            height: 52px;
+            box-sizing: border-box;
+            padding: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:active {
+                opacity: 0.5;
+            }
+            &:not(:last-child):after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 1px;
+                background: #dedede;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .icon {
+                width: 16px;
+                height: 16px;
+                flex-shrink: 0;
+            }
+            span {
+                // display: block;
+                // white-space: nowrap;
+                // padding-top: 4px;
+                // width: 80px;
+                // -webkit-transform-origin-x: 0;
+                // transform-origin-x: 0;
+                // -webkit-transform: scale(0.5);
+                // transform: scale(0.5);
+                // font-size: 20px;
+                // position: absolute;
+                // bottom: 5px;
+                // left:0;
+                font-size: 10px;
+                white-space: nowrap;
+                -webkit-text-size-adjust: none;
+                text-size-adjust: none;
+                padding-top: 4px;
+            }
+        }
+    }
+    //复用1.0版文字框
+    .panel {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 3;
+        display: none;
+
+        &.show {
+            display: block;
+            .panel-box {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .panel-box {
+            position: absolute;
+            bottom: 0;
+            padding-top: 10px;
+            background: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: transform 4s;
+            transform: translate3d(0, 100%, 0);
+            padding-bottom: constant(safe-area-inset-bottom);
+            padding-bottom: env(safe-area-inset-bottom);
+            z-index: 4;
+            h2 {
+                padding: 0 20px;
+                font-size: 16px;
+                line-height: 32px;
+            }
+            .content {
+                max-height: 400px;
+                padding: 0 20px 20px;
+                color: #333;
+                overflow-y: scroll;
+                h3 {
+                    font-size: 15px;
+                    line-height: 30px;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #555;
+                    margin: 6px 0;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .btn {
+                width: 100%;
+                padding: 16px 0;
+                font-size: 16px;
+                color: #5675f1;
+                text-align: center;
+                border-top: 1px solid #dfdfdf;
+            }
+        }
+    }
+
+    // 分享弹窗
+    .nb-dialog-share {
+        &,
+        .mask {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3000;
+        }
+        .mask {
+            background: rgba(0, 0, 0, 0.75);
+        }
+        .dialog-box {
+            width: 327px;
+            // height: 565px;
+            box-sizing: border-box;
+            padding: 0 13.5px 40px;
+            background: #007bf8;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 3001;
+            color: #fff;
+        }
+
+        .btn-close {
+            width: 25px;
+            height: 25px;
+            background: url('https://static.wecity.qq.com/wapnearby_v2/btn-close-660aba04bbf57dde0d993abf8157ef3d.png')
+                no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -35px;
+            right: 0;
+        }
+
+        .img-bg {
+            width: 106px;
+            height: 97px;
+            position: absolute;
+            top: 11px;
+            right: 15px;
+        }
+
+        .dg-hd {
+            padding-top: 26px;
+            .img-title {
+                width: 210px;
+                height: 19px;
+            }
+            .local-box {
+                display: flex;
+                align-items: center;
+                padding-top: 7px;
+                padding-bottom: 8px;
+                font-size: 14px;
+                position: relative;
+                .dot {
+                    padding: 0 5px;
+                }
+                .local-1,
+                .local-2,
+                .total,
+                .dot {
+                    font-weight: bold;
+                    white-space: nowrap;
+                }
+                .local-1,
+                .local-2 {
+                    max-width: 50px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .last-time {
+                width: 150px;
+                font-size: 10px;
+                margin-bottom: 13.5px;
+                padding: 2px 0 2px 7.5px;
+                background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+                border-radius: 2.5px 0 0 2.5px;
+            }
+        }
+        .local-map {
+            width: 298px;
+            // width: 100%;
+            height: 285px;
+            border-radius: 8px;
+            margin: 0 auto;
+            background: #eee;
+            position: relative;
+        }
+
+        .dg-sub {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 23px;
+            .sub-right {
+                padding-top: 6px;
+                .qr {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    background: #eee;
+                }
+                .desc {
+                    font-size: 12px;
+                    font-weight: 600;
+                    padding-top: 5px;
+                }
+            }
+
+            .sub-left {
+                max-width: 200px;
+                .data-item {
+                    padding-bottom: 10px;
+                    font-size: 12px;
+                    .title {
+                        width: 150px;
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 4px;
+                        padding: 2px 0 2px 7.5px;
+                        background-image: linear-gradient(
+                            90deg,
+                            rgba(255, 255, 255, 0.3) 0%,
+                            rgba(255, 255, 255, 0) 100%
+                        );
+                        border-radius: 2.5px 0 0 2.5px;
+                        .icon {
+                            width: 10px;
+                            height: 12px;
+                            // background: #eee;
+                        }
+                        span {
+                            font-weight: 600;
+                            padding-left: 5px;
+                        }
+                    }
+                    .text {
+                        line-height: 18px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        /* autoprefixer: off */
+                        -webkit-box-orient: vertical;
+                        /* autoprefixer: on */
+                    }
+                }
+            }
+        }
+
+        .footer-logo {
+            width: 100%;
+            height: 22px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: linear-gradient(
+                -82deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 47%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .logo {
+                width: 63px;
+                height: 15px;
+                background: url('https://static.wecity.qq.com/wapnearby_v2/0219-logo-2cb1fa63ad7c066d4a77bb8025467202.png')
+                    no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    // 确诊场所弹窗
+    .dialog-community-card {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1020;
+
+        .dialog-card-inner {
+            background: #fff;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            box-sizing: border-box;
+            padding: 15px 0 75px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-hd {
+            .data-statement-new {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // height: 84px; /*no*/
+                line-height: 1;
+                .statement-hd {
+                    padding: 0 15px;
+                }
+                .top-title {
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding-bottom: 5px; /*no*/
+                    line-height: 22px;
+                    .em {
+                        color: #f82121;
+                        font-weight: bold;
+                    }
+                }
+                .sub-title {
+                    font-size: 12px;
+                    color: #888;
+                    display: flex;
+                    align-content: center;
+                    padding-bottom: 5px; /*no*/
+                    .icon-source {
+                        width: 10px;
+                        height: 12px;
+                        background: url('https://static.wecity.qq.com/wapnearby_v2/icon-source-0302-e67c267423093edb3a16cc9cebfc61d5.png')
+                            no-repeat;
+                        background-size: contain;
+                        margin-left: 5px;
+                    }
+                }
+
+                .statement-ft {
+                    margin-top: 10px; /*no*/
+                    padding-top: 7px; /*no*/
+                    padding-bottom: 7px; /*no*/
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    background: #f7f7f7;
+                    color: #888;
+                    font-size: 12px;
+                    line-height: 1.3;
+                }
+            }
+        }
+
+        .card-ft {
+            background: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            .btn-confirm {
+                height: 45px; /*no*/
+                background: #5675f1;
+                border-radius: 6px;
+                line-height: 45px; /*no*/
+                text-align: center;
+                &:active {
+                    opacity: 0.5;
+                }
+                &.disabled {
+                    opacity: 0.5;
+                }
+                span {
+                    font-size: 15px;
+                    color: #ffffff;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .card-bd {
+            // height: 400px;
+            height: 350px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            ul.place-list {
+                .address-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    // padding: 7px 15px 15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-top: 15px; /* no */
+                    padding-bottom: 15px; /* no */
+                    // border-bottom: 1px solid #dfdfdf;/*no*/
+                    height: 70px; /* no */
+                    box-sizing: border-box;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        display: block;
+                        height: 1px;
+                        position: absolute;
+                        left: 15px;
+                        right: 0px;
+                        bottom: 0;
+                        background: rgba(223, 223, 223, 0.8);
+                    }
+                    .address-left {
+                        // max-width: 64%;
+                        // max-width: 70%;
+                        width: 70%;
+                        // overflow: hidden;
+                        // text-overflow: ellipsis;
+                        // white-space: nowrap;
+                        .address-name {
+                            // height: 16px; /* no */
+                            // font-size: 16px;
+                            // font-weight: bold;
+                            // padding-bottom: 7.5px; /* no */
+                            // overflow: hidden;
+                            // text-overflow: ellipsis;
+                            white-space: nowrap;
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: 5px; /* no */
+                            .name {
+                                display: inline-block;
+                                // height: 18px; /* no */
+                                line-height: 20px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                padding-right: 10px;
+                                // box-sizing: border-box;
+                                &.have-tip {
+                                    max-width: 75%;
+                                }
+                            }
+                            .tip {
+                                color: #ff9f00;
+                                // padding-bottom: 7.5px; /* no */
+                                // height: 16px; /* no */
+                                min-width: 10px;
+                            }
+                        }
+                        .address-detail {
+                            font-size: 12px;
+                            color: #888;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    .address-right {
+                        font-size: 12px;
+                        text-align: right;
+                        // .tip {
+                        //     color:#FF9F00;
+                        //     padding-bottom: 7.5px; /* no */
+                        //     height: 16px; /* no */
+                        //     min-width: 10px;
+                        // }
+                        .distance {
+                            color: #888;
+                            padding-bottom: 7.5px; /* no */
+                            height: 16px; /* no */
+                            transform: translateY(1.5px); /* no */
+                        }
+                        .detail {
+                            color: #888;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            .line {
+                                width: 1px;
+                                height: 10px; /* no */
+                                background: #888;
+                                margin: 0 5px;
+                            }
+                        }
+                    }
+                    &.no-address {
+                        .address-name,
+                        .address-detail {
+                            color: #888;
+                        }
+                        .address-detail {
+                            color: #888;
+                        }
+                        .address-right {
+                            .tip {
+                                color: #cacaca;
+                            }
+                            .detail {
+                                color: #888;
+                            }
+                        }
+                    }
+                }
+                .item-no-res {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    // padding: 7px 15px 15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-top: 15px; /* no */
+                    padding-bottom: 15px; /* no */
+                    // border-bottom: 1px solid #dfdfdf;/*no*/
+                    height: 70px; /* no */
+                    box-sizing: border-box;
+                    position: relative;
+                    &.no-confirm {
+                        width: 100%;
+                        .text {
+                            width: 100%;
+                            text-align: center;
+                            color: #888;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* iphoneX */
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+        .dialog-community-card .dialog-card-inner {
+            padding-bottom: 90px;
+            .card-bd {
+                height: 500px;
+            }
+            .card-ft {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    /* iphoneXR */
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+        .dialog-community-card .dialog-card-inner {
+            padding-bottom: 90px;
+            .card-bd {
+                height: 500px;
+            }
+            .card-ft {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    /* iphoneXS Max */
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+        .dialog-community-card .dialog-card-inner {
+            padding-bottom: 90px;
+            .card-bd {
+                height: 500px;
+            }
+            .card-ft {
+                padding-bottom: 30px;
+            }
+        }
+    }
+}

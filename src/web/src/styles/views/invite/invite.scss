@@ -1,0 +1,197 @@
+/* 组件样式 */
+.btn-primary {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 20px;
+    background-color: #ce3833;
+    border-radius: 4px;
+}
+.btn-full {
+    width: 100%;
+}
+
+/* icons */
+.icon-wechat-pay {
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+    background: url('~assets/imgs/invitation/icon/wechat-pay.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+.icon-arrow-right {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+    background: url('~assets/imgs/invitation/icon/arrow-right.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+.icon-code {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('~assets/imgs/invitation/icon/code.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 页面样式 */
+.invitaion {
+    background-color: #932915;
+}
+
+.header {
+    background-color: #d85940;
+    color: #ffd593;
+    text-align: center;
+    line-height: 1;
+    padding-top: 4px;
+    padding-bottom: 55px;
+    .title {
+        font-size: 12px;
+        margin-bottom: 15px;
+        .icon-wechat-pay {
+            margin-right: 5px;
+        }
+    }
+    .sub-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    .banner {
+        padding: 0 15px;
+        img {
+            width: 100%;
+        }
+    }
+    .bottom-title {
+        font-size: 16px;
+        margin-top: 15px;
+        .num {
+            font-size: 25px;
+        }
+    }
+}
+
+.content-wrapper {
+    background: url('~assets/imgs/invitation/bg/content.png') center top no-repeat;
+    background-size: 110% 100%;
+    .content {
+        background-color: #fff;
+        margin: 0 15px;
+        border-radius: 4px;
+        position: relative;
+        padding-bottom: 45px;
+    }
+    .avatar {
+        position: absolute;
+        left: 50%;
+        top: -25px;
+        margin-left: -25px;
+        width: 49px;
+        height: 49px;
+        border: 1px solid #ffe2b1;
+        border-radius: 4px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .code-box {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 76px;
+        height: 76px;
+        background: url('~assets/imgs/invitation/icon/code-box.png') center center no-repeat;
+        background-size: 100% 100%;
+        .icon-code {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+        }
+    }
+    .money {
+        line-height: 1;
+        padding: 44px 22px 30px 22px;
+        text-align: center;
+        .title {
+            font-size: 16px;
+            color: #010101;
+            margin-bottom: 23px;
+        }
+        .amount {
+            font-size: 16px;
+            margin-bottom: 26px;
+            .num {
+                font-size: 70px;
+                line-height: 0.8;
+                margin-right: 11px;
+            }
+        }
+        .btn-primary {
+            margin-top: 25px;
+        }
+    }
+    .check {
+        font-size: 14px;
+        color: #ce3833;
+        text-align: center;
+        .icon-arrow-right {
+            margin-left: 6px;
+        }
+    }
+    .activities {
+        .title {
+            height: 35px;
+            line-height: 35px;
+            font-size: 16px;
+            color: #cd533d;
+            background-color: #fff2de;
+            padding: 0 22px;
+        }
+        img {
+            width: 100%;
+        }
+        .welfare-sec {
+            position: relative;
+            left: -5px;
+        }
+        .check {
+            margin-top: 30px;
+        }
+    }
+}
+
+.rule {
+    position: relative;
+    background: url('~assets/imgs/invitation/bg/bottom.png') center top no-repeat;
+    background-size: 100%;
+    font-size: 14px;
+    color: #ffe2b1;
+    padding: 0 15px;
+    line-height: 22px;
+    padding-top: 55px;
+    padding-bottom: 70px;
+    margin-top: -45px;
+    .title {
+        font-size: 16px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 17px;
+    }
+    p {
+        margin-top: 5px;
+        span {
+            color: #fff;
+            padding: 0 5px;
+        }
+    }
+}

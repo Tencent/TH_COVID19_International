@@ -1,0 +1,115 @@
+@import './common/color';
+
+.container {
+    background: #0059d5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: size(440px);
+    // padding-top: 36.5%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .text {
+        height: 100%;
+        padding-top: size(81px);
+        padding-bottom: size(26px);
+        img {
+            width: size(65px);
+            height: size(38px);
+        }
+    }
+}
+
+.player {
+    width: 38%;
+    height: size(145px);
+    box-sizing: border-box;
+
+    .img-box {
+        width: size(127px);
+        height: size(127px);
+        border-radius: 50%;
+        box-sizing: border-box;
+        background: #eee;
+        position: relative;
+        img {
+            width: size(127px);
+            height: size(127px);
+        }
+        .name {
+            width: size(230px);
+            position: absolute;
+            left: size(120px);
+            transform: translateX(-50%);
+            bottom: -36px;
+            font-family: 'PingFang-SC-Bold';
+            font-size: 12px;
+            white-space: nowrap;
+            color: $fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .names {
+            width: size(230px);
+            text-align: right;
+            position: absolute;
+            right: -50px;
+            transform: translateX(-50%);
+            bottom: -36px;
+            font-family: 'PingFang-SC-Bold';
+            font-size: 12px;
+            white-space: nowrap;
+            color: $fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+.player-left {
+    border-radius: 0 size(73px) size(73px) 0;
+    background-color: $green;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: size(10px);
+    animation: leftToRight 0.3s;
+    animation-timing-function: ease-out;
+}
+
+.player-right {
+    background-color: $yellow;
+    border-radius: size(73px) 0px 0px size(73px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: size(10px);
+    animation: rightToLeft 0.3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

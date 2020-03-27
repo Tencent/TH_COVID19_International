@@ -1,0 +1,43 @@
+.subscribe-city-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background-image: linear-gradient(0deg, #3fa3ff 0%, #486dff 100%);
+    .subscribe-city-header {
+        font-size: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .subscribe-city-content {
+        margin: 0 15px;
+        position: relative;
+        .qr-code-wrap {
+            width: 100%;
+            height: auto;
+        }
+        .qr-code {
+            width: 30%;
+            height: 30%;
+            position: absolute;
+            bottom: 17%;
+            left: 9.2%;
+        }
+    }
+    .subscribe-city-tip {
+        margin-top: 24px;
+        padding-bottom: 35px;
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 0;
+        text-align: center;
+        .tip-1 {
+            margin-bottom: 8px;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import './common.scss';
+.group-new-year-index-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a6192d;
+    // font-family: fangzheng;
+    font-family: simplification;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .inner-wrap {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        .title {
+            font-size: 27px;
+            font-weight: bold;
+            color: $col-gold;
+            text-align: center;
+            padding: 32px 37px 31px;
+            line-height: 32px;
+        }
+        .sub-title {
+            font-size: 18px;
+            color: $col-gold;
+            padding-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                padding-right: 7px;
+            }
+            .arrow-right {
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid $col-gold;
+                border-right: 1px solid $col-gold;
+                transform: rotate(45deg);
+            }
+        }
+        .sub-title.footer {
+            font-size: 20px;
+            padding-top: 24px;
+        }
+        .card-wrap {
+            width: 255px;
+            height: 367px;
+            position: relative;
+            border-radius: 30px;
+            // background-image: linear-gradient(152deg, #ebc08b 0%, #ffebc8 49%, #ecbb81 100%),
+            // linear-gradient(
+            //     #f2f2f2,
+            //     #f2f2f2);
+            // background-blend-mode: normal, normal;
+            box-shadow: 0px 29px 35px 5px rgba(151, 44, 44, 0.33);
+            margin: 0 auto;
+            .card-type {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .btn-big {
+            width: 270px;
+            height: 48px;
+            background: url('https://s.beta.gtimg.com/hospital_img/plus-lib/mysscard-mini/assets/img/group-new-year/card-page/btn-big.png')
+                no-repeat;
+            background-size: contain;
+            font-size: 20px;
+            color: $col-gold;
+            margin: 27px auto 0;
+            text-align: center;
+            line-height: 48px;
+            user-select: none;
+        }
+    }
+    .swiper-wrapper {
+        padding-right: 16%;
+    }
+    .swiper-slide {
+        width: 68%;
+        margin: 0 16%;
+        &:not(:nth-last-child(1)) {
+            margin-right: -8%;
+        }
+    }
+}

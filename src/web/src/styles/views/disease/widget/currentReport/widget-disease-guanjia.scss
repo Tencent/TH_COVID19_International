@@ -1,0 +1,87 @@
+.page-guanjia {
+    // 工具胶囊隐藏
+    .disease-tool-wrap {
+        display: none;
+    }
+    .minHeader {
+        background: #fff;
+    }
+    .heaader-img {
+        .cr-cctv {
+            display: none;
+        }
+    }
+    .dashboard-news {
+        padding: 16px 8px 12px 8px;
+    }
+    .dashboard--simple .dashboard-tab {
+        padding-top: 8px;
+    }
+    .header {
+        .cr-cctv {
+            display: none;
+        }
+    }
+    .dashboard {
+        padding-bottom: 0;
+        &::before {
+            background-image: none;
+            background: #6491ff;
+        }
+    }
+    // .dashboard--local {
+    //     &::before {
+    //         content: "";
+    //         background-image: linear-gradient(270deg, #f04d21 50%, #fbb86a 100%);
+    //     }
+    // }
+    .tab-ends .question-list.pb100 {
+        padding-bottom: 0 !important;
+    }
+    // .dashboard-tips .dashboard-tips-btn .svg-path-tips {
+    //     fill: #af4f31;
+    // }
+    .dashboard-tips {
+        margin: 80px 14px 8px 16px;
+        // color: #af4f31;
+        // p {
+        //     color: #af4f31;
+        // }
+    }
+    .tab-second {
+        .epanel {
+            border-bottom: none;
+            .btn-more {
+                padding-left: 0;
+            }
+            .page-copyright {
+                padding: 20px 0 30px 0;
+            }
+        }
+    }
+    // .tab-list .tab-item {
+    //     &.active {
+    //         color: #fc9153;
+    //         &::before {
+    //             background-color: #fc9153;
+    //         }
+    //     }
+    // }
+    .tab-num-three,
+    .tab-num-four {
+        &.dashboard-tab-btn .dashboard-tab-menu {
+            &.shadow-right:after {
+                background: url('https://static.wecity.qq.com/wap2020-03/transparent-r-07d296b58d67898949b1416785c481ab.png')
+                    no-repeat;
+                background-size: auto 100%;
+                background-position-x: -5px;
+            }
+            &.shadow-left:after {
+                background: url('https://static.wecity.qq.com/wap2020-03/transparent-l-8331814e9d9cf79cb55fd6424831e1ee.png')
+                    no-repeat;
+                background-size: auto 100%;
+                background-position-x: -10px;
+            }
+        }
+    }
+}

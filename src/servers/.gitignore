@@ -1,0 +1,9 @@
+node_modules
+.vscode
+.git
+*.log
+.DS_Store
+database
+package-lock.json
+config/formal/*.hjson
+app_log

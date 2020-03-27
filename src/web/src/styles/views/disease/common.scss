@@ -1,0 +1,134 @@
+.swiper-container {
+    height: 220px;
+}
+.swiper-situation {
+    height: 215px;
+}
+.swiper-pagination-bullet-active {
+    background: #00b9d1 !important;
+}
+.swiper-pagination-bullet {
+    width: 5px !important;
+    height: 5px !important;
+}
+.swiper-banner-list {
+    height: 265px;
+}
+.chart-box-list {
+    .swiper-container {
+        height: 250px;
+    }
+    .swiper-slide {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .swiper-pagination {
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .swiper-pagination-bullet {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        flex: 1;
+        height: 38px !important;
+        border-radius: 3px;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        border: 1px solid #ebebeb;
+        outline: none;
+        margin: 0 !important;
+        margin-right: 6px !important;
+        opacity: 1;
+        color: #333;
+        padding: 0 10px !important;
+        line-height: 15px;
+        &:last-child {
+            margin-right: 0 !important;
+        }
+    }
+    .swiper-pagination-bullet-active {
+        border: 1px solid rgba(0, 186, 209, 0.12);
+        color: #00b9d1;
+        background-color: rgba(0, 186, 209, 0.06) !important;
+    }
+    .chart-4 {
+        .swiper-pagination-bullet {
+            &:nth-child(1) {
+                &:before {
+                    content: '治愈率';
+                }
+            }
+            &:nth-child(2) {
+                &:before {
+                    content: '病死率';
+                }
+            }
+            &:nth-child(3) {
+                &:before {
+                    content: '八个字的情况况况';
+                }
+            }
+            &:nth-child(4) {
+                &:before {
+                    content: '病死率';
+                }
+            }
+        }
+    }
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        display: none;
+    }
+    .swiper-button-prev.swiper-button-black {
+        background-image: none;
+        outline: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.08);
+        margin-left: -3px;
+        margin-top: -14px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 52%;
+            top: 50%;
+            width: 5px;
+            height: 5px;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: translate3d(-50%, -50%, 0) rotate(45deg);
+        }
+    }
+    .swiper-button-next.swiper-button-black {
+        background-image: none;
+        outline: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.08);
+        margin-right: -3px;
+        margin-top: -14px;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 48%;
+            top: 50%;
+            width: 5px;
+            height: 5px;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: translate3d(-50%, -50%, 0) rotate(-135deg);
+        }
+    }
+}

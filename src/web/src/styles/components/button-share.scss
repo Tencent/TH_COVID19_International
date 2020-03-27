@@ -1,0 +1,135 @@
+.btn-area-share-box {
+    height: 110px;
+}
+.btn-area-share {
+    position: fixed;
+    left: 25px;
+    right: 25px;
+    transform: translateZ(0);
+    // bottom: 15px;
+    // bottom: calc(15px + constant(safe-area-inset-bottom));
+    // bottom: calc(15px + env(safe-area-inset-bottom));
+    bottom: 25px;
+    display: flex;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    text-align: center;
+    z-index: 999;
+    .btn-share {
+        width: 115px;
+        height: 100%;
+        background-image: linear-gradient(132deg, #2f9dff 30%, #176fff 100%);
+        box-shadow: 0px 5px 15px 0 rgba(53, 73, 146, 0.5);
+        border-radius: 50px;
+        color: #fff;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: relative;
+        &::before {
+            content: '';
+            width: 27px;
+            height: 27px;
+            display: inline-block;
+            background: url('https://static.wecity.qq.com/wapdisease/ico-disease-share-ceaf9bc5766d217d80980aee41f3c69c.png');
+            background-size: 100% 100%;
+            vertical-align: middle;
+            margin: -3px 5px 0 -3px;
+        }
+        svg {
+            display: none;
+        }
+        &:only-child {
+            width: 100%;
+            margin: 0 15px;
+        }
+        & + .btn-subscription {
+            margin-left: 5px;
+        }
+    }
+    .btn-subscription,
+    .btn-cancle-subscription,
+    .btn-share-normal,
+    .btn-cancel {
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        background-image: linear-gradient(90deg, #ffa513 0%, #ff5a1c 100%);
+        box-shadow: 0 5px 15px 0 rgba(255, 80, 0, 0.4);
+        border-radius: 50px;
+        color: #fff;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding: 0 12px 0 12px;
+        text-align: center;
+        position: relative;
+        .btn-subscription-inner {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            padding-left: 32px;
+            height: 100%;
+            position: relative;
+        }
+        &:only-child {
+            width: 100%;
+            margin: 0 15px;
+        }
+    }
+
+    .btn-subscription-txt {
+        font-weight: 500;
+        height: 18px;
+        line-height: 18px;
+        margin-top: 7px;
+        font-size: 14px;
+        white-space: nowrap;
+        &::before {
+            content: '';
+            width: 27px;
+            height: 27px;
+            display: inline-block;
+            background: url('https://static.wecity.qq.com/wapdisease/ico-disease-book-c1ba9feee77564b8046b3cefe2e5f581.png');
+            background-size: 100% 100%;
+            vertical-align: middle;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -15px;
+        }
+        &:only-child {
+            padding: 0;
+            margin: 0;
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+
+    .btn-subscription-tips {
+        height: 12px;
+        line-height: 12px;
+        overflow: hidden;
+        font-size: 9px;
+        padding-left: 1px;
+    }
+
+    .btn-share-normal,
+    .btn-cancel {
+        .btn-subscription-inner {
+            padding: 0;
+        }
+        .btn-subscription-txt {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+div.popup {
+    bottom: 80px;
+}
+@media screen and (max-width: 320px) {
+    .btn-area-share {
+        bottom: 15px;
+    }
+}

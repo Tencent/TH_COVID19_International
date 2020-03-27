@@ -1,0 +1,212 @@
+.dashboard-wrap {
+    background: #fff;
+    position: relative;
+}
+
+.dashboard {
+    margin: 0px 10px 0 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.06);
+    position: relative;
+    top: -55px;
+}
+
+.dashboard-news {
+    padding: 15px 18px;
+    background: #f9f9f9;
+    .index-news-wrap {
+        margin: 0;
+    }
+
+    .ico-news-notice {
+        margin-top: -6px;
+    }
+    .index-news-list {
+        margin: 0 52px 0 20px;
+    }
+    .index-news-btn {
+        width: 45px;
+        &::after {
+            content: '';
+            width: 1px;
+            height: 10px;
+            background: rgba(199, 199, 199, 0.5);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -4px;
+            transform: scaleX(0.5);
+        }
+    }
+}
+.dashboard-tips {
+    position: relative;
+    font-size: 12px;
+    color: #888;
+    margin: 0 18px;
+    padding: 10px 0 8px 0;
+    .dashboard-tips-btn {
+        width: 14px;
+        height: 14px;
+        padding: 5px;
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.dashboard-grid {
+    font-size: 0;
+    margin-top: 6px;
+}
+.dashboard-item {
+    width: 25%;
+    display: inline-block;
+    .increase {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 8px;
+    }
+}
+
+.dashboard-item-val {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    display: block;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 4px;
+}
+.dashboard-item-tit {
+    font-size: 12px;
+    color: #000;
+    display: block;
+    text-align: center;
+}
+
+.dashboard-grid-tips {
+    font-size: 12px;
+    color: #888;
+    margin: 15px 18px 10px 18px;
+    position: relative;
+    text-align: center;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        background: #dfdfdf;
+        height: 1px;
+        transform: scaleY(0.5);
+        z-index: 1;
+    }
+    strong {
+        color: #c7211c;
+        padding: 0 0 0 4px;
+    }
+    p {
+        display: inline-block;
+        background: #fff;
+        padding: 0 15px;
+        position: relative;
+        z-index: 2;
+        font-size: 12px;
+    }
+}
+
+.dashboard-detail {
+    margin: 0 8px 8px 18px;
+    font-size: 0;
+}
+.dashboard-detail-hd {
+    padding-bottom: 8px;
+}
+.dashboard-detail-tit {
+    font-size: 12px;
+    color: #888;
+}
+
+.dashboard-row {
+    display: -webkit-box;
+}
+.dashboard-cell {
+    display: block;
+    // border: 1px solid #000;
+    overflow: hidden;
+    padding: 8px 0;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    // -webkit-box-pack: center;
+    white-space: nowrap;
+    &:nth-child(2) {
+        width: 100px;
+        // background: rgba($color: #000000, $alpha: 0.2);
+    }
+    &:nth-child(3) {
+        width: 65px;
+        // background: rgba($color: #000000, $alpha: 0.1);
+    }
+    &:nth-child(4) {
+        width: 55px;
+        // background: rgba($color: #000000, $alpha: 0.3);
+    }
+    &:nth-child(5) {
+        width: 55px;
+        // background: rgba($color: #000000, $alpha: 0.4);
+        // text-align: right;
+    }
+}
+.dashboard-cell-01 {
+    flex: 1;
+    -webkit-box-flex: 1;
+    width: 100%;
+    font-weight: 500;
+}
+
+.ds-val {
+    padding: 0 0 0 4px;
+}
+
+.status-new {
+    .ds-val {
+        color: #00b9d1;
+    }
+}
+.status-error {
+    color: #c7211c;
+    .ds-val {
+        color: #c7211c;
+    }
+}
+.status-success {
+    color: #17905b;
+    .ds-val {
+        color: #17905b;
+    }
+}
+.status-warning {
+    color: #ffa317;
+    .ds-val {
+        color: #ffa317;
+    }
+}
+.status-normal {
+    color: #888;
+    .ds-val {
+        color: #888;
+    }
+}
+
+.dashboard-wrap + .tab-list,
+.dashboard-wrap + .tabs-component {
+    margin-top: -35px;
+}

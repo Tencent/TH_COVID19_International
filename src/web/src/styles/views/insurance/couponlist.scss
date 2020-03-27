@@ -1,0 +1,87 @@
+// @function px2rem($px){
+//   $rem: 75px;
+//   @return ($px/$rem) +rem;
+// }
+
+.couponlist {
+    // width: px2rem(750rpx);
+    // height: px2rem(1448rpx);
+    max-width: 375px;
+    height: 724px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('~assets/imgs/couponlist/BG.png') no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.close-btn {
+    // width: px2rem(83px);
+    // height: px2rem(106px);
+    width: 41.5px;
+    height: 53px;
+    background: url('~assets/imgs/couponlist/close.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    // top: px2rem(150px);
+    // right: px2rem(25px);
+    top: 75px;
+    right: 12.5px;
+}
+
+.text {
+    // width: px2rem(474px);
+    // height: px2rem(46px);
+    width: 237px;
+    height: 23px;
+    background: url('~assets/imgs/couponlist/text.png') no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    // margin-top: px2rem(207px);
+    margin-top: 103.5px;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    // height: px2rem(729px);
+    // padding-top: px2rem(28px);
+    height: 364.5px;
+    padding-top: 14px;
+    .card-item {
+        // width: px2rem(573px);
+        // height: px2rem(219px);
+        width: 286.5px;
+        height: 109.5px;
+    }
+}
+
+.arrow {
+    // width: px2rem(105px);
+    // height: px2rem(68px);
+    width: 52.5px;
+    height: 34px;
+    background: url('~assets/imgs/couponlist/arrow-bottom.png') no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    // margin-top: px2rem(19px);
+    // margin-bottom: px2rem(30px);
+    margin-top: 9.5px;
+    margin-bottom: 15px;
+}
+
+.bind-btn {
+    // width: px2rem(578px);
+    // height: px2rem(113px);
+    width: 289px;
+    height: 56.5px;
+    background: url('~assets/imgs/couponlist/btn1.png') no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}

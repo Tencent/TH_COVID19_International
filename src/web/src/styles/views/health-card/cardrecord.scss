@@ -1,0 +1,92 @@
+@import './base/fn.scss';
+@import './base/common.scss';
+@import './widgets/icon.scss';
+
+.container-cardrecord {
+    min-height: 100vh;
+    background-color: #f0f2f7;
+    .weui-cells__title {
+        margin: 0;
+        padding: 10px 20px;
+        font-size: 24px;
+    }
+    .cardrecord-list-wrap {
+        position: relative;
+        &:last-child::before {
+            content: '';
+            position: absolute;
+            left: 32px;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            border-top: 1px solid #d8d8d8;
+            transform: scaleY(0.5);
+        }
+    }
+    .cardrecord-list {
+        background-color: $color-bg-white;
+    }
+    .weui-cell_access .weui-cell__ft {
+        padding-right: 44px;
+        // &::after {
+        //     content: '';
+        //     width: 24px;
+        //     height: 48px;
+        //     margin-top: -24px;
+        //     background: #e7e7e7;
+        // }
+    }
+    .weui-cell {
+        padding: 26px 30px;
+        &::before {
+            content: '';
+            left: 30px;
+            height: 2px;
+            border-top: 1px solid #d8d8d8;
+        }
+    }
+    .weui-cell__bd {
+        margin-right: 40px;
+        font-size: 32px;
+        color: $color-000;
+    }
+    .weui-cell__ft {
+        font-size: 28px;
+        color: $color-666;
+    }
+
+    .cardrecord__name {
+        font-size: 32px;
+        color: $color-000;
+    }
+    .cardrecord__time {
+        font-size: 24px;
+        color: #999;
+    }
+
+    .cardrecord-header {
+        padding: 30px 30px 28px;
+        background-color: $color-bg-white;
+    }
+    .cardrecord-header__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color-000;
+    }
+    .cardrecord-header_name {
+        flex: 0 1 240px;
+        font-size: 40px;
+        font-weight: $font-medium;
+    }
+    .cardrecord-header_num {
+        font-size: 32px;
+    }
+    .cardrecord-header_time {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        font-size: 32px;
+        color: #2c52ee;
+    }
+}

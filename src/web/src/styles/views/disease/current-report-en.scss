@@ -1,0 +1,147 @@
+//首页根class
+.page-index {
+    &.page-english {
+        // english s
+        .header {
+            .heaader-img {
+                height: 100%;
+            }
+        }
+        .disease-tool-wrap {
+            display: none;
+        }
+        .dashboard {
+            padding-bottom: 0;
+            &::after {
+                content: '';
+                border-color: #fff;
+            }
+        }
+        .index-news-btn {
+            width: 42px;
+            &::after {
+                content: '';
+                left: -8px;
+            }
+        }
+        .dashboard-tab-menu {
+            font-size: 13px;
+
+            &.cur {
+                font-size: 16px;
+            }
+            .dashboard-tab-ico {
+                display: none;
+            }
+            span {
+                display: inline-block;
+                max-width: 82px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .dashboard-item {
+            padding-top: 34px;
+            .increase {
+                font-size: 8px;
+            }
+            .dashboard-item-val {
+                margin-top: 2px;
+                margin-bottom: 10px;
+                font-size: 17px;
+                &.txt {
+                    font-size: 14px;
+                }
+            }
+            .dashboard-item-tit {
+                font-size: 8px;
+            }
+        }
+        .tab-list {
+            // padding: 0 15px;
+            .tab-item {
+                font-size: 12px;
+                font-weight: 500;
+                color: #000;
+                &.active {
+                    color: #00b9d1;
+                }
+                .img {
+                    display: none;
+                }
+            }
+        }
+        .chart-pagination {
+            .pagination {
+            }
+        }
+        // .charts-wrapper table thead th {
+        //     padding-bottom: 7px;
+        // }
+        // .charts-wrapper table.index-update thead th:first-child {
+        //     transform: translateY(10px);
+        // }
+        .charts-wrapper table.index-update tbody tr.other-city td:first-child p {
+            width: 72px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 13px;
+        }
+        .charts-wrapper table.index-update .set-top th:first-child {
+            min-width: 72px;
+            line-height: 40px;
+        }
+        // deep
+        .charts-wrapper table.index-update .set-top th {
+            height: 40px;
+            line-height: 20px;
+        }
+        .hubei-situation .chart .tt {
+            font-size: 13px;
+        }
+        .timeline-item .detail-box .box-content {
+            text-align: left;
+        }
+        .epanel {
+            // padding-top: 33px;
+            // padding-bottom: 33px;
+            border-bottom: none;
+        }
+        // en 表格无箭头样式 deep
+        .no-arrows {
+            .icon-arrow-right {
+                display: none;
+            }
+            // 表格
+            &.index-update thead th:nth-child(5) {
+                padding-right: 3px;
+            }
+            &.index-update tbody tr td:last-child .cell {
+                padding-right: 3px;
+            }
+
+            // 吸顶
+            .set-top th:first-child {
+                transform: translateY(10px);
+            }
+            .set-top th:last-child {
+                padding-right: 3px;
+            }
+
+            // 数字过长省略
+            // &.index-update tbody tr td:not(:first-child) .cell p {
+            //     max-width: 51px;
+            //     white-space: nowrap;
+            //     text-overflow: ellipsis;
+            //     overflow: hidden;
+            //     background-color: pink;
+            // }
+        }
+        .en-map-padding {
+            padding-top: 30px;
+        }
+        // english e
+    }
+}
