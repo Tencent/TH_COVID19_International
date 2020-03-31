@@ -15,7 +15,9 @@ Python 3.6+.
 Basic Usage
 ---
 ```
-# git clone 
+# git clone project
+$ git clone https://github.com/Tencent/TH_COVID19_International.git
+$ cd TH_COVID19_International/src/servers/ncov-test-engine
 
 # Install requirements
 $ pip install -r requirements.txt
@@ -30,7 +32,9 @@ $ python3 server/service.py
 Docker Usage
 ---
 ```
-# git clone
+# git clone project
+$ git clone https://github.com/Tencent/TH_COVID19_International.git
+$ cd TH_COVID19_International/src/servers/ncov-test-engine
 
 # Build docker image
 $ docker build -t covid19-engine .
