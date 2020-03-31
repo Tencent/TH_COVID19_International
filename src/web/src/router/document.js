@@ -18,7 +18,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
     mode: 'hash',
-    base: BASE_URL, // 来自卤蛋分配的活动id
+    base: BASE_URL,
     routes: routes.document,
     scrollBehavior
 })

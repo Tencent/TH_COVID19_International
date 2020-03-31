@@ -13,7 +13,7 @@ const remotePageConfigPromise = new Promise((resolve, reject) => {
 
 /**
  * @description 拉取远程配置并解析为 json
- * 为了防止骚哥的接口在配置项都是数组时进行合并，所有的数组都会以'__Array__[1,2,3]'的形式转成字符串，因此函数内会使用parser重新转义回来
+ * 为了防止配置的接口在配置项都是数组时进行合并，所有的数组都会以'__Array__[1,2,3]'的形式转成字符串，因此函数内会使用parser重新转义回来
  * 为了在恰当情况下调用鉴权的接口(腾讯健康下)
  */
 async function fetchConfig () {
