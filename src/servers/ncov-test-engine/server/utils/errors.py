@@ -2,7 +2,7 @@
 
 class CustomError(Exception):
     '''
-    请求异常基类
+    Request exception base class
     '''
     def __init__(self, ret_code, ret_msg):
         super().__init__(ret_code, ret_msg)
@@ -11,7 +11,7 @@ class CustomError(Exception):
 
 class NoSupportVersion(CustomError):
     '''
-    不支持的策略版本
+    Unsupported policy version
     '''
     def __init__(self, version_lis):
         super().__init__(ret_code=-2, 

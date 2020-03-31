@@ -4,9 +4,6 @@ import grpc
 import asyncio
 import time
 
-from server.utils.piling_fake import piling_fake_wrap
-# from server.utils.l5_helper import is_l5_address, get_l5_ip_port, update_l5_qos
-
 def _real_grpc_call(server_url, service_func, func_name, req, metadata=None, timeout=60):
 
     with grpc.insecure_channel(server_url) as channel:
@@ -27,19 +24,18 @@ def call_async_funcs(*calls):
     resps = loop.run_until_complete(asyncio.gather(*calls))
     return resps
 
-@piling_fake_wrap()
 async def async_grpc_call(server_url, service_func, func_name, req, 
                                     threadpool=None, metadata=None, timeout=60):
     """
-    :param server_url: 服务域名 eg:localhost:50051
-    :param service_func: 服务Stub的初始化函数 eg: question2answer_pb2_grpc.Question2AnswerStub
-    :param func_name: 接口函数名，字符串 eg:'Quiz'
-    :param req: 服务请求 eg:question2answer_pb2.QuizRequest()
+    :param server_url: service domain name eg:localhost:50051
+    :param service_func: initial function of service Stub eg: question2answer_pb2_grpc.Question2AnswerStub
+    :param func_name: api function name, string eg:'Quiz'
+    :param req: service request eg:question2answer_pb2.QuizRequest()
     :return:
 
     eg:
     def async_run():
-        reqs = [gen_req('骨科怎么走'), gen_req('怎么缴费')]
+        reqs = [gen_req('where is endocine department'), gen_req('how to pay')]
         calls = [async_grpc_call('localhost:50051', 
                     question2answer_pb2_grpc.Question2AnswerStub, 'Quiz', req) for req in reqs]
         resps = call_async_funcs(*calls)
@@ -49,13 +45,12 @@ async def async_grpc_call(server_url, service_func, func_name, req,
                         server_url, service_func, func_name, req, metadata, timeout)
     return result
 
-@piling_fake_wrap()
 def sync_grpc_call(server_url, service_func, func_name, req, metadata=None, timeout=60):
     """
-    :param server_url: 服务域名 eg:localhost:50051
-    :param service_func: 服务Stub的初始化函数 eg: question2answer_pb2_grpc.Question2AnswerStub
-    :param func_name: 接口函数名，字符串 eg:'Quiz'
-    :param req: 服务请求 eg:question2answer_pb2.QuizRequest()
+    :param server_url: service domain name eg:localhost:50051
+    :param service_func: initial function of service Stub eg: question2answer_pb2_grpc.Question2AnswerStub
+    :param func_name: api function name, string eg:'Quiz'
+    :param req: service request eg:question2answer_pb2.QuizRequest()
     :return:
 
     eg:

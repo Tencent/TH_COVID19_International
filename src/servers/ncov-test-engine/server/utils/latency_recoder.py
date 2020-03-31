@@ -11,8 +11,8 @@ from loguru import logger
 
 class RemoteInfluxDB(object, metaclass=Singleton):
     '''
-    监控平台client端
-    单例
+    Monitoring platform client
+    Singleton
     '''
     def __init__(self):
         from server.config.config import load_config
@@ -24,11 +24,11 @@ class RemoteInfluxDB(object, metaclass=Singleton):
 
     def insert(self, api_name, request_id, succ, ret_code, value):
         '''
-        :param api_name: 服务接口名
-        :param request_id: 请求id
-        :param succ: 标志位，是否成功
-        :param ret_code: 详细的return code
-        :param value: 耗时
+        :param api_name: service api name
+        :param request_id: request id
+        :param succ: Flag bit, success
+        :param ret_code: detail return code
+        :param value: time cost
         :return:
         '''
         body = [{
@@ -42,16 +42,15 @@ class RemoteInfluxDB(object, metaclass=Singleton):
                 'ret_code': ret_code,
                 'latency': value,
             },
-            # 'time': int(time.time())
         }]
 
         self.client.write_points(body)
 
 def log_latency():
     '''
-    以装饰器的形式提供打印耗时接口
-    耗时格式为 模块.函数|时间
-    输出到log中
+    Provides time-consuming printing interface as a decorator
+    The time-consuming format is module.function | time
+    Output to log
     '''
     def wrapper(fn):
         @wraps(fn)

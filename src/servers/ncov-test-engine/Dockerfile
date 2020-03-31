@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-LABEL MAINTAINER="jichaosun<jichaosun@tencent.com>;hesslergao<hesslergao@tencent.com>"
 
 # RUN sed -i 's/archive.ubuntu.com/mirrors.tencent.com/g' /etc/apt/sources.list
 

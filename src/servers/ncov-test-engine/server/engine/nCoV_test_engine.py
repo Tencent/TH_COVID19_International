@@ -7,12 +7,8 @@ import yaml
 
 from server.protobufs.gen.pb_python import nCoV_diagnosis_engine_pb2
 
-# from elasticsearch import ElasticsearchException
-# from server.engine.es_helper import Q2AElasticObj
 from server.utils.latency_recoder import log_latency
 from server.utils.errors import *
-# from server.utils.rainbow_config import get_rainbow_config
-
 
 def replace_str_counter(counter):
     if counter==0:
@@ -44,16 +40,12 @@ def check_advance_reason(conds, advance_reason, and_flag):
 
     return False
 
-
 class nCoVTestEngine(object):
     def __init__(self, config):
 
         self.questions_map = {}
         self.answers = {}
 
-        self.load_yml(config.QUESTION_V1_DATA, 'wuhan')
-        self.load_yml(config.QUESTION_V2_DATA, 'beijing')
-        self.load_yml(config.QUESTION_V3_DATA, 'v3')
         self.load_yml(config.QUESTION_V3_EN_DATA, 'v3_en')
 
 
@@ -99,11 +91,7 @@ class nCoVTestEngine(object):
             question_info = self.questions_map[strategy][no]
             q_type = question_info['type']
             q_answers = question.symp_list
-            if strategy == 'wuhan' and no == 3:
-                symptom = '、'.join(q_answers)
-            if strategy == 'beijing' and no == 3:
-                symptom = '、'.join(q_answers)
-            if strategy == 'v3' and no == 7:
+            if strategy == 'v3_en' and no == 7:
                 symptom = '、'.join(q_answers)
 
             q_answers = [answer for answer in q_answers if len(answer) > 0]
@@ -113,13 +101,7 @@ class nCoVTestEngine(object):
             for answer in q_answers:
                 conds.add(question_info['conclusions'][answer])
 
-                if strategy == 'beijing' and no == 6:
-                    if answer == 'under 5':
-                        person = 'child'
-                    elif answer == 'over 60':
-                        person = 'elderly'
-
-                if strategy == 'v3' and no == 1:
+                if strategy == 'v3_en' and no == 1:
                     if answer == 'Under 5':
                         person = 'child'
                     elif answer == 'Over 60':
@@ -131,10 +113,7 @@ class nCoVTestEngine(object):
         if len(symptom) > 0:
             counter = counter + 1
             answer = answer.replace('#symptom#', symptom)
-        if strategy == 'beijing':
-            if person:
-                answer = answer.replace('#childOld#', person)
-        if strategy == 'v3':
+        if strategy == 'v3_en':
             if 'contact_condition_yes' in conds:
                 answer = answer.replace('#contact#',
                                         'and you have contact history in past 2 weeks, ')
@@ -219,7 +198,7 @@ class nCoVTestEngine(object):
         }
 
     def get_conclusions(self, strategy, his_questions, answer_index, answer):
-        if strategy != 'v3':
+        if strategy != 'v3_en':
             return {}
         details = self._deal_real_conclusions(his_questions, strategy)
 
@@ -339,8 +318,6 @@ class nCoVTestEngine(object):
 
 if __name__ == '__main__':
 
-    from server.test.test_v3 import _real_test
-
     from server.config.config import load_config
     config = load_config()
 
@@ -349,9 +326,7 @@ if __name__ == '__main__':
     engine = nCoVTestEngine(config)
 
     temp_req = nCoV_diagnosis_engine_pb2.DPRequest()
-    # temp_req.strategy = 'wuhan'
-    # temp_req.strategy = 'beijing'
-    temp_req.strategy = 'v3'
+    temp_req.strategy = 'v3_en'
 
     with Session(temp_req, None) as context:
 
@@ -378,6 +353,7 @@ if __name__ == '__main__':
 
         print('\n\nanswer:{}'.format(result))
 
+        print('\n\n')
         for q in his_question:
             print(MessageToDict(q))
 

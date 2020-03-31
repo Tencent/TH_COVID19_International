@@ -9,16 +9,13 @@ from server.protobufs.gen.pb_python import common_pb2
 from server.config.config import load_config
 from server.utils.latency_recoder import RemoteInfluxDB
 
-# Context = namedtuple('Context', 
-#           ['version','request_id','user_id','session_id','trace_id','logger'])
-
 cf = load_config()
 logger.remove()
 
 # log format 
-# 处理请求中的log带上函数名、行号、服务名和请求id等
-# 其他的log格式默认
-# 通过'log_req'来判断
+# Process the log in the request with the function name, line number, service name, request id, etc.
+# Other default log formats
+# Judging by 'log_req'
 def log_format(record):
     if 'log_req' in record["extra"]:
         return """{time:YYYY-MM-DD HH:mm:ss.SSS}|{level: <8}
@@ -37,7 +34,7 @@ if cf.APP_MODE != 'dev':
 
 class CommonPbHelper(object):
     '''
-        公共PB处理函数，处理CommonReq\CommonResp\Context
+        Public PB processing function, process CommonReq\CommonResp\Context
     '''
     @staticmethod
     def parse_req(req):
@@ -58,14 +55,14 @@ class CommonPbHelper(object):
     @staticmethod
     def gen_common_resp(ret_code, ret_message):
         '''
-        生成CommonResponse， cf.VERSION为服务版本号
+        generate CommonResponse， cf.VERSION is sevice version number
         '''
         return common_pb2.CommonResponse(version=cf.VERSION, 
                 ret_code=ret_code, ret_message=ret_message)
 
 class Session(object):
     '''
-    类似于context的存在
+    like context 
     '''
     def __init__(self, req, grpc_context):
         self.req = req
@@ -73,9 +70,9 @@ class Session(object):
 
     def __enter__(self):
         '''
-        初始化好context
-        logger.bind提前将server_name、user_id等绑定到logger里，后续打印的log都会带上server_name、user_id等
-        metadata存储临时值，方便后续grpc服务调用时候填充context
+        initializing context
+        logger.bind binds server_name, user_id, etc. to the logger in advance, and subsequent printed logs will take server_name, user_id, etc.
+        metadata stores temporary values, which is convenient for filling the context when subsequent grpc service calls
         :return:
         '''
         self.start_time = time.time()
@@ -97,8 +94,8 @@ class Session(object):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         '''
-        请求处理结束后，将结果和耗时统一上报监控平台
-        异常情况下，打印下异常堆栈
+        After the request is processed, the results and time will be reported to the monitoring platform.
+        Under abnormal conditions, print the exception stack
         '''
         end_time = time.time()
         resp_time = (end_time - self.start_time) * 1000
@@ -113,7 +110,7 @@ class Session(object):
 
     def mark_succ(self, api_name, succ, ret_code):
         '''
-        需要在__exit__之前调用，填充好请求结果标志
+        Need to be called before __exit__, fill in the request result flag
         '''
         self.api_name = api_name
         self.succ = succ
