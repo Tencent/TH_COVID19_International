@@ -1,0 +1,316 @@
+questions:
+  0:
+    "no": 0
+    q: 结论
+    type: single
+    suggested_answers:
+      - 是
+      - 否
+    is_jump: false
+    jump_cond:
+      是: 0
+      否: 0
+      default: 0
+    conclusions:
+      是: no_use
+      否: no_use
+  1:
+    "no": 1
+    q: 请问您的年龄阶段是？
+    type: single
+    suggested_answers:
+      - 儿童
+      - 青少年或成年
+      - 老年
+    is_jump: true
+    jump_cond:
+      儿童: 3
+      青少年或成年: 2
+      老年: 3
+      default: 3
+    conclusions:
+      儿童: childOld_condition_yes
+      青少年或成年: childOld_condition_no
+      老年: childOld_condition_yes
+  2:
+    "no": 2
+    q: 请问您是否为孕妇？
+    type: single
+    suggested_answers:
+      - 是
+      - 否
+    is_jump: false
+    jump_cond:
+      default: 3
+    conclusions:
+      是: pregnant_condition_yes
+      否: pregnant_condition_no
+  3:
+    "no": 3
+    q: 请问您是否患有以下慢性疾病？
+    type: multi
+    suggested_answers:
+      - 慢性心脑血管疾病
+      - 慢性呼吸道疾病
+      - 慢性肝、肾病
+      - 免疫力低下
+      - 其它慢性病
+      - 以上都没有
+    is_jump: false
+    jump_cond:
+      default: 4
+    conclusions:
+      慢性心脑血管疾病: chronicDisease_condition_yes
+      慢性呼吸道疾病: chronicDisease_condition_yes
+      慢性肝、肾病: chronicDisease_condition_yes
+      免疫力低下: chronicDisease_condition_yes
+      其它慢性病: chronicDisease_condition_yes
+      以上都没有: chronicDisease_condition_no
+  4:
+    "no": 4
+    q: 最近两周内，是否有下相关情况或接触史？
+    type: multi
+    suggested_answers:
+      - 有武汉的旅行或居住史
+      - 接触过武汉（或其他病例聚集区）发热伴呼吸道症状的患者
+      - 接触过的家人、同事或朋友同时出现发热或呼吸道症状
+      - 接触、探视过疑似病例或确诊病例
+      - 与疑似病例或确诊病例同乘一趟交通工具
+      - 以上都没有
+    is_jump: false
+    jump_cond:
+      default: 5
+    conclusions:
+      有武汉的旅行或居住史: contact_condition_yes
+      接触过武汉（或其他病例聚集区）发热伴呼吸道症状的患者: contact_condition_yes
+      接触过的家人、同事或朋友同时出现发热或呼吸道症状: contact_condition_yes
+      接触、探视过疑似病例或确诊病例: contact_condition_yes
+      与疑似病例或确诊病例同乘一趟交通工具: contact_condition_yes
+      以上都没有: contact_condition_no
+  5:
+    "no": 5
+    q: 请问您是否发热？
+    type: single
+    suggested_answers:
+      - 是
+      - 否
+    is_jump: true
+    jump_cond:
+      是: 6
+      否: 7
+      default: 7
+    conclusions:
+      是: no_use
+      否: fever_condition_no
+  6:
+    "no": 6
+    q: 请问您体温最高达到多少度？ （建议在室内平静10分钟测体温）
+    type: single
+    suggested_answers:
+      - "> 37.3℃"
+      - "≤ 37.3℃"
+    is_jump: false
+    jump_cond:
+      default: 7
+    conclusions:
+      "> 37.3℃": fever_condition_yes
+      "≤ 37.3℃": fever_condition_no
+  7:
+    "no": 7
+    q: 请问是否还有其它症状？
+    type: multi
+    suggested_answers:
+      - 乏力
+      - 咳嗽
+      - 结膜炎
+      - 胸闷、憋喘或呼吸困难
+      - 鼻塞
+      - 流鼻涕
+      - 咽痛
+      - 头痛
+      - 肌肉酸痛
+      - 腹泻
+      - 以上都没有
+    is_jump: true
+    jump_cond:
+      乏力: 8
+      咳嗽: 8
+      结膜炎: 8
+      胸闷、憋喘或呼吸困难: 0
+      鼻塞: 8
+      流鼻涕: 8
+      咽痛: 8
+      头痛: 8
+      肌肉酸痛: 8
+      腹泻: 8
+      以上都没有: 0
+      default: 0
+    conclusions:
+      乏力: symptom_condition_yes
+      咳嗽: symptom_condition_yes
+      结膜炎: symptom_condition_yes
+      胸闷、憋喘或呼吸困难: getSevere_condition_yes
+      鼻塞: symptom_condition_yes
+      流鼻涕: symptom_condition_yes
+      咽痛: symptom_condition_yes
+      头痛: symptom_condition_yes
+      肌肉酸痛: symptom_condition_yes
+      腹泻: symptom_condition_yes
+      以上都没有: symptom_condition_no
+  8:
+    "no": 8
+    q: 请问上述症状是否休息后无好转，或逐渐加重？
+    type: single
+    suggested_answers:
+      - 是
+      - 否
+    is_jump: false
+    jump_cond:
+      是: 0
+      否: 0
+      default: 0
+    conclusions:
+      是: getSevere_condition_yes
+      否: getSevere_condition_no
+
+answers:
+  - answer: 新型冠状病毒感染肺炎可能性非常小。\n您没有明显发热症状，且无相关流行病学接触史，因此不用过于担心，建议居家观察，出行戴口罩，勤洗手，做好新型冠状病毒感染肺炎的预防。
+    level: 0
+    index: 1
+    reason:
+      - fever_condition_no
+      - symptom_condition_no
+      - childOld_condition_no
+      - pregnant_condition_no
+      - chronicDisease_condition_no
+      - contact_condition_no
+
+  - answer: 新型冠状病毒感染肺炎可能性较小。您最近有过相关接触史，但并不代表一定患病，建议向立刻向相关部门报备，并根据要求进行集中隔离医学观察或居家隔离医学观察，居家观察期间应定期测量体温，如有发热或呼吸道相关症状应立刻上报并就医。
+    level: 0
+    index: 2
+    reason:
+      - fever_condition_no
+      - symptom_condition_no
+      - childOld_condition_no
+      - pregnant_condition_no
+      - chronicDisease_condition_no
+      - contact_condition_yes
+
+  - answer: 新型冠状病毒感染肺炎可能性较小。\n您没有明显发热状况，但出现了#symptom#等症状，建议您根据病情居家观察，或前往社区医院进一步做DR（数字X线摄影）检查。如胸片正常，可在社区医院接受治疗，也可在社区医生的指导下居家治疗；如胸片异常，社区医生会参照新型冠状病毒感染肺炎疑似病例标准，指导您去附近的医院发热门诊作进一步检查，明确是不是新型冠状病毒感染肺炎疑似病例。
+    level: 0
+    index: 3
+    reason:
+      - fever_condition_no
+      - symptom_condition_yes
+      - getSevere_condition_no
+      - childOld_condition_no
+      - pregnant_condition_no
+      - chronicDisease_condition_no
+      - contact_condition_no
+
+  - answer: 新型冠状病毒感染肺炎可能性较小。您有明显的发热症状，建议您根据病情居家观察，或前往社区医院进一步做DR（数字X线摄影）检查。如胸片正常，可在社区医院接受治疗，也可在社区医生的指导下居家治疗；如胸片异常，社区医生会参照新型冠状病毒感染肺炎疑似病例标准，指导您去附近的医院发热门诊作进一步检查，明确是不是新型冠状病毒感染肺炎疑似病例。
+    level: 0
+    index: 4
+    reason:
+      - fever_condition_yes
+      - symptom_condition_no
+      - childOld_condition_no
+      - pregnant_condition_no
+      - chronicDisease_condition_no
+      - contact_condition_no
+
+  - answer: 新型冠状病毒感染肺炎可能较小。您有明显的发热症状，且伴随#symptom#等症状，建议您根据病情居家观察，或前往社区医院进一步做DR（数字X线摄影）检查。如胸片正常，可在社区医院接受治疗，也可在社区医生的指导下居家治疗；如胸片异常，社区医生会参照新型冠状病毒感染肺炎疑似病例标准，指导您去附近的医院发热门诊作进一步检查，明确是不是新型冠状病毒感染肺炎疑似病例。
+    level: 0
+    index: 5
+    reason:
+      - fever_condition_yes
+      - symptom_condition_yes
+      - getSevere_condition_no
+      - childOld_condition_no
+      - pregnant_condition_no
+      - chronicDisease_condition_no
+      - contact_condition_no
+
+  - answer: 您有明显发热症状，#chronicDisease##pregnant##childOld#建议您根据病情前往医院就诊，就诊途中必须配戴口罩。到医院后如实向医护人员陈述有关情况，如您有什么症状、最近去过哪些地方，是否接触过疑似患者等。
+    level: 0
+    index: 8
+    advance_reason:
+      - and:
+          - fever_condition_yes
+          - symptom_condition_no
+          - or:
+            - chronicDisease_condition_yes
+            - pregnant_condition_yes
+            - childOld_condition_yes
+    reason:
+      - no_use
+
+  - answer: 您没有明显发热症状，但因为有#symptom#等症状，#getSevere##chronicDisease##pregnant##childOld#建议您根据病情前往医院就诊，就诊途中必须配戴口罩。到医院后如实向医护人员陈述有关情况，如您有什么症状、最近去过哪些地方，是否接触过疑似患者等。
+    level: 0
+    index: 9
+    advance_reason:
+      - and:
+          - fever_condition_no
+          - symptom_condition_yes
+          - or:
+            - chronicDisease_condition_yes
+            - pregnant_condition_yes
+            - chronicDisease_condition_yes
+            - getSevere_condition_yes
+    reason:
+      - no_use
+
+  - answer: 您有明显发热症状，伴随#symptom#等症状，#getSevere##chronicDisease##pregnant##childOld#建议您根据病情前往医院就诊，就诊途中必须配戴口罩。到医院后如实向医护人员陈述有关情况，如您有什么症状、最近去过哪些地方，是否接触过疑似患者等。
+    level: 0
+    index: 10
+    advance_reason:
+      - and:
+          - fever_condition_yes
+          - symptom_condition_yes
+          - or:
+            - childOld_condition_yes
+            - pregnant_condition_yes
+            - chronicDisease_condition_yes
+            - getSevere_condition_yes
+    reason:
+      - no_use
+
+  - answer: 您有明显发热症状，而且最近两周有过相关接触史，建议前往附近发热门诊就诊，进行胸部影像检查及血液相关检查，明确是不是新型冠状病毒感染肺炎疑似病例。\n如是疑似病例，会安排您在定点医疗机构隔离治疗，同时进行呼吸道病原核酸检测，如检测为阴性，可排除新型冠状病毒感染肺炎；如为阳性，则确诊为新型冠状病毒感染肺炎。
+    level: 1
+    index: 11
+    reason:
+      - fever_condition_yes
+      - symptom_condition_no
+      - contact_condition_yes
+
+  - answer: 您虽然没有明显发热症状，但因为有#symptom症状，而=且最近两周有过相关接触史，建议前往附近发热门诊就诊，进行胸部影像检查及血液相关检查，明确是不是新型冠状病毒感染肺炎疑似病例。\n如是疑似病例，会安排您在定点医疗机构隔离治疗，同时进行呼吸道病原核酸检测，如检测为阴性，可排除新型冠状病毒感染肺炎；如为阳性，则确诊为新型冠状病毒感染肺炎。
+    level: 1
+    index: 12
+    reason:
+      - fever_condition_yes
+      - symptom_condition_no
+      - contact_condition_yes
+
+  - answer: 您有明显发热症状，伴随有#symptom症状，而且最近两周有过相关接触史，建议前往附近发热门诊就诊，进行胸部影像检查及血液相关检查，明确是不是新型冠状病毒感染肺炎疑似病例。\n如是疑似病例，会安排您在定点医疗机构隔离治疗，同时进行呼吸道病原核酸检测，如检测为阴性，可排除新型冠状病毒感染肺炎；如为阳性，则确诊为新型冠状病毒感染肺炎。
+    level: 1
+    index: 13
+    reason:
+      - fever_condition_yes
+      - symptom_condition_no
+      - contact_condition_yes
+
+
+  - answer: 您没有明显发热症状，但因为有胸闷或呼吸困难的症状，建议您根据病情前往医院就诊，就诊途中必须配戴口罩。到医院后如实向医护人员陈述有关情况，如您有什么症状、最近去过哪些地方，是否接触过疑似患者等。
+    level: 0
+    index: 14
+    advance_reason:
+      - and:
+          - fever_condition_no
+          - getSevere_condition_yes
+          - or:
+            - chronicDisease_condition_yes
+            - pregnant_condition_yes
+            - chronicDisease_condition_yes
+            - symptom_condition_yes
+    reason:
+      - no_use

@@ -12,61 +12,53 @@ COVID-19 Live Updates of Tencent Health is developed to track the live updates o
 ## Project structure
 
     TH_COVID19_International
-    |-- src                     # Source code
-    |   |-- db                  # Database import script
-    |   |-- servers             # Source code of Background
-    |   |-- web                 # Souce code of Web
+    |-- src                       # Source code
+    |   |-- db                    # Database import script
+    |   |-- servers               # Source code of Backend
+    |   |   |-- ncov-server       # Main server
+    |   |   |-- ncov-test-engine  # Self-administered dialogue engine
+    |   |-- web                   # Souce code of Frontend
     |
-    |-- images                  # images of Display
+    |-- images                    # images of Display
 
 
 ## Instructions
 
 ### Database Deployment
 
-```bash
-cd src/db/
-```
-
-    Import sql script under src/db/ in mysql
+1. `cd src/db/`
+2. Import sql script under `src/db/` in mysql
 
 
-### Server Deployment
+### Backend Deployment
 
-```bash
-cd src/servers
-```
+1. `cd src/servers/ncov-server`
+2. `npm install`
+3. Modify the configuration file under `/config/formal`, referring to the sample of  `/config/test`
+4. Debug and execute `npm run dev` locally, will read the configuration file of `config/test`
+5. Modify `start` command of `package.json` and configure `LOG_PATH`
+6. Execute `npm run start` to run the program, will read the configuration files of `LOG_PATH` and `config/formal`
 
-1. `npm install`
-2. Modify the configuration file under `/config/formal`, referring to the sample of  `/config/test`
-3. Debug and execute `npm run dev` locally, will read the configuration file of `config/test`
-4. Modify `start` command of `package.json` and configure `LOG_PATH`
-5. Execute `npm run start` to run the program, will read the configuration files of `LOG_PATH` and `config/formal`
-
-### Web Deployment
+### Frontend Deployment
 
 ```bash
 cd src/web
+npm install
+npm run dev
+
+# Build for pre environment
+npm run build:pre
+
+# Build for production environment
+npm run build
 ```
 
-#### Publish:
+### Components
 
-Build for pre environment
+#### Self-administered Dialogue:
 
-``` bash
-npm run build:pre  
-```
-Build for production environment
+It serves as a virtual doctor and interacts with the users through 5-7 questions which consists of fever, respiratory symptoms, and epidemiological exposure history, etc. After the conversation, it provides with risk judgement and personlized medical advice.
+You can modify the questions or answers, and configure logic according to the
+diagnostic guidelines for COVID-19 of your own country.
 
-```bash
-npm run build  
-```
-
-#### Getting started:
-```bash
-npm install  
-npm run dev  
-```
-
-
-
+[Self-administered Dialogue](src/servers/ncov-test-engine)
