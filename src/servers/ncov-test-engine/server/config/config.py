@@ -27,7 +27,8 @@ class BaseConfig(object, metaclass=Singleton):
 
         self.QUESTION_V1_DATA = os.path.join(BASE_PATH, '..', 'data', 'question_config_v1.yml')
         self.QUESTION_V2_DATA = os.path.join(BASE_PATH, '..', 'data', 'question_config_v2.yml')
-        self.QUESTION_V3_DATA = os.path.join(BASE_PATH, '..', 'data', 'question_config_v3_en.yml')
+        self.QUESTION_V3_DATA = os.path.join(BASE_PATH, '..', 'data', 'question_config_v3.yml')
+        self.QUESTION_V3_EN_DATA = os.path.join(BASE_PATH, '..', 'data', 'question_config_v3_en.yml')
 
         self.QUESTION_TEST_DATA = os.path.join(BASE_PATH, '..', 'data', 'test.yml')
 

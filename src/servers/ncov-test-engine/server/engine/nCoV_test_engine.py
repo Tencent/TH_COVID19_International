@@ -54,11 +54,12 @@ class nCoVTestEngine(object):
         self.load_yml(config.QUESTION_V1_DATA, 'wuhan')
         self.load_yml(config.QUESTION_V2_DATA, 'beijing')
         self.load_yml(config.QUESTION_V3_DATA, 'v3')
+        self.load_yml(config.QUESTION_V3_EN_DATA, 'v3_en')
 
 
     def load_yml(self, path, key):
         with open(path, 'r', encoding='utf-8') as f:
-            temp = yaml.load(f.read())
+            temp = yaml.load(f.read(), Loader=yaml.FullLoader)
         self.questions_map[key] = temp['questions']
         self.answers[key] = temp['answers']
 
@@ -226,7 +227,7 @@ class nCoVTestEngine(object):
         pregnant_question = [q for q in his_questions if q.no == 2]
 
         age = age_question[0].symp_list[0] if len(age_question) == 1 else ''
-        is_pregnant = age_question[0].symp_list[0] == 'Yes' \ 
+        is_pregnant = age_question[0].symp_list[0] == 'Yes' \
                                             if len(pregnant_question) == 1 else False
 
         answer_info = [a for a in self.answers[strategy] if a['index'] == answer_index].pop()
