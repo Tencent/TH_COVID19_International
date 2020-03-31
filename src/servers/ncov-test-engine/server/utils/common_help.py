@@ -18,10 +18,10 @@ logger.remove()
 # Judging by 'log_req'
 def log_format(record):
     if 'log_req' in record["extra"]:
-        return """{time:YYYY-MM-DD HH:mm:ss.SSS}|{level: <8}
-            |{name}:{function}:{line}|{extra[log_req]}|{extra[server_name]}
-            |{extra[user_id]}|{extra[request_id]}|{extra[session_id]}|{extra[trace_id]}
-            |{message}\n"""
+        return '{time:YYYY-MM-DD HH:mm:ss.SSS}|{level: <8}\
+            |{name}:{function}:{line}|{extra[log_req]}|{extra[server_name]}\
+            |{extra[user_id]}|{extra[request_id]}|{extra[session_id]}|{extra[trace_id]}\
+            |{message}\n'
     else:
         return loguru_defaults.LOGURU_FORMAT+'\n'
 

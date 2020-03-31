@@ -68,7 +68,7 @@ enum DiagnosisReplyType {
 }
 
 message ConclusionDetail {
-  string type = 1;                // his_diesase;his_contact;fever;symp;symp_severe  既往病史;接触史;发热;症状;是否加重
+  string type = 1;                // One of following g: his_diesase;his_contact;fever;symp;symp_severe
   bool yes_or_no = 2;
   string str_yes = 3;             // The 'yep' text.
   string str_no = 4;              // The 'nop' text.
