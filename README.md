@@ -24,22 +24,18 @@ COVID-19 Live Updates of Tencent Health is developed to track the live updates o
 
 ### Database Deployment
 
-Path: 
-
-    src/db/
-
-Method:
+```bash
+cd src/db/
+```
 
     Import sql script under src/db/ in mysql
 
 
-### Background Deployment
+### Server Deployment
 
-Path: 
-
-    src/servers
-
-Method:
+```bash
+cd src/servers
+```
 
 1. `npm install`
 2. Modify the configuration file under `/config/formal`, referring to the sample of  `/config/test`
@@ -49,11 +45,9 @@ Method:
 
 ### Web Deployment
 
-Path:
-
-    src/web
-
-Method:
+```bash
+cd src/web
+```
 
 #### Publish:
 
