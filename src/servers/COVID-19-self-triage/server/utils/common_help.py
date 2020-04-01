@@ -55,7 +55,7 @@ class CommonPbHelper(object):
     @staticmethod
     def gen_common_resp(ret_code, ret_message):
         '''
-        generate CommonResponse， cf.VERSION is sevice version number
+        generate CommonResponse, cf.VERSION is sevice version number
         '''
         return common_pb2.CommonResponse(version=cf.VERSION, 
                 ret_code=ret_code, ret_message=ret_message)

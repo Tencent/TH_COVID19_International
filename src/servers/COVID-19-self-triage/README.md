@@ -1,4 +1,4 @@
-CovID-19 Self-screen Server 
+CovID-19 Self-Triage Server
 ====
 ![TENCENT Jarvis Lab logo](docs/static_files/JarvisLogo.png "The TENCENT Jarvis Lab")
 
@@ -17,7 +17,7 @@ Basic Usage
 ```
 # git clone project
 $ git clone https://github.com/Tencent/TH_COVID19_International.git
-$ cd TH_COVID19_International/src/servers/ncov-test-engine
+$ cd TH_COVID19_International/src/servers/COVID-19-self-triage
 
 # Install requirements
 $ pip install -r requirements.txt
@@ -34,7 +34,7 @@ Docker Usage
 ```
 # git clone project
 $ git clone https://github.com/Tencent/TH_COVID19_International.git
-$ cd TH_COVID19_International/src/servers/ncov-test-engine
+$ cd TH_COVID19_International/src/servers/COVID-19-self-triage
 
 # Build docker image
 $ docker build -t covid19-engine .

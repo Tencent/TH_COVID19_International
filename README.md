@@ -15,8 +15,8 @@ COVID-19 Live Updates of Tencent Health is developed to track the live updates o
     |-- src                       # Source code
     |   |-- db                    # Database import script
     |   |-- servers               # Source code of Backend
-    |   |   |-- ncov-server       # Main server
-    |   |   |-- ncov-test-engine  # Self-administered dialogue engine
+    |   |   |-- COVID-19-server       # Main server
+    |   |   |-- COVID-19-self-triage  # Self-administered triage engine
     |   |-- web                   # Souce code of Frontend
     |
     |-- images                    # images of Display
@@ -32,7 +32,7 @@ COVID-19 Live Updates of Tencent Health is developed to track the live updates o
 
 ### Backend Deployment
 
-1. `cd src/servers/ncov-server`
+1. `cd src/servers/COVID-19-server`
 2. `npm install`
 3. Modify the configuration file under `/config/formal`, referring to the sample of  `/config/test`
 4. Debug and execute `npm run dev` locally, will read the configuration file of `config/test`
@@ -55,10 +55,10 @@ npm run build
 
 ### Components
 
-#### Self-administered Dialogue:
+#### COVID-19 Self-triage engine:
 
 It serves as a virtual doctor and interacts with the users through 5-7 questions which consists of fever, respiratory symptoms, and epidemiological exposure history, etc. After the conversation, it provides with risk judgement and personlized medical advice.
 You can modify the questions or answers, and configure logic according to the
 diagnostic guidelines for COVID-19 of your own country.
 
-[Self-administered Dialogue](src/servers/ncov-test-engine)
+[COVID-19 Self-triage engine](src/servers/COVID-19-self-triage)

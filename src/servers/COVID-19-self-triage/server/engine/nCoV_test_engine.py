@@ -92,7 +92,7 @@ class nCoVTestEngine(object):
             q_type = question_info['type']
             q_answers = question.symp_list
             if strategy == 'v3_en' and no == 7:
-                symptom = '、'.join(q_answers)
+                symptom = ','.join(q_answers)
 
             q_answers = [answer for answer in q_answers if len(answer) > 0]
             if len(q_answers) == 0 and (q_type == 'single' or q_type == 'multi'):
@@ -151,10 +151,10 @@ class nCoVTestEngine(object):
                 counter = counter + 1
                 if counter == 1:
                     answer = answer.replace('#childOld#',
-                                            'but you are #person#，').replace('#person#', person)
+                                            'but you are #person#,').replace('#person#', person)
                 else:
                     answer = answer.replace('#childOld#',
-                                            'and you are #person#，').replace('#person#', person)
+                                            'and you are #person#,').replace('#person#', person)
             else:
                 answer = answer.replace('#childOld#', '')
 
@@ -186,9 +186,9 @@ class nCoVTestEngine(object):
             else:
                 str_yes = 'the symptoms did not get severe'
         elif type == 'his_contact':
-            str_yes = '\\n'.join(['{}、{}'.format(i+1, s) \
+            str_yes = '\\n'.join(['{},{}'.format(i+1, s) \
                 for i, s in enumerate(str_yes.split('\\n'))]) if len(str_yes) > 0 else ''
-            str_no = '\\n'.join(['{}、{}'.format(i+1, s) \
+            str_no = '\\n'.join(['{},{}'.format(i+1, s) \
                 for i, s in enumerate(str_no.split('\\n'))]) if len(str_no) > 0 else ''
         return {
             'type': type,
@@ -228,7 +228,7 @@ class nCoVTestEngine(object):
             question_info = self.questions_map[strategy][no]
             q_answers = [answer for answer in question.symp_list if len(answer) > 0]
 
-            spilt_symb = '、' if no != 4 else '\\n'
+            spilt_symb = ',' if no != 4 else '\\n'
             set_yes = set(q_answers)
             set_no = set(question_info['suggested_answers']) - set(q_answers)
             yes_or_no = False if len(set_yes) == 1 and \
