@@ -112,6 +112,20 @@ const allRoutes = {
             name: 'MapHospArticle',
             component: () => import('../views/MapHospArticle.vue')
         }
+    ],
+    selftest: [
+        // 自助排查
+        {
+            path: '/selftest',
+            name: 'Selftest',
+            component: () => import('../views/Selftest.vue')
+        },
+        // 自助排查报告页
+        {
+            path: '/selftest-report',
+            name: 'SelftestReport',
+            component: () => import('../views/modules/selftest/report.vue')
+        }
     ]
 }
 
@@ -129,8 +143,7 @@ export const beforeEach = (currentModuleName) => {
                         (eachOtherModule) => eachOtherModule.path === item.path
                     )
                     if (includePageName) {
-                        console.error('拆了多页面之后，一定要把原来的页面路由在index里面删掉！！！！！')
-                        console.error('没删掉的页面是', item)
+                        console.error(item)
                     }
                     return {
                         module: moduleName,

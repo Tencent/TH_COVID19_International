@@ -1,0 +1,106 @@
+syntax = "proto3";
+
+import "common.proto";
+
+package TencentJarvis.MedicalDiagnosis.nCoV.v1;
+
+// The service definition.
+service nCoVDiagnosisService {
+  // Sends a question
+  rpc predict (DPRequest) returns (DPReply) {}
+}
+
+enum Sex {
+  SEX_UNKNOWN = 0;
+  SEX_MAN = 1;
+  SEX_WOMAN = 2;
+}
+
+message UserProfile {
+  float age = 1;
+  Sex sex = 2;
+}
+
+message DetailedQuestions {
+  QuestionType question_type = 1;//追问种类
+  int32 question_rounds = 2;//追问轮次
+  string question_query = 3;//追问提示语
+  // 追问选项列表
+  repeated string candidate_symp = 4;
+
+  // 用户勾选的列表
+  repeated string symp_list = 5;
+  //仅question_type为QTIME时提供
+  Time time = 6;
+  //问题No.
+  int32 no = 7;
+}
+
+enum QuestionType{
+  SINGLE = 0;//单选
+  MULTI = 1;//多选
+  QTIME = 2;//问询时间， 1.6版本暂时没有用到
+  PERSONALINFO = 3;//性别年龄追问
+}
+
+message Time{
+  float hours = 1;
+  float days = 2;
+  float mouths = 3;
+  float years = 4;
+}
+
+// The request message
+message DPRequest {
+  TencentJarvis.CommonRequest common_req = 1;
+  UserProfile user_profile = 2;
+  repeated DetailedQuestions questions = 3; //所有历史追问
+  string strategy = 4; // wuhan/beijing
+}
+
+enum DiagnosisReplyType {
+  NO_NEED = 0;//无需追问
+
+  NEED_DETAILED_QUESTION = 1;//需要追问
+
+  NO_MEDICAL_QUERY = 2;//用户输入为无关信息
+}
+
+message ConclusionDetail {
+  string type = 1; // his_diesase;his_contact;fever;symp;symp_severe  既往病史;接触史;发热;症状;是否加重
+  bool yes_or_no = 2;
+  string str_yes = 3; // 回答“是”的选项清单
+  string str_no = 4; // 回答“否”的选项清单
+}
+
+message Conclusions {
+  string age = 1;
+  bool is_pregnant = 2;
+  repeated ConclusionDetail details = 3; //
+  string title = 4; // 处置意见
+  string answer = 5; // 结论
+}
+
+// The response message
+message DPReply {
+  TencentJarvis.CommonResponse common_rep = 1;
+
+  // 回复类型
+  DiagnosisReplyType reply_type = 2;
+
+  // 回复答案
+  string answer = 4;
+
+  // 当前轮次追问
+  DetailedQuestions question = 6;
+
+  // 提示信息
+  string help_msg = 7;
+
+  // 是否需要就诊
+  int32 severity_level = 8; // 0无需就诊 1需要就诊
+
+  int32 answer_index = 9; // 回答id
+
+  Conclusions conclusions = 10; // 生成病历
+}

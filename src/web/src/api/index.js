@@ -1,13 +1,15 @@
 import axios from 'axios'
 import { getEnv, getQueryString } from '@/utils'
+// eslint-disable-next-line camelcase
 import API_Data_Static from '@/config/staticInterfaceData'
+import SERVICE_PATH_MAP from './service-path-map'
 import logUtil from '@/utils/log_util'
 const env = getEnv()
 
 const baseURLMap = {
-    development: 'https://mitest.wecity.qq.com/ncovh5api',
-    pre: 'https://mitest.wecity.qq.com/ncovh5api',
-    production: 'https://mitest.wecity.qq.com/ncovh5api'
+    development: 'https://mitest.wecity.qq.com',
+    pre: 'https://mitest.wecity.qq.com',
+    production: 'https://mitest.wecity.qq.com'
 }
 
 const baseURL = baseURLMap[env]
@@ -68,7 +70,7 @@ const _httpUtils = (func, req = {}, service = 'THPneumoniaService', context = {}
         context
     }
 
-    if (['Diagnosis_NCOVQAServer_NCOVQAServant', 'Diagnosis_DiagnosisPreServer_NCovDiagnosis'].includes(service)) {
+    if (['Diagnosis_NCOVQAServer_NCOVQAServant', 'DiagnosisPreServer_NCovDiagnosis'].includes(service)) {
         body.args.header = {
             requestId: Math.random()
                 .toFixed(16)
@@ -76,8 +78,10 @@ const _httpUtils = (func, req = {}, service = 'THPneumoniaService', context = {}
         }
     }
 
+    if (!SERVICE_PATH_MAP[service]) console.error(SERVICE_PATH_MAP[service], service, '不存在！')
+
     return instance
-        .post(`${service}/${func}`, body, { headers })
+        .post(`/${SERVICE_PATH_MAP[service]}/${service}/${func}`, body, { headers })
         .then(res => res.data.args.rsp || JSON.parse(res.data.args.sRsp))
         .catch(e => {
             console.log(e, `${service}/${func}`)

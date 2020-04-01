@@ -16,7 +16,12 @@ module.exports = {
             entry: 'src/main-home.js',
             template: 'public/index.html',
             filename: 'index.html'
-        }
+        },
+        selftest: {
+            entry: 'src/main-selftest.js',
+            template: 'public/index.html',
+            filename: 'selftest.html',
+        },
         // document: {
         //     entry: 'src/main-document.js',
         //     template: 'public/index.html',

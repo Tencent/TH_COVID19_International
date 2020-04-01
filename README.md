@@ -55,10 +55,11 @@ npm run build
 
 ### Components
 
-#### COVID-19 Self-triage engine:
+#### COVID-19 Self-triage:
 
 It serves as a virtual doctor and interacts with the users through 5-7 questions which consists of fever, respiratory symptoms, and epidemiological exposure history, etc. After the conversation, it provides with risk judgement and personlized medical advice.
 You can modify the questions or answers, and configure logic according to the
 diagnostic guidelines for COVID-19 of your own country.
 
 [COVID-19 Self-triage engine](src/servers/COVID-19-self-triage)
+[COVID-19 self-triage server](src/servers/COVID-19-self-triage-server)

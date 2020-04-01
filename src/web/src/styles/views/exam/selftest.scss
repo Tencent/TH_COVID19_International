@@ -118,6 +118,7 @@
                     .chat {
                         border-radius: 10px;
                         padding: 10px 22px;
+                        word-break: break-word;
 
                         .limit-height {
                             max-height: 100px;
@@ -235,6 +236,9 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
+                        &.bigger {
+                            height: 115px;
+                        }
                         &.bad {
                             background-image: url('https://static.wecity.qq.com/h5/2020-2/rgb_02-28ff7b1b259fa552d606b556ae4b054f.png');
                             h4 {

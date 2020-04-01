@@ -1,0 +1,66 @@
+{
+    "webConfig": {
+      "resultCard": {
+        "hospitalList": [],
+        "ifShowTitle": false,
+        "titleLink": "",
+        "ifShowHospitalList": false,
+        "ifShowNearby": false,
+        "nearbyBtnText": "",
+        "nearbyBtnLink": "",
+        "textLink": [],
+        "ifShowReportBtn": true,
+        "reportBtnTitle": "Read Your Report",
+        "reportBtnSubTitle": "Save the photo to your phone"
+      },
+      "bottomBtnRight": {
+        "text": "",
+        "link": "",
+        "ifShow": false,
+        "ifShowHot": false
+      },
+      "ifShowSource": true,
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjI2ODA4Mw==&mid=2653026466&idx=1&sn=52f7a9f77fcc068a19b8c81702a3437e&chksm=bd3e89fe8a4900e8752b03ad0afa973d8cd0bb4f232006a403e78ce88b1b2467d3798ea6d8af&mpshare=1&scene=1&srcid=&sharer_sharetime=1580361584347&sharer_shareid=e7b405cf0e8268cc2436213c37d4d103&rd2werd=1#wechat_redirect",
+      "ifShowSourceBtn": true,
+      "sourceDoctor": "",
+      "strategy": "v3_en",
+      "freeDiagnosis": {
+        "ifShow": false,
+        "text": "",
+        "jumpUrl": ""
+      },
+      "recommend": [],
+      "resultSource": {
+        "ifShow": true,
+        "text": "According to the guideline of National Health Commission and reviewed by Chinese Preventive Medicine Association"
+      },
+      "pageTitle": "COVID-19 Self-Triage",
+      "banner": "https://static.wecity.qq.com/h5/2020-2/Banner-3c2de6fd934ecb3d27bc86e98e207dca.png",
+      "recommendCard": {
+        "modules": [],
+        "ifShowIsolationText": false,
+        "isolationText": "1. Live alone and ensure the room is well ventilated. <br>2. Wear masks and replace every 4 hours. <br>4. Record body temperature twice a day and monitor weight changes. <br>5. Keep at least one-meter distance with the family, especially the elder and children, and avoid physical contact. <br>6. Use medicine when necessary and according to prescription. <br>7. Rest well and drink more water <br>8. Wash hands with running water and hand sanitizer. <br>9. Clean the living environment, using disinfectant to clean the floor, table, etc. <br>10. Sheets and clothing should be soaked with warm water(60°C to 90°C) and dried <br>11. After 2-3 days, if feeling better, maintain the above measures until symptoms disappear. Otherwise, see the doctor in time <br>12. The medical observation period is 14 days. After that, can resume normal study, work and life.",
+        "ifShowIsolationAuth": true,
+        "ifShowDiagnosisText": true,
+        "ifShowDiagnosisAuth": true,
+        "disease": {
+          "ifShow": false,
+          "ifShowCountry": false,
+          "countryLink": ""
+        },
+        "isolationAuth": "According to the guideline of National Health Commission",
+        "diagnosisAuth": "According to the guideline of National Health Commission",
+        "diagnosisText": "1. Choose the nearest hospital with a fever clinic or the hospital designated by the government. <br>2. Wear masks on the way to the hospital and avoid using public transportation. <br>3. Go directly to the fever clinic, after arriving at the hospital. <br>4. Tell the medical staff about the situation, including your symptoms, the places you have been to recently, and whether you have contacted a suspected patient.",
+        "ifShowModullesMore": false,
+        "modulesMoreLink": "",
+        "ifShowAIQA": false
+      },
+      "guideText": "Hello, I am COVID-19 Self-Triage assistant. If you are ill and concerned about being infected, please answer the following questions. I will guide you through the self-Triage.",
+      "ifShowRecommendDisease": false,
+      "ifShowRecommendAbbreviation": false,
+      "report": {
+        "ifShowSubBtn": true,
+        "sharePage": "selftest"
+      }
+    }
+  }

@@ -1,0 +1,35 @@
+{
+  "name": "diagnosis-ncovdiagnosis-server",
+  "version": "1.0.0",
+  "description": "ncovdiagnosis",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=formal LOG_PATH=./app_log node src/app.js",
+    "dev": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^0.7.4",
+    "@grpc/proto-loader": "^0.5.3",
+    "callsite": "^1.0.0",
+    "joi": "^14.3.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "0.0.16",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0",
+    "node-pre-gyp": "^0.14.0",
+    "stream-to-promise": "^2.2.0",
+    "uuid": "^3.3.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "eslint": "^4.19.1"
+  }
+}
