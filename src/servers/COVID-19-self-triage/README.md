@@ -23,7 +23,7 @@ $ cd TH_COVID19_International/src/servers/COVID-19-self-triage
 $ pip install -r requirements.txt
 
 # Configure python path
-$ export PYTHONPATH=server/
+$ export PYTHONPATH=./
 
 # Start engine
 $ python3 server/service.py
