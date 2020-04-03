@@ -369,6 +369,9 @@ export default {
             this.messages = [getQuestionItem(this.hospitalConfig.guideText || this.$i18n.t('selftest.Report_Guide_Text'))]
             this.initSelfTest()
         }
+
+        // chrome safari 100vh问题
+        document.getElementsByClassName('selftest-page')[0].style.height = `${window.innerHeight}px`
     }
 }
 </script>

@@ -186,10 +186,10 @@ questions:
       "No": getSevere_condition_no
 
 answers:
-  - answer: "You are unlikely to be infected the new coronavirus\\nYou have no obvious fever symptoms and no related epidemiological contact history, therefore you do not have to worry. It is recommended to stay at home, wear a mask while traveling, wash your hands frequently, and take protective measures against the new coronavirus."
+  - answer: "You are unlikely to be infected with the COVID-19\\nYou have no obvious fever symptoms and no related epidemiological contact history, therefore you do not have to worry. It is recommended to stay at home, wear a mask while traveling, wash your hands frequently, and take protective measures against the COVID-19."
     level: 0
     index: 1
-    title: You are unlikely to be infected the new coronavirus
+    title: You are unlikely to be infected with the COVID-19
     advance_reason:
       - and:
           - fever_condition_no
@@ -198,10 +198,10 @@ answers:
     reason:
       - no_use
 
-  - answer: "You are less likely to be infected the new coronavirus\\nYou have a recent history of exposure to the epidemic, but it does not necessarily mean that you are infected. Do not overly panic.\\nIt is recommended to immediately report to the relevant department and conduct centralized quarantine or home quarantine as required. During the home quarantine, you should regularly measure your body temperature. If you develop fever or respiratory-related symptoms, seek medical care promptly."
+  - answer: "You are less likely to be infected with the COVID-19\\nYou have a recent history of exposure to the epidemic, but it does not necessarily mean that you are infected. Do not overly panic.\\nIt is recommended to immediately report to the relevant department and conduct centralized quarantine or home quarantine as required. During the home quarantine, you should regularly measure your body temperature. If you develop fever or respiratory-related symptoms, seek medical care promptly."
     level: 0
     index: 2
-    title: You are less likely to be infected the new coronavirus
+    title: You are less likely to be infected with the COVID-19
     advance_reason:
       - and:
           - fever_condition_no
@@ -211,10 +211,10 @@ answers:
       - no_use
 
 
-  - answer: "You are less likely to be infected the new coronavirus\\nYou have no obvious fever symptoms, but you have symptoms like #symptom#. Whether or not you are infected requires professional judgment.\\nYou can consult a doctor online, conduct home quarantine according to your condition, or go to a community hospital for further DR (digital radiography) examination.\\nIf the chest radiograph is normal, you can receive treatment in a community hospital or stay at home under community doctor's guidance. If the chest radiograph is abnormal, the community doctor will refer to Criteria for suspected cases of COVID-19 to guide you to a nearby hospital for further examination to confirm whether or not you are a suspected case."
+  - answer: "You are less likely to be infected with the COVID-19\\nYou have no obvious fever symptoms, but you have symptoms like #symptom#. Whether or not you are infected requires professional judgment.\\nYou can consult a doctor online, conduct home quarantine according to your condition, or go to a community hospital for further DR (digital radiography) examination.\\nIf the chest radiograph is normal, you can receive treatment in a community hospital or stay at home under community doctor's guidance. If the chest radiograph is abnormal, the community doctor will refer to Criteria for suspected cases of COVID-19 to guide you to a nearby hospital for further examination to confirm whether or not you are a suspected case."
     level: 0
     index: 3
-    title: You are less likely to be infected the new coronavirus
+    title: You are less likely to be infected with the COVID-19
     advance_reason:
       - and:
           - fever_condition_no
@@ -228,10 +228,10 @@ answers:
           - chronicDisease_condition_no
           - contact_condition_no
 
-  - answer: "You are less likely to be infected the new coronavirus\\nYou have obvious fever symptoms, accompanied by other symptoms like #symptom#. Whether or not you are infected requires professional judgment.\\nYou can consult a doctor online, conduct home quarantine according to your condition, or go to a community hospital for further DR (digital radiography) examination.\\nIf the chest radiograph is normal, you can receive treatment in a community hospital or stay at home under community doctor's guidance. If the chest radiograph is abnormal, the community doctor will refer to Criteria for suspected cases of COVID-19 to guide you to a nearby hospital for further examination to confirm whether or not you are a suspected case."
+  - answer: "You are less likely to be infected with the COVID-19\\nYou have obvious fever symptoms, accompanied by other symptoms like #symptom#. Whether or not you are infected requires professional judgment.\\nYou can consult a doctor online, conduct home quarantine according to your condition, or go to a community hospital for further DR (digital radiography) examination.\\nIf the chest radiograph is normal, you can receive treatment in a community hospital or stay at home under community doctor's guidance. If the chest radiograph is abnormal, the community doctor will refer to Criteria for suspected cases of COVID-19 to guide you to a nearby hospital for further examination to confirm whether or not you are a suspected case."
     level: 0
     index: 5
-    title: You are less likely to be infected the new coronavirus
+    title: You are less likely to be infected with the COVID-19
     advance_reason:
       - and:
           - fever_condition_yes
@@ -261,10 +261,10 @@ answers:
     reason:
       - no_use
 
-  - answer: "You are less likely to be infected the new coronavirus\\nYou have obvious fever symptoms. Whether or not you are infected requires professional judgment.\\nYou can consult a doctor online, conduct home quarantine according to your condition, or go to a community hospital for further DR (digital radiography) examination.\\nIf the chest radiograph is normal, you can receive treatment in a community hospital or stay at home under community doctor's guidance. If the chest radiograph is abnormal, the community doctor will refer to Criteria for suspected cases of COVID-19 to guide you to a nearby hospital for further examination to confirm whether or not you are a suspected case."
+  - answer: "You are less likely to be infected with the COVID-19\\nYou have obvious fever symptoms. Whether or not you are infected requires professional judgment.\\nYou can consult a doctor online, conduct home quarantine according to your condition, or go to a community hospital for further DR (digital radiography) examination.\\nIf the chest radiograph is normal, you can receive treatment in a community hospital or stay at home under community doctor's guidance. If the chest radiograph is abnormal, the community doctor will refer to Criteria for suspected cases of COVID-19 to guide you to a nearby hospital for further examination to confirm whether or not you are a suspected case."
     level: 0
     index: 4
-    title: You are less likely to be infected the new coronavirus
+    title: You are less likely to be infected with the COVID-19
     advance_reason:
       - and:
           - fever_condition_yes
