@@ -1,0 +1,6 @@
+grpcio==1.12.1
+loguru==0.3.2
+protobuf==3.6.1
+influxdb==5.2.0
+pyyaml==5.1
+pytest==4.0.1

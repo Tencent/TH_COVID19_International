@@ -1,0 +1,108 @@
+syntax = "proto3";
+
+import "common.proto";
+
+package TencentJarvis.MedicalDiagnosis.nCoV.v1;
+
+// The service definition.
+service nCoVDiagnosisService {
+  // Sends a question
+  rpc predict (DPRequest) returns (DPReply) {}
+}
+
+enum Sex {
+  SEX_UNKNOWN = 0;
+  SEX_MAN = 1;
+  SEX_WOMAN = 2;
+}
+
+message UserProfile {
+  float age = 1;
+  Sex sex = 2;
+}
+
+message DetailedQuestions {
+  QuestionType question_type = 1;
+  int32 question_rounds = 2;
+  string question_query = 3;
+
+  // The candidated answers.
+  repeated string candidate_symp = 4;
+
+  // The list user choosed
+  repeated string symp_list = 5;
+  // Only used when question_type is QTIME type
+  Time time = 6;
+  // Question order
+  int32 no = 7;
+}
+
+enum QuestionType{
+  SINGLE = 0;                     // Single choice
+  MULTI = 1;                      // Multi choice
+  QTIME = 2;                      // Query for time
+  PERSONALINFO = 3;               // Personal information, i.e. age & sex.
+}
+
+message Time{
+  float hours = 1;
+  float days = 2;
+  float mouths = 3;
+  float years = 4;
+}
+
+// The request message
+message DPRequest {
+  TencentJarvis.CommonRequest common_req = 1;
+  UserProfile user_profile = 2;
+  repeated DetailedQuestions questions = 3; // All requestions user answered before.
+  string strategy = 4;                      // The diagnosis stategy.
+}
+
+enum DiagnosisReplyType {
+  NO_NEED = 0;                    // No more action.
+
+  NEED_DETAILED_QUESTION = 1;     // Need further questioning.
+
+  NO_MEDICAL_QUERY = 2;           // No medical info in user's query
+}
+
+message ConclusionDetail {
+  string type = 1;                // One of following g: his_diesase;his_contact;fever;symp;symp_severe
+  bool yes_or_no = 2;
+  string str_yes = 3;             // The 'yep' text.
+  string str_no = 4;              // The 'nop' text.
+}
+
+message Conclusions {
+  string age = 1;
+  bool is_pregnant = 2;
+  repeated ConclusionDetail details = 3;
+  string title = 4;
+  string answer = 5;
+}
+
+// The response message
+message DPReply {
+  TencentJarvis.CommonResponse common_rep = 1;
+
+  // The reply type
+  DiagnosisReplyType reply_type = 2;
+
+  string answer = 4;
+
+  // All requestions user answered before.
+  DetailedQuestions question = 6;
+
+  // The hint message
+  string help_msg = 7;
+
+  // severity_level defines the user's risk.
+  // When severity_level is 0, user risk is LOW.
+  // When severity_level is 1, user risk is HIGH.
+  int32 severity_level = 8;
+
+  int32 answer_index = 9;
+
+  Conclusions conclusions = 10;
+}
