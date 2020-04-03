@@ -17,7 +17,7 @@ Basic Usage
 ```
 # git clone project
 $ git clone https://github.com/Tencent/TH_COVID19_International.git
-$ cd TH_COVID19_International/src/servers/COVID-19-self-triage-engine
+$ cd TH_COVID19_International/src/servers/COVID-19-self-triage
 
 # Install requirements
 $ pip install -r requirements.txt
@@ -34,7 +34,7 @@ Docker Usage
 ```
 # git clone project
 $ git clone https://github.com/Tencent/TH_COVID19_International.git
-$ cd TH_COVID19_International/src/servers/COVID-19-self-triage-engine
+$ cd TH_COVID19_International/src/servers/COVID-19-self-triage
 
 # Build docker image
 $ docker build -t covid19-engine .

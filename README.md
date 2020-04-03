@@ -16,7 +16,7 @@ COVID-19 Live Updates of Tencent Health is developed to track the live updates o
     |   |-- db                    # Database import script
     |   |-- servers               # Source code of Backend
     |   |   |-- COVID-19-server                 # Main server
-    |   |   |-- COVID-19-self-triage-engine     # Self-administered triage engine
+    |   |   |-- COVID-19-self-triage            # Self-administered triage engine
     |   |   |-- COVID-19-self-triage-server     # Self-administered triage server
     |   |-- web                   # Souce code of Frontend
     |
@@ -62,5 +62,5 @@ It serves as a virtual doctor and interacts with the users through 5-7 questions
 You can modify the questions or answers, and configure logic according to the
 diagnostic guidelines for COVID-19 of your own country.
 
-[COVID-19 Self-triage engine](src/servers/COVID-19-self-triage-engine)
+[COVID-19 Self-triage engine](src/servers/COVID-19-self-triage)
 [COVID-19 self-triage server](src/servers/COVID-19-self-triage-server)

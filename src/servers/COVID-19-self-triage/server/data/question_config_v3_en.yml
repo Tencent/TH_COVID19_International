@@ -170,7 +170,7 @@ questions:
       None of the above: symptom_condition_no
   8:
     "no": 8
-    q: Did the symptom worsen or not improved after rest?
+    q: Did the symptom worsen or not improve after rest?
     type: single
     con_type: symp_severe
     suggested_answers:
