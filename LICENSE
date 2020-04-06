@@ -1,4 +1,4 @@
-Tencent is pleased to support the open source community by making TH_COVID19_International available.  
+Tencent is pleased to support the open source community by making TH_COVID19_International available.
 
 Copyright (C) 2020 THL A29 Limited, a Tencent company.  All rights reserved.
 
@@ -184,13 +184,6 @@ Terms of the Apache License Version 2.0:
       of your accepting any such warranty or additional liability.
 
    END OF TERMS AND CONDITIONS
-
-
-
-
-
-
-
 
 
 Other dependencies and licenses:
@@ -480,6 +473,14 @@ Copyright (c) 2006-2016 Kirill Simonov
 92. pytest
 Copyright (c) 2004-2017 Holger Krekel and others
 
+93. koa-cors
+Copyright (c) 2013 Everton Yoshitani
+
+94. koa-json
+Copyright (c) Koa contributors
+
+95. koa-static
+Copyright (c) Koa contributors
 
 Terms of the MIT License:
 --------------------------------------------------------------------
@@ -3208,6 +3209,9 @@ Copyright (c) 2012-2014, Walmart
 Copyright (c) 2014, Nathan LaFreniere and other [contributors](https://github.com/ljharb/qs/graphs/contributors)
 All rights reserved.
 
+3. node-pre-gyp
+Copyright (c), Mapbox
+
 Terms of the BSD 3-Clause License:
 --------------------------------------------------------------------
 Redistribution and use in source and binary forms, with or without
@@ -3510,6 +3514,11 @@ Open Source Software Licensed under the Apache License Version 2.0 :
 1. grpcio
 Copyright 2014 gRPC authors.
 
+2. @grpc/grpc-js
+Copyright (c) Google Inc.
+
+3. @grpc/proto-loader
+Copyright (c) Google Inc.
 
 Terms of the Apache License Version 2.0 :
 --------------------------------------------------------------------
