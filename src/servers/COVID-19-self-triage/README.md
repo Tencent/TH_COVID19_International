@@ -45,7 +45,7 @@ $ docker run --rm -it --name covid19-engine covid19-engine
 
 Referenced guideline for this instrument
 ---
-It is based on **Clinical Protocols for the Diagnosis and Treatment of COVID-19** ([link](https://covid19.21wecan.com/covid19en/c100021/202003/1000174.shtml)) published by **China National Health Commission**, and you can tweak the logic as appropriate.
+It is based on **Clinical Protocols for the Diagnosis and Treatment of COVID-19** ([link](https://covid19.21wecan.com/covid19en/c100021/202003/1000174.shtml), [PDF](docs/static_files/Clinical_Protocols_for_the_Diagnosis_and_Treatment_of_COVID-19_V7.pdf)) published by **China National Health Commission**, and you can tweak the logic as appropriate.
 
 Workflow
 ---
