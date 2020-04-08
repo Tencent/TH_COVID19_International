@@ -48,7 +48,6 @@
   'Czech Republic': '捷克',
   Denmark: '丹麦',
   Djibouti: '吉布提',
-  Dominica: '多米尼加',
   'Dominican Republic': '多明尼加共和国',
   Ecuador: '厄瓜多尔',
   Egypt: '埃及',
@@ -212,5 +211,13 @@
   Montenegro: '黑山',
   Kosovo: '科索沃',
   'Republic of Serbia': '塞尔维亚',
-  'East Timor': '东帝汶'
+  'East Timor': '东帝汶',
+  'Principality of Liechtenstein': '列支敦士登公国',
+  'Santa lucia': '圣卢西亚',
+  'The Federation of Saint Kitts and Nevis': '圣基茨和尼维斯',
+  'Dominica': '多米尼克',
+  'Dominican': '多米尼加',
+  'Palestine': '巴勒斯坦',
+  'Trinidad and Tobago': '特立尼达和多巴哥',
+  'Diamond Princess': '钻石号邮轮'
 }

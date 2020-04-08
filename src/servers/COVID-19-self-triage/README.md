@@ -47,6 +47,9 @@ Referenced guideline for this instrument
 ---
 It is based on **Clinical Protocols for the Diagnosis and Treatment of COVID-19** ([link](https://covid19.21wecan.com/covid19en/c100021/202003/1000174.shtml)) published by **China National Health Commission**, and you can tweak the logic as appropriate.
 
+Workflow
+---
+![Workflow](docs/static_files/Workflow.png "Workflow")
 
 Licensing
 ---
