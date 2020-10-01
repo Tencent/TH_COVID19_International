@@ -1,4 +1,4 @@
-# TH_COVID19_International
+# TH_COVID19_Universal
 
 COVID-19 Live Updates of Tencent Health is developed to track the live updates of COVID-19, including the global pandemic trends, domestic live updates, and overseas live updates.
 
