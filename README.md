@@ -1,5 +1,15 @@
 # TH_COVID19_International
 
+## Archival Notice
+
+This repository provided real-time tracking of COVID-19 trends during the pandemic. As the global health crisis has subsided and the project is no longer maintained, it will be **archived**.
+
+The repository will become **read-only** on **2025-04-04**. No new issues or pull requests will be accepted, but historical data and contributions remain accessible.
+
+We sincerely thank all contributors and users who supported this project during a critical time.
+
+---
+
 COVID-19 Live Updates of Tencent Health is developed to track the live updates of COVID-19, including the global pandemic trends, domestic live updates, and overseas live updates.
 
 
