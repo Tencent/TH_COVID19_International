@@ -1,4 +1,4 @@
-# TH_COVID19_International
+# TH_COVID19_Universal
 
 ## Archival Notice
 
